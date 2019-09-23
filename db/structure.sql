@@ -71,6 +71,18 @@ ALTER SEQUENCE public.admin_users_id_seq OWNED BY public.admin_users.id;
 
 
 --
+-- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.ar_internal_metadata (
+    key character varying NOT NULL,
+    value character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
 -- Name: archived_debate_outcomes; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -478,7 +490,7 @@ CREATE TABLE public.debate_outcomes (
     debated boolean DEFAULT true NOT NULL,
     commons_image_file_name character varying,
     commons_image_content_type character varying,
-    commons_image_file_size integer,
+    commons_image_file_size bigint,
     commons_image_updated_at timestamp without time zone,
     debate_pack_url character varying(500)
 );
@@ -1530,6 +1542,14 @@ ALTER TABLE ONLY public.admin_users
 
 
 --
+-- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ar_internal_metadata
+    ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
 -- Name: archived_debate_outcomes archived_debate_outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -1727,6 +1747,14 @@ ALTER TABLE ONLY public.rate_limits
 
 ALTER TABLE ONLY public.rejections
     ADD CONSTRAINT rejections_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.schema_migrations
+    ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
 
 
 --
@@ -2005,7 +2033,7 @@ CREATE INDEX index_archived_signatures_on_name ON public.archived_signatures USI
 -- Name: index_archived_signatures_on_normalized_email; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_archived_signatures_on_normalized_email ON public.archived_signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '\.|\+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
+CREATE INDEX index_archived_signatures_on_normalized_email ON public.archived_signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '.|+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
 
 
 --
@@ -2418,7 +2446,7 @@ CREATE INDEX index_signatures_on_name ON public.signatures USING btree (lower((n
 -- Name: index_signatures_on_normalized_email; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_signatures_on_normalized_email ON public.signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '\.|\+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
+CREATE INDEX index_signatures_on_normalized_email ON public.signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '.|+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
 
 
 --
@@ -2559,13 +2587,6 @@ CREATE INDEX index_trending_ips_on_ip_address_and_petition_id ON public.trending
 --
 
 CREATE INDEX index_trending_ips_on_petition_id ON public.trending_ips USING btree (petition_id);
-
-
---
--- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE UNIQUE INDEX unique_schema_migrations ON public.schema_migrations USING btree (version);
 
 
 --
@@ -2888,12 +2909,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190414081712'),
 ('20190414083111'),
 ('20190414234613'),
-('20190415015616');
+('20190415015616'),
+('20190419065717'),
+('20190420112847'),
+('20190420112856');
 
-
-INSERT INTO schema_migrations (version) VALUES ('20190419065717');
-
-INSERT INTO schema_migrations (version) VALUES ('20190420112847');
-
-INSERT INTO schema_migrations (version) VALUES ('20190420112856');
 
