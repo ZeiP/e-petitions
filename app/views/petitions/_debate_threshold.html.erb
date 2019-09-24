@@ -1,3 +1,4 @@
+<% if Site.threshold_for_debate != -1 %>
 <section class="about-item about-item-count-debate" id="debate-threshold" aria-labelledby="debate-threshold-heading">
   <%# Has debate outcome details #%>
   <% if debate_outcome = petition.debate_outcome? -%>
@@ -71,3 +72,4 @@
     <% end %>
   <% end -%>
 </section>
+<% end %>

@@ -1,4 +1,4 @@
-en-GB:
+fi-FI:
   petitions:
     errors:
       prompt:
@@ -7,9 +7,9 @@ en-GB:
 
       invalid_signature_count: "Petition %{id} had an invalid signature count"
 
-    view_all: "View all open petitions"
-    popular_title: "Popular petitions"
-    search_title: "Search petitions"
+    view_all: "Näytä kaikki aloitteet"
+    popular_title: "Suositut aloitteet"
+    search_title: "Hae aloitetta"
 
     page_titles:
       all: "All petitions"
@@ -25,16 +25,16 @@ en-GB:
 
     share_title: "Petition: %{petition}"
 
-    ad: "The Petitions service is open"
-    start_prompt: "Start a petition"
-    criteria: "Anyone can start a petition as long as they are a British citizen or UK resident"
-    response_threshold: "If a petition gets %{threshold} signatures, the government will respond"
-    debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in Parliament"
+    ad: "Tee partiolaisaloite!"
+    start_prompt: "Perusta aloite"
+    criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
+    response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö vastaa siihen."
+    debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, sitä harkitaan parlamentin käsittelyyn."
 
     responded_petitions:
-      none: "The government hasn’t responded to any petitions yet"
-      responded_on: "The government responded on %{date}"
-      read_full: "Read the response in full"
+      none: "Keskusjärjestö ei ole vielä vastannut yhteenkään aloitteeseen"
+      responded_on: "Keskusjärjestö vastasi %{date}"
+      read_full: "Lue vastaus kokonaan"
 
     debated_petitions:
       none: "Parliament hasn’t debated any petitions yet"
@@ -202,7 +202,7 @@ en-GB:
         notify_creator_of_validated_petition_being_stopped: |-
           We’ve stopped your petition early
       signoff_prefix: "The Petitions team"
-      signoff_suffix: "UK Government and Parliament"
+      signoff_suffix: "Suomen Partiolaiset"
 
     waiting_for_in_words:
       zero: "Waiting for less than a day"
@@ -294,13 +294,13 @@ en-GB:
 
   petition:
     responded:
-      title: "Government responded"
-      on: "This response was given on %{date}"
-      read_in_full: "Read the response in full"
+      title: "Keskusjärjestö vastasi"
+      on: "Vastaus annettiin %{date}"
+      read_in_full: "Lue koko vastaus"
     waiting:
-      title: "Government will respond"
-      description: "Government responds to all petitions that get more than %{threshold} signatures"
-      waiting: "%{waiting} for a government response"
+      title: "Keskusjärjestö on vastaamassa"
+      description: "Keskusjärjestö vastaa kaikkiin aloitteisiin, joita kannattaa enemmän kuin %{threshold} partiolaista"
+      waiting: "%{waiting} keskusjärjestön vastausta"
     need_more:
-      title: "At %{threshold} signatures..."
-      description: "At %{threshold} signatures, government will respond to this petition"
+      title: "%{threshold} partiolaisen kannatuksella..."
+      description: "Keskusjärjestö vastaa aloitteeseen, kun sitä kannattaa enemmän kuin %{threshold} partiolaista"

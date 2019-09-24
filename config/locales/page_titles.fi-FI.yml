@@ -1,5 +1,6 @@
-en-GB:
+fi-FI:
   page_titles:
+    header_title: "Partiolaisaloitteet"
     default: "Petitions - UK Government and Parliament"
     archived_petitions:
       index: "View archived petitions - Petitions"
@@ -39,9 +40,9 @@ en-GB:
       help: "How petitions work"
       privacy: "Privacy and cookies"
   navigation:    
-    home: "Home"
-    all_petitions: "All petitions"
-    start_petition: "Start a petition"
-    help: "How petitions work"
-    privacy: "Privacy and cookies"
-    feedback: "Feedback"
+    home: "Etusivu"
+    all_petitions: "Kaikki aloitteet"
+    start_petition: "Perusta aloite"
+    help: "Lisätietoja partiolaisaloitteesta"
+    privacy: "Yksityisyys ja evästeet"
+    feedback: "Palaute"

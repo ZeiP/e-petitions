@@ -2,13 +2,13 @@
   <div class="wrapper">
     <% if home_page? %>
       <span class="proposition">
-        <span class="graphic graphic-portcullis-white"></span> Petitions
+        <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <%= t "page_titles.header_title" %>
       </span>
     <% else %>
       <%= link_to(home_path, :title => 'Go to the petitions homepage', :tabindex => 1, :class => 'proposition') do %>
-        <span class="graphic graphic-portcullis-white"></span> Petitions
+        <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <%= t "page_titles.header_title" %>
       <% end %>
     <% end %>
-    <p class="strapline">UK Government and Parliament</p>
+    <p class="strapline"><%= t "petitions.emails.signoff_suffix" %></p>
   </div>
 </header>

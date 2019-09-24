@@ -1,8 +1,8 @@
 <section class="about-item about-item-count-response" id="response-threshold" aria-labelledby="response-threshold-heading">
   <%# Has a government response #%>
   <% if government_response = petition.government_response? -%>
-    <h2 id="response-threshold-heading">Government responded</h2>
-    <p class="secondary">This response was given on <%= short_date_format government_response.responded_on %></p>
+    <h2 id="response-threshold-heading"><%= t "petition.responded.title" %></h2>
+    <p class="secondary"><%= t "petition.responded.on", date: short_date_format(government_response.responded_on) %></p>
     <blockquote class="pull-quote">
       <%= auto_link(simple_format(h(government_response.summary)), html: { rel: 'nofollow' } ) %>
     </blockquote>
@@ -10,7 +10,7 @@
     <% if government_response.details? -%>
       <% unless params["reveal_response"] == "yes" -%>
       <details>
-        <summary><span class="summary">Read the response in full</span></summary>
+        <summary><span class="summary"><%= t "petition.responded.read_in_full" %></span></summary>
         <div class="panel-indent panel-no-border">
       <% end -%>
       <%= auto_link(simple_format(h(government_response.details)), html: { rel: 'nofollow' }) %>
@@ -22,15 +22,15 @@
 
   <%# Waiting for a government response #%>
   <% elsif petition.response_threshold_reached_at? -%>
-    <h2 id="response-threshold-heading">Government will respond</h2>
-    <p>Government responds to all petitions that get more than <%= Site.formatted_threshold_for_response %> signatures</p>
-    <p class="secondary"><%= waiting_for_in_words(petition.response_threshold_reached_at) %> for a government response</p>
+    <h2 id="response-threshold-heading"><%= t "petition.waiting.title" %></h2>
+    <p><%= t "petition.waiting.description", threshold: Site.formatted_threshold_for_response %></p>
+    <p class="secondary"><%= t "petition.waiting.waiting", waiting: waiting_for_in_words(petition.response_threshold_reached_at) %></p>
 
   <%# Needs more signatures #%>
   <% else -%>
     <% if !@petition.closed? %>
-      <h2 id="response-threshold-heading">At <%= Site.formatted_threshold_for_response %> signatures...</h2>
-      <p>At <%= Site.formatted_threshold_for_response %> signatures, government will respond to this petition</p>
+      <h2 id="response-threshold-heading"><%= t "petition.need_more.title", threshold: Site.formatted_threshold_for_response %></h2>
+      <p><%= t "petition.need_more.description", threshold: Site.formatted_threshold_for_response %></p>
     <% end %>
   <% end -%>
 </section>
