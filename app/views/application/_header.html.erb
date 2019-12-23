@@ -1,14 +1,12 @@
 <header role="banner" id="global-header">
   <div class="wrapper">
     <% if home_page? %>
-      <span class="proposition">
-        <span class="graphic graphic-portcullis-white"></span> Petitions
-      </span>
+      <h1 style="padding-left:0" class="proposition">Partiolaisaloite</h1>
     <% else %>
-      <%= link_to(home_path, :title => 'Go to the petitions homepage', :tabindex => 1, :class => 'proposition') do %>
-        <span class="graphic graphic-portcullis-white"></span> Petitions
+      <%= link_to(home_path, :title => 'Go to the petitions homepage', :tabindex => 1 ) do %>
+        <h1 style="padding-left:0" class="proposition">Partiolaisaloite</h1>
       <% end %>
     <% end %>
-    <p class="strapline">UK Government and Parliament</p>
+    <p class="strapline"></p>
   </div>
 </header>

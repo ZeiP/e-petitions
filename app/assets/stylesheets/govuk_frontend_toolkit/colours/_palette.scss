@@ -2,6 +2,9 @@
 $govuk-blue: #005ea5;
 $mainstream-brand: $govuk-blue;
 
+$scouts-dark-blue: #253764;
+$scouts-light-blue: #28a9e1;
+
 // Standard palette, colours
 $purple: #2e358b;
 $purple-50: #9799c4;
@@ -63,7 +66,7 @@ $button-colour: #00823b;
 $focus-colour: $yellow;
 $text-colour: $black;             // Standard text colour
 $secondary-text-colour: $grey-1;  // Section headers, help text etc.
-$border-colour: $grey-2;          // Borders, seperators, rules, keylines etc.
+$border-colour: $scouts-dark-blue; // Borders, seperators, rules, keylines etc.
 $panel-colour: $grey-3;           // Related links panel, page footer etc.
 $canvas-colour: $grey-4;          // Page background
 $highlight-colour: $grey-4;       // Table stripes etc.

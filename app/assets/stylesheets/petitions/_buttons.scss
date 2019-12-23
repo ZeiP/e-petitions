@@ -14,6 +14,8 @@
   @include bold-24;
   text-align: center;
   width: 100%;
+  border-radius: 4px;
+  color: #fff !important;
 
   @include media($min-width: 420px) {
     width: inherit;
