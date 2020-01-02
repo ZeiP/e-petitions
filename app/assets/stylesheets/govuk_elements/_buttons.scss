@@ -8,10 +8,12 @@
 .button {
   @include button ($button-colour);
   margin: 0 $gutter-half $gutter-half 0;
-  padding: em(10) em(15) em(5) em(15);
+  // padding: em(10) em(15) em(5) em(15);
+  padding: 10px 20px 5px 20px !important;
   vertical-align: top;
   font-family: 'Tondu', sans-serif !important;
   text-transform: uppercase !important;
+  box-shadow: none;
 }
 
 // Fix unwanted button padding in Firefox

@@ -9,7 +9,8 @@
   @include button($colour);
   @include box-sizing(border-box);
   margin: 0 0 $gutter-half 0;
-  padding: em(10, 24) em(15, 24);
+  // padding: em(10, 24) em(15, 24);
+  padding: 10px 20px 5px 20px;
   vertical-align: top;
   @include bold-24;
   text-align: center;

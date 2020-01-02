@@ -33,10 +33,6 @@
   -webkit-appearance: none;
 
   // Bottom edge effect
-  @include box-shadow(0 2px 0 darken($colour, 15%));
-  @include ie-lte(8) {
-    border-bottom: 2px solid darken($colour, 15%);
-  }
 
   // Text
   font-size: 1em; // inherit from parent
@@ -71,10 +67,6 @@
     }
     &:active {
       top: 0;
-      @include box-shadow(0 2px 0 darken($colour, 15%));
-      @include ie-lte(8) {
-        border-bottom: 2px solid darken($colour, 15%);
-      }
     }
   }
 
