@@ -1,10 +1,12 @@
 #global-header {
   background-color: $petitions-header-colour;
-  padding-top: $gutter-half;
+  // padding-top: $gutter-half;
   margin-top: -1px;
   margin-bottom: -1px;
-  padding-bottom: $gutter-half;
-  h1 {
+  // padding-bottom: $gutter-half;
+  height: 38px;
+  padding-top: 10px;
+    h1 {
     margin: 0;
   }
   .proposition {
