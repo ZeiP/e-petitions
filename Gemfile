@@ -6,7 +6,7 @@ gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem 'rails', '4.2.11.1'
 
 gem 'rake'
-gem 'pg', '< 0.21'
+gem 'pg'
 gem 'authlogic'
 gem 'will_paginate'
 gem 'json'
@@ -48,7 +48,7 @@ end
 
 group :test do
   gem 'nokogiri'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '4.0.1'
   gem 'pickle'
   gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', require: false
