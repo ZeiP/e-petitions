@@ -7,18 +7,28 @@ services:
     networks:
       app_net:
         ipv4_address: 173.17.0.2
+  memcached:
+    image: memcached:1.5.20
+    networks:
+      app_net:
+        ipv4_address: 173.17.0.3
   app:
     environment:
       - RAILS_ENV=development
       - DATABASE_HOST=sqldb
-    build: .
+      - DATABASE_URL=postgres://postgres@sqldb
+      - MEMCACHED_HOST=memcached
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     volumes:
       - .:/app
       - ./data/bundle:/bundle
     ports:
-      - "5432:5432"
+      - "3000:3000"
     links:
       - sqldb
+      - memcached
     networks:
       app_net:
         ipv4_address: 173.17.0.6

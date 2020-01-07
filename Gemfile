@@ -50,7 +50,7 @@ end
 
 group :test do
   gem 'nokogiri'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '4.0.1'
   gem 'pickle'
   gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', require: false
