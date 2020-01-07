@@ -386,7 +386,23 @@ class Petition < ActiveRecord::Base
       where(arel_table[:last_signed_at].gt(timestamp))
     end
 
+    def in_need_of_validating
+      where(grouping(last_signed_at.gt(signature_count_validated_at)).eq(true))
+    end
+
     private
+
+    def grouping(expression)
+      Arel::Nodes::Grouping.new(expression)
+    end
+
+    def last_signed_at
+      arel_table[:last_signed_at]
+    end
+
+    def signature_count_validated_at
+      arel_table[:signature_count_validated_at]
+    end
 
     def moderation_threshold_reached_at
       arel_table[:moderation_threshold_reached_at]
@@ -457,9 +473,9 @@ class Petition < ActiveRecord::Base
     sql = "signature_count = signature_count + ?, last_signed_at = ?, updated_at = ?"
     count = signatures.validated_count(last_signed_at, time)
 
-    return true if count.zero?
+    return false if count.zero?
 
-    if update_all([sql, count, time, time]) > 0
+    if result = update_all([sql, count, time, time]) > 0
       self.reload
 
       updates = []
@@ -489,7 +505,7 @@ class Petition < ActiveRecord::Base
       end
     end
 
-    true
+    result
   end
 
   def decrement_signature_count!(time = Time.current)
@@ -512,8 +528,16 @@ class Petition < ActiveRecord::Base
     end
   end
 
+  def signature_count_difference
+    signature_count - signatures.validated_count(nil, last_signed_at)
+  end
+
   def valid_signature_count?
-    signature_count == signatures.validated_count(nil, last_signed_at)
+    signature_count_difference.zero?
+  end
+
+  def valid_signature_count!
+    valid_signature_count? && touch(:signature_count_validated_at)
   end
 
   def will_reach_threshold_for_moderation?

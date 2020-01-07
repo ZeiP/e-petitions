@@ -468,12 +468,70 @@ RSpec.describe SponsorsController, type: :controller do
           end
         end
 
+        context "and the signature is a pending duplicate alias" do
+          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition)) }
+
+          before do
+            allow(Site).to receive(:disable_plus_address_check?).and_return(true)
+
+            perform_enqueued_jobs {
+              post :create, petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com")
+            }
+          end
+
+          it "assigns the @petition instance variable" do
+            expect(assigns[:petition]).to eq(petition)
+          end
+
+          it "assigns the @signature instance variable to the original signature" do
+            expect(assigns[:signature]).to eq(signature)
+          end
+
+          it "re-sends the confirmation email" do
+            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to have_subject("Please confirm your email address")
+          end
+
+          it "redirects to the thank you page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+          end
+        end
+
         context "and the signature is a validated duplicate" do
           let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition)) }
 
           before do
             perform_enqueued_jobs {
               post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params }
+            }
+          end
+
+          it "assigns the @petition instance variable" do
+            expect(assigns[:petition]).to eq(petition)
+          end
+
+          it "assigns the @signature instance variable to the original signature" do
+            expect(assigns[:signature]).to eq(signature)
+          end
+
+          it "sends a duplicate signature email" do
+            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to have_subject("Duplicate signature of petition")
+          end
+
+          it "redirects to the thank you page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+          end
+        end
+
+        context "and the signature is a validated duplicate alias" do
+          let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition)) }
+
+          before do
+            allow(Site).to receive(:disable_plus_address_check?).and_return(true)
+
+            perform_enqueued_jobs {
+              post :create, petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com")
             }
           end
 
@@ -829,6 +887,18 @@ RSpec.describe SponsorsController, type: :controller do
 
         it "doesn't set the flash :notice message" do
           expect(flash[:notice]).to be_nil
+        end
+
+        it "doesn't send another email" do
+          expect(deliveries).to be_empty
+        end
+      end
+
+      context "and the signature has been validated more than 15 minutes ago" do
+        let(:signature) { FactoryBot.create(:validated_signature, validated_at: 30.minutes.ago, petition: petition, sponsor: true) }
+
+        it "redirects to the new sponsor page" do
+          expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}")
         end
       end
 

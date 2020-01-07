@@ -49,7 +49,8 @@ module Epets
 
     # Replace ActionDispatch::RemoteIp with our custom middleware
     # to remove the CloudFront ip address from X-Forwarded-For
-    config.middleware.insert_before ActionDispatch::RemoteIp, CloudFrontRemoteIp
-    config.middleware.delete ActionDispatch::RemoteIp
+    config.middleware.insert_before ActionDispatch::RemoteIp, "CloudFrontRemoteIp"
+    config.middleware.delete "ActionDispatch::RemoteIp"
+
   end
 end

@@ -6,10 +6,10 @@
 }
 
 select.form-control {
-  height: 40px;
+  // height: 40px;
 
   @include media(tablet) {
-    height: 52px;
+    // height: 52px;
   }
 }
 

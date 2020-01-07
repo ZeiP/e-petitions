@@ -41,8 +41,8 @@
   .inline-button {
     @include bold-19;
     width: auto;
-    height: 40px;
+    // height: 40px;
     line-height: 40px;
-    padding: 0px em(19, 24);
+    padding: .25em 1em 0em 1em;
   }
 }

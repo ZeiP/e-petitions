@@ -555,6 +555,40 @@ ALTER SEQUENCE public.delayed_jobs_id_seq OWNED BY public.delayed_jobs.id;
 
 
 --
+-- Name: domains; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.domains (
+    id integer NOT NULL,
+    canonical_domain_id integer,
+    name character varying(100) NOT NULL,
+    strip_characters character varying(10),
+    strip_extension character varying(10) DEFAULT '+'::character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: domains_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.domains_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: domains_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.domains_id_seq OWNED BY public.domains.id;
+
+
+--
 -- Name: email_requested_receipts; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -893,7 +927,8 @@ CREATE TABLE public.petition_statistics (
     refreshed_at timestamp without time zone,
     duplicate_emails integer,
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    pending_rate numeric
 );
 
 
@@ -950,7 +985,8 @@ CREATE TABLE public.petitions (
     locked_at timestamp without time zone,
     locked_by_id integer,
     moderation_lag integer,
-    signature_count_reset_at timestamp without time zone
+    signature_count_reset_at timestamp without time zone,
+    signature_count_validated_at timestamp without time zone
 );
 
 
@@ -1101,7 +1137,8 @@ CREATE TABLE public.signatures (
     validated_ip character varying,
     form_requested_at timestamp without time zone,
     image_loaded_at timestamp without time zone,
-    form_token character varying
+    form_token character varying,
+    canonical_email character varying
 );
 
 
@@ -1401,6 +1438,13 @@ ALTER TABLE ONLY public.delayed_jobs ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
+-- Name: domains id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.domains ALTER COLUMN id SET DEFAULT nextval('public.domains_id_seq'::regclass);
+
+
+--
 -- Name: email_requested_receipts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1643,6 +1687,14 @@ ALTER TABLE ONLY public.debate_outcomes
 
 ALTER TABLE ONLY public.delayed_jobs
     ADD CONSTRAINT delayed_jobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: domains domains_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.domains
+    ADD CONSTRAINT domains_pkey PRIMARY KEY (id);
 
 
 --
@@ -2170,6 +2222,20 @@ CREATE INDEX index_delayed_jobs_on_priority_and_run_at ON public.delayed_jobs US
 
 
 --
+-- Name: index_domains_on_canonical_domain_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_domains_on_canonical_domain_id ON public.domains USING btree (canonical_domain_id);
+
+
+--
+-- Name: index_domains_on_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_domains_on_name ON public.domains USING btree (name);
+
+
+--
 -- Name: index_email_requested_receipts_on_petition_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -2366,6 +2432,13 @@ CREATE INDEX index_petitions_on_tags ON public.petitions USING gin (tags public.
 
 
 --
+-- Name: index_petitions_on_validated_at_and_signed_at; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_petitions_on_validated_at_and_signed_at ON public.petitions USING btree (((last_signed_at > signature_count_validated_at)));
+
+
+--
 -- Name: index_rejections_on_petition_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -2377,6 +2450,13 @@ CREATE UNIQUE INDEX index_rejections_on_petition_id ON public.rejections USING b
 --
 
 CREATE INDEX index_signatures_on_archived_at_and_petition_id ON public.signatures USING btree (archived_at, petition_id);
+
+
+--
+-- Name: index_signatures_on_canonical_email; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_signatures_on_canonical_email ON public.signatures USING btree (canonical_email);
 
 
 --
@@ -2611,6 +2691,14 @@ ALTER TABLE ONLY public.trending_ips
 
 ALTER TABLE ONLY public.trending_domains
     ADD CONSTRAINT fk_rails_1f51885fb0 FOREIGN KEY (petition_id) REFERENCES public.petitions(id);
+
+
+--
+-- Name: domains fk_rails_3112c9a009; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.domains
+    ADD CONSTRAINT fk_rails_3112c9a009 FOREIGN KEY (canonical_domain_id) REFERENCES public.domains(id);
 
 
 --
@@ -2914,4 +3002,18 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190420112847'),
 ('20190420112856');
 
+
+INSERT INTO schema_migrations (version) VALUES ('20190501120348');
+
+INSERT INTO schema_migrations (version) VALUES ('20190502104930');
+
+INSERT INTO schema_migrations (version) VALUES ('20190502105505');
+
+INSERT INTO schema_migrations (version) VALUES ('20190502105750');
+
+INSERT INTO schema_migrations (version) VALUES ('20190514055139');
+
+INSERT INTO schema_migrations (version) VALUES ('20190514070908');
+
+INSERT INTO schema_migrations (version) VALUES ('20190718133606');
 

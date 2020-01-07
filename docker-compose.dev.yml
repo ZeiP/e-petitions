@@ -1,0 +1,32 @@
+version: '2'
+services:
+  sqldb:
+    image: postgres:12.1
+    volumes:
+      - ./data/sqldb:/var/lib/postgres/data
+    networks:
+      app_net:
+        ipv4_address: 173.17.0.2
+  app:
+    environment:
+      - RAILS_ENV=development
+      - DATABASE_HOST=sqldb
+    build: .
+    volumes:
+      - .:/app
+      - ./data/bundle:/bundle
+    ports:
+      - "5432:5432"
+    links:
+      - sqldb
+    networks:
+      app_net:
+        ipv4_address: 173.17.0.6
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 173.17.0.0/24
+          gateway: 173.17.0.1

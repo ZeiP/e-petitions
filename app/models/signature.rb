@@ -44,19 +44,15 @@ class Signature < ActiveRecord::Base
   attr_readonly :sponsor, :creator
 
   before_create if: :email? do
+    self.uuid = generate_uuid
+    self.canonical_email = Domain.normalize(email)
+
     if find_duplicate
       raise ActiveRecord::RecordNotUnique, "Signature is not unique: #{name}, #{email}, #{postcode}"
     end
-  end
 
-  before_create if: :email? do
-    self.uuid = generate_uuid
-  end
-
-  before_create if: :email? do
     if find_similar
-      self.state = INVALIDATED_STATE
-      self.invalidated_at = Time.current
+      raise ActiveRecord::RecordNotUnique, "Signature is not unique: #{name}, #{email}, #{postcode}"
     end
   end
 
@@ -102,12 +98,16 @@ class Signature < ActiveRecord::Base
       where(arel_table[:id].not_eq(id).and(arel_table[:email].eq(email)))
     end
 
-    def similar(id, email)
-      for_email(email).where.not(id: id)
-    end
-
     def duplicate_emails
       unscoped.from(validated.select(:uuid).group(:uuid).having(arel_table[Arel.star].count.gt(1))).count
+    end
+
+    def pending_rate
+      (Rational(pending.count, total.count) * 100).to_d(2)
+    end
+
+    def similar(id, email)
+      where(canonical_email: email).where.not(id: id)
     end
 
     def for_domain(domain)
@@ -183,6 +183,10 @@ class Signature < ActiveRecord::Base
 
     def pending
       where(state: PENDING_STATE)
+    end
+
+    def total
+      where(state: [PENDING_STATE, VALIDATED_STATE])
     end
 
     def petition_ids_signed_since(timestamp)
@@ -465,14 +469,22 @@ class Signature < ActiveRecord::Base
   end
 
   def find_duplicate!
-    find_duplicate || (raise ActiveRecord::RecordNotFound, "Signature not found: #{name}, #{email}, #{postcode}")
+    find_duplicate || find_similar || (raise ActiveRecord::RecordNotFound, "Signature not found: #{name}, #{email}, #{postcode}")
   end
 
   def find_similar
     return nil unless petition
 
-    signatures = petition.signatures.similar(id, email)
-    signatures.first if signatures.many?
+    signatures = petition.signatures.similar(id, canonical_email)
+    return signatures.first if signatures.many?
+
+    if signature = signatures.first
+      if sanitized_name == signature.sanitized_name
+        signature
+      elsif postcode != signature.postcode
+        signature
+      end
+    end
   end
 
   def name=(value)
@@ -563,6 +575,10 @@ class Signature < ActiveRecord::Base
       end
     end
 
+    if update_signature_counts
+      @just_validated = true
+    end
+
     if inline_updates? && update_signature_counts
       last_signed_at = petition.last_signed_at
       petition.increment_signature_count!(now)
@@ -570,6 +586,18 @@ class Signature < ActiveRecord::Base
       ConstituencyPetitionJournal.increment_signature_counts_for(petition, last_signed_at)
       CountryPetitionJournal.increment_signature_counts_for(petition, last_signed_at)
     end
+  end
+
+  def just_validated?
+    defined?(@just_validated) ? @just_validated : false
+  end
+
+  def validated_before?(timestamp)
+    validated? && validated_at < timestamp
+  end
+
+  def reload(*)
+    super.tap { @just_validated = false }
   end
 
   def invalidate!(now = Time.current, invalidation_id = nil)
@@ -667,6 +695,10 @@ class Signature < ActiveRecord::Base
 
   def update_uuid
     update_column(:uuid, generate_uuid)
+  end
+
+  def update_canonical_email
+    update_column(:canonical_email, Domain.normalize(email))
   end
 
   def number

@@ -227,6 +227,25 @@ RSpec.describe Signature, type: :model do
           }.from(nil).to("6613a3fd-c2c4-5bc2-a6de-3dc0b2527dd6")
         end
       end
+
+      context "and the email is normalized" do
+        let!(:domain_1) { Domain.create(name: "example.com", strip_extension: "+", strip_characters: ".") }
+        let!(:domain_2) { Domain.create(name: "example.co.uk", canonical_domain: domain_1) }
+
+        let(:email) { "alice.smith+petitions@example.co.uk" }
+
+        before do
+          allow(Site).to receive(:disable_plus_address_check?).and_return(true)
+        end
+
+        it "sets the canonical_email column" do
+          expect {
+            signature.save
+          }.to change {
+            signature.canonical_email
+          }.from(nil).to("alicesmith@example.com")
+        end
+      end
     end
   end
 
@@ -1146,6 +1165,26 @@ RSpec.describe Signature, type: :model do
     end
   end
 
+  describe ".pending_rate" do
+    let!(:petition) { FactoryBot.create(:open_petition) }
+
+    context "when there are no pending signatures" do
+      it "returns zero" do
+        expect(petition.signatures.pending_rate).to eq(0)
+      end
+    end
+
+    context "when there are pending signatures" do
+      before do
+        FactoryBot.create(:pending_signature, petition: petition)
+      end
+
+      it "returns the number of duplicate emails" do
+        expect(petition.signatures.pending_rate).to eq(50)
+      end
+    end
+  end
+
   describe "#number" do
     let(:attributes) { FactoryBot.attributes_for(:petition) }
     let(:creator) { FactoryBot.create(:pending_signature, creator: true) }
@@ -1543,6 +1582,69 @@ RSpec.describe Signature, type: :model do
             signature.reload.validated_ip
           }.from(nil).to("12.34.56.78")
         end
+      end
+    end
+  end
+
+  describe "#just_validated?" do
+    let(:petition) { FactoryBot.create(:petition) }
+    let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
+
+    context "when the signature is pending" do
+      it "returns false" do
+        expect(signature.just_validated?).to eq(false)
+      end
+    end
+
+    context "when the signature has just been validated" do
+      before do
+        signature.validate!
+      end
+
+      it "returns true" do
+        expect(signature.just_validated?).to eq(true)
+      end
+    end
+
+    context "when the signature has been reloaded after validation" do
+      before do
+        signature.validate!
+        signature.reload
+      end
+
+      it "returns false" do
+        expect(signature.just_validated?).to eq(false)
+      end
+    end
+  end
+
+  describe "#validated_before?" do
+    let(:petition) { FactoryBot.create(:petition) }
+    let(:timestamp) { 15.minutes.ago }
+
+    %w[pending fraudulent invalidated].each do |state|
+      context "when the signature is #{state}" do
+        let(:signature) { FactoryBot.create(:"#{state}_signature", petition: petition) }
+
+        it "returns false" do
+          expect(signature.validated_before?(timestamp)).to eq(false)
+        end
+      end
+    end
+
+    context "when the signature has been validated within the last 15 minutes" do
+      let(:signature) { FactoryBot.create(:validated_signature, validated_at: 5.minutes.ago, petition: petition) }
+
+      it "returns false" do
+        expect(signature.validated_before?(timestamp)).to eq(false)
+      end
+    end
+
+    context "when the signature has been validated over 15 minutes ago" do
+      let(:signature) { FactoryBot.create(:validated_signature, validated_at: 30.minutes.ago, petition: petition) }
+
+      it "returns true" do
+        expect(signature.validated_before?(timestamp)).to eq(true)
       end
     end
   end

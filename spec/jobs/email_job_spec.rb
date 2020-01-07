@@ -184,6 +184,16 @@ RSpec.describe GatherSponsorsForPetitionEmailJob, type: :job do
       described_class.perform_later(petition)
     end
   end
+
+  context "when passing a BCC address" do
+    it "sends the PetitionMailer#gather_sponsors_for_petition email with a BCC address" do
+      expect(PetitionMailer).to receive(:gather_sponsors_for_petition).with(petition, Site.feedback_email).and_call_original
+
+      perform_enqueued_jobs do
+        described_class.perform_later(petition, Site.feedback_email)
+      end
+    end
+  end
 end
 
 RSpec.describe NotifyCreatorThatModerationIsDelayedJob, type: :job do
@@ -400,6 +410,24 @@ RSpec.describe FeedbackEmailJob, type: :job do
 
     perform_enqueued_jobs do
       described_class.perform_later(feedback)
+    end
+  end
+
+  context "when feedback sending is disabled" do
+    before do
+      allow(Site).to receive(:disable_feedback_sending?).and_return(true)
+    end
+
+    around do |example|
+      travel_to(Time.current) { example.run }
+    end
+
+    it "reschedules the job without sending the email" do
+      expect(FeedbackMailer).not_to receive(:send_feedback)
+
+      expect {
+        described_class.perform_now(feedback)
+      }.to have_enqueued_job(described_class).with(feedback).on_queue("high_priority").at(1.hour.from_now)
     end
   end
 end
