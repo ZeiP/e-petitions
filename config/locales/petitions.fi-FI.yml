@@ -1,29 +1,37 @@
 fi-FI:
   petitions:
+    start:
+      title: "Luo uusi aloite"
+      petition: "Mitä haluaisit partiojohdon tekevän?"
+      character_limit: "80 kirjainta max"
+      notice: "Tiedoksesi"
+      supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalle aloitteen luomiseksi."
+      continue: "Jatka" 
+
     errors:
       prompt:
-        one: "Please fix the following error:"
-        other: "Please fix the following errors:"
+        one: "Fi_fi_locale_Please fix the following error:"
+        other: "Fi_fi_locale_Please fix the following errors:"
 
-      invalid_signature_count: "Petition %{id} had an invalid signature count"
+      invalid_signature_count: "Fi_fi_locale_Petition %{id} had an invalid signature count"
 
     view_all: "Näytä kaikki aloitteet"
     popular_title: "Suositut aloitteet"
     search_title: "Hae aloitetta"
 
     page_titles:
-      all: "All petitions"
-      open: "Open petitions"
-      closed: "Closed petitions"
-      rejected: "Rejected petitions"
-      published: "Published petitions"
-      awaiting_response: "Petitions waiting for a Government response"
-      with_response: "Petitions with a Government response"
-      debated: "Petitions debated in Parliament"
-      not_debated: "Petitions not debated in Parliament"
-      awaiting_debate: "Petitions waiting for a debate in Parliament"
+      all: "Kaikki aloitteet"
+      open: "Avoimet aloitteet"
+      closed: "Suljetut aloitteet"
+      rejected: "Fi_fi_locale_Rejected petitions"
+      published: "Fi_fi_locale_Published petitions"
+      awaiting_response: "Fi_fi_locale_Petitions waiting for a Government response"
+      with_response: "Fi_fi_locale_Petitions with a Government response"
+      debated: "Fi_fi_locale_Petitions debated in Parliament"
+      not_debated: "Fi_fi_locale_Petitions not debated in Parliament"
+      awaiting_debate: "Fi_fi_locale_Petitions waiting for a debate in Parliament"
 
-    share_title: "Petition: %{petition}"
+    share_title: "Fi_fi_locale_Petition: %{petition}"
 
     ad: "Tee partiolaisaloite!"
     start_prompt: "Perusta aloite"
@@ -37,36 +45,36 @@ fi-FI:
       read_full: "Lue vastaus kokonaan"
 
     debated_petitions:
-      none: "Parliament hasn’t debated any petitions yet"
-      debated_on: "This topic was debated on %{date}"
-      debate_video: "Watch the debate on %{url}"
-      debate_transscript: "Read the transcript at %{url}"
-      debate_research: "Read the research at %{url}"
+      none: "Keskusjärjestö ei ole vielä käsitellyt yhtäkään aloitetta"
+      debated_on: "Fi_fi_locale_This topic was debated on %{date}"
+      debate_video: "Fi_fi_locale_Watch the debate on %{url}"
+      debate_transscript: "Fi_fi_locale_Read the transcript at %{url}"
+      debate_research: "Fi_fi_locale_Read the research at %{url}"
 
     sharing:
       facebook:
         html: <span class="icon icon-share-facebook"></span> Facebook
       email:
-        html: <span class="icon icon-share-email"></span> Email
+        html: <span class="icon icon-share-email"></span> Sähköposti
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
     lists:
-      all: "All petitions (%{quantity})"
-      open: "Open petitions (%{quantity})"
-      closed: "Closed petitions (%{quantity})"
-      published: "Published petitions (%{quantity})"
-      rejected: "Rejected petitions (%{quantity})"
-      awaiting_response: "Awaiting government response (%{quantity})"
-      with_response: "Government responses (%{quantity})"
-      debated: "Debated in Parliament (%{quantity})"
-      not_debated: "Not debated in Parliament (%{quantity})"
-      awaiting_debate: "Awaiting a debate in Parliament (%{quantity})"
+      all: "Fi_fi_locale_All petitions (%{quantity})"
+      open: "Fi_fi_locale_Open petitions (%{quantity})"
+      closed: "Fi_fi_locale_Closed petitions (%{quantity})"
+      published: "Fi_fi_locale_Published petitions (%{quantity})"
+      rejected: "Fi_fi_locale_Rejected petitions (%{quantity})"
+      awaiting_response: "Fi_fi_locale_Awaiting government response (%{quantity})"
+      with_response: "Fi_fi_locale_Government responses (%{quantity})"
+      debated: "Fi_fi_locale_Debated in Parliament (%{quantity})"
+      not_debated: "Fi_fi_locale_Not debated in Parliament (%{quantity})"
+      awaiting_debate: "Fi_fi_locale_Awaiting a debate in Parliament (%{quantity})"
 
     list_headers:
-      not_debated: "The Petitions Committee decided not to debate these petitions"
+      not_debated: "Fi_fi_locale_The Petitions Committee decided not to debate these petitions"
 
     facets:
       archived:
@@ -154,141 +162,141 @@ fi-FI:
         email_signer: |-
           %{subject}
         email_confirmation_for_signer: |-
-          Please confirm your email address
+          Fi_fi_locale_Please confirm your email address
         email_duplicate_signatures: |-
-          Duplicate signature of petition
+          Fi_fi_locale_Duplicate signature of petition
         notify_signer_of_positive_debate_outcome: |-
-          Parliament debated “%{action}”
+          Fi_fi_locale_Parliament debated “%{action}”
         notify_signer_of_negative_debate_outcome: |-
-          Parliament didn’t debate “%{action}”
+          Fi_fi_locale_Parliament didn’t debate “%{action}”
         notify_signer_of_debate_scheduled: |-
-          Parliament will debate “%{action}”
+          Fi_fi_locale_Parliament will debate “%{action}”
         notify_signer_of_threshold_response: |-
-          Government responded to “%{action}”
+          Fi_fi_locale_Government responded to “%{action}”
 
         # Emails to people who create petitions
         email_creator: |-
           %{subject}
         notify_creator_of_positive_debate_outcome: |-
-          Parliament debated “%{action}”
+          Fi_fi_locale_Parliament debated “%{action}”
         notify_creator_of_negative_debate_outcome: |-
-          Parliament didn’t debate “%{action}”
+          Fi_fi_locale_Parliament didn’t debate “%{action}”
         notify_creator_of_debate_scheduled: |-
-          Parliament will debate “%{action}”
+          Fi_fi_locale_Parliament will debate “%{action}”
         notify_creator_of_threshold_response: |-
-          Government responded to “%{action}”
+          Fi_fi_locale_Government responded to “%{action}”
         notify_creator_that_moderation_is_delayed: |-
           %{subject}
 
         # Emails to people who support a petition
         gather_sponsors_for_petition: |-
-          Action required: Petition “%{action}”
+          Fi_fi_locale_Action required: Petition “%{action}”
         notify_creator_that_petition_is_published: |-
-          We published your petition “%{action}”
+          Fi_fi_locale_We published your petition “%{action}”
         notify_sponsor_that_petition_is_published: |-
-          We published the petition “%{action}” that you supported
+          Fi_fi_locale_We published the petition “%{action}” that you supported
         notify_creator_that_petition_was_rejected: |-
-          We rejected your petition “%{action}”
+          Fi_fi_locale_We rejected your petition “%{action}”
         notify_sponsor_that_petition_was_rejected: |-
-          We rejected the petition “%{action}” that you supported
+          Fi_fi_locale_We rejected the petition “%{action}” that you supported
 
         # Re-send confirmation emails
         special_resend_of_email_confirmation_for_signer: |-
-          Please confirm your email address
+          Fi_fi_locale_Please confirm your email address
         notify_creator_of_closing_date_change: |-
-          We’re closing your petition early
+          Fi_fi_locale_We’re closing your petition early
         notify_creator_of_sponsored_petition_being_stopped: |-
-          We’ve stopped your petition early
+          Fi_fi_locale_We’ve stopped your petition early
         notify_creator_of_validated_petition_being_stopped: |-
-          We’ve stopped your petition early
-      signoff_prefix: "The Petitions team"
+          Fi_fi_locale_We’ve stopped your petition early
+      signoff_prefix: "Fi_fi_locale_The Petitions team"
       signoff_suffix: "Suomen Partiolaiset"
 
     waiting_for_in_words:
-      zero: "Waiting for less than a day"
-      one: "Waiting for 1 day"
-      other: "Waiting for %{formatted_count} days"
+      zero: "Fi_fi_locale_Waiting for less than a day"
+      one: "Fi_fi_locale_Waiting for 1 day"
+      other: "Fi_fi_locale_Waiting for %{formatted_count} days"
 
     scheduled_for_debate_in_words:
-      today: "Scheduled for debate today"
-      tomorrow: "Scheduled for debate tomorrow"
-      other: "Scheduled for debate on %{formatted_date}"
+      today: "Fi_fi_locale_Scheduled for debate today"
+      tomorrow: "Fi_fi_locale_Scheduled for debate tomorrow"
+      other: "Fi_fi_locale_Scheduled for debate on %{formatted_date}"
 
     signature_counts:
       default:
         html:
-          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">signature</span>"
-          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">signatures</span>"
+          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">Fi_fi_locale_signature</span>"
+          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">Fi_fi_locale_signatures</span>"
       trending:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> signature in the last hour"
-          other: "<span class=\"count\">%{formatted_count}</span> signatures in the last hour"
+          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_signature in the last hour"
+          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_signatures in the last hour"
       in_your_constituency:
         html:
-          one: "%{formatted_count} signature from %{constituency}"
-          other: "%{formatted_count} signatures from %{constituency}"
+          one: "%{formatted_count} Fi_fi_locale_signature from %{constituency}"
+          other: "%{formatted_count} Fi_fi_locale_signatures from %{constituency}"
       in_total:
         html:
-          one: "%{formatted_count} signature total"
-          other: "%{formatted_count} signatures total"
+          one: "%{formatted_count} Fi_fi_locale_signature total"
+          other: "%{formatted_count} Fi_fi_locale_signatures total"
 
     counts:
       awaiting_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition is waiting for a response from the Government"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions are waiting for responses from the Government"
+          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petition is waiting for a response from the Government"
+          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petitions are waiting for responses from the Government"
       with_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition got a response from the Government"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions got a response from the Government"
+          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petition got a response from the Government"
+          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petitions got a response from the Government"
       awaiting_debate:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition is waiting to be considered for debate"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions are waiting to be considered for debate"
+          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petition is waiting to be considered for debate"
+          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petitions are waiting to be considered for debate"
       with_debated_outcome:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition was debated in the House of Commons"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions were debated in the House of Commons"
+          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petition was debated in the House of Commons"
+          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_petitions were debated in the House of Commons"
       awaiting_response_explanation:
-        html: "See all petitions waiting for a government response (%{formatted_count})"
+        html: "Fi_fi_locale_See all petitions waiting for a government response (%{formatted_count})"
       with_response_explanation:
-        html: "See all petitions with a government response (%{formatted_count})"
+        html: "Fi_fi_locale_See all petitions with a government response (%{formatted_count})"
       awaiting_debate_explanation:
-        html: "See all petitions waiting for a debate (%{formatted_count})"
+        html: "Fi_fi_locale_See all petitions waiting for a debate (%{formatted_count})"
       debated_explanation:
-        html: "See all petitions debated in parliament (%{formatted_count})"
+        html: "Fi_fi_locale_See all petitions debated in parliament (%{formatted_count})"
       not_debated_explanation:
-        html: "See all petitions not debated in parliament (%{formatted_count})"
+        html: "Fi_fi_locale_See all petitions not debated in parliament (%{formatted_count})"
 
     action_counts:
       in_moderation:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Moderation queue"
+          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Moderation queue"
       awaiting_response:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Government response queue"
+          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Government response queue"
       in_debate_queue:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Debate queue"
+          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Debate queue"
       all:
         html:
-          "<span class=\"count\">%{formatted_count}</span> All petitions"
+          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_All petitions"
 
     debate_outcomes:
       link_titles:
-        video_url: "Watch the debate"
-        transcript_url: "Read the transcript"
-        debate_pack_url: "Read the research"
+        video_url: "Fi_fi_locale_Watch the debate"
+        transcript_url: "Fi_fi_locale_Read the transcript"
+        debate_pack_url: "Fi_fi_locale_Read the research"
 
     pagination:
       previous_html: |-
         <a class="previous" href="%{previous_link}">
-          <span class="paginate-label">Previous</span>
+          <span class="paginate-label">Fi_fi_locale_Previous</span>
           <span class="paginate page-count">%{previous_page} of %{total_pages}</span>
         </a>
       next_html: |-
         <a class="next" href="%{next_link}">
-          <span class="paginate-label">Next</span>
+          <span class="paginate-label">Fi_fi_locale_Next</span>
           <span class="paginate page-count">%{next_page} of %{total_pages}</span>
         </a>
 

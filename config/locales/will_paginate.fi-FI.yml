@@ -1,0 +1,18 @@
+en-GB:
+  will_paginate:
+    previous_label: "&#8592; Fi_fi_locale_Previous"
+    next_label: "Fi_fi_locale_Next &#8594;"
+    page_gap: "&hellip;"
+
+    page_entries_info:
+      single_page:
+        zero:  "Fi_fi_locale_No %{model} found"
+        one:   "Fi_fi_locale_Displaying 1 %{model}"
+        other: "Fi_fi_locale_Displaying all %{count} %{model}"
+      single_page_html:
+        zero:  "Fi_fi_locale_No %{model} found"
+        one:   "Fi_fi_locale_Displaying <b>1</b> %{model}"
+        other: "Fi_fi_locale_Displaying <b>all %{count}</b> %{model}"
+
+      multi_page: "Fi_fi_locale_Displaying %{model} %{from} - %{to} of %{count} in total"
+      multi_page_html: "Fi_fi_locale_Displaying %{model} <b>%{from} - %{to}</b> of <b>%{count}</b> in total"

@@ -4,43 +4,43 @@
 <%= form.hidden_field :background %>
 <%= form.hidden_field :additional_details %>
 
-<h1 class="page-title">Sign your petition</h1>
+<h1 class="page-title">LOCALIZE_Sign your petition</h1>
 <h2 class="page-subtitle"><%= petition.action %></h2>
 
 <%= render "petitions/create/error_summary", form: form %>
 
 <%= form_row for: [petition, :uk_citizenship], class: "uk-citizen" do %>
   <span class="form-label">
-    Only British citizens or UK residents have the right to create and sign petitions
+    LOCALIZE_Only British citizens or UK residents have the right to create and sign petitions
   </span>
   <%= error_messages_for_field petition, :uk_citizenship %>
   <div class="multiple-choice">
     <%= form.check_box :uk_citizenship, tabindex: increment %>
-    <%= form.label :uk_citizenship, "I am a British citizen or UK resident" %>
+    <%= form.label :uk_citizenship, "LOCALIZE_I am a British citizen or UK resident" %>
   </div>
 <% end %>
 
 <%= form_row for: [petition, :name] do %>
-  <%= form.label :name, class: "form-label" %>
+  <%= form.label :name, "LOCALIZE_Name", class: "form-label" %>
   <%= error_messages_for_field petition, :name %>
   <%= form.text_field :name, tabindex: increment, maxlength: 255, size: nil, class: "form-control" %>
-  <span class="form-hint">You must use your full name</span>
+  <span class="form-hint">LOCALIZE_You must use your full name</span>
 <% end %>
 
 <%= form_row for: [petition, :email] do %>
-  <%= form.label :email, "Email address", class: "form-label" %>
+  <%= form.label :email, "LOCALIZE_Email address", class: "form-label" %>
   <%= error_messages_for_field petition, :email %>
   <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
 <% end %>
 
 <%= form_row for: [petition, :location_code] do %>
-  <%= form.label :location_code, "Location", class: "form-label" %>
+  <%= form.label :location_code, "LOCALIZE_Location", class: "form-label" %>
   <%= error_messages_for_field petition, :location_code %>
   <%= form.select :location_code, countries_for_select, {}, tabindex: increment, class: "form-control" %>
 <% end %>
 
 <%= form_row for: [petition, :postcode] do %>
-  <%= form.label :postcode, class: "form-label" %>
+  <%= form.label :postcode,"LOCALIZE_Postcode",  class: "form-label" %>
   <%= error_messages_for_field petition, :postcode %>
   <%= form.text_field :postcode, tabindex: increment, class: "form-control small" %>
 <% end %>
@@ -48,13 +48,13 @@
 <%= form_row for: [petition, :notify_by_email], class: "notify-by-email" do %>
   <div class="multiple-choice">
     <%= form.check_box :notify_by_email, tabindex: increment %>
-    <%= form.label :notify_by_email, "Email me whenever there’s an update about this petition" %>
+    <%= form.label :notify_by_email, "LOCALIZE_Email me whenever there’s an update about this petition" %>
   </div>
 <% end %>
 
-<%= form.submit "Continue", name: "move_next", class: "button", tabindex: increment %>
+<%= form.submit "LOCALIZE_Continue", name: "move_next", class: "button", tabindex: increment %>
 
 <div class="secondary">
-  <p>Your name will be published on this petition as the petition creator.</p>
-  <p>Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition.</p>
+  <p>LOCALIZE_Your name will be published on this petition as the petition creator.</p>
+  <p>LOCALIZE_Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition.</p>
 </div>

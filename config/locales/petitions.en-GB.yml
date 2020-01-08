@@ -1,5 +1,13 @@
 en-GB:
-  petitions:
+  petitions: 
+    start: 
+      title: "Start a petition"
+      petition: "What do you want us to do?"
+      character_limit: "80 characters max"
+      notice: "Just so you know"
+      supporter_requirement:  "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
+      continue: "Continue" 
+
     errors:
       prompt:
         one: "Please fix the following error:"

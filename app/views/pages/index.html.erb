@@ -1,13 +1,11 @@
 <%= cache_for :home_page do %>
   <h1 class="visuallyhidden"><%= t "page_titles.default" %></h1>
 
-  <% if Parliament.dissolved? %>
+  <% if false && Parliament.dissolved? %>
     <%= render 'pages/home/dissolved' %>
-  <% elsif Parliament.dissolution_announced? %>
+  <% elsif false && Parliament.dissolution_announced? %>
     <%= render 'pages/home/dissolution_announced' %>
-  <% elsif Parliament.opened? %>
-    <%= render 'pages/home/opened' %>
   <% else %>
-    <%= render 'pages/home/pending' %>
+    <%= render 'pages/home/opened' %>
   <% end %>
 <% end %>

@@ -1,20 +1,20 @@
-<h1 class="page-title">Start a petition</h1>
+<h1 class="page-title"><%= t "petitions.start.title" %></h1>
 
 <%= render 'parliament_dissolution_warning' %>
 
 <form method="get" action="/petitions/check_results">
   <div class="form-group">
-    <label for="action" class="form-label">What do you want us to do?</label>
+    <label for="action" class="form-label"><%= t "petitions.start.petition" %></label>
     <textarea name="q" id="q" class="form-control" data-max-length="80" rows="3"><%= @new_petition.action %></textarea>
-    <p class="character-count">80 characters max</p>
+    <p class="character-count"><%= t "petitions.start.character_limit" %></p>
     <%= render 'petitions/action_help' %>
   </div>
 
   <section class="create-warning" aria-labelledby="just-so-you-know-heading">
-    <h2 id="just-so-you-know-heading">Just so you know</h2>
+    <h2 id="just-so-you-know-heading"><%= t "petitions.start.notice" %></h2>
     <span aria-hidden="true"><%= Site.minimum_number_of_sponsors %></span>
-    <p>Later on, you'll need email addresses for <%= Site.minimum_number_of_sponsors %> supporters to get your petition started</p>
+    <p><%= t "petitions.response_threshold", threshold: Site.formatted_threshold_for_response %></p>
   </section>
 
-  <input type="submit" value="Continue" class="button" />
+  <input type="submit" value=<%= t "petitions.start.continue" %> class="button" />
 </form>

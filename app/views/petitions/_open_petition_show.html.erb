@@ -40,7 +40,7 @@
       <% else %>
         <span class="label">Deadline</span> <%= short_date_format petition.deadline %>
       <% end %>
-      <% unless Parliament.dissolution_announced? %>
+      <% unless false && Parliament.dissolution_announced? %>
         <span class="note">All petitions run for 6 months</span>
       <% end %>
     </li>
