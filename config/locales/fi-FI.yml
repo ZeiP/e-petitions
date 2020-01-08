@@ -211,3 +211,7 @@ fi-FI:
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  generic:
+    back: Takaisin
+    back_and_make_changes: "Palaa takaisin ja jatka muokkausta"
+    continue: "Jatka" 

@@ -211,3 +211,7 @@ en-GB:
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  generic:
+    back: Back
+    back_and_make_changes: "Go back and make changes"
+    continue: "Continue"

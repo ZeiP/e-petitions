@@ -1,5 +1,5 @@
 <%= link_to check_petitions_path(q: @new_petition.action), class: "back-page" do %>
-  &#9664; Back
+  &#9664; <%= t "generic.back" %>
 <% end %>
 
 <% if petitions = @new_petition.duplicates %>
@@ -29,6 +29,6 @@
   <p>We checked for similar petitions and didn't find any.</p>
   <p>So you can go ahead and create a new one.<br /></p>
 
-  <%= link_to("Continue", new_petition_path(q: @new_petition.action), class: "button") %>
+  <%= link_to(( t "generic.continue" ), new_petition_path(q: @new_petition.action), class: "button") %>
 
 <% end %>

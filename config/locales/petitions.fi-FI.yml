@@ -6,12 +6,11 @@ fi-FI:
       character_limit: "80 kirjainta max"
       notice: "Tiedoksesi"
       supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalle aloitteen luomiseksi."
-      continue: "Jatka" 
 
     errors:
       prompt:
-        one: "Fi_fi_locale_Please fix the following error:"
-        other: "Fi_fi_locale_Please fix the following errors:"
+        one: "Korjaa seuraava virhe:"
+        other: "Korjaa seuraavat virheet:"
 
       invalid_signature_count: "Fi_fi_locale_Petition %{id} had an invalid signature count"
 
@@ -23,15 +22,15 @@ fi-FI:
       all: "Kaikki aloitteet"
       open: "Avoimet aloitteet"
       closed: "Suljetut aloitteet"
-      rejected: "Fi_fi_locale_Rejected petitions"
-      published: "Fi_fi_locale_Published petitions"
-      awaiting_response: "Fi_fi_locale_Petitions waiting for a Government response"
-      with_response: "Fi_fi_locale_Petitions with a Government response"
-      debated: "Fi_fi_locale_Petitions debated in Parliament"
-      not_debated: "Fi_fi_locale_Petitions not debated in Parliament"
-      awaiting_debate: "Fi_fi_locale_Petitions waiting for a debate in Parliament"
+      rejected: "Hylätyt aloitteet"
+      published: "Julkaistut aloitteet"
+      awaiting_response: "Keskusjärjestön vastausta odottavat aloitteet"
+      with_response: "Keskusjärjestön vastaamat aloitteet"
+      debated: "Keskusjärjestön käsittelemät aloitteet"
+      not_debated: "Keskusjärjestön käsittelemättömät aloitteet"
+      awaiting_debate: "Keskusjärjestön käsittelyä odottavat aloitteet"
 
-    share_title: "Fi_fi_locale_Petition: %{petition}"
+    share_title: "Aloite: %{petition}"
 
     ad: "Tee partiolaisaloite!"
     start_prompt: "Perusta aloite"
@@ -46,7 +45,7 @@ fi-FI:
 
     debated_petitions:
       none: "Keskusjärjestö ei ole vielä käsitellyt yhtäkään aloitetta"
-      debated_on: "Fi_fi_locale_This topic was debated on %{date}"
+      debated_on: "Keskusjärjestö käsitteli aloitteen %{date}"
       debate_video: "Fi_fi_locale_Watch the debate on %{url}"
       debate_transscript: "Fi_fi_locale_Read the transcript at %{url}"
       debate_research: "Fi_fi_locale_Read the research at %{url}"
@@ -62,19 +61,19 @@ fi-FI:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
     lists:
-      all: "Fi_fi_locale_All petitions (%{quantity})"
-      open: "Fi_fi_locale_Open petitions (%{quantity})"
-      closed: "Fi_fi_locale_Closed petitions (%{quantity})"
-      published: "Fi_fi_locale_Published petitions (%{quantity})"
-      rejected: "Fi_fi_locale_Rejected petitions (%{quantity})"
-      awaiting_response: "Fi_fi_locale_Awaiting government response (%{quantity})"
-      with_response: "Fi_fi_locale_Government responses (%{quantity})"
-      debated: "Fi_fi_locale_Debated in Parliament (%{quantity})"
-      not_debated: "Fi_fi_locale_Not debated in Parliament (%{quantity})"
-      awaiting_debate: "Fi_fi_locale_Awaiting a debate in Parliament (%{quantity})"
+      all: "Kaikki aloitteet (%{quantity})"
+      open: "Avoimet aloitteet (%{quantity})"
+      closed: "Suljetut aloitteet (%{quantity})"
+      published: "Julkaistut aloitteet (%{quantity})"
+      rejected: "Hylätyt aloitteet (%{quantity})"
+      awaiting_response: "Odottaa keskusjärjestön vastausta (%{quantity})"
+      with_response: "Keskusjärjestön vastaamat (%{quantity})"
+      debated: "Keskusjärjestön käsittelemät (%{quantity})"
+      not_debated: "Keskusjärjestön käsittelemättömät (%{quantity})"
+      awaiting_debate: "Odottaa keskusjärjestön käsittelyä (%{quantity})"
 
     list_headers:
-      not_debated: "Fi_fi_locale_The Petitions Committee decided not to debate these petitions"
+      not_debated: "Keskusjärjestö on päättänyt jättää käsittelemättä nämä aloitteet" #TODO: mitä haetaan?
 
     facets:
       archived:

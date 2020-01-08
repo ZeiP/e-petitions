@@ -41,7 +41,7 @@
 <% end %>
 
 <%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0" %>
-<%= form.submit "Continue", name: "move:next", class: "button", tabindex: increment %>
+<%= form.submit ( t "generic.continue" ), name: "move:next", class: "button", tabindex: increment %>
 
 <section class="secondary">
   <p>We won't publish your personal details anywhere or use them for anything other than this petition.</p>

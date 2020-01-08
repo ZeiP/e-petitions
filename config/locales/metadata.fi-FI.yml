@@ -1,12 +1,12 @@
 fi-FI:
   metadata:
     open_graph:
-      site_name: "Fi_fi_locale_Petitions - UK Government and Parliament"
-      default_title: "Fi_fi_locale_Petitions - UK Government and Parliament"
-      title: "Fi_fi_locale_Petition: %{petition}"
-      archived_title: "Fi_fi_locale_Archived Petition: %{petition}"
+      site_name: "Partiolaisaloitteet"
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"
 
     twitter:
-      default_title: "Fi_fi_locale_Petitions - UK Government and Parliament"
-      title: "Fi_fi_locale_Petition: %{petition}"
-      archived_title: "Fi_fi_locale_Archived Petition: %{petition}"
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"

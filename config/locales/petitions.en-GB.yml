@@ -5,8 +5,7 @@ en-GB:
       petition: "What do you want us to do?"
       character_limit: "80 characters max"
       notice: "Just so you know"
-      supporter_requirement:  "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
-      continue: "Continue" 
+      supporter_requirement: "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
 
     errors:
       prompt:
