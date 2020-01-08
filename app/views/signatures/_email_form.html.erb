@@ -1,17 +1,18 @@
-<h1 class="page-title">Make sure this is right</h1>
+<h1 class="page-title">LOCALIZE_Make sure this is right</h1>
 
 <%= form.hidden_field :name %>
+<%#rename uk_citizenship%>
 <%= form.hidden_field :uk_citizenship %>
 <%= form.hidden_field :postcode %>
 <%= form.hidden_field :location_code %>
 <%= form.hidden_field :notify_by_email %>
 
 <%= form_row for: [signature, :email] do %>
-  <%= form.label :email, "Email address", class: "form-label visuallyhidden" %>
+  <%= form.label :email, "LOCALIZE_Email address", class: "form-label visuallyhidden" %>
   <%= error_messages_for_field signature, :email %>
   <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
 <% end %>
 
-<%= form.submit "Yes – this is my email address", class: "button", tabindex: increment %>
+<%= form.submit "LOCALIZE_Yes – this is my email address", class: "button", tabindex: increment %>
 
-<p>If your email address is wrong, just change it above</p>
+<p>LOCALIZE_If your email address is wrong, just change it above</p>

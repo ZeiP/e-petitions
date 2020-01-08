@@ -13,7 +13,7 @@
   <section class="create-warning" aria-labelledby="just-so-you-know-heading">
     <h2 id="just-so-you-know-heading"><%= t "petitions.start.notice" %></h2>
     <span aria-hidden="true"><%= Site.minimum_number_of_sponsors %></span>
-    <p><%= t "petitions.response_threshold", threshold: Site.formatted_threshold_for_response %></p>
+    <p><%= t "petitions.start.supporter_requirement", threshold: Site.minimum_number_of_sponsors %></p>
   </section>
 
   <input type="submit" value=<%= t "generic.continue" %> class="button" />

@@ -1,3 +1,4 @@
+<%#TODO: localise emails%>
 <p>Click this link to sign the petition “<%= @petition.action %>”</p>
 
 <p><%= link_to nil, verify_sponsor_url(@sponsor, token: @sponsor.perishable_token) %></p>
