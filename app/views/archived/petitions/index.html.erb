@@ -11,14 +11,14 @@
         <% archived_parliaments.each do |parliament| %>
           <li><%= link_to "#{parliament.period} #{parliament.government} government", archived_petitions_path(parliament: parliament, state: "published") %></li>
         <% end %>
-        <li><%= link_to "LOCALIZE_Back to current petitions", petitions_path(state: "open") %></li>
+        <li><%= link_to (t "petitions.back_to_current"), petitions_path(state: "open") %></li>
       </ul>
     </div>
   </details>
 </div>
 
 <details class="lists-of-petitions">
-  <summary><span class="summary">LOCALIZE_Other lists of petitions</span></summary>
+  <summary><span class="summary"><%= t "petitions.list_of_petitions" %></span></summary>
   <div>
     <ul>
     <% archived_petition_facets_with_counts(@petitions).each do |facet, count| %>
@@ -47,7 +47,7 @@
 
 <div class="search-results section-panel">
   <% if @petitions.empty? %>
-    <p>LOCALIZE_No archived petitions could be found matching your search terms</p>
+    <p><%= t "petitions.no_archived_found" %></p>
   <% else %>
     <ol>
       <% @petitions.each do |petition| %>
@@ -62,7 +62,7 @@
 </div>
 
 <nav id="other-search-lists" role="navigation" aria-labelledby="other-lists-heading">
-  <h2 id="other-lists-heading">LOCALIZE_Other lists of petitions</h2>
+  <h2 id="other-lists-heading"><%= t "petitions.list_of_petitions" %></h2>
   <div class="section-panel">
     <ul>
     <% archived_petition_facets_with_counts(@petitions).each do |facet, count| %>
@@ -74,5 +74,5 @@
     <% end %>
     </ul>
   </div>
-  <%= link_to 'LOCALIZE_Current petitions', petitions_path(state: "open") %>
+  <%= link_to (t "petitions.current"), petitions_path(state: "open") %>
 </nav>

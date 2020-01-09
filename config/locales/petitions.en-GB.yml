@@ -17,6 +17,20 @@ en-GB:
     view_all: "View all open petitions"
     popular_title: "Popular petitions"
     search_title: "Search petitions"
+    current: "Current petitions"
+    back_to_current: "Back to current petitions"
+    no_archived_found: "No archived petitions could be found matching your search terms"
+    list_of_petitions: "Other lists of petitions"
+
+    about:
+      summary: "About petition data"
+      content: |- #TODO: does this work?
+        "The data shows the number of people who have signed the petition
+        by country as well as in the constituency of each Member of Parliament.
+        This data is available for all petitions on the site. It is not a
+        list of people who have signed the petition. The only name
+        that is shared on the site is that of the petition creator."
+
 
     page_titles:
       all: "All petitions"
@@ -57,6 +71,7 @@ en-GB:
         html: <span class="icon icon-share-email"></span> Email
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
+        twitter_card_desc: "Fi_fi_locale_Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 

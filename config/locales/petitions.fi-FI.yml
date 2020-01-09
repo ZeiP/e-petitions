@@ -17,6 +17,19 @@ fi-FI:
     view_all: "Näytä kaikki aloitteet"
     popular_title: "Suositut aloitteet"
     search_title: "Hae aloitetta"
+    current: "Fi_fi_locale_Current petitions"
+    back_to_current: "Fi_fi_locale_Back to current petitions"
+    no_archived_found: "Fi_fi_locale_No archived petitions could be found matching your search terms"
+    list_of_petitions: "Fi_fi_locale_Other lists of petitions"
+
+    about:
+      summary: "Fi_fi_locale_About petition data"
+      content: |- #TODO: does this work?
+        "Fi_fi_locale_The data shows the number of people who have signed the petition
+        by country as well as in the constituency of each Member of Parliament.
+        This data is available for all petitions on the site. It is not a
+        list of people who have signed the petition. The only name
+        that is shared on the site is that of the petition creator."
 
     page_titles:
       all: "Kaikki aloitteet"
@@ -57,6 +70,7 @@ fi-FI:
         html: <span class="icon icon-share-email"></span> Sähköposti
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
+        twitter_card_desc: "Fi_fi_locale_Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 

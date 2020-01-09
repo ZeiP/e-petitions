@@ -1,0 +1,18 @@
+---
+fi-FI:
+  feedback:
+    page_title: "Palaute ja yhteystiedot"
+    petition_link/title: "Aloitteen otsikko tai linkki"
+    reply_wanted_question: "Haluatko vastauksen"
+    send: "Lähetä palaute"
+    terms:
+      email_only_reply: "Vastaamme sinulle ainostaan antamasi sähköpostin kautta"
+      no_forwarding: "Fi_fi_locale_We can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition"
+    contact: "Yhteystiedot"
+    email:
+      help: "Fi_fi_locale_They can help you to understand how Parliament handles petitions. They can also help with some technical problems using this service. They can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+    phone:
+      info: "Fi_fi_locale_Phone calls are handled by the House of Commons Enquiry Service."
+      help: "Fi_fi_locale_They can help you to understand how Parliament handles petitions. They can’t help with any technical problems with this service, forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+      number: "Fi_fi_locale_123 456 6789 0"
+      reception_times: "Fi_fi_locale_Monday to Friday, 10am&ndash;12pm and 2pm&ndash;4pm"

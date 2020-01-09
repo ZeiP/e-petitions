@@ -1,0 +1,15 @@
+---
+en-GB:
+  feedback:
+    page_title: "Feedback and contact"
+    petition_link/title: "Petition title/link" 
+    reply_wanted_question: "Do you want a reply?"
+    send: "Send feedback"
+    terms.email_only_reply: "We'll only use your email to reply to your message"
+    terms.no_forwarding: "We can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition"
+    contact: "Contact"
+    email.help: "They can help you to understand how Parliament handles petitions. They can also help with some technical problems using this service. They can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+    phone.info: "Phone calls are handled by the House of Commons Enquiry Service."
+    phone.help: "They can help you to understand how Parliament handles petitions. They can’t help with any technical problems with this service, forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+    phone.number: "123 456 6789 0"
+    phone.reception_times: "Monday to Friday, 10am&ndash;12pm and 2pm&ndash;4pm"

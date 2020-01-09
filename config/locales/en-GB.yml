@@ -215,3 +215,10 @@ en-GB:
     back: Back
     back_and_make_changes: "Go back and make changes"
     continue: "Continue"
+    postcode: "UK postcode"
+    feedback: "Feedback"
+    comments: "Comments"
+    optional: "optional"
+    email_address: "Email address"
+    email: "Email"
+    phone: "Phone"

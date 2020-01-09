@@ -215,3 +215,10 @@ fi-FI:
     back: Takaisin
     back_and_make_changes: "Palaa takaisin ja jatka muokkausta"
     continue: "Jatka" 
+    postcode: "Postinumero"
+    feedback: "Palaute"
+    comments: "Kommentit"
+    optional: "valinnainen"
+    email_address: "Sähköpostiosoite"
+    email: "Sähköposti"
+    phone: "Puhelin"
