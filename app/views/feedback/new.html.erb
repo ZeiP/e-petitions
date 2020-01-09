@@ -42,11 +42,11 @@
 
 <h3><%= t "generic.email"%></h3>
 
-<p>LOCALIZE_You can email the <%= link_to 'Petitions Committee', help_url(anchor: 'petitions-committee') %> directly.</p>
+<p><%= t "feedback.email.direction_html", href:(link_to (t "feedback.email.recipient"), help_url(anchor: 'petitions-committee'))%></p>
 
 <p><%= t "feedback.email.help"%></p>
 
-<p><%= t "generic.email"%>: <a href="mailto:petitionscommittee@parliament.uk">petitionscommittee@parliament.uk</a></p>
+<p><%= t "generic.email"%>: <a href="mailto:petitionscommittee@parliament.uk"><%= t "feedback.email.address"%></a></p>
 
 <h3><%= t "generic.phone"%></h3>
 

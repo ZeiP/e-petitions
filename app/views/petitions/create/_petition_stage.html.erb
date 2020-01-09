@@ -4,7 +4,7 @@
 
 <h1 class="page-title"><%= t "petitions.start.title" %></h1>
 
-<p class="form-hint petition-standards">LOCALIZE_Remember, your petition must meet the <%= link_to "petition standards", help_url(anchor: "standards") %>.</p>
+<p class="form-hint petition-standards"><%= t "petitions.start.read_standards"%> <%= link_to (t "petitions.start.standards"), help_url(anchor: "standards") %>.</p>
 
 <%= render "petitions/create/error_summary", form: form %>
 
@@ -12,32 +12,32 @@
   <%= form.label :action, (t "petitions.start.petition") , class: "form-label" %>
   <%= error_messages_for_field petition, :action %>
   <%= form.text_area :action, tabindex: increment, rows: 3, data: { max_length: 80 }, class: "form-control" %>
-  <p class="character-count"><%= t "petitions.start.character_limit" %></p>
+  <p class="character-count"><%= t "generic.character_limit" %></p>
   <%= render "petitions/action_help" %>
 <% end %>
 
 <%= form_row for: [petition, :background] do %>
-  <%= form.label :background, "LOCALIZE_Background", class: "form-label" %>
+  <%= form.label :background, (t "petitions.start.background"), class: "form-label" %>
   <%= error_messages_for_field petition, :background %>
   <%= form.text_area :background, tabindex: increment, rows: 5, data: { max_length: 300 }, class: "form-control" %>
-  <p class="character-count">LOCALIZE_300 characters max</p>
+  <p class="character-count"><%= t "generic.character_limit", limit:300 %></p>
   <details class="form-group-help">
-    <summary><span class="summary">LOCALIZE_Help writing background</span></summary>
+    <summary><span class="summary"><%= t "petitions.start.background_help"%></span></summary>
     <div class="panel-indent">
-      <p>LOCALIZE_Use this section to back up why you want action. Some people include a personal story here.</p>
-      <p>LOCALIZE_Remember that people won’t always know that much about the issue you’re petitioning about - explain it.</p>
+      <p><%= t "petitions.start.background_help_explanation"%></p>
+      <p><%= t "petitions.start.background_help_reminder"%></p>
     </div>
   </details>
 <% end %>
 
 <%= form_row for: [petition, :additional_details] do %>
   <%= form.label :additional_details, class: "form-label" do %>
-    LOCALIZE_Additional details
-    <span class="form-hint">LOCALIZE_Optional - background information, evidence and references</span>
+    <%= t "petitions.start.additional_details"%>
+    <span class="form-hint"><%= t "petitions.start.optional_details"%></span>
   <% end %>
   <%= error_messages_for_field petition, :additional_details %>
   <%= form.text_area :additional_details, tabindex: increment, rows: 7, data: { max_length: 500 }, class: "form-control" %>
-  <p class="character-count">LOCALIZE_500 characters max</p>
+  <p class="character-count"><%= t "generic.character_limit", limit:500 %></p>
 <% end %>
 
-<%= form.submit "LOCALIZE_Preview petition", name: "move_next", class: "button", tabindex: increment %>
+<%= form.submit (t "petitions.start.preview_petition"), name: "move_next", class: "button", tabindex: increment %>

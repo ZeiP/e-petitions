@@ -1,6 +1,6 @@
 <div class="search-results section-panel">
   <% if @petitions.empty? %>
-    <p>No petitions could be found matching your search terms.</p>
+    <p><%= t "petitions.no_archived_found"%></p>
   <% else %>
     <ol>
       <% @petitions.each do |petition| %>
@@ -10,6 +10,6 @@
       <% end -%>
     </ol>
     <%= render 'paginated_results' %>
-    <p>Get this data in <%= link_to "JSON", petitions_path(:json, params.permit(:q, :page, :state)) %> or <%= link_to 'CSV', petitions_path(:csv, params.permit(:q, :state)) %> format</p>
+    <p><%= t "petitions.get_data_html", json: (link_to "JSON", petitions_path(:json, params.permit(:q, :page, :state))), csv: (link_to 'CSV', petitions_path(:csv, params.permit(:q, :state))) %></p>
   <% end %>
 </div>

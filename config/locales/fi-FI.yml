@@ -222,3 +222,4 @@ fi-FI:
     email_address: "Sähköpostiosoite"
     email: "Sähköposti"
     phone: "Puhelin"
+    character_limit: "{%limit} kirjainta max"

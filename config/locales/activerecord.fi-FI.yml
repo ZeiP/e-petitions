@@ -1,0 +1,123 @@
+fi-FI:
+  activemodel:
+    errors:
+      models:
+        feedback:
+          attributes:
+            comment:
+              blank: "Fi_fi_locale_Comment must be completed"
+            email:
+              invalid: "Fi_fi_locale_Email not recognised."
+
+  activerecord:
+    errors:
+      models:
+        admin_user:
+          attributes:
+            current_password:
+              invalid: "Fi_fi_locale_Current password is incorrect"
+            password:
+              invalid: "Fi_fi_locale_Password must contain at least one digit, a lower and upper case letter and a special character"
+              taken: "Fi_fi_locale_Password is the same as the current password"
+            password_confirmation:
+              confirmation: "Fi_fi_locale_Password confirmation doesn't match password"
+            role:
+              inclusion: "Fi_fi_locale_Role '%{value}' is invalid"
+
+        archived/debate_outcome:
+          attributes:
+            commons_image:
+              too_narrow: "Fi_fi_locale_Width must be at least %{min_width}px (is %{width}px)"
+              too_short: "Fi_fi_locale_Height must be at least %{min_height}px (is %{height}px)"
+              incorrect_ratio: "Fi_fi_locale_Width and height ratio of uploaded image is %{ratio} - should be between %{min_ratio} and %{max_ratio}"
+
+        archived/petition:
+          attributes:
+            parliament:
+              required: "Fi_fi_locale_Parliament can't be blank"
+            tags:
+              invalid: "Fi_fi_locale_The submitted tags were invalid - please reselect and try again"
+
+        domain:
+          attributes:
+            aliased_domain:
+              not_found: "Fi_fi_locale_The aliased domain was not found - please check the spelling and try again"
+
+        petition:
+          attributes:
+            moderation:
+              blank: "Fi_fi_locale_You must choose to approve, reject or flag"
+            creator_signature:
+              blank: "Fi_fi_locale_ %{attribute} must be completed"
+            state:
+              inclusion: "Fi_fi_locale_State '%{value}' not recognised"
+            tags:
+              invalid: "Fi_fi_locale_The submitted tags were invalid - please reselect and try again"
+
+        signature:
+          attributes:
+            state:
+              inclusion: "Fi_fi_locale_State '%{value}' not recognised"
+            name:
+              already_signed: "Fi_fi_locale_ %{name} has already signed this petition using %{email}"
+
+        sponsor:
+          attributes:
+            petition:
+              blank: "Fi_fi_locale_Needs a petition"
+
+        debate_outcome:
+          attributes:
+            commons_image:
+              too_narrow: "Fi_fi_locale_Width must be at least %{min_width}px (is %{width}px)"
+              too_short: "Fi_fi_locale_Height must be at least %{min_height}px (is %{height}px)"
+              incorrect_ratio: "Fi_fi_locale_Width and height ratio of uploaded image is %{ratio} - should be between %{min_ratio} and %{max_ratio}"
+
+        rate_limit:
+          attributes:
+            allowed_domains:
+              invalid: "Fi_fi_locale_Allowed domains list is invalid"
+            blocked_domains:
+              invalid: "Fi_fi_locale_Blocked domains list is invalid"
+            allowed_ips:
+              invalid: "Fi_fi_locale_Allowed IPs list is invalid"
+            blocked_ips:
+              invalid: "Fi_fi_locale_Blocked IPs list is invalid"
+            ignored_domains:
+              invalid: "Fi_fi_locale_Ignored domains list is invalid"
+
+        tag:
+          attributes:
+            name:
+              taken: "Fi_fi_locale_Tag already exists"
+              too_long:
+                one: "Fi_fi_locale_Tag is too long (maximum is 1 character)"
+                other: "Fi_fi_locale_Tag is too long (maximum is %{count} characters)"
+
+  errors:
+    attributes:
+      email:
+        blank: "Fi_fi_locale_Email must be completed"
+        invalid: "Fi_fi_locale_Email '%{value}' not recognised"
+        plus_address: "Fi_fi_locale_You can’t use ‘plus addressing’ in your email address"
+      creator:
+        blank: "Fi_fi_locale_Creator must be completed"
+      action: 
+        blank: "Fi_fi_locale_Action must be completed"
+        too_long: "Fi_fi_locale_Action is too long"
+      background:
+        blank: "Fi_fi_locale_Background must be completed"
+        too_long: "Fi_fi_locale_Background is too long"
+      additional_details:
+        too_long: "Fi_fi_locale_Additional details is too long"
+      comment:
+        blank: "Fi_fi_locale_Comments must be completed"
+      name:
+        blank: "Fi_fi_locale_Name must be completed"
+      location_code:
+        blank: "Fi_fi_locale_Location must be completed"
+      postcode:
+        blank: "Fi_fi_locale_Postcode must be completed"
+        invalid: "Fi_fi_locale_Postcode not recognised"
+      uk_citizenship:
+        accepted: "Fi_fi_locale_You must be a British citizen or normally live in the UK to create or sign petitions"

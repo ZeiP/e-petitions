@@ -1,5 +1,5 @@
 <nav id="other-search-lists" role="navigation" aria-labelledby="other-lists-heading">
-  <h2 id="other-lists-heading">LOCALIZE_Other lists of petitions</h2>
+  <h2 id="other-lists-heading"><%= t "petitions.list_of_petitions"%></h2>
   <div class="section-panel">
     <ul>
     <% public_petition_facets_with_counts(@petitions).each do |facet, count| %>
@@ -11,5 +11,5 @@
     <% end %>
     </ul>
   </div>
-  <%= link_to 'Archived petitions', archived_petitions_path(state: "published") %>
+  <%= link_to (t "petitions.archived_petitions"), archived_petitions_path(state: "published") %>
 </nav>

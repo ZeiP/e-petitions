@@ -3,7 +3,7 @@
 <% when "open" %>
   <p><%= signature_count(:default, petition.signature_count) %></p>
 <% when "closed" %>
-  <p><%= signature_count(:default, petition.signature_count) %>, now closed</p>
+  <p><%= signature_count(:default, petition.signature_count) %>, LOCALIZE_now closed</p>
 <% when "rejected" %>
-  <p>Rejected</p>
+  <p>LOCALIZE_Rejected</p>
 <% end %>

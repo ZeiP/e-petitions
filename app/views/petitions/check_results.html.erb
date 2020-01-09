@@ -4,10 +4,10 @@
 
 <% if petitions = @new_petition.duplicates %>
 
-  <h1 class="page-title">LOCALIZE_We found some similar petitions</h1>
-  <p>LOCALIZE_If one of these petitions matches yours, sign it and share it instead</p>
-  <p>LOCALIZE_Your petition is more likely to get to <%= Site.formatted_threshold_for_response %> and <%= Site.formatted_threshold_for_debate %> signatures that way.</p>
-  <%= render 'notification', message: "LOCALIZE_If there’s already a petition on the same topic, your petition is likely to be rejected" %>
+  <h1 class="page-title"><%= t "petitions.check.title_duplicates"%></h1>
+  <p><%= t "petitions.check.help"%></p>
+  <p><%= t "petitions.check.help", treshold_response: Site.formatted_threshold_for_response, treshold_debate: Site.formatted_threshold_for_debate %></p>
+  <%= render 'notification', message: (t "petitions.check.duplicate_notification") %>
 
   <% petitions.each do |petition| %>
     <ul>
@@ -21,13 +21,13 @@
     </ul>
   <% end %>
 
-  <%= link_to("LOCALIZE_My petition is different", new_petition_path(q: @new_petition.action), class: "button") %>
+  <%= link_to((t "petitions.check.duplicate_continue"), new_petition_path(q: @new_petition.action), class: "button") %>
 
 <% else %>
 
-  <h1 class="page-title">LOCALIZE_We checked for similar petitions</h1>
-  <p>LOCALIZE_We checked for similar petitions and didn't find any.</p>
-  <p>LOCALIZE_So you can go ahead and create a new one.<br /></p>
+  <h1 class="page-title"><%= t "petitions.check.title"%></h1>
+  <p><%= t "petitions.check.no_duplicates"%></p>
+  <p><%= t "petitions.check.no_duplicates_go_ahead"%><br /></p>
 
   <%= link_to(( t "generic.continue" ), new_petition_path(q: @new_petition.action), class: "button") %>
 

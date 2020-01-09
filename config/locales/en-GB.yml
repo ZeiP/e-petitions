@@ -222,3 +222,4 @@ en-GB:
     email_address: "Email address"
     email: "Email"
     phone: "Phone"
+    character_limit: "%{limit} characters max"

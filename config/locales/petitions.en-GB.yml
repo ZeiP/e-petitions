@@ -3,9 +3,17 @@ en-GB:
     start: 
       title: "Start a petition"
       petition: "What do you want us to do?"
-      character_limit: "80 characters max"
       notice: "Just so you know"
       supporter_requirement: "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
+      read_standards: "Remember, your petition must meet the"
+      standards: "petition standards"
+      background: "Background"
+      background_help: "Help writing background"
+      background_help_explanation: "Use this section to back up why you want action. Some people include a personal story here."
+      background_help_reminder: "Remember that people won’t always know that much about the issue you’re petitioning about - explain it."
+      additional_details: "Additional details"
+      optional_details: "Optional - background information, evidence and references"
+      preview_petition: "Preview petition"
 
     errors:
       prompt:
@@ -21,6 +29,8 @@ en-GB:
     back_to_current: "Back to current petitions"
     no_archived_found: "No archived petitions could be found matching your search terms"
     list_of_petitions: "Other lists of petitions"
+    archived_petitions: "Archived petitions"
+    get_data_html: "Get this data in %{json} or %{csv} formats"
 
     about:
       summary: "About petition data"
@@ -30,7 +40,35 @@ en-GB:
         This data is available for all petitions on the site. It is not a
         list of people who have signed the petition. The only name
         that is shared on the site is that of the petition creator."
+  
+    check:
+      title: "We checked for similar petitions"
+      title_duplicates: "We found some similar petitions"
+      help: "If one of these petitions matches yours, sign it and share it instead"
+      help: "Your petition is more likely to get to %{treshold_response} and %{treshold_debate} signatures that way."
+      duplicate_notification: "If there’s already a petition on the same topic, your petition is likely to be rejected"
+      duplicate_continue: "My petition is different"
+      no_duplicates: "We checked for similar petitions and didn't find any."
+      no_duplicates_go_ahead: "So you can go ahead and create a new one."
+    
+    example:
+      main: "Example: Make wrongly describing a casserole with a pastry lid as a pie a criminal offence"
+      show_more: "Show more examples"
+      good: "Good examples:"
+      good_1: "Introduce Black History to the primary curriculum"
+      good_2: "Lower the voting age to 16"
+      bad: "Bad examples:"
+      bad_1: "Russia Problem on US ruling"
+      bad_2: "Justice for David Thomas"
+      explanation: "Good petitions say clearly what they want government or parliament to do."
 
+    finalize:
+      title: "Check your petition"
+      more_details: "More details"
+      continue: "This looks good"
+      warning_no_changes: "You can’t change your petition after this point."
+      warning_personal_info: "If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published."
+      warning_no_removal: "Published petitions can only be removed from the site with the agreement of the House of Commons Petitions Committee."
 
     page_titles:
       all: "All petitions"

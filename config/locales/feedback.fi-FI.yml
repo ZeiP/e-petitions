@@ -10,6 +10,9 @@ fi-FI:
       no_forwarding: "Fi_fi_locale_We can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition"
     contact: "Yhteystiedot"
     email:
+      direction_html: "Fi_fi_locale_Get this data in %{href} or formats"
+      recipient: "Fi_fi_locale_EMAIL_RECIPIENT"
+      address: "Fi_fi_locale_email@email.email"
       help: "Fi_fi_locale_They can help you to understand how Parliament handles petitions. They can also help with some technical problems using this service. They can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
     phone:
       info: "Fi_fi_locale_Phone calls are handled by the House of Commons Enquiry Service."
