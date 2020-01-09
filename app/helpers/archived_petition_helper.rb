@@ -26,6 +26,7 @@ module ArchivedPetitionHelper
   def petition_duration_to_words(duration)
     duration = duration.to_d
 
+    #TODO: Kill pluralize
     if duration.frac.zero?
       pluralize(duration.floor, "month", locale: :en)
     elsif duration.frac > 0.75

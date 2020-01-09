@@ -17,8 +17,9 @@ module SearchHelper
 
   def filtered_petition_count(petitions)
     total_entries = petitions.total_entries
-    noun = petitions.search? ? "LOCALIZE_result" : "LOCALIZE_petition"
-    "#{number_with_delimiter(total_entries)} #{noun.pluralize(total_entries)}"
+    noun = petitions.search? ? "petitions.search.result" : "petitions.search.petition"
+    pluralized_noun = noun + (total_entries == 1 ? ".one" : ".other")
+    "#{number_with_delimiter(total_entries)} #{t pluralized_noun}"
   end
 
   def petition_result_path(petition, options = {})

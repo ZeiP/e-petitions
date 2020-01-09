@@ -15,6 +15,14 @@ en-GB:
       optional_details: "Optional - background information, evidence and references"
       preview_petition: "Preview petition"
 
+    search:
+      result:
+        one: "result"
+        other: "results"
+      petition: 
+        one: "petition"
+        other: "petitions"
+
     errors:
       prompt:
         one: "Please fix the following error:"

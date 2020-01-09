@@ -15,6 +15,14 @@ fi-FI:
       optional_details: "Fi_fi_locale_Optional - background information, evidence and references"
       preview_petition: "Fi_fi_locale_Preview petition"
 
+    search:
+      result:
+        one: "tulos"
+        other: "tulosta"
+      petition: 
+        one: "aloite"
+        other: "aloitetta"
+
     errors:
       prompt:
         one: "Korjaa seuraava virhe:"
