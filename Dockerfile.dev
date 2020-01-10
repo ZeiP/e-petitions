@@ -3,7 +3,7 @@ FROM ruby:2.3-slim
 RUN gem install bundler
 
 RUN apt-get update && apt-get install -y \
-     build-essential \
+     build-essential git \
      locales nodejs \
      libpq-dev wget lsb-release
 
