@@ -57,4 +57,6 @@ Rails.application.configure do
     allow_localhost: true,
     allow: 'chromedriver.storage.googleapis.com'
   )
+
+  DatabaseCleaner.url_whitelist = ['postgres://postgres@sqldb']
 end
