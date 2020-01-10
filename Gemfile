@@ -54,7 +54,7 @@ group :test do
   gem 'pickle'
   gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
+  gem 'database_cleaner', git: 'https://github.com/DatabaseCleaner/database_cleaner'
   gem 'capybara', '~> 3.13.2'
   gem 'factory_bot_rails'
   gem 'email_spec'
