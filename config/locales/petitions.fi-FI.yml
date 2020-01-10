@@ -33,15 +33,15 @@ fi-FI:
     view_all: "Näytä kaikki aloitteet"
     popular_title: "Suositut aloitteet"
     search_title: "Hae aloitetta"
-    current: "Fi_fi_locale_Current petitions"
-    back_to_current: "Fi_fi_locale_Back to current petitions"
-    no_archived_found: "Fi_fi_locale_No archived petitions could be found matching your search terms"
-    list_of_petitions: "Fi_fi_locale_Other lists of petitions"
+    current: "Nykyiset aloitteet"
+    back_to_current: "Takaisin nykyisiin aloitteisiin"
+    no_archived_found: "Hakusanoihin sopivia arkistoituja aloitteita ei löytynyt"
+    list_of_petitions: "Muita aloitelistauksia"
     archived_petitions: "Arkistoidut aloitteet"
     get_data_html: "Lataa tiedot %{json}- tai %{csv}-formaatissa"
 
     about:
-      summary: "Fi_fi_locale_About petition data"
+      summary: "Aloitteen tiedoista"
       content: |- #TODO: does this work?
         "Fi_fi_locale_The data shows the number of people who have signed the petition
         by country as well as in the constituency of each Member of Parliament.
@@ -50,13 +50,13 @@ fi-FI:
         that is shared on the site is that of the petition creator."
 
     check:
-      title: "Tarkistimme samankaltaisten aloitteiden varalta"
+      title: "Emme löytäneet samankaltaisia aloitteita"
       title_duplicates: "Löysimme joitakin samankaltaisia aloitteita"
       help: "Jos jokin näistä aloitteista vastaa omaasi, allekirjoita ja jaa se uuden aloitteen luomisen sijaan"
       help_reason: "On todennäköisempää että aloitteesi saa %{treshold_response} ja %{treshold_debate} allekirjoitusta tällä tavalla."
       duplicate_notification: "Jos aiheesta on jo aloite, on todennäköistä että aloitteesi hylätään"
       duplicate_continue: "Minun aloitteeni on erillainen"
-      no_duplicates: "Tarkistimme samankaltaisten aloitteiden varalta, eikä niitä löytynyt."
+      no_duplicates: "Tarkistimme aloitteet samankaltaisten aloitteiden varalta, eikä niitä löytynyt."
       no_duplicates_go_ahead: "Joten voit jatkaa ja luoda uuden aloitteen."
 
     example:
@@ -85,11 +85,19 @@ fi-FI:
       title_sponsor: "Allekirjoita aloite partiolaiselta %{creator}"
       criteria: "Partiolaisaloitteen voi tehdä vain jäsenmaksun maksanut partiolainen"
       criteria_confirm: "Olen jäsenmaksun maksanut partiolainen"
-      full_name_required: "Sinun täytyy käyttää kokonimeäsi"
+      full_name_required: "Sinun täytyy käyttää koko nimeäsi"
       email_updates: "Lähetä minulle sähköpostitse ilmoituksia aloitteesta"
-      name_visible: "Kokonimesi julkaistaan aloitteen yhteydessä aloitteen luojana."
+      name_visible: "Koko nimesi julkaistaan aloitteen yhteydessä aloitteen luojana."
       other_hidden: "Nimesi lisäksi emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
       all_hidden: "Emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
+      heading: "Aloite"
+      additional_details: "Lisää tietoa"
+      sign_this: "Allekirjoita aloite"
+      creator: "Aloitteen luoja"
+      deadline: "Määräaika"
+      time: "Kaikki aloitteet kestävät 6 kuukautta"
+      get_data: "Lataa aloitteen tiedot (json-formaatti)"
+
 
     page_titles:
       all: "Kaikki aloitteet"
@@ -124,6 +132,7 @@ fi-FI:
       debate_research: "Fi_fi_locale_Read the research at %{url}"
 
     sharing:
+      share_this: "Jaa tämä aloite"
       facebook:
         html: <span class="icon icon-share-facebook"></span> Facebook
       email:
@@ -298,12 +307,12 @@ fi-FI:
     signature_counts:
       default:
         html:
-          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">Fi_fi_locale_signature</span>"
-          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">Fi_fi_locale_signatures</span>"
+          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">allekirjoitus</span>"
+          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">allekirjoitusta</span>"
       trending:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_signature in the last hour"
-          other: "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_signatures in the last hour"
+          one: "<span class=\"count\">%{formatted_count}</span> allekirjoitus tunnin sisällä"
+          other: "<span class=\"count\">%{formatted_count}</span> allekirjoitusta tunnin sisällä"
       in_your_constituency:
         html:
           one: "%{formatted_count} Fi_fi_locale_signature from %{constituency}"

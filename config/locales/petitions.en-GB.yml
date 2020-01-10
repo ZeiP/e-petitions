@@ -90,6 +90,13 @@ en-GB:
       name_visible: "Your name will be published on this petition as the petition creator."
       other_hidden: "Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition."
       all_hidden: "We won't publish your personal details anywhere or use them for anything other than this petition."
+      heading: "Petition"
+      additional_details: "More details"
+      sign_this: "Sign this petition"
+      creator: "Created by"
+      deadline: "Deadline"
+      time: "All petitions run for 6 months"
+      get_data: "Get petition data (json format)"
 
     page_titles:
       all: "All petitions"
@@ -124,6 +131,7 @@ en-GB:
       debate_research: "Read the research at %{url}"
 
     sharing:
+      share_this: "Share this"
       facebook:
         html: <span class="icon icon-share-facebook"></span> Facebook
       email:

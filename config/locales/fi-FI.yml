@@ -2,53 +2,53 @@
 fi-FI:
   date:
     abbr_day_names:
-    - Fi_fi_locale_Sun
-    - Fi_fi_locale_Mon
-    - Fi_fi_locale_Tue
-    - Fi_fi_locale_Wed
-    - Fi_fi_locale_Thu
-    - Fi_fi_locale_Fri
-    - Fi_fi_locale_Sat
+    - su
+    - ma
+    - ti
+    - ke
+    - to
+    - pe
+    - la
     abbr_month_names:
     -
-    - Fi_fi_locale_Jan
-    - Fi_fi_locale_Feb
-    - Fi_fi_locale_Mar
-    - Fi_fi_locale_Apr
-    - Fi_fi_locale_May
-    - Fi_fi_locale_Jun
-    - Fi_fi_locale_Jul
-    - Fi_fi_locale_Aug
-    - Fi_fi_locale_Sep
-    - Fi_fi_locale_Oct
-    - Fi_fi_locale_Nov
-    - Fi_fi_locale_Dec
+    - tam
+    - hel
+    - maa
+    - huu
+    - tou
+    - kesä
+    - hei
+    - elo
+    - syys
+    - lok
+    - mar
+    - jou
     day_names:
-    - Fi_fi_locale_Sunday
-    - Fi_fi_locale_Monday
-    - Fi_fi_locale_Tuesday
-    - Fi_fi_locale_Wednesday
-    - Fi_fi_locale_Thursday
-    - Fi_fi_locale_Friday
-    - Fi_fi_locale_Saturday
+    - sunnuntai
+    - maanantai
+    - tiistai
+    - keskiviikko
+    - torstai
+    - perjantai
+    - lauantai
     formats:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
       short: "%d %b"
     month_names:
     -
-    - Fi_fi_locale_January
-    - Fi_fi_locale_February
-    - Fi_fi_locale_March
-    - Fi_fi_locale_April
-    - Fi_fi_locale_May
-    - Fi_fi_locale_June
-    - Fi_fi_locale_July
-    - Fi_fi_locale_August
-    - Fi_fi_locale_September
-    - Fi_fi_locale_October
-    - Fi_fi_locale_November
-    - Fi_fi_locale_December
+    - tammikuu
+    - helmikuu
+    - maaliskuu
+    - huhtikuu
+    - toukokuu
+    - kesäkuu
+    - heinäkuu
+    - elokuu
+    - syyskuu
+    - lokakuu
+    - marraskuu
+    - joulukuu
     order:
     - :day
     - :month
@@ -56,46 +56,46 @@ fi-FI:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: Fi_fi_locale_about 1 hour
-        other: Fi_fi_locale_about %{count} hours
+        one: Noin 1 tunti
+        other: Noin %{count} tuntia
       about_x_months:
-        one: Fi_fi_locale_about 1 month
-        other: Fi_fi_locale_about %{count} months
+        one: Noin 1 kuukausi
+        other: Noin %{count} kuukautta
       about_x_years:
-        one: Fi_fi_locale_about 1 year
-        other: Fi_fi_locale_about %{count} years
+        one: Noin 1 vuosi
+        other: Noin %{count} vuotta
       almost_x_years:
-        one: Fi_fi_locale_almost 1 year
-        other: Fi_fi_locale_almost %{count} years
-      half_a_minute: Fi_fi_locale_half a minute
+        one: Melkein 1 vuosi
+        other: Melkein %{count} vuotta
+      half_a_minute: puoli minuuttia
       less_than_x_minutes:
-        one: Fi_fi_locale_less than a minute
-        other: Fi_fi_locale_less than %{count} minutes
+        one: alle minuutti
+        other: alle %{count} minuuttia
       less_than_x_seconds:
-        one: Fi_fi_locale_less than 1 second
-        other: Fi_fi_locale_less than %{count} seconds
+        one: Alle 1 sekuntti
+        other: Alle %{count} sekunttia
       over_x_years:
-        one: Fi_fi_locale_over 1 year
-        other: Fi_fi_locale_over %{count} years
+        one: Yli 1 vuosi
+        other: Yli %{count} vuotta
       x_days:
-        one: Fi_fi_locale_1 day
-        other: "Fi_fi_locale_ %{count} days"
+        one: 1 päivä
+        other: "%{count} päivää"
       x_minutes:
-        one: Fi_fi_locale_1 minute
-        other: "Fi_fi_locale_ %{count} minutes"
+        one: 1 minuutti
+        other: "%{count} minuuttia"
       x_months:
-        one: Fi_fi_locale_1 month
-        other: "Fi_fi_locale_ %{count} months"
+        one: 1 kuukausi
+        other: "%{count} kuukautta"
       x_seconds:
-        one: Fi_fi_locale_1 second
-        other: "Fi_fi_locale_ %{count} seconds"
+        one: 1 sekuntti
+        other: "%{count} sekunttia"
     prompts:
-      day: Fi_fi_locale_Day
-      hour: Fi_fi_locale_Hour
-      minute: Fi_fi_locale_Minute
-      month: Fi_fi_locale_Month
-      second: Fi_fi_locale_Seconds
-      year: Fi_fi_locale_Year
+      day: Päivä
+      hour: Tunti
+      minute: Minuutti
+      month: Kuukausi
+      second: Sekunttia
+      year: Vuosi
   errors:
     format: "Fi_fi_locale_ %{message}"
     messages:
