@@ -29,10 +29,10 @@ fi-FI:
       confirm: "%{petition} - Allekirjoita aloite - Partiolaisaloitteet"
       signed: "Kiitos - Partiolaisaloitteet"
       thank_you: "Kiitos - Partiolaisaloitteet"
-      unsubscribe: "Fi_fi_locale_Unsubscribe from %{petition} email updates - Partiolaisaloitteet"
+      unsubscribe: "Lopeta sähköpostipäivitysten vastaanotto aloitteelle %{petition} - Partiolaisaloitteet"
     sponsors:
-      new: "Fi_fi_locale_Support %{creator}’s petition - Partiolaisaloitteet"
-      confirm: "Fi_fi_locale_Support %{creator}’s petition - Partiolaisaloitteet"
+      new: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloitteet"
+      confirm: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloitteet"
       signed: "Kiitos - Partiolaisaloitteet"
       thank_you: "%{petition} - Kiitos tuestasi tälle aloitteelle - Partiolaisaloitteet"
     pages:

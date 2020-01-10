@@ -1,0 +1,122 @@
+fi-FI:
+  admin:
+    email_button:
+      one: "Email %{formatted_count} petitioner"
+      other: "Email %{formatted_count} petitioners"
+    email_confirm:
+      one: "Are you sure you want to do this and email the petitioner?"
+      other: "Are you sure you want to do this and email all %{formatted_count} petitioners?"
+
+    threshold_reminder:
+      one: "%{count} petition requires action"
+      other: "%{count} petitions require action"
+
+    invalidations:
+      facets:
+        keys:
+          - :all
+          - :completed
+          - :cancelled
+          - :enqueued
+          - :pending
+          - :running
+        labels:
+          all: "All invalidations (%{quantity})"
+          completed: "Completed invalidations (%{quantity})"
+          cancelled: "Cancelled invalidations (%{quantity})"
+          enqueued: "Enqueued invalidations (%{quantity})"
+          pending: "Pending invalidations (%{quantity})"
+          running: "Running invalidations (%{quantity})"
+
+    signature:
+      states:
+        - ["Any", ""]
+        - ["Validated", "validated"]
+        - ["Pending", "pending"]
+        - ["Invalidated", "invalidated"]
+        - ["Fraudulent", "fraudulent"]
+
+    flash:
+      admin_required: "You must be logged in as an administrator to view this page"
+      change_password: "Please change your password before continuing"
+      closure_scheduled: "Petitions have been scheduled to close early"
+      creators_emailed: "Petition creators will be notified of the early closing of their petitions"
+      debate_date_updated: "Updated the scheduled debate date successfully"
+      debate_outcome_updated: "Updated debate outcome successfully"
+      domain_created: "Domain created successfully"
+      domain_updated: "Domain updated successfully"
+      domain_deleted: "Domain removed successfully"
+      domain_not_deleted: "Domain could not be removed - please contact support"
+      email_resent_to_creator: "Resent the email to the petition creator and forwarded a copy to the feedback address"
+      email_sent_overnight: "Email will be sent overnight"
+      enqueued_petition_statistics_update: "Updating the petition statistics - please wait a few minutes and then refresh this page"
+      government_response_updated: "Updated government response successfully"
+      failed_tasks: "There was a problem starting the tasks - please contact support"
+      invalidation_cant_be_cancelled: "Can't cancel invalidations that have completed"
+      invalidation_cant_be_counted: "Can't count invalidations that aren't pending"
+      invalidation_cant_be_edited: "Can't edit invalidations that aren't pending"
+      invalidation_cant_be_removed: "Can't remove invalidations that have started"
+      invalidation_cant_be_started: "Can't start invalidations that aren't pending"
+      invalidation_not_cancelled: "Invalidation could not be cancelled - please contact support"
+      invalidation_not_counted: "Invalidation could not be counted - please contact support"
+      invalidation_not_removed: "Invalidation could not be removed - please contact support"
+      invalidation_not_started: "Invalidation could not be enqueued - please contact support"
+      invalidation_cancelled: "Invalidation cancelled successfully"
+      invalidation_counted: "Counted the matching signatures for invalidation %{summary}"
+      invalidation_created: "Invalidation created successfully"
+      invalidation_removed: "Invalidation removed successfully"
+      invalidation_started: "Enqueued the invalidation %{summary}"
+      invalidation_updated: "Invalidation updated successfully"
+      last_login: "You have one more attempt before your account is temporarily disabled"
+      disabled_login: "Failed login limit exceeded, your account has been temporarily disabled"
+      invalid_login: "Invalid email/password combination"
+      logged_out: "You have been logged out"
+      moderation_delay_sent: "An email has been sent to creators that moderation has been delayed"
+      moderation_delay_preview_sent: "A preview email of the moderation delay has been sent to the feedback address"
+      missing_tasks: "Please select one or more tasks to execute"
+      password_updated: "Password was successfully updated"
+      petitions_archiving: "Archiving of petitions was successfully started"
+      parliament_archived: "Parliament archived successfully"
+      parliament_updated: "Parliament updated successfully"
+      petition_email_created: "Created other parliamentary business successfully"
+      petition_email_updated: "Updated other parliamentary business successfully"
+      petition_email_deleted: "Deleted other parliamentary business successfully"
+      petition_email_not_deleted: "Unable to delete other parliamentary business - please contact support"
+      petition_not_found: "Cannot find petition with id: %{query}"
+      petition_updated: "Petition has been successfully updated"
+      preview_email_sent: "Preview email successfully sent"
+      rate_limits_updated: "Rate limits updated successfully"
+      signature_validated: "Signature validated successfully"
+      signature_not_validated: "Signature could not be validated - please contact support"
+      signature_invalidated: "Signature invalidated successfully"
+      signature_not_invalidated: "Signature could not be invalidated - please contact support"
+      signature_deleted: "Signature removed successfully"
+      signature_not_deleted: "Signature could not be removed - please contact support"
+      signature_subscribed: "Signature subscribed successfully"
+      signature_not_subscribed: "Signature could not be subscribed - please contact support"
+      signature_unsubscribed: "Signature unsubscribed successfully"
+      signature_not_unsubscribed: "Signature could not be unsubscribed - please contact support"
+      signatures_validated: "Signatures validated successfully"
+      signatures_not_validated: "Signatures could not be validated - please contact support"
+      signatures_invalidated: "Signatures invalidated successfully"
+      signatures_not_invalidated: "Signatures could not be invalidated - please contact support"
+      signatures_deleted: "Signatures removed successfully"
+      signatures_not_deleted: "Signatures could not be removed - please contact support"
+      signatures_subscribed: "Signatures subscribed successfully"
+      signatures_not_subscribed: "Signatures could not be subscribed - please contact support"
+      signatures_unsubscribed: "Signatures unsubscribed successfully"
+      signatures_not_unsubscribed: "Signatures could not be unsubscribed - please contact support"
+      site_updated: "Site updated successfully"
+      started_tasks:
+        one: "Task started successfully"
+        other: "Tasks started successfully"
+      sysadmin_required: "You must be logged in as a system administrator to view this page"
+      tag_created: "Tag created successfully"
+      tag_updated: "Tag updated successfully"
+      tag_deleted: "Tag removed successfully"
+      user_created: "User was successfully created"
+      user_updated: "User was successfully updated"
+      user_deleted: "User was successfully deleted"
+      user_not_deleted: "User could not be deleted - please contact support"
+      user_is_current_user: "You are not allowed to delete yourself!"
+      user_count_is_too_low: "There needs to be at least one admin user"

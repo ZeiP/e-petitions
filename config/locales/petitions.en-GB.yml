@@ -53,7 +53,7 @@ en-GB:
       title: "We checked for similar petitions"
       title_duplicates: "We found some similar petitions"
       help: "If one of these petitions matches yours, sign it and share it instead"
-      help: "Your petition is more likely to get to %{treshold_response} and %{treshold_debate} signatures that way."
+      help_reason: "Your petition is more likely to get to %{treshold_response} and %{treshold_debate} signatures that way."
       duplicate_notification: "If there’s already a petition on the same topic, your petition is likely to be rejected"
       duplicate_continue: "My petition is different"
       no_duplicates: "We checked for similar petitions and didn't find any."
@@ -77,6 +77,19 @@ en-GB:
       warning_no_changes: "You can’t change your petition after this point."
       warning_personal_info: "If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published."
       warning_no_removal: "Published petitions can only be removed from the site with the agreement of the House of Commons Petitions Committee."
+
+    sign:
+      signatures: "signatures"
+      title_own: "Sign your petition"
+      title_other: "Sign petition"
+      title_sponsor: "Sign %{creator}’s petition"
+      criteria: "Only British citizens or UK residents have the right to create and sign petitions"
+      criteria_confirm: "I am a British citizen or UK resident"
+      full_name_required: "You must use your full name"
+      email_updates: "Email me whenever there’s an update about this petition"
+      name_visible: "Your name will be published on this petition as the petition creator."
+      other_hidden: "Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition."
+      all_hidden: "We won't publish your personal details anywhere or use them for anything other than this petition."
 
     page_titles:
       all: "All petitions"

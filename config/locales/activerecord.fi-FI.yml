@@ -97,27 +97,27 @@ fi-FI:
   errors:
     attributes:
       email:
-        blank: "Fi_fi_locale_Email must be completed"
-        invalid: "Fi_fi_locale_Email '%{value}' not recognised"
-        plus_address: "Fi_fi_locale_You can’t use ‘plus addressing’ in your email address"
+        blank: "Sähköpostiosoitteen tulee olla täytetty"
+        invalid: "Sähköpostia '%{value}' ei tunnistettu"
+        plus_address: "+-merkkin käyttö sähköpostiosoitteessasi ei ole sallittua"
       creator:
-        blank: "Fi_fi_locale_Creator must be completed"
+        blank: "Luojan tulee olla täytetty"
       action: 
-        blank: "Fi_fi_locale_Action must be completed"
-        too_long: "Fi_fi_locale_Action is too long"
+        blank: "Aloitteen otsikko tulee olla täytetty"
+        too_long: "Aloitteen otsikko on liian pitkä"
       background:
-        blank: "Fi_fi_locale_Background must be completed"
-        too_long: "Fi_fi_locale_Background is too long"
+        blank: "Taustatietojen tulee olla täytetty"
+        too_long: "Taustatiedot ovat liian pitkät"
       additional_details:
-        too_long: "Fi_fi_locale_Additional details is too long"
+        too_long: "Lisätiedot ovat liian pitkät"
       comment:
-        blank: "Fi_fi_locale_Comments must be completed"
+        blank: "Kommentin tulee olla täytetty"
       name:
-        blank: "Fi_fi_locale_Name must be completed"
+        blank: "Nimen tulee olla täytetty"
       location_code:
-        blank: "Fi_fi_locale_Location must be completed"
+        blank: "Sijainnin tulee olla täytetty"
       postcode:
-        blank: "Fi_fi_locale_Postcode must be completed"
-        invalid: "Fi_fi_locale_Postcode not recognised"
+        blank: "Postinumeron tulee olla täytetty"
+        invalid: "Postinumeroa ei tunnistettu"
       uk_citizenship:
-        accepted: "Fi_fi_locale_You must be a British citizen or normally live in the UK to create or sign petitions"
+        accepted: "Sinun tulee olla jäsenmaksun maksanut partiolainen luodaksesi tai allekirjoittaksesi aloitteita"

@@ -3,19 +3,19 @@ fi-FI:
   feedback:
     page_title: "Palaute ja yhteystiedot"
     petition_link/title: "Aloitteen otsikko tai linkki"
-    reply_wanted_question: "Haluatko vastauksen"
+    reply_wanted_question: "Haluatko vastauksen?"
     send: "Lähetä palaute"
     terms:
       email_only_reply: "Vastaamme sinulle ainostaan antamasi sähköpostin kautta"
-      no_forwarding: "Fi_fi_locale_We can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition"
+      no_forwarding: "Emme voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä"
     contact: "Yhteystiedot"
     email:
-      direction_html: "Fi_fi_locale_Get this data in %{href} or formats"
+      direction_html: "Voit lähettää sähköpostia suoraan %{href}."
       recipient: "Fi_fi_locale_EMAIL_RECIPIENT"
       address: "Fi_fi_locale_email@email.email"
-      help: "Fi_fi_locale_They can help you to understand how Parliament handles petitions. They can also help with some technical problems using this service. They can't forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+      help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
     phone:
-      info: "Fi_fi_locale_Phone calls are handled by the House of Commons Enquiry Service."
-      help: "Fi_fi_locale_They can help you to understand how Parliament handles petitions. They can’t help with any technical problems with this service, forward your feedback to the people who started a petition or comment on the ideas raised in a specific petition."
+      info: "Puhelinsoitot käsittelee Fi_fi_locale_House of Commons Enquiry Service."
+      help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
       number: "Fi_fi_locale_123 456 6789 0"
-      reception_times: "Fi_fi_locale_Monday to Friday, 10am&ndash;12pm and 2pm&ndash;4pm"
+      reception_times: "Fi_fi_locale_Maanantai-Perjantai, 10:00-12:00 ja 14:00:16:00"

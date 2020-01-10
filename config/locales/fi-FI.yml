@@ -2,53 +2,53 @@
 fi-FI:
   date:
     abbr_day_names:
-    - Sun
-    - Mon
-    - Tue
-    - Wed
-    - Thu
-    - Fri
-    - Sat
+    - Fi_fi_locale_Sun
+    - Fi_fi_locale_Mon
+    - Fi_fi_locale_Tue
+    - Fi_fi_locale_Wed
+    - Fi_fi_locale_Thu
+    - Fi_fi_locale_Fri
+    - Fi_fi_locale_Sat
     abbr_month_names:
     -
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Oct
-    - Nov
-    - Dec
+    - Fi_fi_locale_Jan
+    - Fi_fi_locale_Feb
+    - Fi_fi_locale_Mar
+    - Fi_fi_locale_Apr
+    - Fi_fi_locale_May
+    - Fi_fi_locale_Jun
+    - Fi_fi_locale_Jul
+    - Fi_fi_locale_Aug
+    - Fi_fi_locale_Sep
+    - Fi_fi_locale_Oct
+    - Fi_fi_locale_Nov
+    - Fi_fi_locale_Dec
     day_names:
-    - Sunday
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
+    - Fi_fi_locale_Sunday
+    - Fi_fi_locale_Monday
+    - Fi_fi_locale_Tuesday
+    - Fi_fi_locale_Wednesday
+    - Fi_fi_locale_Thursday
+    - Fi_fi_locale_Friday
+    - Fi_fi_locale_Saturday
     formats:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
       short: "%d %b"
     month_names:
     -
-    - January
-    - February
-    - March
-    - April
-    - May
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
+    - Fi_fi_locale_January
+    - Fi_fi_locale_February
+    - Fi_fi_locale_March
+    - Fi_fi_locale_April
+    - Fi_fi_locale_May
+    - Fi_fi_locale_June
+    - Fi_fi_locale_July
+    - Fi_fi_locale_August
+    - Fi_fi_locale_September
+    - Fi_fi_locale_October
+    - Fi_fi_locale_November
+    - Fi_fi_locale_December
     order:
     - :day
     - :month
@@ -56,83 +56,83 @@ fi-FI:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: about 1 hour
-        other: about %{count} hours
+        one: Fi_fi_locale_about 1 hour
+        other: Fi_fi_locale_about %{count} hours
       about_x_months:
-        one: about 1 month
-        other: about %{count} months
+        one: Fi_fi_locale_about 1 month
+        other: Fi_fi_locale_about %{count} months
       about_x_years:
-        one: about 1 year
-        other: about %{count} years
+        one: Fi_fi_locale_about 1 year
+        other: Fi_fi_locale_about %{count} years
       almost_x_years:
-        one: almost 1 year
-        other: almost %{count} years
-      half_a_minute: half a minute
+        one: Fi_fi_locale_almost 1 year
+        other: Fi_fi_locale_almost %{count} years
+      half_a_minute: Fi_fi_locale_half a minute
       less_than_x_minutes:
-        one: less than a minute
-        other: less than %{count} minutes
+        one: Fi_fi_locale_less than a minute
+        other: Fi_fi_locale_less than %{count} minutes
       less_than_x_seconds:
-        one: less than 1 second
-        other: less than %{count} seconds
+        one: Fi_fi_locale_less than 1 second
+        other: Fi_fi_locale_less than %{count} seconds
       over_x_years:
-        one: over 1 year
-        other: over %{count} years
+        one: Fi_fi_locale_over 1 year
+        other: Fi_fi_locale_over %{count} years
       x_days:
-        one: 1 day
-        other: "%{count} days"
+        one: Fi_fi_locale_1 day
+        other: "Fi_fi_locale_ %{count} days"
       x_minutes:
-        one: 1 minute
-        other: "%{count} minutes"
+        one: Fi_fi_locale_1 minute
+        other: "Fi_fi_locale_ %{count} minutes"
       x_months:
-        one: 1 month
-        other: "%{count} months"
+        one: Fi_fi_locale_1 month
+        other: "Fi_fi_locale_ %{count} months"
       x_seconds:
-        one: 1 second
-        other: "%{count} seconds"
+        one: Fi_fi_locale_1 second
+        other: "Fi_fi_locale_ %{count} seconds"
     prompts:
-      day: Day
-      hour: Hour
-      minute: Minute
-      month: Month
-      second: Seconds
-      year: Year
+      day: Fi_fi_locale_Day
+      hour: Fi_fi_locale_Hour
+      minute: Fi_fi_locale_Minute
+      month: Fi_fi_locale_Month
+      second: Fi_fi_locale_Seconds
+      year: Fi_fi_locale_Year
   errors:
-    format: "%{message}"
+    format: "Fi_fi_locale_ %{message}"
     messages:
-      accepted: "%{attribute} must be accepted"
-      blank: "%{attribute} can't be blank"
-      confirmation: "%{attribute} doesn't match %{attribute}"
-      empty: "%{attribute} can't be empty"
-      equal_to: "%{attribute} must be equal to %{count}"
-      even: "%{attribute} must be even"
-      exclusion: "%{attribute} is reserved"
-      greater_than: "%{attribute} must be greater than %{count}"
-      greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}"
-      inclusion: "%{attribute} is not included in the list"
-      invalid: "%{attribute} is invalid"
-      less_than: "%{attribute} must be less than %{count}"
-      less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}"
-      not_a_number: "%{attribute} is not a number"
-      not_an_integer: "%{attribute} must be an integer"
-      odd: "%{attribute} must be odd"
-      record_invalid: 'Validation failed: %{errors}'
-      taken: "%{attribute} has already been taken"
+      accepted: "Fi_fi_locale_ %{attribute} must be accepted"
+      blank: "Fi_fi_locale_ %{attribute} can't be blank"
+      confirmation: "Fi_fi_locale_ %{attribute} doesn't match %{attribute}"
+      empty: "Fi_fi_locale_ %{attribute} can't be empty"
+      equal_to: "Fi_fi_locale_ %{attribute} must be equal to %{count}"
+      even: "Fi_fi_locale_ %{attribute} must be even"
+      exclusion: "Fi_fi_locale_ %{attribute} is reserved"
+      greater_than: "Fi_fi_locale_ %{attribute} must be greater than %{count}"
+      greater_than_or_equal_to: "Fi_fi_locale_ %{attribute} must be greater than or equal to %{count}"
+      inclusion: "Fi_fi_locale_ %{attribute} is not included in the list"
+      invalid: "Fi_fi_locale_ %{attribute} is invalid"
+      less_than: "Fi_fi_locale_ %{attribute} must be less than %{count}"
+      less_than_or_equal_to: "Fi_fi_locale_ %{attribute} must be less than or equal to %{count}"
+      not_a_number: "Fi_fi_locale_ %{attribute} is not a number"
+      not_an_integer: "Fi_fi_locale_ %{attribute} must be an integer"
+      odd: "Fi_fi_locale_ %{attribute} must be odd"
+      record_invalid: 'Fi_fi_locale_ Validation failed: %{errors}'
+      taken: "Fi_fi_locale_ %{attribute} has already been taken"
       too_long:
-        one: "%{attribute} is too long (maximum is 1 character)"
-        other: "%{attribute} is too long (maximum is %{count} characters)"
+        one: "Fi_fi_locale_ %{attribute} is too long (maximum is 1 character)"
+        other: "Fi_fi_locale_ %{attribute} is too long (maximum is %{count} characters)"
       too_short:
-        one: "%{attribute} is too short (minimum is 1 character)"
-        other: "%{attribute} is too short (minimum is %{count} characters)"
+        one: "Fi_fi_locale_ %{attribute} is too short (minimum is 1 character)"
+        other: "Fi_fi_locale_ %{attribute} is too short (minimum is %{count} characters)"
       wrong_length:
-        one: "%{attribute} is the wrong length (should be 1 character)"
-        other: "%{attribute} is the wrong length (should be %{count} characters)"
+        one: "Fi_fi_locale_ %{attribute} is the wrong length (should be 1 character)"
+        other: "Fi_fi_locale_ %{attribute} is the wrong length (should be %{count} characters)"
   activerecord:
     errors:
       template:
-        body: 'There were problems with the following fields:'
+        body: 'Fi_fi_locale_There were problems with the following fields:'
         header:
-          one: 1 error prohibited this %{model} from being saved
-          other: "%{count} errors prohibited this %{model} from being saved"
+          one: Fi_fi_locale_1 error prohibited this %{model} from being saved
+          other: "Fi_fi_locale_ %{count} errors prohibited this %{model} from being saved"
   helpers:
     label:
       tag:
@@ -140,18 +140,18 @@ fi-FI:
       site:
         url: "URL"
       parliament:
-        dissolution_heading: "Heading"
-        dissolution_message: "Message"
-        dissolved_heading: "Heading"
-        dissolved_message: "Message"
-        dissolution_at: "Date and time"
-        notification_cutoff_at: "Notify unpublished petitions created after"
+        dissolution_heading: "Fi_fi_locale_Heading"
+        dissolution_message: "Fi_fi_locale_Message"
+        dissolved_heading: "Fi_fi_locale_Heading"
+        dissolved_message: "Fi_fi_locale_Message"
+        dissolution_at: "Fi_fi_locale_Date and time"
+        notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
     select:
-      prompt: Please select
+      prompt: Fi_fi_locale_Please select
     submit:
-      create: Create %{model}
-      submit: Save %{model}
-      update: Update %{model}
+      create: Fi_fi_locale_Create %{model}
+      submit: Fi_fi_locale_Save %{model}
+      update: Fi_fi_locale_Update %{model}
   number:
     currency:
       format:
@@ -161,7 +161,7 @@ fi-FI:
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "£"
+        unit: "Fi_fi_locale_£"
     format:
       delimiter: ","
       precision: 3
@@ -172,11 +172,11 @@ fi-FI:
       decimal_units:
         format: "%n %u"
         units:
-          billion: Billion
-          million: Million
-          quadrillion: Quadrillion
-          thousand: Thousand
-          trillion: Trillion
+          billion: Fi_fi_locale_Billion
+          million: Fi_fi_locale_Million
+          quadrillion: Fi_fi_locale_Quadrillion
+          thousand: Fi_fi_locale_Thousand
+          trillion: Fi_fi_locale_Trillion
           unit: ''
       format:
         delimiter: ''
@@ -187,8 +187,8 @@ fi-FI:
         format: "%n %u"
         units:
           byte:
-            one: Byte
-            other: Bytes
+            one: Fi_fi_locale_Byte
+            other: Fi_fi_locale_Bytes
           gb: GB
           kb: KB
           mb: MB
@@ -201,16 +201,16 @@ fi-FI:
         delimiter: ''
   support:
     array:
-      last_word_connector: ", and "
-      two_words_connector: " and "
+      last_word_connector: ", ja "
+      two_words_connector: " ja "
       words_connector: ", "
   time:
-    am: am
+    am: Fi_fi_locale_am
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
-    pm: pm
+    pm: Fi_fi_locale_pm
   generic:
     back: Takaisin
     back_and_make_changes: "Palaa takaisin ja jatka muokkausta"
@@ -223,3 +223,5 @@ fi-FI:
     email: "Sähköposti"
     phone: "Puhelin"
     character_limit: "{%limit} kirjainta max"
+    name: "Nimi"
+    location: "Sijainti"

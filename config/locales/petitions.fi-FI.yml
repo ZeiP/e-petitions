@@ -5,15 +5,15 @@ fi-FI:
       petition: "Mitä haluaisit partiojohdon tekevän?"
       notice: "Tiedoksesi"
       supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalta aloitteen luomiseksi." #TODO: Proper Finnish
-      read_standards: "Fi_fi_locale_Remember, your petition must meet the"
-      standards: Fi_fi_locale_petition standards
-      background: "Fi_fi_locale_Background"
-      background_help: "Fi_fi_locale_Help writing background"
-      background_help_explanation: "Fi_fi_locale_Use this section to back up why you want action. Some people include a personal story here."
-      background_help_reminder: "Fi_fi_locale_Remember that people won’t always know that much about the issue you’re petitioning about - explain it."
-      additional_details: "Fi_fi_locale_Additional details"
-      optional_details: "Fi_fi_locale_Optional - background information, evidence and references"
-      preview_petition: "Fi_fi_locale_Preview petition"
+      read_standards: "Muista että aloittesi tulee täyttää"
+      standards: "aloitevaatimukset"
+      background: "Taustatiedot"
+      background_help: "Apua taustatietojen kirjoitukseen"
+      background_help_explanation: "Käytä tätä osiota perustellaksesi miksi aloite tulisi hyväksyä. Voit lisätä esimerkiksi kokemuksiisi perustuvan kertomuksen."
+      background_help_reminder: "Kaikki eivät saata tietää paljoa aiheesta josta olet luomassa aloitetta - selitä se."
+      additional_details: "Lisää tietoa"
+      optional_details: "Valinnaista - taustatietoa, todisteita ja viitteitä"
+      preview_petition: "Esikatsele aloitetta"
 
     search:
       result:
@@ -38,7 +38,7 @@ fi-FI:
     no_archived_found: "Fi_fi_locale_No archived petitions could be found matching your search terms"
     list_of_petitions: "Fi_fi_locale_Other lists of petitions"
     archived_petitions: "Arkistoidut aloitteet"
-    get_data_html: "Fi_fi_locale_Get this data in %{json} or %{csv} formats"
+    get_data_html: "Lataa tiedot %{json}- tai %{csv}-formaatissa"
 
     about:
       summary: "Fi_fi_locale_About petition data"
@@ -50,33 +50,46 @@ fi-FI:
         that is shared on the site is that of the petition creator."
 
     check:
-      title: "Fi_fi_locale_We found some similar petitions"
-      title_duplicates: "Fi_fi_locale_We found some similar petitions"
-      help: "Fi_fi_locale_If one of these petitions matches yours, sign it and share it instead"
-      help: "Fi_fi_locale_Your petition is more likely to get to %{treshold_response} and %{treshold_debate} signatures that way."
-      duplicate_notification: "Fi_fi_locale_If there’s already a petition on the same topic, your petition is likely to be rejected"
-      duplicate_continue: "My petition is different"
-      no_duplicates: "Fi_fi_locale_We checked for similar petitions and didn't find any."
-      no_duplicates_go_ahead: "Fi_fi_locale_So you can go ahead and create a new one."
+      title: "Tarkistimme samankaltaisten aloitteiden varalta"
+      title_duplicates: "Löysimme joitakin samankaltaisia aloitteita"
+      help: "Jos jokin näistä aloitteista vastaa omaasi, allekirjoita ja jaa se uuden aloitteen luomisen sijaan"
+      help_reason: "On todennäköisempää että aloitteesi saa %{treshold_response} ja %{treshold_debate} allekirjoitusta tällä tavalla."
+      duplicate_notification: "Jos aiheesta on jo aloite, on todennäköistä että aloitteesi hylätään"
+      duplicate_continue: "Minun aloitteeni on erillainen"
+      no_duplicates: "Tarkistimme samankaltaisten aloitteiden varalta, eikä niitä löytynyt."
+      no_duplicates_go_ahead: "Joten voit jatkaa ja luoda uuden aloitteen."
 
     example:
       main: "Fi_fi_locale_Example: Make wrongly describing a casserole with a pastry lid as a pie a criminal offence"
-      show_more: "Fi_fi_locale_Show more examples"
-      good: "Fi_fi_locale_Good examples:"
+      show_more: "Näytä lisää esimerkkejä"
+      good: "Hyviä esimerkkejä:"
       good_1: "Fi_fi_locale_Introduce Black History to the primary curriculum"
       good_2: "Fi_fi_locale_Lower the voting age to 16"
-      bad: "Fi_fi_locale_Bad examples:"
+      bad: "Hyviä esimerkkejä:"
       bad_1: "Fi_fi_locale_Russia Problem on US ruling"
       bad_2: "Fi_fi_locale_Justice for David Thomas"
-      explanation: "Fi_fi_locale_Good petitions say clearly what they want government or parliament to do."
+      explanation: "Hyvät aloitteet sanovat selvästi mitä ne haluavat partiojohdon tekevän."
 
     finalize:
-      title: "Fi_fi_locale_Check your petition"
-      more_details: "Fi_fi_locale_More details"
-      continue: "Fi_fi_locale_This looks good"
-      warning_no_changes: "Fi_fi_locale_You can’t change your petition after this point."
-      warning_personal_info: "Fi_fi_locale_If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published."
-      warning_no_removal: "Fi_fi_locale_Published petitions can only be removed from the site with the agreement of the House of Commons Petitions Committee."
+      title: "Tarkista aloitteesi"
+      more_details: "Lisätietoa"
+      continue: "Tämä näyttää hyvältä"
+      warning_no_changes: "Et voi muuttaa aloitettasi enää tämän osion jälkeen"
+      warning_personal_info: "Jos aloitteessa on henkilökohtaista tietoa liittyen esimerkiksi terveyteesi tai perheeseesi, mieti tarkkaan haluatko julkaista aloitteen."
+      warning_no_removal: "Julkaistu aloite voidaan poistaa ainoastaan Fi_fi_locale_keskusjärjestön päätöksellä."
+
+    sign:
+      signatures: "allekirjoitukset"
+      title_own: "Allekirjoita aloitteesi"
+      title_other: "Allekirjoita aloite"
+      title_sponsor: "Allekirjoita aloite partiolaiselta %{creator}"
+      criteria: "Partiolaisaloitteen voi tehdä vain jäsenmaksun maksanut partiolainen"
+      criteria_confirm: "Olen jäsenmaksun maksanut partiolainen"
+      full_name_required: "Sinun täytyy käyttää kokonimeäsi"
+      email_updates: "Lähetä minulle sähköpostitse ilmoituksia aloitteesta"
+      name_visible: "Kokonimesi julkaistaan aloitteen yhteydessä aloitteen luojana."
+      other_hidden: "Nimesi lisäksi emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
+      all_hidden: "Emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
 
     page_titles:
       all: "Kaikki aloitteet"
