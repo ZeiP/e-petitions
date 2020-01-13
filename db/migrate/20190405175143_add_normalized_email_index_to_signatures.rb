@@ -6,7 +6,7 @@ class AddNormalizedEmailIndexToSignatures < ActiveRecord::Migration[4.2]
       execute <<-SQL
         CREATE INDEX CONCURRENTLY index_signatures_on_normalized_email
         ON signatures USING btree ((
-          REGEXP_REPLACE(LEFT(email, POSITION('@' IN email) - 1), '\.|\+.+', '', 'g') ||
+          REGEXP_REPLACE(LEFT(email, POSITION('@' IN email) - 1), '\\.|\\+.+', '', 'g') ||
           SUBSTRING(email FROM POSITION('@' IN email))
         ));
       SQL

@@ -20,7 +20,17 @@ class Site < ActiveRecord::Base
 
   class << self
     def table_exists?
-      @table_exists ||= connection.table_exists?(table_name)
+      @table_exists ||= db_exists? && connection.table_exists?(table_name)
+    end
+
+    def db_exists?
+      begin
+        ActiveRecord::Base.connection
+      rescue
+        return false
+      else
+        return true
+      end
     end
 
     def before_remove_const
