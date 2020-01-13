@@ -1,8 +1,9 @@
 <section class="about-item about-item-count-response" id="response-threshold" aria-labelledby="response-threshold-heading">
   <%# Has a government response #%>
   <% if government_response = petition.government_response? -%>
-    <h2 id="response-threshold-heading"><%= t "petition.responded.title" %></h2>
-    <p class="secondary"><%= t "petition.responded.on", date: short_date_format(government_response.responded_on) %></p>
+    <h2 id="response-threshold-heading"><%= t "petition.responded.title" %></h2>  
+    <%# The translation here does not always load #%>
+    <p class="secondary"><%= t "petitions.responded_petitions.responded_on", date: (short_date_format government_response.responded_on) %></p>
     <blockquote class="pull-quote">
       <%= auto_link(simple_format(h(government_response.summary)), html: { rel: 'nofollow' } ) %>
     </blockquote>

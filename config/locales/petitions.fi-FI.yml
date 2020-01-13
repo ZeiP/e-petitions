@@ -14,6 +14,7 @@ fi-FI:
       additional_details: "Lisää tietoa"
       optional_details: "Valinnaista - taustatietoa, todisteita ja viitteitä"
       preview_petition: "Esikatsele aloitetta"
+      could_not_create: "Emme voineet luoda aloitetta"
 
     search:
       result:
@@ -53,7 +54,7 @@ fi-FI:
       title: "Emme löytäneet samankaltaisia aloitteita"
       title_duplicates: "Löysimme joitakin samankaltaisia aloitteita"
       help: "Jos jokin näistä aloitteista vastaa omaasi, allekirjoita ja jaa se uuden aloitteen luomisen sijaan"
-      help_reason: "On todennäköisempää että aloitteesi saa %{treshold_response} ja %{treshold_debate} allekirjoitusta tällä tavalla."
+      help_reason: "On todennäköisempää että aloitteesi saa %{threshold_response} ja %{threshold_debate} allekirjoitusta tällä tavalla."
       duplicate_notification: "Jos aiheesta on jo aloite, on todennäköistä että aloitteesi hylätään"
       duplicate_continue: "Minun aloitteeni on erillainen"
       no_duplicates: "Tarkistimme aloitteet samankaltaisten aloitteiden varalta, eikä niitä löytynyt."
@@ -98,7 +99,6 @@ fi-FI:
       time: "Kaikki aloitteet kestävät 6 kuukautta"
       get_data: "Lataa aloitteen tiedot (json-formaatti)"
 
-
     page_titles:
       all: "Kaikki aloitteet"
       open: "Avoimet aloitteet"
@@ -122,14 +122,30 @@ fi-FI:
     responded_petitions:
       none: "Keskusjärjestö ei ole vielä vastannut yhteenkään aloitteeseen"
       responded_on: "Keskusjärjestö vastasi %{date}"
+      responded_on_dash: "Keskusjärjestö vastasi – %{date}"
       read_full: "Lue vastaus kokonaan"
-
+ 
     debated_petitions:
       none: "Keskusjärjestö ei ole vielä käsitellyt yhtäkään aloitetta"
+      was_debated: "Keskusjärjestö käsitteli tämän aloitteen"
       debated_on: "Keskusjärjestö käsitteli aloitteen %{date}"
-      debate_video: "Fi_fi_locale_Watch the debate on %{url}"
-      debate_transscript: "Fi_fi_locale_Read the transcript at %{url}"
-      debate_research: "Fi_fi_locale_Read the research at %{url}"
+      was_debated_on: "Fi_fi_locale_This topic was debated on %{date}"
+      no_debate: "Fi_fi_locale_The Petitions Committee decided not to debate this petition"
+      video_html: "Fi_fi_locale_Watch the debate on %{href}"
+      transcript_html: "Fi_fi_locale_Read the transcript at %{href}"
+      research_html: "Fi_fi_locale_Read the research at %{href}"
+      video_location: "Fi_fi_locale_parliamentlive.tv"
+      transcript_location: "Fi_fi_locale_parliament.uk"
+      research_location: "Fi_fi_locale_parliament.uk"
+      watch_at_html: 'Fi_fi_locale_You will be able to watch the debate live at <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
+      will_debate: "Fi_fi_locale_Parliament will debate this petition"
+      will_debate_on: "Fi_fi_locale_Parliament will debate this petition on %{date}"
+      watch_online_html: 'Fi_fi_locale_You will be able to watch online on the <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
+      will_consider_debate: "Fi_fi_locale_Parliament will consider this for a debate"
+      consider_threshold: "Fi_fi_locale_Parliament considers all petitions that get more than %{threshold} signatures for debate"
+      current_signatures: "Fi_fi_locale_At %{signatures} signatures..."
+      at_threshold: "Fi_fi_locale_At %{threshold} signatures..."
+      if_at_threshold: "Fi_fi_locale_At %{threshold} signatures, this petition will be considered for debate in Parliament"
 
     sharing:
       share_this: "Jaa tämä aloite"
@@ -394,3 +410,41 @@ fi-FI:
     need_more:
       title: "%{threshold} partiolaisen kannatuksella..."
       description: "Keskusjärjestö vastaa aloitteeseen, kun sitä kannattaa enemmän kuin %{threshold} partiolaista"
+
+  archived:
+    during: "Fi_fi_locale_This petition was submitted during the %{period} %government government"
+    others: "Fi_fi_locale_View other petitions from this government"
+    rejected_petition: "Fi_fi_locale_Rejected petition"
+    petition: "Fi_fi_locale_Petition"
+    details: "Fi_fi_locale_More details"
+    was_rejected: "Fi_fi_locale_This petition was rejected"
+    rejection_reason: "Fi_fi_locale_Why was this petition rejected?"
+    rejection_explanation: "Fi_fi_locale_We only reject petitions that don’t meet the %{href}"
+    standards: "Fi_fi_locale_petition standards"
+    reason_ge: "Fi_fi_locale_This petition closed early because of a General Election"
+    faq:  "Fi_fi_locale_Find out more on the %{href}"
+    faq_location: "Fi_fi_locale_Petitions Committee website" 
+    petition_closed: "Fi_fi_locale_This petition is closed"
+    petition_ran_for: "Fi_fi_locale_This petition ran for %{duration}"
+    was_debated: "Fi_fi_locale_Parliament debated this topic"
+    was_debated_on: "Fi_fi_locale_This topic was debated on %{date}"
+    no_debate: "Fi_fi_locale_The Petitions Committee decided not to debate this petition"
+    watch_at: "Fi_fi_locale_You'll be able to watch the debate online at {href}"
+    watch_at_location: "Fi_fi_locale_parliamentlive.tv"
+    watch_at_link: Fi_fi_locale_http://parliamentlive.tv
+    result_publication: "%{duration} Fi_fi_locale_for Parliament to publish the debate outcome"
+    will_debate: "Fi_fi_locale_Parliament will debate this petition"
+    will_debate_on: "Fi_fi_locale_Parliament will debate this petition on %{date}"
+    watch_online: "Fi_fi_locale_You'll be able to watch online on the %{href}."
+    watch_online_location: "Fi_fi_locale_UK Parliament YouTube channel"
+    watch_online_link: "Fi_fi_locale_https://www.youtube.com/UKParliament"
+    will_consider_debate: "Fi_fi_locale_Parliament will consider this for a debate"
+    consider_threshold: "Fi_fi_locale_Parliament considers all petitions that get more than %{threshold} signatures for debate"
+    waiting_debate_date: "%{duration} Fi_fi_locale_for a debate date"
+    responded: "Fi_fi_locale_Government responded"
+    responded_on: "Keskusjärjestö vastasi %{date}"
+    read_response: "Fi_fi_locale_Read the response in full"
+    other: "Fi_fi_locale_Other parliamentary business"
+    date_submitted: "Fi_fi_locale_Date submitted"
+    date_closed: "Fi_fi_locale_Date closed"
+    get_json_data: "Fi_fi_locale_Get petition data (json format)"

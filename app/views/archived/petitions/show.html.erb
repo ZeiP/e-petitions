@@ -2,19 +2,19 @@
   <div class="notification">
     <span class="icon icon-warning-white"></span>
     <p class="content">
-      LOCALIZE_This petition was submitted during the <%= @parliament.period %> <%= @parliament.government %> government
+      <%= t "archived.during", period: @parliament.period, @parliament.government %>
     </p>
 
     <p class="link">
-      <%= link_to "LOCALIZE_View other petitions from this government", archived_petitions_path(parliament: @parliament) %>
+      <%= link_to (t "archived.others"), archived_petitions_path(parliament: @parliament) %>
     </p>
   </div>
 
   <h1>
     <% if @petition.rejected? %>
-      <span class="heading-secondary">LOCALIZE_Rejected petition</span>
+      <span class="heading-secondary"><%= t "archived.rejected_petition" %> /span>
     <% else %>
-      <span class="heading-secondary">LOCALIZE_Petition</span>
+      <span class="heading-secondary"><%= t "archived.petition" %></span>
     <% end %>
     <%= @petition.action %>
   </h1>
@@ -23,41 +23,41 @@
     <div><%= auto_link(simple_format(h(@petition.background)), html: { rel: 'nofollow' }) %></div>
     <% if @petition.additional_details? %>
       <details>
-        <summary><span class="summary">LOCALIZE_More details</span></summary>
+        <summary><span class="summary"><%= t "archived.details" %></span></summary>
         <div><%= auto_link(simple_format(h(@petition.additional_details)), html: { rel: 'nofollow' }) %></div>
       </details>
     <% end %>
   <% else %>
     <% if @petition.additional_details? %>
       <details open="open">
-        <summary><span class="summary">LOCALIZE_More details</span></summary>
+        <summary><span class="summary"><%= t "archived.details" %>_</span></summary>
         <div><%= auto_link(simple_format(h(@petition.additional_details)), html: { rel: 'nofollow' }) %></div>
       </details>
     <% end %>
   <% end %>
 
   <% if @petition.rejected? %>
-    <p class="flash-notice">LOCALIZE_This petition was rejected</p>
+    <p class="flash-notice"><%= t "archived.was_rejected" %></p>
 
-    <h2>LOCALIZE_Why was this petition rejected?</h2>
+    <h2><%= t "archived.rejection_reason" %></h2>
     <%= rejection_description(@petition.rejection.code) %>
     <% if @petition.rejection.details? %>
       <p><%= auto_link(simple_format(h(@petition.rejection.details))) %></p>
     <% end %>
-    <p>LOCALIZE_We only reject petitions that don’t meet the <%= link_to 'petition standards', help_url(anchor: 'standards') %>.</p>
+    <p><%= t "archived.rejection_explanation", href: link_to (t "archived.standards"), help_url(anchor: 'standards') %>.</p>
   <% else %>
     <% if @petition.closed_early_due_to_election? %>
       <p class="flash-notice">
-        LOCALIZE_This petition closed early because of a General Election
+        <%= t "archived.reason_ge" %>
 
         <% if @parliament.dissolution_faq_url? %>
-          <span>LOCALIZE_Find out more on the <%= link_to 'Petitions Committee website', @parliament.dissolution_faq_url %></span>
+          <span><%= t "archived.faq", href: link_to (t "archived.faq_location"), @parliament.dissolution_faq_url %></span>
         <% end %>
       </p>
     <% else %>
       <p class="flash-notice">
-        LOCALIZE_This petition is closed
-        <span>LOCALIZE_This petition ran for <%= petition_duration_to_words(@petition.duration) %></span>
+        <%= t "archived.petition_closed" %>
+        <span><%= t "archived.petition_ran_for", duration: petition_duration_to_words(@petition.duration) %></span>
       </p>
     <% end %>
 
@@ -75,9 +75,9 @@
       <% if debate_outcome = @petition.debate_outcome %>
         <section class="about-item about-item-count-debate" id="debate-threshold" aria-labelledby="debate-threshold-heading">
           <% if debate_outcome.debated? %>
-            <h2 id="debate-threshold-heading">LOCALIZE_Parliament debated this topic</h2>
+            <h2 id="debate-threshold-heading"><%= t "archived.was_debated" %></h2>
             <section class="debate-outcome">
-              <p class="secondary">LOCALIZE_This topic was debated on <%= short_date_format(debate_outcome.debated_on) %></p>
+              <p class="secondary"><%= t "archived.was_debated_on", date: short_date_format(debate_outcome.debated_on) %></p>
               <% if debate_outcome.video_url? %>
                 <%= link_to debate_outcome.video_url, rel: 'external' do %>
                   <span class="debate-video graphic graphic-house-of-commons" aria-hidden>
@@ -100,7 +100,7 @@
               <% end %>
             </section>
           <% else %>
-            <h2 id="debate-threshold-heading">LOCALIZE_The Petitions Committee decided not to debate this petition</h2>
+            <h2 id="debate-threshold-heading"><%= t "archived.no_debate" %></h2>
             <% if debate_outcome.overview? %>
               <%= auto_link(simple_format(h(debate_outcome.overview)), html: { rel: 'nofollow' }) %>
             <% end %>
@@ -109,36 +109,36 @@
       <% elsif @petition.scheduled_debate_date? %>
         <section class="about-item about-item-count-debate" id="debate-threshold" aria-labelledby="debate-threshold-heading">
           <% if @petition.scheduled_debate_date.past? %>
-            <h2 id="debate-threshold-heading">LOCALIZE_Parliament debated this topic</h2>
+            <h2 id="debate-threshold-heading"><%= t "archived.was_debated" %></h2>
             <p class="about-item-scheduled-debate-date">
-              LOCALIZE_Parliament debated this petition on <%= short_date_format(@petition.scheduled_debate_date) %>
+              <%= t "archived.was_debated_on", date: short_date_format(@petition.scheduled_debate_date) %>
             </p>
             <p>
-              LOCALIZE_You'll be able to watch the debate online at <a href="http://parliamentlive.tv" rel="external">parliamentlive.tv</a>
+              <%= t "archived.watch_at", href: <a href=(t "archived.watch_at_link") rel="external"> (t "archived.watch_at_location") </a> %>
             </p>
-            <p class="secondary"><%= waiting_for_in_words(@petition.scheduled_debate_date) %> LOCALIZE_for Parliament to publish the debate outcome</p>
+            <p class="secondary"><%= t "archived.result_publication", duration: waiting_for_in_words(@petition.scheduled_debate_date) %></p>
           <% else %>
-            <h2 id="debate-threshold-heading">LOCALIZE_Parliament will debate this petition</h2>
+            <h2 id="debate-threshold-heading"><%= t "archived.will_debate" %></h2>
             <p class="about-item-scheduled-debate-date">
-              LOCALIZE_Parliament will debate this petition on <%= short_date_format(@petition.scheduled_debate_date) %>.
+              <%= t "archived.will_debate_on", date: short_date_format(@petition.scheduled_debate_date) %>
             </p>
             <p>
-              LOCALIZE_You'll be able to watch online on the <a href="https://www.youtube.com/UKParliament" rel="external">LOCALIZE_UK Parliament YouTube channel</a>.
+             <%= t "archived.watch_online", href:  <a href=(t "archived.watch_online_link") rel="external"> (t "archived.watch_online_location")</a> %>
             </p>
           <% end %>
         </section>
       <% elsif @petition.debate_threshold_reached_at? %>
         <section class="about-item about-item-count-debate" id="debate-threshold" aria-labelledby="debate-threshold-heading">
-          <h2 id="debate-threshold-heading">LOCALIZE_Parliament will consider this for a debate</h2>
-          <p>LOCALIZE_Parliament considers all petitions that get more than <%= @parliament.formatted_threshold_for_debate %> signatures for a debate</p>
-          <p class="secondary"><%= waiting_for_in_words(@petition.debate_threshold_reached_at) %> LOCALIZE_for a debate date</p>
+          <h2 id="debate-threshold-heading"><%= t "archived.will_consider_debate" %></h2>
+          <p><%= t "archived.consider_threshold", threshold: @parliament.formatted_threshold_for_debate %></p>
+          <p class="secondary"><%= t "archived.waiting_debate_date", duration: waiting_for_in_words(@petition.debate_threshold_reached_at) %></p>
         </section>
       <% end %>
 
       <% if government_response = @petition.government_response? %>
         <section class="about-item about-item-count-response" id="response-threshold" aria-labelledby="response-threshold-heading">
-          <h2 id="response-threshold-heading">LOCALIZE_Government responded</h2>
-          <p class="secondary">LOCALIZE_This response was given on <%= short_date_format government_response.responded_on %></p>
+          <h2 id="response-threshold-heading"><%= t "archived.responded" %></h2>
+          <p class="secondary"><%= t "archived.responded_on", date: short_date_format government_response.responded_on %></p>
           <% if government_response.summary? %>
             <blockquote class="pull-quote">
               <%= auto_link(simple_format(h(government_response.summary)), html: { rel: 'nofollow' } ) %>
@@ -149,7 +149,7 @@
                 <%= auto_link(simple_format(h(government_response.details)), html: { rel: 'nofollow' }) %>
               <% else %>
                 <details>
-                  <summary><span class="summary">LOCALIZE_Read the response in full</span></summary>
+                  <summary><span class="summary"><%= t "archived.read_response" %></span></summary>
                   <div class="panel-indent panel-no-border">
                     <%= auto_link(simple_format(h(government_response.details)), html: { rel: 'nofollow' }) %>
                   </div>
@@ -166,7 +166,7 @@
 
     <% unless @petition.emails.empty? %>
       <section class="about-item about-item-other-business" id="other-business" aria-labelledby="other-business-heading">
-        <h2 id="other-business-heading">LOCALIZE_Other parliamentary business</h2>
+        <h2 id="other-business-heading"><%= t "archived.other" %></h2>
 
         <% @petition.emails.each do |email| %>
           <details>
@@ -183,16 +183,16 @@
   <ul class="petition-meta">
     <% if @petition.rejected? %>
       <li>
-        <span class="label">LOCALIZE_Date submitted</span> <%= short_date_format @petition.created_at %>
+        <span class="label"><%= t "archived.date_submitted" %></span> <%= short_date_format @petition.created_at %>
       </li>
     <% else %>
       <li>
-        <span class="label">LOCALIZE_Date closed</span> <%= short_date_format @petition.closed_at %>
+        <span class="label"><%= t "archived.date_closed" %></span> <%= short_date_format @petition.closed_at %>
       </li>
     <% end %>
 
     <li class="meta-json">
-      <span class="note"><%= link_to "LOCALIZE_Get petition data (json format)", archived_petition_path(@petition, :json) %></span>
+      <span class="note"><%= link_to (t "get_json_data"), archived_petition_path(@petition, :json) %></span>
       <%= render "about_petition_data" %>
     </li>
   </ul>

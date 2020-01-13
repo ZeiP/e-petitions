@@ -6,7 +6,7 @@
 
   <h1 class="page-title"><%= t "petitions.check.title_duplicates"%></h1>
   <p><%= t "petitions.check.help"%></p>
-  <p><%= t "petitions.check.help_reason", treshold_response: Site.formatted_threshold_for_response, treshold_debate: Site.formatted_threshold_for_debate %></p>
+  <p><%= t "petitions.check.help_reason", threshold_response: Site.formatted_threshold_for_response, threshold_debate: Site.formatted_threshold_for_debate %></p>
   <%= render 'notification', message: (t "petitions.check.duplicate_notification") %>
 
   <% petitions.each do |petition| %>

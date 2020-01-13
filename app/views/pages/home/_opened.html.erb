@@ -6,7 +6,7 @@
 
 <%= render "pages/home/actioned_petitions" %>
 
-<% unless no_petitions_yet? %>
+<% unless !no_petitions_yet? #TODO: THIS SHOULD NOT HAVE THE ! %>
   <%= render "pages/home/search_petitions", search_path: petitions_path %>
   <%= render "pages/home/trending_petitions" %>
 <% end %>

@@ -14,6 +14,7 @@ en-GB:
       additional_details: "Additional details"
       optional_details: "Optional - background information, evidence and references"
       preview_petition: "Preview petition"
+      could_not_create: "We couldn't create this petition"
 
     search:
       result:
@@ -53,7 +54,7 @@ en-GB:
       title: "We checked for similar petitions"
       title_duplicates: "We found some similar petitions"
       help: "If one of these petitions matches yours, sign it and share it instead"
-      help_reason: "Your petition is more likely to get to %{treshold_response} and %{treshold_debate} signatures that way."
+      help_reason: "Your petition is more likely to get to %{threshold_response} and %{threshold_debate} signatures that way."
       duplicate_notification: "If there’s already a petition on the same topic, your petition is likely to be rejected"
       duplicate_continue: "My petition is different"
       no_duplicates: "We checked for similar petitions and didn't find any."
@@ -121,14 +122,30 @@ en-GB:
     responded_petitions:
       none: "The government hasn’t responded to any petitions yet"
       responded_on: "The government responded on %{date}"
+      responded_on_dash: "Government responded – %{date}"
       read_full: "Read the response in full"
 
     debated_petitions:
       none: "Parliament hasn’t debated any petitions yet"
+      was_debated: "Parliament debated this topic"
+      was_debated_on: "This topic was debated on %{date}"
       debated_on: "This topic was debated on %{date}"
-      debate_video: "Watch the debate on %{url}"
-      debate_transscript: "Read the transcript at %{url}"
-      debate_research: "Read the research at %{url}"
+      no_debate: "The Petitions Committee decided not to debate this petition"
+      video_html: "Watch the debate on %{href}"
+      transcript_html: "Read the transcript at %{href}"
+      research_html: "Read the research at %{href}"
+      video_location: "parliamentlive.tv"
+      transcript_location: "parliament.uk"
+      research_location: "parliament.uk"
+      watch_at_html: 'You will be able to watch the debate live at <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
+      will_debate: "Parliament will debate this petition"
+      will_debate_on: "Parliament will debate this petition on %{date}"
+      watch_online_html: 'You will be able to watch online on the <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
+      will_consider_debate: "Parliament will consider this for a debate"
+      waiting_debate_date: "%{duration} for a debate date"
+      consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+      at_threshold: "At %{threshold} signatures..."
+      if_at_threshold: "At %{threshold} signatures, this petition will be considered for debate in Parliament"
 
     sharing:
       share_this: "Share this"
@@ -138,7 +155,7 @@ en-GB:
         html: <span class="icon icon-share-email"></span> Email
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
-        twitter_card_desc: "Fi_fi_locale_Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
+        twitter_card_desc: "Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
@@ -393,3 +410,41 @@ en-GB:
     need_more:
       title: "At %{threshold} signatures..."
       description: "At %{threshold} signatures, government will respond to this petition"
+
+  archived:
+    during: "This petition was submitted during the %{period} %government government"
+    others: "View other petitions from this government"
+    rejected_petition: "Rejected petition"
+    petition: "Petition"
+    details: "More details"
+    was_rejected: "This petition was rejected"
+    rejection_reason: "Why was this petition rejected?"
+    rejection_explanation: "We only reject petitions that don’t meet the %{href}"
+    standards: "petition standards"
+    reason_ge: "This petition closed early because of a General Election"
+    faq:  "Find out more on the %{href}"
+    faq_location: "Petitions Committee website" 
+    petition_closed: "This petition is closed"
+    petition_ran_for: "This petition ran for %{duration}"
+    was_debated: "Parliament debated this topic"
+    was_debated_on: "This topic was debated on %{date}"
+    no_debate: "The Petitions Committee decided not to debate this petition"
+    watch_at: "You'll be able to watch the debate online at {href}"
+    watch_at_location: "parliamentlive.tv"
+    watch_at_link: http://parliamentlive.tv
+    result_publication: "%{duration} for Parliament to publish the debate outcome"
+    will_debate: "Parliament will debate this petition"
+    will_debate_on: "Parliament will debate this petition on %{date}"
+    watch_online: "You'll be able to watch online on the %{href}."
+    watch_online_location: "UK Parliament YouTube channel"
+    watch_online_link: "https://www.youtube.com/UKParliament"
+    will_consider_debate: "Parliament will consider this for a debate"
+    consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+    waiting_debate_date: "%{duration} for a debate date"
+    responded: "Government responded"
+    responded_on: "This response was given on %{date}"
+    read_response: "Read the response in full"
+    other: "Other parliamentary business"
+    date_submitted: "Date submitted"
+    date_closed: "Date closed"
+    get_json_data: "Get petition data (json format)"
