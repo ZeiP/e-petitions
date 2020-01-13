@@ -26,7 +26,7 @@ gem 'slack-notifier'
 gem 'daemons'
 gem 'jquery-rails'
 gem 'delayed-web'
-gem 'dalli'
+gem 'dalli', '2.7.6'
 gem 'connection_pool'
 gem 'lograge'
 gem 'logstash-logger'
@@ -46,6 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'jasmine-rails'
   gem 'pry'
+  gem 'byebug'
 end
 
 group :test do

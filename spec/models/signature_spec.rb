@@ -23,8 +23,7 @@ RSpec.describe Signature, type: :model do
     end
 
     it "generates perishable token" do
-      s = FactoryBot.build(:signature, :perishable_token => nil)
-      raise s.inspect
+      s = FactoryBot.create(:signature, :perishable_token => nil)
       expect(s.perishable_token).not_to be_nil
     end
 

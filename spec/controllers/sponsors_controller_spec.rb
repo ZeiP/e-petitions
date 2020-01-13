@@ -475,7 +475,7 @@ RSpec.describe SponsorsController, type: :controller do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com")
+              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com") }
             }
           end
 
@@ -531,7 +531,7 @@ RSpec.describe SponsorsController, type: :controller do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com")
+              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com") }
             }
           end
 

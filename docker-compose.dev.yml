@@ -1,7 +1,7 @@
 version: '2'
 services:
   sqldb:
-    image: postgres:12.1
+    image: postgres:10
     volumes:
       - ./data/sqldb:/var/lib/postgres/data
     networks:

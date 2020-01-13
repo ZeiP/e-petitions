@@ -5,7 +5,8 @@ RUN gem install bundler
 RUN apt-get update && apt-get install -y \
      build-essential git \
      locales nodejs \
-     libpq-dev wget lsb-release
+     libpq-dev wget lsb-release \
+     imagemagick
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8

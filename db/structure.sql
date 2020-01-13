@@ -1,10 +1,13 @@
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
+SET row_security = off;
 
 --
 -- Name: intarray; Type: EXTENSION; Schema: -; Owner: -
@@ -21,8 +24,6 @@ COMMENT ON EXTENSION intarray IS 'functions, operators, and index support for 1-
 
 
 SET default_tablespace = '';
-
-SET default_with_oids = false;
 
 --
 -- Name: admin_users; Type: TABLE; Schema: public; Owner: -
@@ -56,6 +57,7 @@ CREATE TABLE public.admin_users (
 --
 
 CREATE SEQUENCE public.admin_users_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -109,6 +111,7 @@ CREATE TABLE public.archived_debate_outcomes (
 --
 
 CREATE SEQUENCE public.archived_debate_outcomes_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -143,6 +146,7 @@ CREATE TABLE public.archived_government_responses (
 --
 
 CREATE SEQUENCE public.archived_government_responses_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -175,6 +179,7 @@ CREATE TABLE public.archived_notes (
 --
 
 CREATE SEQUENCE public.archived_notes_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -209,6 +214,7 @@ CREATE TABLE public.archived_petition_emails (
 --
 
 CREATE SEQUENCE public.archived_petition_emails_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -268,6 +274,7 @@ CREATE TABLE public.archived_petitions (
 --
 
 CREATE SEQUENCE public.archived_petitions_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -301,6 +308,7 @@ CREATE TABLE public.archived_rejections (
 --
 
 CREATE SEQUENCE public.archived_rejections_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -353,6 +361,7 @@ CREATE TABLE public.archived_signatures (
 --
 
 CREATE SEQUENCE public.archived_signatures_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -392,6 +401,7 @@ CREATE TABLE public.constituencies (
 --
 
 CREATE SEQUENCE public.constituencies_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -426,6 +436,7 @@ CREATE TABLE public.constituency_petition_journals (
 --
 
 CREATE SEQUENCE public.constituency_petition_journals_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -460,6 +471,7 @@ CREATE TABLE public.country_petition_journals (
 --
 
 CREATE SEQUENCE public.country_petition_journals_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -501,6 +513,7 @@ CREATE TABLE public.debate_outcomes (
 --
 
 CREATE SEQUENCE public.debate_outcomes_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -540,6 +553,7 @@ CREATE TABLE public.delayed_jobs (
 --
 
 CREATE SEQUENCE public.delayed_jobs_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -574,6 +588,7 @@ CREATE TABLE public.domains (
 --
 
 CREATE SEQUENCE public.domains_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -609,6 +624,7 @@ CREATE TABLE public.email_requested_receipts (
 --
 
 CREATE SEQUENCE public.email_requested_receipts_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -641,6 +657,7 @@ CREATE TABLE public.feedback (
 --
 
 CREATE SEQUENCE public.feedback_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -675,6 +692,7 @@ CREATE TABLE public.government_responses (
 --
 
 CREATE SEQUENCE public.government_responses_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -709,6 +727,7 @@ CREATE TABLE public.holidays (
 --
 
 CREATE SEQUENCE public.holidays_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -758,6 +777,7 @@ CREATE TABLE public.invalidations (
 --
 
 CREATE SEQUENCE public.invalidations_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -792,6 +812,7 @@ CREATE TABLE public.locations (
 --
 
 CREATE SEQUENCE public.locations_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -824,6 +845,7 @@ CREATE TABLE public.notes (
 --
 
 CREATE SEQUENCE public.notes_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -869,6 +891,7 @@ CREATE TABLE public.parliaments (
 --
 
 CREATE SEQUENCE public.parliaments_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -903,6 +926,7 @@ CREATE TABLE public.petition_emails (
 --
 
 CREATE SEQUENCE public.petition_emails_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -937,6 +961,7 @@ CREATE TABLE public.petition_statistics (
 --
 
 CREATE SEQUENCE public.petition_statistics_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -995,6 +1020,7 @@ CREATE TABLE public.petitions (
 --
 
 CREATE SEQUENCE public.petitions_id_seq
+    AS integer
     START WITH 200000
     INCREMENT BY 1
     MINVALUE 200000
@@ -1044,6 +1070,7 @@ CREATE TABLE public.rate_limits (
 --
 
 CREATE SEQUENCE public.rate_limits_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1077,6 +1104,7 @@ CREATE TABLE public.rejections (
 --
 
 CREATE SEQUENCE public.rejections_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1147,6 +1175,7 @@ CREATE TABLE public.signatures (
 --
 
 CREATE SEQUENCE public.signatures_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1200,6 +1229,7 @@ CREATE TABLE public.sites (
 --
 
 CREATE SEQUENCE public.sites_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1232,6 +1262,7 @@ CREATE TABLE public.tags (
 --
 
 CREATE SEQUENCE public.tags_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1263,6 +1294,7 @@ CREATE TABLE public.tasks (
 --
 
 CREATE SEQUENCE public.tasks_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1297,6 +1329,7 @@ CREATE TABLE public.trending_domains (
 --
 
 CREATE SEQUENCE public.trending_domains_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1332,6 +1365,7 @@ CREATE TABLE public.trending_ips (
 --
 
 CREATE SEQUENCE public.trending_ips_id_seq
+    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -2085,7 +2119,7 @@ CREATE INDEX index_archived_signatures_on_name ON public.archived_signatures USI
 -- Name: index_archived_signatures_on_normalized_email; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_archived_signatures_on_normalized_email ON public.archived_signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '.|+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
+CREATE INDEX index_archived_signatures_on_normalized_email ON public.archived_signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '\.|\+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
 
 
 --
@@ -2526,7 +2560,7 @@ CREATE INDEX index_signatures_on_name ON public.signatures USING btree (lower((n
 -- Name: index_signatures_on_normalized_email; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_signatures_on_normalized_email ON public.signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '.|+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
+CREATE INDEX index_signatures_on_normalized_email ON public.signatures USING btree (((regexp_replace("left"((email)::text, ("position"((email)::text, '@'::text) - 1)), '\.|\+.+'::text, ''::text, 'g'::text) || "substring"((email)::text, "position"((email)::text, '@'::text)))));
 
 
 --
@@ -3000,20 +3034,13 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190415015616'),
 ('20190419065717'),
 ('20190420112847'),
-('20190420112856');
+('20190420112856'),
+('20190501120348'),
+('20190502104930'),
+('20190502105505'),
+('20190502105750'),
+('20190514055139'),
+('20190514070908'),
+('20190718133606');
 
-
-INSERT INTO schema_migrations (version) VALUES ('20190501120348');
-
-INSERT INTO schema_migrations (version) VALUES ('20190502104930');
-
-INSERT INTO schema_migrations (version) VALUES ('20190502105505');
-
-INSERT INTO schema_migrations (version) VALUES ('20190502105750');
-
-INSERT INTO schema_migrations (version) VALUES ('20190514055139');
-
-INSERT INTO schema_migrations (version) VALUES ('20190514070908');
-
-INSERT INTO schema_migrations (version) VALUES ('20190718133606');
 
