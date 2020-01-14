@@ -2,6 +2,7 @@ module DateTimeHelper
   WAITING_FOR_KEYS = Hash.new(:other).merge(0 => :zero, 1 => :one)
   TO_BE_DEBATED_KEYS = Hash.new(:other).merge(0 => :today, 1 => :tomorrow)
 
+  #TODO: LOCALIZE
   def short_date_format(date_time)
     date_time && date_time.strftime("%-d %B %Y")
   end

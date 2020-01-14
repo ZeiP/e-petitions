@@ -10,14 +10,14 @@
 <%= form.hidden_field :location_code %>
 <%= form.hidden_field :notify_by_email %>
 
-<h1 class="page-title">Make sure this is right</h1>
+<h1 class="page-title">LOCALIZE_Make sure this is right</h1>
 
 <%= form_row for: [petition, :email] do %>
-  <%= form.label :email, "Email address", class: "form-label" %>
+  <%= form.label :email, "LOCALIZE_Email address", class: "form-label" %>
   <%= error_messages_for_field petition, :email %>
   <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
 <% end %>
 
-<%= form.submit "Yes – this is my email address", name: "move_next", class: "button", tabindex: increment %>
+<%= form.submit "LOCALIZE_Yes – this is my email address", name: "move_next", class: "button", tabindex: increment %>
 
-<p>If your email address is wrong, just change it above</p>
+<p>LOCALIZE_If your email address is wrong, just change it above</p>
