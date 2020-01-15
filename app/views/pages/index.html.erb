@@ -9,7 +9,7 @@
     #TODO: Clear code, currently assuming no dissolution announced
     %>
     <%= render 'pages/home/dissolution_announced' %>
-  <% elsif Parliament.opened? || true 
+  <% elsif (Parliament.opened? || true) 
     #TODO: Clear code, currently assuming parliament is open
     %>
     <%= render 'pages/home/opened' %>
