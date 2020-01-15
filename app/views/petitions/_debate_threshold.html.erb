@@ -61,14 +61,14 @@
   <%# Waiting for a government response #%>
   <% elsif petition.debate_threshold_reached_at? -%>
     <h2 id="debate-threshold-heading"><%= t "petitions.debated_petitions.will_consider_debate" %></h2>
-    <p><%= t "petitions.debated_petitions.consider_threshold", threshold: @parliament.formatted_threshold_for_debate %></p>
+    <p><%= t "petitions.debated_petitions.consider_threshold", threshold: Site.formatted_threshold_for_debate %></p>
     <p class="secondary"><%= t "petitions.debated_petitions.waiting_debate_date", duration: waiting_for_in_words(@petition.debate_threshold_reached_at) %></p>
 
   <%# Needs more signatures #%>
   <% else -%>
     <% if !@petition.closed? %>
       <h2 id="debate-threshold-heading"><%= t "petitions.debated_petitions.at_threshold", threshold: Site.formatted_threshold_for_debate %></h2>
-      <p><%= t "petitions.debated_petitions.if_at_threshold", threshold: @parliament.formatted_threshold_for_debate %></p>
+      <p><%= t "petitions.debated_petitions.if_at_threshold", threshold: Site.formatted_threshold_for_debate %></p>
     <% end %>
   <% end -%>
 </section>
