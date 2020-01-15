@@ -34,7 +34,7 @@ en-GB:
     formats:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
-      short: "%d %b"
+      short: "%-d %B %Y"
     month_names:
     -
     - January
@@ -54,6 +54,8 @@ en-GB:
     - :month
     - :year
   datetime:
+    formats: 
+      short: "%H:%M%P on %-d %B %Y"
     distance_in_words:
       about_x_hours:
         one: about 1 hour

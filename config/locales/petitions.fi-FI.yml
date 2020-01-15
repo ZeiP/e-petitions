@@ -429,7 +429,7 @@ fi-FI:
     petition_closed: "Fi_fi_locale_This petition is closed"
     petition_ran_for: "Fi_fi_locale_This petition ran for %{duration}"
     was_debated: "Fi_fi_locale_Parliament debated this topic"
-    was_debated_on: "Fi_fi_locale_This topic was debated on %{date}"
+    was_debated_on: "Keskusjärjestö käsitteli aloitteen  %{date}"
     no_debate: "Fi_fi_locale_The Petitions Committee decided not to debate this petition"
     watch_at: "Fi_fi_locale_You'll be able to watch the debate online at {href}"
     watch_at_location: "Fi_fi_locale_parliamentlive.tv"
