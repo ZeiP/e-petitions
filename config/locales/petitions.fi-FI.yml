@@ -456,7 +456,7 @@ fi-FI:
     details: "Lisätietoja"
     was_rejected: "Tämä aloite hylättiin"
     reason: "Miksi tämä aloite hylättiin?"
-    explanation_html: "Hylkäämme aloitteita ainoastaan kun ne eivät täytä %{href}"
+    explanation_html: "Hylkäämme aloitteita ainoastaan kun ne eivät täytä %{href}."
     standards: "aloitevaatimuksia"
     date_submitted: "Aloitteen luontipäivä"
     get_json_data: "Lataa aloitteen tiedot (json-formaatti)"

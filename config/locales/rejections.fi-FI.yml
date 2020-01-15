@@ -19,12 +19,12 @@ fi-FI:
       no-action: |-
         <p>Ei ole selvää mitä aloite haluaa Partiolaisten tai partiojohdon tekevän.</p>
       honours: |-
-        <p>Aloite on kunnianosoitusten tai nimityksisten myönnöstä</p>
+        <p>Aloite on kunnianosoitusten tai nimityksisten myönnöstä.</p>
       fake-name: |-
-        <p>Aloite luotiin käyttäen väärää tai vaillinaista nimeä</p>
+        <p>Aloite luotiin käyttäen väärää tai vaillinaista nimeä.</p>
         <p>Aloitteen teksti täytti sille asetetut vaatimukset.</p>
         <p>Tästä huolimatta aloitteet tulee luoda käyttäen kokonaista, oikeaa nimeä. Anteeksi jos tämä ei ollut selvää.</p>
-        <p>Hylkäämme aloittesi tällä perusteella, mutta jos lähetät aloitteen uudelleen käyttäen oikeaa nimeäsi voimme hyväksyä sen.</p>
+        <p>Hylkäämme aloittesi tämän perusteella, mutta jos lähetät aloitteen uudelleen käyttäen oikeaa nimeäsi voimme hyväksyä sen.</p>
       foi: |-
         <p>Aloite on tietopyyntö.</p>
       libellous: |-
