@@ -1,4 +1,4 @@
-require 'csv'
+require "csv"
 
 class PetitionsController < ApplicationController
   before_action :redirect_to_valid_state, only: [:index]
@@ -94,11 +94,13 @@ class PetitionsController < ApplicationController
   end
 
   def redirect_to_home_page_if_dissolved
-    redirect_to home_url if false
+    #TODO: Clear code, currently assuming parliament not dissolved
+    redirect_to home_url if Parliament.dissolved? || false
   end
 
   def redirect_to_home_page_unless_opened
-    redirect_to home_url unless true
+    #TODO: Clear code, currently assuming parliament open
+    redirect_to home_url unless Parliament.opened? || true
   end
 
   def request_format
@@ -178,6 +180,6 @@ class PetitionsController < ApplicationController
   end
 
   def set_content_disposition
-    response.headers['Content-Disposition'] = "attachment; filename=#{csv_filename}"
+    response.headers["Content-Disposition"] = "attachment; filename=#{csv_filename}"
   end
 end

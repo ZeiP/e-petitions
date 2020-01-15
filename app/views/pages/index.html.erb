@@ -1,11 +1,19 @@
 <%= cache_for :home_page do %>
   <h1 class="visuallyhidden"><%= t "page_titles.default" %></h1>
 
-  <% if false && Parliament.dissolved? %>
+  <% if false && Parliament.dissolved?
+    #TODO: Clear code, currently assuming parliament not dissolved 
+    %>
     <%= render 'pages/home/dissolved' %>
-  <% elsif false && Parliament.dissolution_announced? %>
+  <% elsif false && Parliament.dissolution_announced? 
+    #TODO: Clear code, currently assuming no dissolution announced
+    %>
     <%= render 'pages/home/dissolution_announced' %>
-  <% else %>
+  <% elsif Parliament.opened? || true 
+    #TODO: Clear code, currently assuming parliament is open
+    %>
     <%= render 'pages/home/opened' %>
+  <% else %>
+    <%= render 'pages/home/pending' %>
   <% end %>
 <% end %>
