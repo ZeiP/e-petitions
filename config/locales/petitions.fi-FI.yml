@@ -369,19 +369,20 @@ fi-FI:
       not_debated_explanation:
         html: "Fi_fi_locale_See all petitions not debated in parliament (%{formatted_count})"
 
+    #Admin-side localizations
     action_counts:
       in_moderation:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Moderation queue"
+          "<span class=\"count\">%{formatted_count}</span> Moderation queue"
       awaiting_response:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Government response queue"
+          "<span class=\"count\">%{formatted_count}</span> Government response queue"
       in_debate_queue:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_Debate queue"
+          "<span class=\"count\">%{formatted_count}</span> Debate queue"
       all:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Fi_fi_locale_All petitions"
+          "<span class=\"count\">%{formatted_count}</span> All petitions"
 
     debate_outcomes:
       link_titles:
