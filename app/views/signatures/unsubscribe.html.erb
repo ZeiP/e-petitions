@@ -1,12 +1,12 @@
 <% if @signature.already_unsubscribed? %>
-  <h1>LOCALIZE_Already unsubscribed from this petition</h1>
-  <p>LOCALIZE_You have already unsubscribed from email updates about this petition.</p>
+  <h1><%= t "unsubscribe.already_unsubscribed_title"%></h1>
+  <p><%= t "unsubscribe.already_unsubscribed"%></p>
 <% elsif @signature.invalid_unsubscribe_token? %>
-  <h1>LOCALIZE_Failed to unsubscribe</h1>
-  <p>LOCALIZE_Your unsubscribe link is invalid.</p>
+  <h1><%= t "unsubscribe.failed_title"%></h1>
+  <p><%= t "unsubscribe.failed"%></p>
 <% else %>
-  <h1>LOCALIZE_Successfully unsubscribed from this petition</h1>
-  <p>LOCALIZE_You have unsubscribed from email updates about this petition.</p>
+  <h1><%= t "unsubscribe.success_title"%></h1>
+  <p><%= t "unsubscribe.success"%></p>
 <% end %>
 
-<%= link_to "LOCALIZE_Return to home page", home_path %>
+<%= link_to (t "unsubscribe.return_home"), home_path %>

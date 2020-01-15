@@ -10,6 +10,8 @@
       <% end -%>
     </ol>
     <%= render 'paginated_results' %>
-    <p><%= t "petitions.get_data_html", json: (link_to "JSON", petitions_path(:json, params.permit(:q, :page, :state))), csv: (link_to 'CSV', petitions_path(:csv, params.permit(:q, :state))) %></p>
+    <p><%= t "petitions.get_data_html", 
+      json: (link_to "JSON", petitions_path(:json, params.permit(:q, :page, :state))), 
+      csv: (link_to 'CSV', petitions_path(:csv, params.permit(:q, :state))) %></p>
   <% end %>
 </div>

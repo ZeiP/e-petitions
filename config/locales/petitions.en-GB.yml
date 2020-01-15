@@ -98,6 +98,9 @@ en-GB:
       deadline: "Deadline"
       time: "All petitions run for 6 months"
       get_data: "Get petition data (json format)"
+      check_info: "Make sure this is right"
+      confirm_info: "Yes – this is my email address"
+      if_wrong_email: "If your email address is wrong, just change it above"
 
     page_titles:
       all: "All petitions"
@@ -448,3 +451,53 @@ en-GB:
     date_submitted: "Date submitted"
     date_closed: "Date closed"
     get_json_data: "Get petition data (json format)"
+
+  rejected:
+    heading: "Rejected petition"
+    details: "More details"
+    was_rejected: "This petition was rejected"
+    reason: "Why was this petition rejected?"
+    explanation_html: "We only reject petitions that don’t meet the %{href}"
+    standards: "petition standards"
+    date_submitted: "Date submitted"
+    get_json_data: "Get petition data (json format)"
+
+  unsubscribe:
+    already_unsubcribed_title: "Already unsubscribed from this petition"
+    already_unsubscribed: "You have already unsubscribed from email updates about this petition."
+    failed_title: "Failed to unsubscribe"
+    failed: "Your unsubscribe link is invalid."
+    success_title: "Successfully unsubscribed from this petition"
+    success: "You have unsubscribed from email updates about this petition."
+    return_home: "Return to home page"
+
+  signed:
+    signatures: "signatures"
+    signature_added: "We've added your signature to the petition:"
+    thanks: "Thanks"
+    sponsor_sign: "Your signature has been added to this petition as a supporter."
+    what_next: "What next?"
+    signatures_required: "This petition needs %{threshold} supporters to go live."
+    email_notice: "When it goes live, we'll email you a link so you can start sharing it."
+    one_more_step: "One more step..."
+    emailed_link: "We've emailed you a link to send to your potential supporters"
+    required_supporters: "You need %{threshold} supporters"
+    supporters_needed: "%{threshold} people need to click this link and confirm their support for your petition to go live"
+    live_requirement: "Your petition will only go live when %{threshold} people confirm their support"
+    confirm_address: "We’ve sent you an email. Please click on the link in the email to confirm your address."
+    confirm_required: "Your signature will not be counted until you click the link in the email"
+    no_confirmation: "Not received a confirmation email?"
+    if_no_email: "If you haven’t received a confirmation email:"
+    check_spam: "check your spam or junk mail folders"
+    wait: "allow up to 24 hours for the email to arrive"
+
+  gathering_support:
+    title: "This petition is gathering support"
+    signatures_required_html: "%{creator}’s petition needs %{threshold} supporters before we will check that it meets the %{href} and publish it."
+    try_later: "Please try again in a few days."
+
+  moderation:
+    title: "We’re checking this petition"
+    supporters: "%{threshold} people have already supported %{creator}’s petition."
+    check_needed_html: "We need to check it meets the %{href} before we publish it."
+    try_later: "Please try again in a few days."

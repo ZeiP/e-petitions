@@ -225,3 +225,8 @@ en-GB:
     character_limit: "%{limit} characters max"
     name: "Name"
     location: "Location"
+    rejected: "Rejected"
+    now_closed: "now closed"
+    cookies: "We use cookies to make this service simpler."
+    about_cookies: "Find out more about cookies"
+    debated: "Debated"

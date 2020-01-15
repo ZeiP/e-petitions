@@ -1,9 +1,9 @@
 <h1 class="page-title page-title-with-icon">
   <span class="icon icon-confirmation-tick"></span>
-  LOCALIZE_Thanks
+  <%= t "signed.thanks"%>
 </h1>
 
-<p>LOCALIZE_Your signature has been added to this petition as a supporter.</p>
-<h2>LOCALIZE_What next?</h2>
-<p>LOCALIZE_This petition needs <%= Site.minimum_number_of_sponsors %> supporters to go live.</p>
-<p>LOCALIZE_When it goes live, we'll email you a link so you can start sharing it.</p>
+<p><%= t "signed.sponsor_sign"%></p>
+<h2><%= t "signed.what_next"%></h2>
+<p><%= t "signed.signatures_required", threshold: Site.minimum_number_of_sponsors %></p>
+<p><%= t "signed.email_notice"%></p>

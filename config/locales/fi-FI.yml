@@ -207,9 +207,9 @@ fi-FI:
   time:
     am: Fi_fi_locale_am
     formats:
-      default: "%a, %d %b %Y %H:%M:%S %z"
-      long: "%d %B, %Y %H:%M"
-      short: "%d %b %H:%M"
+      default: "Fi_fi_locale_ %a, %d %b %Y %H:%M:%S %z"
+      long: "Fi_fi_locale_ %d %B, %Y %H:%M"
+      short: "Fi_fi_locale_ %d %b %H:%M"
     pm: Fi_fi_locale_pm
   generic:
     back: Takaisin
@@ -225,3 +225,8 @@ fi-FI:
     character_limit: "{%limit} kirjainta max"
     name: "Nimi"
     location: "Sijainti"
+    rejected: "Hylätty"
+    now_closed: "suljettu"
+    cookies: "Fi_fi_locale_We use cookies to make this service simpler."
+    about_cookies: "Fi_fi_locale_Find out more about cookies"
+    debated: "Käsitelty"

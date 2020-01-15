@@ -98,6 +98,9 @@ fi-FI:
       deadline: "Määräaika"
       time: "Kaikki aloitteet kestävät 6 kuukautta"
       get_data: "Lataa aloitteen tiedot (json-formaatti)"
+      check_info: "Fi_fi_locale_Make sure this is right"
+      confirm_info: "Fi_fi_locale_Yes – this is my email address"
+      if_wrong_email: "Fi_fi_locale_If your email address is wrong, just change it above"
 
     page_titles:
       all: "Kaikki aloitteet"
@@ -448,3 +451,54 @@ fi-FI:
     date_submitted: "Fi_fi_locale_Date submitted"
     date_closed: "Fi_fi_locale_Date closed"
     get_json_data: "Fi_fi_locale_Get petition data (json format)"
+
+  rejected:
+    heading: "Fi_fi_locale_Rejected petition"
+    details: "Fi_fi_locale_More details"
+    was_rejected: "Fi_fi_locale_This petition was rejected"
+    reason: "Fi_fi_locale_Why was this petition rejected?"
+    explanation_html: "Fi_fi_locale_We only reject petitions that don’t meet the %{href}"
+    standards: "Fi_fi_locale_petition standards"
+    date_submitted: "Fi_fi_locale_Date submitted"
+    get_json_data: "Fi_fi_locale_Get petition data (json format)"
+
+
+  unsubscribe:
+    already_unsubcribed_title: "Fi_fi_locale_Already unsubscribed from this petition"
+    already_unsubscribed: "Fi_fi_locale_You have already unsubscribed from email updates about this petition."
+    failed_title: "Fi_fi_locale_Failed to unsubscribe"
+    failed: "Fi_fi_locale_Your unsubscribe link is invalid."
+    success_title: "Fi_fi_locale_Successfully unsubscribed from this petition"
+    success: "Fi_fi_locale_You have unsubscribed from email updates about this petition."
+    return_home: "Fi_fi_locale_Return to home page"
+
+  signed:
+    signatures: "Fi_fi_locale_signatures"
+    signature_added: "Fi_fi_locale_We've added your signature to the petition:"
+    thanks: "Fi_fi_locale_Thanks"
+    sponsor_sign: "Fi_fi_locale_Your signature has been added to this petition as a supporter."
+    what_next: "Fi_fi_locale_What next?"
+    signatures_required: "Fi_fi_locale_This petition needs %{threshold} supporters to go live."
+    email_notice: "Fi_fi_locale_When it goes live, we'll email you a link so you can start sharing it."
+    one_more_step: "Fi_fi_locale_One more step..."
+    emailed_link: "Fi_fi_locale_We've emailed you a link to send to your potential supporters"
+    required_supporters: "Fi_fi_locale_You need %{threshold} supporters"
+    supporters_needed: "Fi_fi_locale_%{threshold} people need to click this link and confirm their support for your petition to go live"
+    live_requirement: "Fi_fi_locale_Your petition will only go live when %{threshold} people confirm their support"
+    confirm_address: "Fi_fi_locale_We’ve sent you an email. Please click on the link in the email to confirm your address."
+    confirm_required: "Fi_fi_locale_Your signature will not be counted until you click the link in the email"
+    no_confirmation: "Fi_fi_locale_Not received a confirmation email?"
+    if_no_email: "Fi_fi_locale_If you haven’t received a confirmation email:"
+    check_spam: "Fi_fi_locale_check your spam or junk mail folders"
+    wait: "Fi_fi_locale_allow up to 24 hours for the email to arrive"
+
+  gathering_support:
+    title: "Fi_fi_locale_This petition is gathering support"
+    signatures_required_html: "Fi_fi_locale_%{creator}’s petition needs %{threshold} supporters before we will check that it meets the %{href} and publish it."
+    try_later: "Fi_fi_locale_Please try again in a few days."
+
+  moderation:
+    title: "Fi_fi_locale_We’re checking this petition"
+    supporters: "Fi_fi_locale_%{threshold} people have already supported %{creator}’s petition."
+    check_needed_html: "Fi_fi_locale_We need to check it meets the %{href} before we publish it."
+    try_later: "Fi_fi_locale_Please try again in a few days."

@@ -1,9 +1,9 @@
-<h1>LOCALIZE_Petitions</h1>
+<h1>Petitions</h1>
 
 <%= form_tag admin_petitions_path, enforce_utf8: false, method: :get, class: "search-petitions" do %>
   <div class="grid-row">
     <div class="column-two-thirds">
-      <%= label_tag :state, "LOCALIZE_Filter by status", class: "visuallyhidden" %>
+      <%= label_tag :state, "Filter by status", class: "visuallyhidden" %>
       <%= select_tag :state, admin_petition_facets_for_select(@petitions.facets, params[:state]), class: "form-control", data: { autosubmit: true } %>
     </div>
     <div class="column-two-thirds">
@@ -14,21 +14,21 @@
       </div>
     </div>
     <div class="column-third actions-right">
-      <%= link_to "LOCALIZE_Download CSV", admin_petitions_path(params.permit(:state, :q, :match, tags: []).merge(format: "csv")) %>
+      <%= link_to "Download CSV", admin_petitions_path(params.permit(:state, :q, :match, tags: []).merge(format: "csv")) %>
     </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= content_tag(:details, class: "tag-selector", open: selected_tags.present? || params[:match] == "none") do %>
-        <summary><span>LOCALIZE_Tags</span></summary>
+        <summary><span>Tags</span></summary>
         <div class="inline tag-list">
           <div class="panel-indent">
             <p>
               <small>
-               LOCALIZE_ Match <label><%= radio_button_tag :match, "any", %w[all none].exclude?(params[:match]) %> LOCALIZE_any selected tags</label>
-                <label><%= radio_button_tag :match, "all", params[:match] == "all" %> LOCALIZE_all selected tags</label>
-                <label><%= radio_button_tag :match, "none", params[:match] == "none" %> LOCALIZE_no tags</label>
+                Match <label><%= radio_button_tag :match, "any", %w[all none].exclude?(params[:match]) %> any selected tags</label>
+                <label><%= radio_button_tag :match, "all", params[:match] == "all" %> all selected tags</label>
+                <label><%= radio_button_tag :match, "none", params[:match] == "none" %> no tags</label>
               </small>
             </p>
             <% Tag.by_name.each do |tag| %>
@@ -53,12 +53,12 @@
 <table class="petition-list">
   <thead>
     <tr>
-      <th class="petition-list-petition-action">LOCALIZE_Action</th>
-      <th class="petition-list-petition-creator">LOCALIZE_Creator</th>
-      <th class="petition-list-petition-id">LOCALIZE_Id</th>
-      <th>LOCALIZE_State</th>
-      <th class="date">LOCALIZE_Closing</th>
-      <th class="numeric last">LOCALIZE_Signatures</th>
+      <th class="petition-list-petition-action">Action</th>
+      <th class="petition-list-petition-creator">Creator</th>
+      <th class="petition-list-petition-id">Id</th>
+      <th>State</th>
+      <th class="date">Closing</th>
+      <th class="numeric last">Signatures</th>
     </tr>
   </thead>
   <tbody>
@@ -78,5 +78,5 @@
 <%= will_paginate(@petitions) %>
 
 <% if @petitions.scope == :overdue_in_moderation %>
-  <p><%= link_to "LOCALIZE_Email creators", new_admin_moderation_delay_path, class: "button" %></p>
+  <p><%= link_to "Email creators", new_admin_moderation_delay_path, class: "button" %></p>
 <% end %>
