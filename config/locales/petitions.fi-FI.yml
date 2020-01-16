@@ -403,7 +403,7 @@ fi-FI:
   petition:
     responded:
       title: "Keskusjärjestö vastasi"
-      on: "Vastaus annettiin %{date}"
+      'on': "Vastaus annettiin %{date}"
       read_in_full: "Lue koko vastaus"
     waiting:
       title: "Keskusjärjestö on vastaamassa"

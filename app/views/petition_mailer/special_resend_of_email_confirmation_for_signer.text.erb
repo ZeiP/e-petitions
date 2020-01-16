@@ -1,11 +1,11 @@
-Dear <%= @signature.name %>,
+<%= t "mail.greeting" %> <%= @signature.name %>,
 
-We noticed that you tried to sign the petition "<%= @petition.action %>" but haven't confirmed your email address.
+<%= t "mail.sign_attempt", petition: @petition.action %>
 
-Click this link to sign the petition:
+<%= t "mail.sponsor.click_link" %> 
 
 <%= verify_signature_url(@signature, token: @signature.perishable_token) %>
 
-Thanks,
+<%= t "mail.thanks" %> 
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>

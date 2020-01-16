@@ -1,12 +1,18 @@
-<p>Dear <%= @petition.creator.name %>,</p>
+<p><%= t "mail.greeting"%> <%= @petition.creator.name %>,</p>
 
-<p><%= @sponsor.name %> supported your petition – “<%= @petition.action %>”.</p>
+<p><%= t"mail.supported", sponsor: @sponsor.name, petition: @petition.action %></p>
 
-<p>You have <%= pluralize(@sponsor_count, 'supporter', locale: :en) %> so far. If <%= Site.threshold_for_moderation %> people support your petition we’ll check it to make sure it meets the petition standards. If it does, we’ll publish it.</p>
 
-<p>Find out how we check petitions before we publish them:<br />
+<% if @sponsor_count == 1 %>
+    <p><%= t"mail.supporters.one", count: @sponsor_count, threshold: Site.threshold_for_moderation%></p>
+<% else %>
+    <p><%= t"mail.supporters.other", count: @sponsor_count, threshold: Site.threshold_for_moderation%></p>
+<% end %>
+
+
+<p><%= t "mail.moderation_info" %><br />
 <%= link_to nil, help_url(anchor: 'standards') %></p>
 
-<p>Thanks,<br />
+<p><%= t "mail.thanks"%><br />
 <%= t("petitions.emails.signoff_prefix") %><br />
 <%= t("petitions.emails.signoff_suffix") %></p>

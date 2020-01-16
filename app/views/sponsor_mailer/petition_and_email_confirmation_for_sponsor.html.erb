@@ -1,11 +1,11 @@
 <%#TODO: localise emails%>
-<p>Click this link to sign the petition “<%= @petition.action %>”</p>
+<p><%= t "mail.click_to_sign", petition: @petition.action %></p>
 
 <p><%= link_to nil, verify_sponsor_url(@sponsor, token: @sponsor.perishable_token) %></p>
 
 <hr />
 
-<p><%= @petition.creator.name %>’s petition:</p>
+<p><%= t "mail.creator", creator: @petition.creator.name %></p>
 
 <p><%= @petition.action %></p>
 
@@ -17,5 +17,5 @@
 
 <hr />
 
-<p>Click this link to sign the petition:<br />
+<p><%= t "mail.click_link" %><br />
 <%= link_to nil, verify_sponsor_url(@sponsor, token: @sponsor.perishable_token) %></p>

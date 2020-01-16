@@ -404,7 +404,7 @@ en-GB:
   petition:
     responded:
       title: "Government responded"
-      on: "This response was given on %{date}"
+      'on': "This response was given on %{date}"
       read_in_full: "Read the response in full"
     waiting:
       title: "Government will respond"
