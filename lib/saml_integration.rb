@@ -25,14 +25,13 @@ module SamlIntegration
   private
 
   def self.get_saml_configuration
-    @saml_configuration = @saml_configuration || OneLogin::RubySaml::Settings.new({
-      assertion_consumer_service_url: ENV['SAML_ACS_URL'],
-      assertion_consumer_logout_service_url: ENV['SAML_LOGOUT_URL'],
-      idp_entity_id: ENV['SAML_IDP_ENTITY_ID'],
-      idp_sso_target_url: ENV['SAML_IDP_SSO_TARGET_URL'],
-      idp_cert: ENV['SAML_IDP_CERT'],
-      issuer: ENV['SAML_METADATA_URL']
-    })
+    if !@saml_configuration
+      idp_metadata_parser = OneLogin::RubySaml::IdpMetadataParser.new
+      settings = idp_metadata_parser.parse_remote(ENV['SAML_IDP_METADATA_URL'])
+      settings.assertion_consumer_service_url = ENV['SAML_ACS_URL']
+      settings.assertion_consumer_logout_service_url = ENV['SAML_LOGOUT_URL']
+      settings.sp_entity_id = ENV['SAML_METADATA_URL']
+    end
     return @saml_configuration
   end
 end
