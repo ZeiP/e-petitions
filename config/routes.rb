@@ -217,6 +217,14 @@ Rails.application.routes.draw do
 
   get 'ping', to: 'ping#ping'
 
+  resources :saml, only: [:sso, :acs, :logout] do
+    collection do
+      get :sso
+      post :acs
+      get :logout
+    end
+  end
+
   if defined?(JasmineRails)
     mount JasmineRails::Engine, at: '/specs'
   end

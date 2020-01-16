@@ -1381,6 +1381,39 @@ ALTER SEQUENCE public.trending_ips_id_seq OWNED BY public.trending_ips.id;
 
 
 --
+-- Name: users; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.users (
+    id bigint NOT NULL,
+    email character varying(255) NOT NULL,
+    username character varying(255) NOT NULL,
+    persistence_token character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
+
+
+--
 -- Name: admin_users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1609,6 +1642,13 @@ ALTER TABLE ONLY public.trending_domains ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.trending_ips ALTER COLUMN id SET DEFAULT nextval('public.trending_ips_id_seq'::regclass);
+
+
+--
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
@@ -1889,6 +1929,14 @@ ALTER TABLE ONLY public.trending_domains
 
 ALTER TABLE ONLY public.trending_ips
     ADD CONSTRAINT trending_ips_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
 
 
 --
@@ -3041,6 +3089,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190502105750'),
 ('20190514055139'),
 ('20190514070908'),
-('20190718133606');
+('20190718133606'),
+('20200114090018');
 
 
