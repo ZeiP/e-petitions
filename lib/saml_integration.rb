@@ -22,7 +22,8 @@ module SamlIntegration
     @saml_configuration = @saml_configuration || OneLogin::RubySaml::Settings.new({
       assertion_consumer_service_url: ENV['SAML_ACS_URL'],
       assertion_consumer_logout_service_url: ENV['SAML_LOGOUT_URL'],
-      idp_sso_target_url: ENV['SAML_IDP_SSO_TARGET_URL']
+      idp_sso_target_url: ENV['SAML_IDP_SSO_TARGET_URL'],
+      idp_cert: ENV['SAML_IDP_CERT']
     })
     return @saml_configuration
   end
