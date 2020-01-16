@@ -218,11 +218,12 @@ Rails.application.routes.draw do
 
   get 'ping', to: 'ping#ping'
 
-  resources :saml, only: [:sso, :acs, :logout] do
+  resources :saml, only: [:sso, :acs, :logout, :metadata] do
     collection do
       get :sso
       post :acs
       get :logout
+      get :metadata
     end
   end
 

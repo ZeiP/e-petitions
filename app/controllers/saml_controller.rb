@@ -16,6 +16,10 @@ class SamlController < ApplicationController
     end
   end
 
+  def metadata
+    render xml: SamlIntegration.metadata
+  end
+
   def logout
   end
 end

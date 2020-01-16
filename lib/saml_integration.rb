@@ -11,9 +11,15 @@ module SamlIntegration
     request.create(configuration)
   end
 
-  def parse_acs(params)
+  def self.parse_acs(params)
     configuration = get_saml_configuration
     return OneLogin::RubySaml::Response.new(params[:SAMLResponse], settings: configuration)
+  end
+
+  def self.metadata
+    configuration = get_saml_configuration
+    meta = OneLogin::RubySaml::Metadata.new
+    return meta.generate(configuration, true)
   end
 
   private
@@ -23,7 +29,8 @@ module SamlIntegration
       assertion_consumer_service_url: ENV['SAML_ACS_URL'],
       assertion_consumer_logout_service_url: ENV['SAML_LOGOUT_URL'],
       idp_sso_target_url: ENV['SAML_IDP_SSO_TARGET_URL'],
-      idp_cert: ENV['SAML_IDP_CERT']
+      idp_cert: ENV['SAML_IDP_CERT'],
+      issuer: ENV['SAML_METADATA_URL']
     })
     return @saml_configuration
   end
