@@ -18,7 +18,7 @@ class SamlController < ApplicationController
   end
 
   def metadata
-    render xml: SamlIntegration.metadata
+    render xml: SamlIntegration.metadata, content_type: 'application/xml'
   end
 
   def logout
