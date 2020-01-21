@@ -30,7 +30,7 @@ module SamlIntegration
       settings = idp_metadata_parser.parse_remote(ENV['SAML_IDP_METADATA_URL'])
       settings.assertion_consumer_service_url = ENV['SAML_ACS_URL']
       settings.assertion_consumer_logout_service_url = ENV['SAML_LOGOUT_URL']
-      settings.issuer = ENV['SAML_METADATA_URL']
+      settings.issuer = ENV['SAML_ISSUER']
       @saml_configuration = settings
     end
     return @saml_configuration
