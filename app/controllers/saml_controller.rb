@@ -4,6 +4,7 @@ require 'saml_integration'
 class SamlController < ApplicationController
 
   skip_before_action :authenticate, only: [:acs, :logout, :sso]
+  skip_before_action :verify_authenticity_token, only: [:acs, :logout]
 
   def sso
     redirect_to(SamlIntegration.url_for_sso)
