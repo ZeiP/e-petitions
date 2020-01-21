@@ -12,8 +12,12 @@ class SamlController < ApplicationController
 
   def acs
     response = SamlIntegration.parse_acs(params)
-    if response.valid?
-      Rails.logger.warn response.inspect
+    params = response.attributes.attributes
+    @user_session = UserSession.new(email: params['email'][0], username: params['membernumber'][0])
+    if @user_session.save
+      render json: @user_session
+    else
+
     end
   end
 
