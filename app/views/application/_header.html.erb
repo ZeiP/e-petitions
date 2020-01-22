@@ -1,5 +1,5 @@
 <header role="banner" id="global-header">
-  <div class="wrapper">
+  <div class="wrapper header-wrapper">
     <% if home_page? %>
       <span class="proposition">
         <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <%= t "page_titles.header_title" %>
@@ -9,6 +9,6 @@
         <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <%= t "page_titles.header_title" %>
       <% end %>
     <% end %>
-    <p class="strapline"><%= t "petitions.emails.signoff_suffix" %></p>
+    <%= render partial: 'login' %>
   </div>
 </header>

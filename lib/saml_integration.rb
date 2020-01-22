@@ -4,6 +4,7 @@ module SamlIntegration
 
   @saml_configuration = nil
 
+  # SP initiated sso
   def self.url_for_sso
     configuration = get_saml_configuration
     raise SamlConfigurationError unless configuration
@@ -16,10 +17,28 @@ module SamlIntegration
     return OneLogin::RubySaml::Response.new(params[:SAMLResponse], settings: configuration)
   end
 
+  # Metadata for IdP, TODO: is this used?
   def self.metadata
     configuration = get_saml_configuration
     meta = OneLogin::RubySaml::Metadata.new
     return meta.generate(configuration, true)
+  end
+
+  # SP initiated slo
+  def self.url_for_slo
+    configuration = get_saml_configuration
+    if configuration.idp_slo_target_url.nil?
+      raise 'A'
+    else
+      logout_request = OneLogin::RubySaml::Logoutrequest.new()
+      relay_state = home_url
+      return logout_request.create(configuration, RelayState: relay_state)
+    end
+  end
+
+  # IdP initiated slo
+  def self.parse_slo(params)
+
   end
 
   private
