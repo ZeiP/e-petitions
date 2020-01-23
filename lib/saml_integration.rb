@@ -28,17 +28,17 @@ module SamlIntegration
   def self.url_for_slo
     configuration = get_saml_configuration
     if configuration.idp_slo_target_url.nil?
-      raise 'A'
+      raise 'idp_slo_target_url nil, error handling not implemented'
     else
       logout_request = OneLogin::RubySaml::Logoutrequest.new()
-      relay_state = home_url
+      relay_state = '/'
       return logout_request.create(configuration, RelayState: relay_state)
     end
   end
 
-  # IdP initiated slo
   def self.parse_slo(params)
-
+    configuration = get_saml_configuration
+    return OneLogin::RubySaml::Logoutresponse.new(params[:SAMLResponse], settings)
   end
 
   private

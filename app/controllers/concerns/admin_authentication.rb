@@ -1,4 +1,4 @@
-module Authentication
+module AdminAuthentication
   extend ActiveSupport::Concern
 
   included do

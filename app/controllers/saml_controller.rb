@@ -8,7 +8,7 @@ class SamlController < ApplicationController
 
   def sso
     if Rails.env.development?
-      sign_in({'email': ['leif.setala@trineria.fi'], 'membernumber': ['1234356']})
+      sign_in({'email' => ['leif.setala@trineria.fi'], 'membernumber' => ['1234356']})
     else
       redirect_to(SamlIntegration.url_for_sso)
     end
@@ -25,20 +25,33 @@ class SamlController < ApplicationController
   end
 
   def logout
+    response = SamlIntegration.parse_slo(params)
+    current_session.destroy if current_session
+    redirect_to '/'
   end
 
   def application_logout
-    redirect_to(SamlIntegration.url_for_slo)
+    if Rails.env.development?
+      current_session.destroy if current_session
+      redirect_to '/'
+    else
+      redirect_to(SamlIntegration.url_for_slo)
+    end
   end
 
   private
 
   def sign_in(params)
-    user = User.find_or_initialize_by(email: params[:email][0], username: params[:membernumber][0])
-    if user.save
+    if logged_in?
       redirect_to home_url
     else
-      raise "#{user.errors.full_messages}"
+      user = User.find_or_initialize_by(email: params['email'][0], username: params['membernumber'][0])
+      if user.save
+        @current_session = UserSession.create(user, false)
+        redirect_to home_url
+      else
+        raise "#{user.errors.full_messages}"
+      end
     end
   end
 end
