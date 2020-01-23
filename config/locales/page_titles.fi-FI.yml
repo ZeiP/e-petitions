@@ -8,11 +8,12 @@ fi-FI:
     feedback:
       index: "Lähetä palautetta - Partiolaisaloitteet"
       thanks: "Kiitos - Aloitteet"
+    #local petitions logic not in use?
     local_petitions:
       index:
         zero: "Paikallisia sinulle - Partiolaisaloitteet"
         one: "Aloitteita postinumerolla %{postcode}"
-      show: "Aloitteita  %{constituency}" #TODO : Constituency -
+      show: "Aloitteita  %{constituency}"
     petitions:
       index: "Näytä kaikki aloitteet - Partiolaisaloitteet"
       check: "Luo uusi aloite - Partiolaisaloitteet"

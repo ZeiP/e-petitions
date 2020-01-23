@@ -1,5 +1,8 @@
+#Almost everything here is visible to standard users
+
 fi-FI:
   petitions:
+    #encountered during creation of new petition
     start:
       title: "Luo uusi aloite"
       petition: "Mitä haluaisit partiojohdon tekevän?"
@@ -16,6 +19,7 @@ fi-FI:
       preview_petition: "Esikatsele aloitetta"
       could_not_create: "Emme voineet luoda aloitetta"
 
+    # encountered when searching for petitions
     search:
       result:
         one: "tulos"
@@ -24,6 +28,7 @@ fi-FI:
         one: "aloite"
         other: "aloitetta"
 
+    #errors during petition creation
     errors:
       prompt:
         one: "Korjaa seuraava virhe:"
@@ -31,6 +36,7 @@ fi-FI:
 
       invalid_signature_count: "Fi_fi_locale_Petition %{id} had an invalid signature count"
 
+    #searching for petitions
     view_all: "Näytä kaikki aloitteet"
     popular_title: "Suositut aloitteet"
     search_title: "Hae aloitetta"
@@ -41,15 +47,17 @@ fi-FI:
     archived_petitions: "Arkistoidut aloitteet"
     get_data_html: "Lataa tiedot %{json}- tai %{csv}-formaatissa"
 
+    #searching for petitions
     about:
       summary: "Aloitteen tiedoista"
-      content: |- #TODO: does this work?
+      content: |-
         "Fi_fi_locale_The data shows the number of people who have signed the petition
         by country as well as in the constituency of each Member of Parliament.
         This data is available for all petitions on the site. It is not a
         list of people who have signed the petition. The only name
         that is shared on the site is that of the petition creator."
 
+    #petition creation during check for duplicates
     check:
       title: "Emme löytäneet samankaltaisia aloitteita"
       title_duplicates: "Löysimme joitakin samankaltaisia aloitteita"
@@ -60,6 +68,7 @@ fi-FI:
       no_duplicates: "Tarkistimme aloitteet samankaltaisten aloitteiden varalta, eikä niitä löytynyt."
       no_duplicates_go_ahead: "Joten voit jatkaa ja luoda uuden aloitteen."
 
+    #examples for good and bad petitions during petition creation
     example:
       main: "Fi_fi_locale_Example: Make wrongly describing a casserole with a pastry lid as a pie a criminal offence"
       show_more: "Näytä lisää esimerkkejä"
@@ -71,6 +80,7 @@ fi-FI:
       bad_2: "Fi_fi_locale_Justice for David Thomas"
       explanation: "Hyvät aloitteet sanovat selvästi mitä ne haluavat partiojohdon tekevän."
 
+    #finishing up on creating petition
     finalize:
       title: "Tarkista aloitteesi"
       more_details: "Lisätietoa"
@@ -79,6 +89,7 @@ fi-FI:
       warning_personal_info: "Jos aloitteessa on henkilökohtaista tietoa liittyen esimerkiksi terveyteesi tai perheeseesi, mieti tarkkaan haluatko julkaista aloitteen."
       warning_no_removal: "Julkaistu aloite voidaan poistaa ainoastaan Fi_fi_locale_keskusjärjestön päätöksellä."
 
+    #signing a petition
     sign:
       signatures: "allekirjoitukset"
       title_own: "Allekirjoita aloitteesi"
@@ -102,6 +113,7 @@ fi-FI:
       confirm_info: "Kyllä - tämä on sähköpostiosoitteeni"
       if_wrong_email: "Jos sähköpostiosoitteesi on väärin, korjaa se yllä olevaan kenttään"
 
+    #page titles for petition listings
     page_titles:
       all: "Kaikki aloitteet"
       open: "Avoimet aloitteet"
@@ -122,12 +134,15 @@ fi-FI:
     response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö vastaa siihen."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, sitä harkitaan parlamentin käsittelyyn."
 
+    #appears on responded petitions listing?
     responded_petitions:
       none: "Keskusjärjestö ei ole vielä vastannut yhteenkään aloitteeseen"
       responded_on: "Keskusjärjestö vastasi %{date}"
       responded_on_dash: "Keskusjärjestö vastasi – %{date}"
       read_full: "Lue vastaus kokonaan"
  
+    #appears when petition has been debated. 
+    #the logic for this might not be in use with partiolaisaloite. 
     debated_petitions:
       none: "Keskusjärjestö ei ole vielä käsitellyt yhtäkään aloitetta"
       was_debated: "Keskusjärjestö käsitteli tämän aloitteen"
@@ -160,6 +175,7 @@ fi-FI:
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
+    #petitions listings
     lists:
       all: "Kaikki aloitteet (%{quantity})"
       open: "Avoimet aloitteet (%{quantity})"
@@ -175,6 +191,7 @@ fi-FI:
     list_headers:
       not_debated: "Keskusjärjestö on päättänyt jättää käsittelemättä nämä aloitteet" #TODO: mitä haetaan?
 
+    #this is not visible/admin side?
     facets:
       archived:
         - :all
@@ -311,11 +328,13 @@ fi-FI:
       signoff_prefix: "Fi_fi_locale_The Petitions team"
       signoff_suffix: "Suomen Partiolaiset"
 
+    #appears on petitions awaiting answer/moderation?
     waiting_for_in_words:
       zero: "Odottanut alle päivän"
       one: "Odottanut 1 päivä"
       other: "Odottanut %{formatted_count} päivää"
 
+    #appears on petitions that have been scheduled for debate. Logic not in use? 
     scheduled_for_debate_in_words:
       today: "Suunniteltu käsiteltäväksi tänään"
       tomorrow: "Suunniteltu käsiteltäväksi huomenna"
@@ -413,6 +432,8 @@ fi-FI:
       title: "%{threshold} partiolaisen kannatuksella..."
       description: "Keskusjärjestö vastaa aloitteeseen, kun sitä kannattaa enemmän kuin %{threshold} partiolaista"
 
+  #appears on archived petitions
+  #logic for archived petitions might not be in use in partiolaisaloite
   archived:
     during: "Fi_fi_locale_This petition was submitted during the %{period} %government government"
     others: "Fi_fi_locale_View other petitions from this government"
@@ -451,6 +472,7 @@ fi-FI:
     date_closed: "Fi_fi_locale_Date closed"
     get_json_data: "Fi_fi_locale_Get petition data (json format)"
 
+  #appears on rejected petitions
   rejected:
     heading: "Hylätty aloite"
     details: "Lisätietoja"
@@ -461,7 +483,7 @@ fi-FI:
     date_submitted: "Aloitteen luontipäivä"
     get_json_data: "Lataa aloitteen tiedot (json-formaatti)"
 
-
+  #appears when you unsubscribe from emails for a petition
   unsubscribe:
     already_unsubcribed_title: "Olet jo perunut viestien tilauksen aloitteesta"
     already_unsubscribed: "Olet jo perunut aloitteen sähköpostipäivitysten tilauksen."
@@ -471,6 +493,7 @@ fi-FI:
     success: "Olet onnistuneesti perunut aloitteen sähköpostipäivitysten tilauksen."
     return_home: "Palaa etusivulle"
 
+  #appears when you sign a petition
   signed:
     signatures: "allekirjoitusta"
     signature_added: "Lisäsimme allekirjoituksesi tähän aloitteeseen:"
@@ -491,11 +514,13 @@ fi-FI:
     check_spam: "tarkista roskapostikansiosi"
     wait: "sähköpostin saapuminen saattaa kestää maksimissaan 24 tuntia"
 
+  #appears on a petition that is still gathering sponsors
   gathering_support:
     title: "Tämä aloite kerää kannatusta"
     signatures_required_html: "Partiolaisen %{creator} aloite vaatii %{threshold} tukijaa ennen kun tarkistamme että se täyttää %{href} ja julkaisemme sen."
     try_later: "Yritä uudestaan muutaman päivän kuluttua."
 
+  #appears on a petition that has gained enough sponsors and waits for moderation?
   moderation:
     title: "Olemme tarkastamassa tätä aloitetta"
     supporters: "%{threshold} henkilöä ovat jo tukeneet partiolaisen %{creator} aloitetta."

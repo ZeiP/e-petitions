@@ -1,5 +1,6 @@
 fi-FI:
   metadata:
+    #metadata shown with with social media stuff
     open_graph:
       site_name: "Partiolaisaloitteet"
       default_title: "Partiolaisaloitteet"

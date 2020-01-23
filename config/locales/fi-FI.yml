@@ -1,3 +1,4 @@
+
 ---
 fi-FI:
   date:
@@ -98,6 +99,8 @@ fi-FI:
       month: Kuukausi
       second: Sekunttia
       year: Vuosi
+  #Many of the errors-lines here are admin-side 
+  #Not all appear within the service
   errors:
     format: "%{message}"
     messages:
@@ -131,10 +134,10 @@ fi-FI:
   activerecord:
     errors:
       template:
-        body: 'Fi_fi_locale_There were problems with the following fields:'
+        body: 'here were problems with the following fields:'
         header:
-          one: Fi_fi_locale_1 error prohibited this %{model} from being saved
-          other: "Fi_fi_locale_ %{count} errors prohibited this %{model} from being saved"
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
   helpers:
     label:
       tag:
@@ -142,6 +145,7 @@ fi-FI:
       site:
         url: "URL"
       parliament:
+        #Partiolaiset hallitus shouldn't need to dissolve
         dissolution_heading: "Fi_fi_locale_Heading"
         dissolution_message: "Fi_fi_locale_Message"
         dissolved_heading: "Fi_fi_locale_Heading"
@@ -149,11 +153,11 @@ fi-FI:
         dissolution_at: "Fi_fi_locale_Date and time"
         notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
     select:
-      prompt: Fi_fi_locale_Please select
+      prompt: Valitse
     submit:
-      create: Fi_fi_locale_Create %{model}
-      submit: Fi_fi_locale_Save %{model}
-      update: Fi_fi_locale_Update %{model}
+      create: Luo %{model}
+      submit: Lähetä %{model}
+      update: Päivitä %{model}
   number:
     currency:
       format:
@@ -207,13 +211,16 @@ fi-FI:
       two_words_connector: " ja "
       words_connector: ", "
   time:
+    #Seem to be just placeholders, possibly appear somewhere
     am: Fi_fi_locale_am
     formats:
-      default: "Fi_fi_locale_ %a, %d %b %Y %H:%M:%S %z"
-      long: "Fi_fi_locale_ %d %B, %Y %H:%M"
-      short: "Fi_fi_locale_ %d %b %H:%M"
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%d %B, %Y %H:%M"
+      short: "%d %b %H:%M"
     pm: Fi_fi_locale_pm
 
+#Lines that do rely on surrounding context and appear in
+#many parts of the service
   generic:
     back: Takaisin
     back_and_make_changes: "Palaa takaisin ja jatka muokkausta"

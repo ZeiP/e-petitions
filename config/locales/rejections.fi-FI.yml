@@ -10,6 +10,7 @@ fi-FI:
       foi: "FOI request"
       libellous: "Confidential, libellous, false, defamatory or references a court case"
       offensive: "Offensive, joke, nonsense or advert"
+    #descriptions available only to general users
     descriptions:
       duplicate: |-
         <p>Aiheesta on jo aloite. Emme voi hyväksyä uutta hyvin samanlaista aloitetta.</p>

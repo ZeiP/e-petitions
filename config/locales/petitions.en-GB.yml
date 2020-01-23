@@ -132,7 +132,6 @@ en-GB:
       none: "Parliament hasn’t debated any petitions yet"
       was_debated: "Parliament debated this topic"
       was_debated_on: "This topic was debated on %{date}"
-      debated_on: "This topic was debated on %{date}"
       no_debate: "The Petitions Committee decided not to debate this petition"
       video_html: "Watch the debate on %{href}"
       transcript_html: "Read the transcript at %{href}"

@@ -1,3 +1,4 @@
+#everything here appears in emails. Plenty of re-used lines
 fi-FI:
   mail:
     thanks: "Kiitos,"
@@ -58,7 +59,6 @@ fi-FI:
         easter: "Fi_fi_locale_Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does we’ll publish it. This usually takes a week or less but over the Easter period it will take us a little longer than usual. We’ll check your petition as quickly as we can."
         delay: "Fi_fi_locale_Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does, we’ll publish it. This usually takes a week or less, however we have a very large number to check at the moment so it is likely to take longer. Thank you for your patience."
         standard: "Fi_fi_locale_Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does, we’ll publish it. This usually takes a week or less."
-
 
     sponsor:
       click_to_sign: "Fi_fi_locale_Click this link to sign the petition “%{petition}”"
