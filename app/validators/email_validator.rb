@@ -1,3 +1,5 @@
+require "mail"
+
 class EmailValidator < ActiveModel::EachValidator
   EMAIL_REGEX = /\A[^@\s]+@[^@\s]+\.[^@\s]+\z/
 
@@ -14,7 +16,7 @@ class EmailValidator < ActiveModel::EachValidator
 
   def plus_address?(parsed_email)
     unless Site.disable_plus_address_check?
-      parsed_email.local.include? '+'
+      parsed_email.local.include? "+"
     end
   end
 
