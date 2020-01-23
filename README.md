@@ -22,6 +22,7 @@
 
 * Clone the repo to your local machine
 * Install and configure Docker and Docker-compose
+* remove `-d` from the `bundle exec rails s` line in the run_rails.sh file if it's there
 * run `docker-compose -f docker-compose.dev.yml up`
 
 ## Run the app
