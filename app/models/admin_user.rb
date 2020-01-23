@@ -1,7 +1,7 @@
 class AdminUser < ActiveRecord::Base
   DISABLED_LOGIN_COUNT = 5
-  SYSADMIN_ROLE = 'sysadmin'
-  MODERATOR_ROLE = 'moderator'
+  SYSADMIN_ROLE = "sysadmin"
+  MODERATOR_ROLE = "moderator"
   ROLES = [SYSADMIN_ROLE, MODERATOR_ROLE]
   PASSWORD_REGEX = /\A.*(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).*\z/
 
@@ -14,12 +14,12 @@ class AdminUser < ActiveRecord::Base
     config.logged_in_timeout = Site.login_timeout
     config.require_password_confirmation = true
 
-    config.merge_validates_length_of_password_field_options minimum: 8
-    config.merge_validates_uniqueness_of_email_field_options case_sensitive: false
-    config.merge_validates_format_of_email_field_options unless: ->(u) { u.email.blank? }
-    config.merge_validates_length_of_email_field_options unless: ->(u) { u.email.blank? }
-    config.merge_validates_length_of_password_field_options unless: ->(u) { u.password.blank? }
-    config.merge_validates_confirmation_of_password_field_options unless: ->(u) { u.password.blank? }
+    #config.merge_validates_length_of_password_field_options minimum: 8
+    #config.merge_validates_uniqueness_of_email_field_options case_sensitive: false
+    #config.merge_validates_format_of_email_field_options unless: ->(u) { u.email.blank? }
+    #config.merge_validates_length_of_email_field_options unless: ->(u) { u.email.blank? }
+    #config.merge_validates_length_of_password_field_options unless: ->(u) { u.password.blank? }
+    #config.merge_validates_confirmation_of_password_field_options unless: ->(u) { u.password.blank? }
   end
 
   # = Validations =
@@ -36,7 +36,7 @@ class AdminUser < ActiveRecord::Base
 
   # = Finders =
   scope :by_name, -> { order(:last_name, :first_name) }
-  scope :by_role, ->(role) { where(role: role).order(:id) }
+  scope :by_role, -> (role) { where(role: role).order(:id) }
 
   # = Methods =
   def current_password
@@ -86,11 +86,11 @@ class AdminUser < ActiveRecord::Base
   end
 
   def is_a_sysadmin?
-    self.role == 'sysadmin'
+    self.role == "sysadmin"
   end
 
   def is_a_moderator?
-    self.role == 'moderator'
+    self.role == "moderator"
   end
 
   def has_to_change_password?
