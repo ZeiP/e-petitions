@@ -15,7 +15,7 @@ class AdminUser < ActiveRecord::Base
     config.require_password_confirmation = true
 
     config.merge_validates_length_of_password_field_options minimum: 8
-    config.merge_validates_uniqueness_of_email_fdield_options case_sensitive: false
+    config.merge_validates_uniqueness_of_email_field_options case_sensitive: false
     config.merge_validates_format_of_email_field_options unless: -> (u) { u.email.blank? }
     config.merge_validates_length_of_email_field_options unless: -> (u) { u.email.blank? }
     config.merge_validates_length_of_password_field_options unless: -> (u) { u.password.blank? }
