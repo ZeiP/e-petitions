@@ -38,7 +38,7 @@ module SamlIntegration
 
   def self.parse_slo(params)
     configuration = get_saml_configuration
-    return OneLogin::RubySaml::Logoutresponse.new(params[:SAMLResponse], settings)
+    return OneLogin::RubySaml::Logoutresponse.new(params[:SAMLResponse], configuration)
   end
 
   private
