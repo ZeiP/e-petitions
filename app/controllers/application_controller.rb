@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include UserAuthentication
   protect_from_forgery with: :exception
 
   before_action :reload_site

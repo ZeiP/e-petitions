@@ -1,48 +1,11 @@
-<%= form_row for: [signature, :uk_citizenship], class: "uk-citizen" do %>
-  <span class="form-label">
-     <%= t "petitions.sign.criteria" %>
-  </span>
-  <%= error_messages_for_field signature, :uk_citizenship %>
-  <div class="multiple-choice">
-    <%= form.check_box :uk_citizenship, tabindex: increment %>
-    <%= form.label :uk_citizenship, (t "petitions.sign.criteria_confirm") %>
-  </div>
-<% end %>
-
-<%= form_row for: [signature, :name] do %>
-  <%= form.label :name, (t "generic.name"), class: "form-label" %>
-  <%= error_messages_for_field signature, :name %>
-  <%= form.text_field :name, tabindex: increment, maxlength: 255, size: nil, class: "form-control"  %>
-<% end %>
-
-<%= form_row for: [signature, :email] do %>
-  <%= form.label :email, (t "generic.email_address"), class: "form-label" %>
-  <%= error_messages_for_field signature, :email %>
-  <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
-<% end %>
-
-<%= form_row for: [signature, :location_code] do %>
-  <%= form.label :location_code, (t "generic.location"), class: "form-label" %>
-  <%= error_messages_for_field signature, :location_code %>
-  <%= form.select :location_code, countries_for_select, {}, tabindex: increment, class: "form-control" %>
-<% end %>
-
-<%= form_row for: [signature, :postcode] do %>
-  <%= form.label :postcode, (t "generic.postcode"), class: "form-label" %>
-  <%= error_messages_for_field signature, :postcode %>
-  <%= form.text_field :postcode, tabindex: increment, class: "form-control small" %>
-<% end %>
-
 <%= form_row for: [signature, :notify_by_email], class: "notify-by-email" do %>
   <div class="multiple-choice">
     <%= form.check_box :notify_by_email, tabindex: increment %>
     <%= form.label :notify_by_email, (t "petitions.sign.email_updates") %>
   </div>
 <% end %>
-
 <%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0" %>
 <%= form.submit ( t "generic.continue" ), name: "move:next", class: "button", tabindex: increment %>
-
 <section class="secondary">
   <p><%= t "petitions.sign.all_hidden" %></p>
 </section>

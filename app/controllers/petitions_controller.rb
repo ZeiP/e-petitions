@@ -122,7 +122,10 @@ class PetitionsController < ApplicationController
   end
 
   def build_petition_creator
-    @new_petition = PetitionCreator.new(params, request)
+    new_params = params.dup
+    new_params[:petition_creator] = (new_params[:petition_creator] || {})
+    new_params[:petition_creator].merge!({ email: current_user.email, name: current_user.username })
+    @new_petition = PetitionCreator.new(new_params, request)
   end
 
   def redirect_to_valid_state

@@ -3,7 +3,6 @@
     <span class="heading-secondary"><%= t "petitions.sign.heading"%></span>
     <%= petition.action %>
   </h1>
-
   <div><%= auto_link(simple_format(h(petition.background)), html: { rel: 'nofollow' }) %></div>
   <% unless petition.additional_details.blank? %>
     <details>
@@ -11,9 +10,11 @@
       <div><%= auto_link(simple_format(h(petition.additional_details)), html: { rel: 'nofollow' }) %></div>
     </details>
   <% end %>
-
-  <%= link_to (t "petitions.sign.sign_this"), new_petition_signature_path(petition), :class => 'button button-sign-petition', :tabindex => increment(5) %>
-
+  <% if current_user %>
+    <%= link_to (t "petitions.sign.sign_this"), new_petition_signature_path(petition), :class => 'button button-sign-petition', :tabindex => increment(5) %>
+  <% else %>
+    <p><%= t ".login_to_start" %></p>
+  <% end %>
   <div class="signature-count">
     <p class="signature-count-number">
       <%= signature_count(:default, petition.signature_count) %>
@@ -25,11 +26,9 @@
       <%= number_with_delimiter(current_threshold(petition)) %>
     </p>
   </div>
-
   <%= render 'threshold_details', petition: petition %>
   <%= render 'other_business_details', petition: petition %>
   <%= render 'share_petition', petition: petition %>
-
   <ul class="petition-meta">
     <li class="meta-created-by">
       <span class="label"><%= t "petitions.sign.creator"%></span> <%= petition.creator.name %>
