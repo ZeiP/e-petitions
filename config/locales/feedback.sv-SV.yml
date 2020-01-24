@@ -1,0 +1,22 @@
+#Appears on the feedback form
+---
+sv-SV:
+  feedback:
+    page_title: "Palaute ja yhteystiedot"
+    petition_link/title: "Aloitteen otsikko tai linkki"
+    reply_wanted_question: "Haluatko vastauksen?"
+    send: "Lähetä palaute"
+    terms:
+      email_only_reply: "Vastaamme sinulle ainostaan antamasi sähköpostin kautta"
+      no_forwarding: "Emme voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä"
+    contact: "Yhteystiedot"
+    email:
+      direction_html: "Voit lähettää sähköpostia suoraan %{href}."
+      recipient: "Sv_sv_locale_EMAIL_RECIPIENT"
+      address: "Sv_sv_locale_email@email.email"
+      help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
+    phone:
+      info: "Puhelinsoitot käsittelee Sv_sv_locale_House of Commons Enquiry Service."
+      help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
+      number: "Sv_sv_locale_123 456 6789 0"
+      reception_times: "Sv_sv_locale_Maanantai-Perjantai, 10:00-12:00 ja 14:00:16:00"
