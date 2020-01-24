@@ -6,4 +6,3 @@
 -Localization for privacy information and help information should be done directly to the views 
 	app/views/pages/privacy.fi-FI.html.erb
 	app/views/pages/help.fi-FI.html.erb
-	
