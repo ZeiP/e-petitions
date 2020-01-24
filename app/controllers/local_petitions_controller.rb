@@ -1,5 +1,5 @@
-require "postcode_sanitizer"
-require "csv"
+require 'postcode_sanitizer'
+require 'csv'
 
 class LocalPetitionsController < ApplicationController
   before_action :sanitize_postcode, only: :index
@@ -64,11 +64,15 @@ class LocalPetitionsController < ApplicationController
   end
 
   def redirect_to_constituency
-    redirect_to local_petition_url(@constituency.slug)
+    if Parliament.dissolved?
+      redirect_to all_local_petition_url(@constituency.slug)	
+    else	
+      redirect_to local_petition_url(@constituency.slug)	
+    end
   end
 
   def csv_filename
-    if action_name == "all"
+    if action_name == 'all'
       "all-popular-petitions-in-#{@constituency.slug}.csv"
     else
       "open-popular-petitions-in-#{@constituency.slug}.csv"
@@ -76,6 +80,6 @@ class LocalPetitionsController < ApplicationController
   end
 
   def set_content_disposition
-    response.headers["Content-Disposition"] = "attachment; filename=#{csv_filename}"
+    response.headers['Content-Disposition'] = "attachment; filename=#{csv_filename}"
   end
 end

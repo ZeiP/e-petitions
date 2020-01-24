@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
 
   def url_without_format
     URI.parse(request.original_url).tap do |uri|
-      uri.path = File.join(File.dirname(request.path), File.basename(request.path, ".*"))
+      uri.path = File.join(File.dirname(request.path), File.basename(request.path, '.*'))
     end.to_s
   rescue URI::InvalidURIError => e
     home_url
@@ -76,25 +76,25 @@ class ApplicationController < ActionController::Base
   end
 
   def set_seen_cookie_message
-    cookies[:seen_cookie_message] = {value: "yes", expires: 1.year.from_now, httponly: true}
+    cookies[:seen_cookie_message] = {value: 'yes', expires: 1.year.from_now, httponly: true}
   end
 
   def set_cors_headers
-    headers["Access-Control-Allow-Origin"] = "*"
-    headers["Access-Control-Allow-Methods"] = "GET"
-    headers["Access-Control-Allow-Headers"] = "Origin, X-Requested-With, Content-Type, Accept"
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'GET'
+    headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept'
   end
 
   def show_cookie_message?
-    @show_cookie_message ||= cookies[:seen_cookie_message] != "yes"
+    @show_cookie_message ||= cookies[:seen_cookie_message] != 'yes'
   end
 
   def public_petition_facets
-    I18n.t("public", scope: :"petitions.facets")
+    I18n.t('public', scope: :'petitions.facets')
   end
 
   def do_not_cache
-    response.headers["Cache-Control"] = "no-store, no-cache"
+    response.headers['Cache-Control'] = 'no-store, no-cache'
   end
 
   def current_time

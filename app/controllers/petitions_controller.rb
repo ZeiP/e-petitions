@@ -95,12 +95,12 @@ class PetitionsController < ApplicationController
 
   def redirect_to_home_page_if_dissolved
     #TODO: Clear code, currently assuming parliament not dissolved
-    redirect_to home_url if false && Parliament.dissolved?
+    redirect_to home_url if false # Parliament.dissolved?
   end
 
   def redirect_to_home_page_unless_opened
     #TODO: Clear code, currently assuming parliament open
-    redirect_to home_url unless true || Parliament.opened?
+    redirect_to home_url unless true # Parliament.opened?
   end
 
   def request_format
