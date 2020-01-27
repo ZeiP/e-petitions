@@ -241,3 +241,6 @@ fi-FI:
     about_cookies: "Lisätietoja evästeistä"
     debated: "Käsitelty"
     other: "Muuta keskusjärjestöltä"
+  login:
+    log_in: "Kirjaudu sisään"
+    log_out: "Kirjaudu ulos"

@@ -77,7 +77,7 @@
           <% if debate_outcome.debated? %>
             <h2 id="debate-threshold-heading"><%= t "archived.was_debated" %></h2>
             <section class="debate-outcome">
-              <p class="secondary"><%= t "archived.was_debated_on", date: short_date_format(debate_outcome.debated_on) %></p>
+              <p class="secondary"><%= t "archived.was_debated_on", date: short_date_format debate_outcome.debated_on  %></p>
               <% if debate_outcome.video_url? %>
                 <%= link_to debate_outcome.video_url, rel: 'external' do %>
                   <span class="debate-video graphic graphic-house-of-commons" aria-hidden>

@@ -100,6 +100,7 @@ sv-SV:
       full_name_required: "Sinun täytyy käyttää koko nimeäsi"
       email_updates: "Lähetä minulle sähköpostitse ilmoituksia aloitteesta"
       name_visible: "Koko nimesi julkaistaan aloitteen yhteydessä aloitteen luojana."
+      confirm: "Vahvista allekirjoitus"
       other_hidden: "Nimesi lisäksi emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
       all_hidden: "Emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
       heading: "Aloite"
@@ -130,6 +131,8 @@ sv-SV:
 
     ad: "Tee partiolaisaloite!"
     start_prompt: "Perusta aloite"
+    login_prompt: "Kirjaudu sisään perustaaksesi aloitteen"
+    login_prompt_sign: "Kirjaudu sisään allekirjoittaaksesi aloitteen"
     criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
     response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö vastaa siihen."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, sitä harkitaan parlamentin käsittelyyn."

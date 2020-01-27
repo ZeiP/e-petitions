@@ -202,6 +202,7 @@ class Site < ActiveRecord::Base
     end
 
     def default_host
+      #TODO: Default value for default host hardcoded for UK petition site 
       ENV.fetch('EPETITIONS_HOST', 'petition.parliament.uk')
     end
 
@@ -222,6 +223,7 @@ class Site < ActiveRecord::Base
     end
 
     def default_moderate_host
+      #TODO: Default value for default moderation host hardcoded for UK petition site 
       ENV.fetch('MODERATE_HOST', 'moderate.petition.parliament.uk')
     end
 
@@ -230,10 +232,14 @@ class Site < ActiveRecord::Base
     end
 
     def default_email_from
+      #TODO: Default email for contact hardcoded for UK petition site 
+      #Default is used
       ENV.fetch('EPETITIONS_FROM', %{"Petitions: UK Government and Parliament" <no-reply@#{default_host}>})
     end
 
     def default_feedback_email
+      #TODO: Default email for feedback hardcoded for UK petition site 
+      #Default is used
       ENV.fetch('EPETITIONS_FEEDBACK', %{"Petitions: UK Government and Parliament" <petitionscommittee@#{default_domain}>})
     end
 
