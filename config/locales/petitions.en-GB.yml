@@ -43,7 +43,7 @@ en-GB:
 
     about:
       summary: "About petition data"
-      content: |- #TODO: does this work?
+      content: |-
         "The data shows the number of people who have signed the petition
         by country as well as in the constituency of each Member of Parliament.
         This data is available for all petitions on the site. It is not a

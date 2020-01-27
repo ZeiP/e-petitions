@@ -1,4 +1,3 @@
-<%#TODO: Localisation for all the emails %>
 <p><small><%= t "mail.because.created" %> “<%= @petition.action %>”.</small></p>
 <p><small><%= t "mail.unsubscribe" %> <%= link_to nil, unsubscribe_archived_signature_url(@signature, token: @signature.unsubscribe_token) %></small></p>
 <hr>

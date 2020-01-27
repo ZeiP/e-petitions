@@ -7,7 +7,7 @@ fi-FI:
       title: "Luo uusi aloite"
       petition: "Mitä haluaisit partiojohdon tekevän?"
       notice: "Tiedoksesi"
-      supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalta aloitteen luomiseksi." #TODO: Proper Finnish
+      supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalta aloitteen luomiseksi."
       read_standards: "Muista että aloittesi tulee täyttää"
       standards: "aloitevaatimukset"
       background: "Taustatiedot"
