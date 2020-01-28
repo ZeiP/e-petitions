@@ -1,0 +1,50 @@
+sv-SV:
+  page_titles:
+    header_title: "Partiolaisaloitteet"
+    default: "Partiolaisaloitteet"
+    archived_petitions:
+      index: "Arkistoidut aloitteet"
+      show: "Aloitteet"
+    feedback:
+      index: "Lähetä palautetta - Partiolaisaloitteet"
+      thanks: "Kiitos - Aloitteet"
+    #local petitions logic not in use?
+    local_petitions:
+      index:
+        zero: "Paikallisia sinulle - Partiolaisaloitteet"
+        one: "Aloitteita postinumerolla %{postcode}"
+      show: "Aloitteita  %{constituency}"
+    petitions:
+      index: "Näytä kaikki aloitteet - Partiolaisaloitteet"
+      check: "Luo uusi aloite - Partiolaisaloitteet"
+      check_results: "Luo uusi aloite - Partiolaisaloitteet"
+      create: "Luo uusi aloite - Partiolaisaloitteet"
+      gathering_support: "Tämä aloite kerää kannatusta - Partiolaisaloitteet"
+      moderation_info: "Tämä aloite on lähetetty tarkistukseen - Partiolaisaloitteet"
+      new: "Luo uusi aloite - Partiolaisaloitteet"
+      resend_confirmation_email: "Vahvistusviesti lähetettiin uudelleen - Partiolaisaloitteet"
+      show: "%{petition} - Partiolaisaloitteet"
+      thank_you: "Kiitos - Partiolaisaloitteet"
+    signatures:
+      new: "%{petition} - Allekirjoita aloite - Partiolaisaloitteet"
+      confirm: "%{petition} - Allekirjoita aloite - Partiolaisaloitteet"
+      signed: "Kiitos - Partiolaisaloitteet"
+      thank_you: "Kiitos - Partiolaisaloitteet"
+      unsubscribe: "Lopeta sähköpostipäivitysten vastaanotto aloitteelle %{petition} - Partiolaisaloitteet"
+    sponsors:
+      new: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloitteet"
+      confirm: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloitteet"
+      signed: "Kiitos - Partiolaisaloitteet"
+      thank_you: "%{petition} - Kiitos tuestasi tälle aloitteelle - Partiolaisaloitteet"
+    pages:
+      index: "Partiolaisaloitteet"
+      help: "Lisätietoja partiolaisaloitteesta"
+      privacy: "Yksityisyys ja evästeet"
+  navigation:    
+    home: "Etusivu"
+    all_petitions: "Kaikki aloitteet"
+    start_petition: "Perusta aloite"
+    help: "Lisätietoja partiolaisaloitteesta"
+    privacy: "Yksityisyys ja evästeet"
+    feedback: "Palaute"
+    to_home: "Palaa aloitteiden etusivulle"

@@ -1,7 +1,7 @@
-<h1>We’re checking this petition</h1>
+<h1><%= t "moderation.title"%></h1>
 
-<p><%= Site.minimum_number_of_sponsors %> people have already supported <%= @petition.creator.name %>’s petition.</p>
+<p><%= t "moderation.supporters", threshold: Site.minimum_number_of_sponsors, creator: @petition.creator.name %></p>
 
-<p>We need to check it meets the <%= link_to "petition standards", help_path(anchor: 'standards') %> before we publish it.</p>
+<p><%= t "moderation.check_needed_html", href: (link_to (t "petitions.start.standards"), help_path(anchor: 'standards'))%></p>
 
-<p>Please try again in a few days.</p>
+<p><%= t "moderation.try_later"%></p>

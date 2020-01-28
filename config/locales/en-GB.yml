@@ -34,7 +34,7 @@ en-GB:
     formats:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
-      short: "%d %b"
+      short: "%-d %B %Y"
     month_names:
     -
     - January
@@ -54,6 +54,8 @@ en-GB:
     - :month
     - :year
   datetime:
+    formats: 
+      short: "%H:%M%P on %-d %B %Y"
     distance_in_words:
       about_x_hours:
         one: about 1 hour
@@ -211,3 +213,26 @@ en-GB:
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  generic:
+    back: Back
+    back_and_make_changes: "Go back and make changes"
+    continue: "Continue"
+    postcode: "UK postcode"
+    feedback: "Feedback"
+    comments: "Comments"
+    optional: "optional"
+    email_address: "Email address"
+    email: "Email"
+    phone: "Phone"
+    character_limit: "%{limit} characters max"
+    name: "Name"
+    location: "Location"
+    rejected: "Rejected"
+    now_closed: "now closed"
+    cookies: "We use cookies to make this service simpler."
+    about_cookies: "Find out more about cookies"
+    debated: "Debated"
+    generic: "Other Parlimentary business"
+  login:
+    log_in: "Sign In"
+    log_out: "Sign Out"

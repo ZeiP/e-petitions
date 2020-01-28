@@ -1,10 +1,10 @@
-<p>Dear <%= @signature.name %>,</p>
+<p><%= t "mail.greeting" %> <%= @signature.name %>,</p>
 
-<p>We published the petition you supported – “<%= @petition.action %>”</p>
+<p><%= t "mail.published.signed" %>  “<%= @petition.action %>”</p>
 
-<p>Click this link to see the petition and start sharing it:<br />
+<p><%= t "mail.published.share" %> <br />
 <%= link_to nil, petition_url(@petition) %></p>
 
-<p>Thanks,<br />
+<p><%= t "mail.thanks" %> <br />
 <%= t("petitions.emails.signoff_prefix") %><br />
 <%= t("petitions.emails.signoff_suffix") %></p>

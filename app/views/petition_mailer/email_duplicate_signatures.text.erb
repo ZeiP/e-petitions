@@ -1,8 +1,8 @@
-You're receiving this email because your email has been used to sign the petition “<%= @petition.action %>”, but you have already signed this petition.
+<%= t "mail.because.already_signed", petition: @petition.action %>
 
-View the petition “<%= @petition.action %>” at:
+<%= t "mail.view_at", petition: @petition.action %>
 <%= petition_url(@petition) %>
 
-Thanks,
+<%= t "mail.thanks" %> 
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>

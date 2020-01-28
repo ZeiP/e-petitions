@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'pages#index'
   constraints Site.constraints_for_public do
     controller 'constituencies' do
       get '/constituencies', action: 'index', as: :constituencies
@@ -216,6 +217,16 @@ Rails.application.routes.draw do
   end
 
   get 'ping', to: 'ping#ping'
+
+  resources :saml, only: [:sso, :acs, :logout, :application_logout, :metadata] do
+    collection do
+      get :sso
+      post :acs
+      get :logout
+      get :application_logout
+      get :metadata
+    end
+  end
 
   if defined?(JasmineRails)
     mount JasmineRails::Engine, at: '/specs'

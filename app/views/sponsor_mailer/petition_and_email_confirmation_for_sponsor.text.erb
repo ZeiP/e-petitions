@@ -1,10 +1,10 @@
-Click this link to sign the petition "<%= @petition.action %>"
+<%= t "mail.click_to_sign", petition: @petition.action %>
 
 <%= verify_sponsor_url(@sponsor, token: @sponsor.perishable_token) %>
 
 --
 
-<%= @petition.creator.name %>’s petition:
+<%= t "mail.creator", creator: @petition.creator.name %>
 
 <%= @petition.action %>
 
@@ -16,5 +16,5 @@ Click this link to sign the petition "<%= @petition.action %>"
 
 --
 
-Click this link to sign the petition:
+<%= t "mail.click_link" %>
 <%= verify_sponsor_url(@sponsor, token: @sponsor.perishable_token) %>

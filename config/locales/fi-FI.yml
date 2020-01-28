@@ -1,101 +1,106 @@
+
 ---
 fi-FI:
   date:
     abbr_day_names:
-    - Sun
-    - Mon
-    - Tue
-    - Wed
-    - Thu
-    - Fri
-    - Sat
+    - su
+    - ma
+    - ti
+    - ke
+    - to
+    - pe
+    - la
     abbr_month_names:
     -
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Oct
-    - Nov
-    - Dec
+    - tam
+    - hel
+    - maa
+    - huu
+    - tou
+    - kesä
+    - hei
+    - elo
+    - syys
+    - lok
+    - mar
+    - jou
     day_names:
-    - Sunday
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
+    - sunnuntai
+    - maanantai
+    - tiistai
+    - keskiviikko
+    - torstai
+    - perjantai
+    - lauantai
     formats:
       default: "%d-%m-%Y"
-      long: "%d %B, %Y"
-      short: "%d %b"
+      long: "%d.%m, %Y"
+      short: "%-d.%m.%Y"
     month_names:
     -
-    - January
-    - February
-    - March
-    - April
-    - May
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
+    - tammikuu
+    - helmikuu
+    - maaliskuu
+    - huhtikuu
+    - toukokuu
+    - kesäkuu
+    - heinäkuu
+    - elokuu
+    - syyskuu
+    - lokakuu
+    - marraskuu
+    - joulukuu
     order:
     - :day
     - :month
     - :year
   datetime:
+    formats: 
+        short: "%d.%m.%Y klo %H:%M"
     distance_in_words:
       about_x_hours:
-        one: about 1 hour
-        other: about %{count} hours
+        one: Noin 1 tunti
+        other: Noin %{count} tuntia
       about_x_months:
-        one: about 1 month
-        other: about %{count} months
+        one: Noin 1 kuukausi
+        other: Noin %{count} kuukautta
       about_x_years:
-        one: about 1 year
-        other: about %{count} years
+        one: Noin 1 vuosi
+        other: Noin %{count} vuotta
       almost_x_years:
-        one: almost 1 year
-        other: almost %{count} years
-      half_a_minute: half a minute
+        one: Melkein 1 vuosi
+        other: Melkein %{count} vuotta
+      half_a_minute: puoli minuuttia
       less_than_x_minutes:
-        one: less than a minute
-        other: less than %{count} minutes
+        one: alle minuutti
+        other: alle %{count} minuuttia
       less_than_x_seconds:
-        one: less than 1 second
-        other: less than %{count} seconds
+        one: Alle 1 sekuntti
+        other: Alle %{count} sekunttia
       over_x_years:
-        one: over 1 year
-        other: over %{count} years
+        one: Yli 1 vuosi
+        other: Yli %{count} vuotta
       x_days:
-        one: 1 day
-        other: "%{count} days"
+        one: 1 päivä
+        other: "%{count} päivää"
       x_minutes:
-        one: 1 minute
-        other: "%{count} minutes"
+        one: 1 minuutti
+        other: "%{count} minuuttia"
       x_months:
-        one: 1 month
-        other: "%{count} months"
+        one: 1 kuukausi
+        other: "%{count} kuukautta"
       x_seconds:
-        one: 1 second
-        other: "%{count} seconds"
+        one: 1 sekuntti
+        other: "%{count} sekunttia"
     prompts:
-      day: Day
-      hour: Hour
-      minute: Minute
-      month: Month
-      second: Seconds
-      year: Year
+      day: Päivä
+      hour: Tunti
+      minute: Minuutti
+      month: Kuukausi
+      second: Sekunttia
+      year: Vuosi
+  #Many of the errors-lines here are admin-side 
+  #Not all appear within the service
   errors:
     format: "%{message}"
     messages:
@@ -129,7 +134,7 @@ fi-FI:
   activerecord:
     errors:
       template:
-        body: 'There were problems with the following fields:'
+        body: 'here were problems with the following fields:'
         header:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
@@ -140,18 +145,19 @@ fi-FI:
       site:
         url: "URL"
       parliament:
-        dissolution_heading: "Heading"
-        dissolution_message: "Message"
-        dissolved_heading: "Heading"
-        dissolved_message: "Message"
-        dissolution_at: "Date and time"
-        notification_cutoff_at: "Notify unpublished petitions created after"
+        #Partiolaiset hallitus shouldn't need to dissolve
+        dissolution_heading: "Fi_fi_locale_Heading"
+        dissolution_message: "Fi_fi_locale_Message"
+        dissolved_heading: "Fi_fi_locale_Heading"
+        dissolved_message: "Fi_fi_locale_Message"
+        dissolution_at: "Fi_fi_locale_Date and time"
+        notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
     select:
-      prompt: Please select
+      prompt: Valitse
     submit:
-      create: Create %{model}
-      submit: Save %{model}
-      update: Update %{model}
+      create: Luo %{model}
+      submit: Lähetä %{model}
+      update: Päivitä %{model}
   number:
     currency:
       format:
@@ -161,7 +167,7 @@ fi-FI:
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "£"
+        unit: "Fi_fi_locale_£"
     format:
       delimiter: ","
       precision: 3
@@ -172,11 +178,11 @@ fi-FI:
       decimal_units:
         format: "%n %u"
         units:
-          billion: Billion
-          million: Million
-          quadrillion: Quadrillion
-          thousand: Thousand
-          trillion: Trillion
+          billion: Miljardi
+          million: Miljoona
+          quadrillion: Quadriljoona
+          thousand: Tuhat
+          trillion: Triljoona
           unit: ''
       format:
         delimiter: ''
@@ -187,8 +193,8 @@ fi-FI:
         format: "%n %u"
         units:
           byte:
-            one: Byte
-            other: Bytes
+            one: Tavu
+            other: Tavua
           gb: GB
           kb: KB
           mb: MB
@@ -201,13 +207,40 @@ fi-FI:
         delimiter: ''
   support:
     array:
-      last_word_connector: ", and "
-      two_words_connector: " and "
+      last_word_connector: ", ja "
+      two_words_connector: " ja "
       words_connector: ", "
   time:
-    am: am
+    #Seem to be just placeholders, possibly appear somewhere
+    am: Fi_fi_locale_am
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
-    pm: pm
+    pm: Fi_fi_locale_pm
+
+#Lines that do rely on surrounding context and appear in
+#many parts of the service
+  generic:
+    back: Takaisin
+    back_and_make_changes: "Palaa takaisin ja jatka muokkausta"
+    continue: "Jatka" 
+    postcode: "Postinumero"
+    feedback: "Palaute"
+    comments: "Kommentit"
+    optional: "valinnainen"
+    email_address: "Sähköpostiosoite"
+    email: "Sähköposti"
+    phone: "Puhelin"
+    character_limit: "{%limit} kirjainta max"
+    name: "Nimi"
+    location: "Sijainti"
+    rejected: "Hylätty"
+    now_closed: "suljettu"
+    cookies: "Käytämme evästeitä yksinkertaistaaksemme palvelun käyttöä."
+    about_cookies: "Lisätietoja evästeistä"
+    debated: "Käsitelty"
+    other: "Muuta keskusjärjestöltä"
+  login:
+    log_in: "Kirjaudu sisään"
+    log_out: "Kirjaudu ulos"

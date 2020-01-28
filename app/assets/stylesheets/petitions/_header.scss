@@ -16,9 +16,11 @@
     display: block;
     position: relative;
     overflow: visible;
-    vertical-align: baseline;
     line-height: 34px;
     padding-left: $text-indent;
+    img {
+      margin-right: 0.5em;
+    }
   }
   a {
     text-decoration: none;
@@ -38,6 +40,23 @@
   .strapline {
     color: $white;
     margin: $gutter-one-third -5px 5px $text-indent;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .proposition {
+      display: flex;
+    }
+    .current-user-container {
+      line-height: 34px;
+      > a {
+        color: white;
+        > i {
+          color: white;
+        }
+      }
+    }
   }
 }
 

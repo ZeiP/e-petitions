@@ -1,5 +1,6 @@
 en-GB:
   page_titles:
+    header_title: "Petitions - UK Government and Parliament"
     default: "Petitions - UK Government and Parliament"
     archived_petitions:
       index: "View archived petitions - Petitions"
@@ -45,3 +46,4 @@ en-GB:
     help: "How petitions work"
     privacy: "Privacy and cookies"
     feedback: "Feedback"
+    to_home: "Go to the petitions homepage"

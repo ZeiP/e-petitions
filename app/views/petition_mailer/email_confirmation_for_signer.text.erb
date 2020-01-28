@@ -1,7 +1,7 @@
-Click this link to sign the petition "<%= @petition.action %>"
+<%= t "mail.sponsor.click_to_sign", petition: @petition.action %>
 
 <%= verify_signature_url(@signature, token: @signature.perishable_token) %>
 
-Thanks,
+<%= t "mail.thanks" %>
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>

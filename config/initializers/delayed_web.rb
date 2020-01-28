@@ -5,7 +5,7 @@ end
 
 # Authenticate our delayed job web interface
 Delayed::Web::ApplicationController.class_eval do
-  include Authentication, FlashI18n
+  include AdminAuthentication, FlashI18n
 
   def admin_request?
     true

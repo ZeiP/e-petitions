@@ -2,6 +2,8 @@ version: '2'
 services:
   sqldb:
     image: postgres:10
+    environment:
+      - POSTGRES_DB=epets_development
     volumes:
       - ./data/sqldb:/var/lib/postgres/data
     networks:
