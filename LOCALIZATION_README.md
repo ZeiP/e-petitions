@@ -5,10 +5,10 @@
 - Translation for locale already translated finnish should be checked
 - Translations in Finnish in Swedish locale files should be changed
 - Localization for privacy information and help information should be done directly to the views 
-	app/views/pages/privacy.fi-FI.html.erb
-	app/views/pages/help.fi-FI.html.erb
-	app/views/pages/privacy.sv-SV.html.erb
-	app/views/pages/help.sv-SV.html.erb
+	- app/views/pages/privacy.fi-FI.html.erb
+	- app/views/pages/help.fi-FI.html.erb
+	- app/views/pages/privacy.sv-SV.html.erb
+	- app/views/pages/help.sv-SV.html.erb
 
 Parameters in the translations such as %{threshold} or %{quantity} get replaced by some value depending on the state of the software.
 The parameter should be left as it is, and 
