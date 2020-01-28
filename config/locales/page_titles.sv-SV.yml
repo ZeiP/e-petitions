@@ -20,7 +20,7 @@ sv-SV:
       check_results: "Luo uusi aloite - Partiolaisaloitteet"
       create: "Luo uusi aloite - Partiolaisaloitteet"
       gathering_support: "Tämä aloite kerää kannatusta - Partiolaisaloitteet"
-      moderation_info: "Tämä aloite on lähetetty moderaatioon - Partiolaisaloitteet" #TODO : fixfix
+      moderation_info: "Tämä aloite on lähetetty tarkistukseen - Partiolaisaloitteet"
       new: "Luo uusi aloite - Partiolaisaloitteet"
       resend_confirmation_email: "Vahvistusviesti lähetettiin uudelleen - Partiolaisaloitteet"
       show: "%{petition} - Partiolaisaloitteet"
@@ -47,3 +47,4 @@ sv-SV:
     help: "Lisätietoja partiolaisaloitteesta"
     privacy: "Yksityisyys ja evästeet"
     feedback: "Palaute"
+    to_home: "Palaa aloitteiden etusivulle"

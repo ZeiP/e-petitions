@@ -43,7 +43,7 @@ en-GB:
 
     about:
       summary: "About petition data"
-      content: |- #TODO: does this work?
+      content: |-
         "The data shows the number of people who have signed the petition
         by country as well as in the constituency of each Member of Parliament.
         This data is available for all petitions on the site. It is not a
@@ -89,6 +89,7 @@ en-GB:
       full_name_required: "You must use your full name"
       email_updates: "Email me whenever there’s an update about this petition"
       name_visible: "Your name will be published on this petition as the petition creator."
+      confirm: "Confirm signature"
       other_hidden: "Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition."
       all_hidden: "We won't publish your personal details anywhere or use them for anything other than this petition."
       heading: "Petition"
@@ -118,6 +119,8 @@ en-GB:
 
     ad: "The Petitions service is open"
     start_prompt: "Start a petition"
+    login_prompt: "Log in to start a petition"
+    login_prompt_sign: "Log in to sign the petition"
     criteria: "Anyone can start a petition as long as they are a British citizen or UK resident"
     response_threshold: "If a petition gets %{threshold} signatures, the government will respond"
     debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in Parliament"

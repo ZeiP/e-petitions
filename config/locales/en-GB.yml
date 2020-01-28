@@ -233,3 +233,6 @@ en-GB:
     about_cookies: "Find out more about cookies"
     debated: "Debated"
     generic: "Other Parlimentary business"
+  login:
+    log_in: "Sign In"
+    log_out: "Sign Out"

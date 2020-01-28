@@ -1,10 +1,2 @@
 <h1 class="visuallyhidden"><%= t "page_titles.default" %></h1>
-<% if Parliament.dissolved? %>
-  <%= render 'pages/home/dissolved' %>
-<% elsif Parliament.dissolution_announced? %>
-  <%= render 'pages/home/dissolution_announced' %>
-<% elsif Parliament.opened? %>
-  <%= render 'pages/home/opened' %>
-<% else %>
-  <%= render 'pages/home/pending' %>
-<% end %>
+<%=render 'pages/home/opened' %>

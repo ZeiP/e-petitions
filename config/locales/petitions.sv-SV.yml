@@ -7,7 +7,7 @@ sv-SV:
       title: "Luo uusi aloite"
       petition: "Mitä haluaisit partiojohdon tekevän?"
       notice: "Tiedoksesi"
-      supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalta aloitteen luomiseksi." #TODO: Proper Finnish
+      supporter_requirement: "Tarvitset myöhemmin sähköpostiosoitteet vähintään %{threshold} tukijalta aloitteen luomiseksi."
       read_standards: "Muista että aloittesi tulee täyttää"
       standards: "aloitevaatimukset"
       background: "Taustatiedot"
@@ -100,6 +100,7 @@ sv-SV:
       full_name_required: "Sinun täytyy käyttää koko nimeäsi"
       email_updates: "Lähetä minulle sähköpostitse ilmoituksia aloitteesta"
       name_visible: "Koko nimesi julkaistaan aloitteen yhteydessä aloitteen luojana."
+      confirm: "Vahvista allekirjoitus"
       other_hidden: "Nimesi lisäksi emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
       all_hidden: "Emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
       heading: "Aloite"
@@ -130,6 +131,8 @@ sv-SV:
 
     ad: "Tee partiolaisaloite!"
     start_prompt: "Perusta aloite"
+    login_prompt: "Kirjaudu sisään perustaaksesi aloitteen"
+    login_prompt_sign: "Kirjaudu sisään allekirjoittaaksesi aloitteen"
     criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
     response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö vastaa siihen."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, sitä harkitaan parlamentin käsittelyyn."
@@ -189,7 +192,7 @@ sv-SV:
       awaiting_debate: "Odottaa keskusjärjestön käsittelyä (%{quantity})"
 
     list_headers:
-      not_debated: "Keskusjärjestö on päättänyt jättää käsittelemättä nämä aloitteet" #TODO: mitä haetaan?
+      not_debated: "Keskusjärjestö on päättänyt jättää käsittelemättä nämä aloitteet"
 
     #this is not visible/admin side?
     facets:
