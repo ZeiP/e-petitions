@@ -113,7 +113,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
 
     describe "POST /admin/petitions/:id/resend" do
       context "when the petition doesn't exist" do
-        before { post :resend, id: "999999" }
+        before { post :resend, params: { id: "999999" } }
 
         it "redirects to the admin dashboard page" do
           expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin")
@@ -127,7 +127,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
       context "when the petition exists" do
         let!(:petition) { FactoryBot.create(:petition, action: "Do Stuff!", creator_attributes: { email: "bob@example.com" }) }
 
-        before { perform_enqueued_jobs { post :resend, id: petition.to_param } }
+        before { perform_enqueued_jobs { post :resend, params: { id: petition.to_param } } }
 
         it "redirects to the admin petition page" do
           expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/#{petition.to_param}")

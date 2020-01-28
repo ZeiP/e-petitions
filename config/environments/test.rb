@@ -29,6 +29,8 @@ Rails.application.configure do
   # Set the HSTS headers to include subdomains
   config.ssl_options[:hsts] = { expires: 365.days, subdomains: true }
 
+  config.i18n.default_locale = :'en-GB'
+
   # Enable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = true
 
@@ -57,4 +59,6 @@ Rails.application.configure do
     allow_localhost: true,
     allow: 'chromedriver.storage.googleapis.com'
   )
+
+  DatabaseCleaner.url_whitelist = ['postgres://postgres@sqldb']
 end

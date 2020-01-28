@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-require File.expand_path('../../lib/cloud_front_remote_ip', __FILE__)
 
 require 'rails/all'
 

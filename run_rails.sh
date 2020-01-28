@@ -10,8 +10,9 @@ fi
 
 echo "RAILS_ENV=$RAILS_ENV"
 
+bin/rake db:exists && bin/rake db:migrate || bin/rake db:setup
+
 echo "Installing bundle..."
 bundle check || bundle install
-bundle exec rake db:create && bundle exec rake db:migrate
 
 bundle exec rails s -p 3000 -b '0.0.0.0'

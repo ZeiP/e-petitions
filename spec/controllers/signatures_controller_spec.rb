@@ -395,7 +395,7 @@ RSpec.describe SignaturesController, type: :controller do
           allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
           perform_enqueued_jobs {
-            post :create, petition_id: petition.id, signature: params.merge(email: "ted+petitions@example.com")
+            post :create, params: { petition_id: petition.id, signature: params.merge(email: "ted+petitions@example.com") }
           }
         end
 
@@ -451,7 +451,7 @@ RSpec.describe SignaturesController, type: :controller do
           allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
           perform_enqueued_jobs {
-            post :create, petition_id: petition.id, signature: params.merge(email: "ted+petitions@example.com")
+            post :create, params: { petition_id: petition.id, signature: params.merge(email: "ted+petitions@example.com") }
           }
         end
 
