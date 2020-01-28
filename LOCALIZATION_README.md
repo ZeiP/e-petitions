@@ -1,7 +1,7 @@
 # On localization:
 
 - Some of the content is only visible on admin side, this content is left as is in the Finnish locale files. 
-- Translations or information is required for lines prefixed with Fi_fi_locale_ or Sv_sv_locale_ unless specified otherwise specified in the comments of the file
+- Translations or information is required for lines prefixed with Fi_fi_locale_ or Sv_sv_locale_ unless specified otherwise in the comments of the file
 - Translation for locale already translated finnish should be checked
 - Translations in Finnish in Swedish locale files should be changed
 - Localization for privacy information and help information should be done directly to the views 
