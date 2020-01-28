@@ -1,4 +1,4 @@
-<%= form.submit raw("&#9664; Back"), name: "move_back", class: "back-page" %>
+<%= form.submit raw("&#9664; " ++ (t "generic.back")), name: "move_back", class: "back-page" %>
 
 <%= form.hidden_field :action %>
 <%= form.hidden_field :background %>
@@ -10,14 +10,14 @@
 <%= form.hidden_field :location_code %>
 <%= form.hidden_field :notify_by_email %>
 
-<h1 class="page-title">Make sure this is right</h1>
+<h1 class="page-title"><%= t "petitions.sign.check_info"%></h1>
 
 <%= form_row for: [petition, :email] do %>
-  <%= form.label :email, "Email address", class: "form-label" %>
+  <%= form.label :email, (t "generic.email_address"), class: "form-label" %>
   <%= error_messages_for_field petition, :email %>
   <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
 <% end %>
 
-<%= form.submit "Yes – this is my email address", name: "move_next", class: "button", tabindex: increment %>
+<%= form.submit (t "petitions.sign.confirm_info"), name: "move_next", class: "button", tabindex: increment %>
 
-<p>If your email address is wrong, just change it above</p>
+<p><%= t "petitions.sign.if_wrong_email"%></p>

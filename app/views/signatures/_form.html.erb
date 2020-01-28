@@ -1,13 +1,11 @@
 <%= form_row for: [signature, :notify_by_email], class: "notify-by-email" do %>
   <div class="multiple-choice">
     <%= form.check_box :notify_by_email, tabindex: increment %>
-    <%= form.label :notify_by_email, "Email me whenever there’s an update about this petition" %>
+    <%= form.label :notify_by_email, (t "petitions.sign.email_updates") %>
   </div>
 <% end %>
-
 <%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0" %>
-<%= form.submit "Continue", name: "move:next", class: "button", tabindex: increment %>
-
+<%= form.submit ( t "generic.continue" ), name: "move:next", class: "button", tabindex: increment %>
 <section class="secondary">
-  <p>We won't publish your personal details anywhere or use them for anything other than this petition.</p>
+  <p><%= t "petitions.sign.all_hidden" %></p>
 </section>

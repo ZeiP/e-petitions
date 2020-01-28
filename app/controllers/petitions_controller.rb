@@ -1,12 +1,12 @@
-require 'csv'
+require "csv"
 
 class PetitionsController < ApplicationController
   before_action :redirect_to_valid_state, only: [:index]
   before_action :do_not_cache, except: [:index, :show]
   before_action :set_cors_headers, only: [:index, :show, :count], if: :json_request?
 
-  before_action :redirect_to_home_page_if_dissolved, only: [:new, :check, :check_results, :create]
-  before_action :redirect_to_home_page_unless_opened, only: [:index, :new, :check, :check_results, :create]
+  #before_action :redirect_to_home_page_if_dissolved, only: [:new, :check, :check_results, :create]
+  #before_action :redirect_to_home_page_unless_opened, only: [:index, :new, :check, :check_results, :create]
   before_action :redirect_to_archived_petition_if_archived, only: [:show]
 
   before_action :retrieve_petitions, only: [:index]
@@ -92,15 +92,7 @@ class PetitionsController < ApplicationController
   def petition_id
     params[:id].to_i
   end
-
-  def redirect_to_home_page_if_dissolved
-    redirect_to home_url if Parliament.dissolved?
-  end
-
-  def redirect_to_home_page_unless_opened
-    redirect_to home_url unless Parliament.opened?
-  end
-
+  
   def request_format
     request.format.json? ? :json : nil
   end
@@ -181,6 +173,6 @@ class PetitionsController < ApplicationController
   end
 
   def set_content_disposition
-    response.headers['Content-Disposition'] = "attachment; filename=#{csv_filename}"
+    response.headers["Content-Disposition"] = "attachment; filename=#{csv_filename}"
   end
 end

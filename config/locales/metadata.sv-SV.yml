@@ -1,0 +1,13 @@
+sv-SV:
+  metadata:
+    #metadata shown with with social media stuff
+    open_graph:
+      site_name: "Partiolaisaloitteet"
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"
+
+    twitter:
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"

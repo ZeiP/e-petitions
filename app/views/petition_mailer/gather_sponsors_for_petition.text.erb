@@ -1,33 +1,33 @@
-Dear <%= @creator.name %>,
+<%= t "mail.greeting" %> <%= @creator.name %>,
 
-You’re not done yet!
+<%= t "mail.gather_sponsors.not_done" %>
 
-Forward the email below to your potential supporters.
+<%= t "mail.gather_sponsors.forward" %>
 
-<%= Site.threshold_for_moderation %> people need to click the link and confirm their support for us to publish your petition.
+<%= t "mail.gather_sponsors.threshold", threshold: Site.threshold_for_moderation %>
 
 <% if christmas_period? %>
-Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does we’ll publish it. This usually takes a week or less but over the Christmas period it will take us a little longer than usual. We’ll check your petition as quickly as we can.
+<%= t "mail.gather_sponsors.estimate.christmas" %>
 <% elsif easter_period? %>
-Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does we’ll publish it. This usually takes a week or less but over the Easter period it will take us a little longer than usual. We’ll check your petition as quickly as we can.
+<%= t "mail.gather_sponsors.estimate.easter" %>
 <% elsif moderation_delay? %>
-Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does, we’ll publish it. This usually takes a week or less, however we have a very large number to check at the moment so it is likely to take longer. Thank you for your patience.
+<%= t "mail.gather_sponsors.estimate.delay" %>
 <% else %>
-Once you’ve gained the required number of supporters, we’ll check your petition to make sure it meets the petition standards. If it does, we’ll publish it. This usually takes a week or less.
+<%= t "mail.gather_sponsors.estimate.standard" %>
 <% end %>
 
-Thanks,
+<%= t "mail.thanks" %> 
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>
 
 --
 
-I've made a petition – will you sign it?
+<%= t "mail.gather_sponsors.please_sign" %>
 
-Click this link to sign the petition:
+<%= t "mail.sponsor.click_link" %> 
 <%= new_petition_sponsor_url(@petition, token: @petition.sponsor_token) %>
 
-My petition:
+<%= t "mail.gather_sponsors.my_petition" %>
 
 <%= @petition.action %>
 
@@ -39,5 +39,5 @@ My petition:
 
 --
 
-Click this link to sign the petition:
+<%= t "mail.sponsor.click_link" %> 
 <%= new_petition_sponsor_url(@petition, token: @petition.sponsor_token) %>

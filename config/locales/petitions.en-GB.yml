@@ -1,5 +1,29 @@
 en-GB:
-  petitions:
+  petitions: 
+    start: 
+      title: "Start a petition"
+      petition: "What do you want us to do?"
+      notice: "Just so you know"
+      supporter_requirement: "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
+      read_standards: "Remember, your petition must meet the"
+      standards: "petition standards"
+      background: "Background"
+      background_help: "Help writing background"
+      background_help_explanation: "Use this section to back up why you want action. Some people include a personal story here."
+      background_help_reminder: "Remember that people won’t always know that much about the issue you’re petitioning about - explain it."
+      additional_details: "Additional details"
+      optional_details: "Optional - background information, evidence and references"
+      preview_petition: "Preview petition"
+      could_not_create: "We couldn't create this petition"
+
+    search:
+      result:
+        one: "result"
+        other: "results"
+      petition: 
+        one: "petition"
+        other: "petitions"
+
     errors:
       prompt:
         one: "Please fix the following error:"
@@ -10,6 +34,74 @@ en-GB:
     view_all: "View all open petitions"
     popular_title: "Popular petitions"
     search_title: "Search petitions"
+    current: "Current petitions"
+    back_to_current: "Back to current petitions"
+    no_archived_found: "No archived petitions could be found matching your search terms"
+    list_of_petitions: "Other lists of petitions"
+    archived_petitions: "Archived petitions"
+    get_data_html: "Get this data in %{json} or %{csv} formats"
+
+    about:
+      summary: "About petition data"
+      content: |-
+        "The data shows the number of people who have signed the petition
+        by country as well as in the constituency of each Member of Parliament.
+        This data is available for all petitions on the site. It is not a
+        list of people who have signed the petition. The only name
+        that is shared on the site is that of the petition creator."
+  
+    check:
+      title: "We checked for similar petitions"
+      title_duplicates: "We found some similar petitions"
+      help: "If one of these petitions matches yours, sign it and share it instead"
+      help_reason: "Your petition is more likely to get to %{threshold_response} and %{threshold_debate} signatures that way."
+      duplicate_notification: "If there’s already a petition on the same topic, your petition is likely to be rejected"
+      duplicate_continue: "My petition is different"
+      no_duplicates: "We checked for similar petitions and didn't find any."
+      no_duplicates_go_ahead: "So you can go ahead and create a new one."
+    
+    example:
+      main: "Example: Make wrongly describing a casserole with a pastry lid as a pie a criminal offence"
+      show_more: "Show more examples"
+      good: "Good examples:"
+      good_1: "Introduce Black History to the primary curriculum"
+      good_2: "Lower the voting age to 16"
+      bad: "Bad examples:"
+      bad_1: "Russia Problem on US ruling"
+      bad_2: "Justice for David Thomas"
+      explanation: "Good petitions say clearly what they want government or parliament to do."
+
+    finalize:
+      title: "Check your petition"
+      more_details: "More details"
+      continue: "This looks good"
+      warning_no_changes: "You can’t change your petition after this point."
+      warning_personal_info: "If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published."
+      warning_no_removal: "Published petitions can only be removed from the site with the agreement of the House of Commons Petitions Committee."
+
+    sign:
+      signatures: "signatures"
+      title_own: "Sign your petition"
+      title_other: "Sign petition"
+      title_sponsor: "Sign %{creator}’s petition"
+      criteria: "Only British citizens or UK residents have the right to create and sign petitions"
+      criteria_confirm: "I am a British citizen or UK resident"
+      full_name_required: "You must use your full name"
+      email_updates: "Email me whenever there’s an update about this petition"
+      name_visible: "Your name will be published on this petition as the petition creator."
+      confirm: "Confirm signature"
+      other_hidden: "Other than that, we won’t publish your personal details anywhere or use them for anything other than this petition."
+      all_hidden: "We won't publish your personal details anywhere or use them for anything other than this petition."
+      heading: "Petition"
+      additional_details: "More details"
+      sign_this: "Sign this petition"
+      creator: "Created by"
+      deadline: "Deadline"
+      time: "All petitions run for 6 months"
+      get_data: "Get petition data (json format)"
+      check_info: "Make sure this is right"
+      confirm_info: "Yes – this is my email address"
+      if_wrong_email: "If your email address is wrong, just change it above"
 
     page_titles:
       all: "All petitions"
@@ -27,6 +119,8 @@ en-GB:
 
     ad: "The Petitions service is open"
     start_prompt: "Start a petition"
+    login_prompt: "Log in to start a petition"
+    login_prompt_sign: "Log in to sign the petition"
     criteria: "Anyone can start a petition as long as they are a British citizen or UK resident"
     response_threshold: "If a petition gets %{threshold} signatures, the government will respond"
     debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in Parliament"
@@ -34,22 +128,39 @@ en-GB:
     responded_petitions:
       none: "The government hasn’t responded to any petitions yet"
       responded_on: "The government responded on %{date}"
+      responded_on_dash: "Government responded – %{date}"
       read_full: "Read the response in full"
 
     debated_petitions:
       none: "Parliament hasn’t debated any petitions yet"
-      debated_on: "This topic was debated on %{date}"
-      debate_video: "Watch the debate on %{url}"
-      debate_transscript: "Read the transcript at %{url}"
-      debate_research: "Read the research at %{url}"
+      was_debated: "Parliament debated this topic"
+      was_debated_on: "This topic was debated on %{date}"
+      no_debate: "The Petitions Committee decided not to debate this petition"
+      video_html: "Watch the debate on %{href}"
+      transcript_html: "Read the transcript at %{href}"
+      research_html: "Read the research at %{href}"
+      video_location: "parliamentlive.tv"
+      transcript_location: "parliament.uk"
+      research_location: "parliament.uk"
+      watch_at_html: 'You will be able to watch the debate live at <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
+      will_debate: "Parliament will debate this petition"
+      will_debate_on: "Parliament will debate this petition on %{date}"
+      watch_online_html: 'You will be able to watch online on the <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
+      will_consider_debate: "Parliament will consider this for a debate"
+      waiting_debate_date: "%{duration} for a debate date"
+      consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+      at_threshold: "At %{threshold} signatures..."
+      if_at_threshold: "At %{threshold} signatures, this petition will be considered for debate in Parliament"
 
     sharing:
+      share_this: "Share this"
       facebook:
         html: <span class="icon icon-share-facebook"></span> Facebook
       email:
         html: <span class="icon icon-share-email"></span> Email
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
+        twitter_card_desc: "Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
@@ -295,7 +406,7 @@ en-GB:
   petition:
     responded:
       title: "Government responded"
-      on: "This response was given on %{date}"
+      'on': "This response was given on %{date}"
       read_in_full: "Read the response in full"
     waiting:
       title: "Government will respond"
@@ -304,3 +415,91 @@ en-GB:
     need_more:
       title: "At %{threshold} signatures..."
       description: "At %{threshold} signatures, government will respond to this petition"
+
+  archived:
+    during: "This petition was submitted during the %{period} %government government"
+    others: "View other petitions from this government"
+    rejected_petition: "Rejected petition"
+    petition: "Petition"
+    details: "More details"
+    was_rejected: "This petition was rejected"
+    rejection_reason: "Why was this petition rejected?"
+    rejection_explanation: "We only reject petitions that don’t meet the %{href}"
+    standards: "petition standards"
+    reason_ge: "This petition closed early because of a General Election"
+    faq:  "Find out more on the %{href}"
+    faq_location: "Petitions Committee website" 
+    petition_closed: "This petition is closed"
+    petition_ran_for: "This petition ran for %{duration}"
+    was_debated: "Parliament debated this topic"
+    was_debated_on: "This topic was debated on %{date}"
+    no_debate: "The Petitions Committee decided not to debate this petition"
+    watch_at: "You'll be able to watch the debate online at {href}"
+    watch_at_location: "parliamentlive.tv"
+    watch_at_link: http://parliamentlive.tv
+    result_publication: "%{duration} for Parliament to publish the debate outcome"
+    will_debate: "Parliament will debate this petition"
+    will_debate_on: "Parliament will debate this petition on %{date}"
+    watch_online: "You'll be able to watch online on the %{href}."
+    watch_online_location: "UK Parliament YouTube channel"
+    watch_online_link: "https://www.youtube.com/UKParliament"
+    will_consider_debate: "Parliament will consider this for a debate"
+    consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+    waiting_debate_date: "%{duration} for a debate date"
+    responded: "Government responded"
+    responded_on: "This response was given on %{date}"
+    read_response: "Read the response in full"
+    other: "Other parliamentary business"
+    date_submitted: "Date submitted"
+    date_closed: "Date closed"
+    get_json_data: "Get petition data (json format)"
+
+  rejected:
+    heading: "Rejected petition"
+    details: "More details"
+    was_rejected: "This petition was rejected"
+    reason: "Why was this petition rejected?"
+    explanation_html: "We only reject petitions that don’t meet the %{href}"
+    standards: "petition standards"
+    date_submitted: "Date submitted"
+    get_json_data: "Get petition data (json format)"
+
+  unsubscribe:
+    already_unsubcribed_title: "Already unsubscribed from this petition"
+    already_unsubscribed: "You have already unsubscribed from email updates about this petition."
+    failed_title: "Failed to unsubscribe"
+    failed: "Your unsubscribe link is invalid."
+    success_title: "Successfully unsubscribed from this petition"
+    success: "You have unsubscribed from email updates about this petition."
+    return_home: "Return to home page"
+
+  signed:
+    signatures: "signatures"
+    signature_added: "We've added your signature to the petition:"
+    thanks: "Thanks"
+    sponsor_sign: "Your signature has been added to this petition as a supporter."
+    what_next: "What next?"
+    signatures_required: "This petition needs %{threshold} supporters to go live."
+    email_notice: "When it goes live, we'll email you a link so you can start sharing it."
+    one_more_step: "One more step..."
+    emailed_link: "We've emailed you a link to send to your potential supporters"
+    required_supporters: "You need %{threshold} supporters"
+    supporters_needed: "%{threshold} people need to click this link and confirm their support for your petition to go live"
+    live_requirement: "Your petition will only go live when %{threshold} people confirm their support"
+    confirm_address: "We’ve sent you an email. Please click on the link in the email to confirm your address."
+    confirm_required: "Your signature will not be counted until you click the link in the email"
+    no_confirmation: "Not received a confirmation email?"
+    if_no_email: "If you haven’t received a confirmation email:"
+    check_spam: "check your spam or junk mail folders"
+    wait: "allow up to 24 hours for the email to arrive"
+
+  gathering_support:
+    title: "This petition is gathering support"
+    signatures_required_html: "%{creator}’s petition needs %{threshold} supporters before we will check that it meets the %{href} and publish it."
+    try_later: "Please try again in a few days."
+
+  moderation:
+    title: "We’re checking this petition"
+    supporters: "%{threshold} people have already supported %{creator}’s petition."
+    check_needed_html: "We need to check it meets the %{href} before we publish it."
+    try_later: "Please try again in a few days."

@@ -22,7 +22,7 @@
   <body>
     <% if show_cookie_message? %>
       <div id="global-cookie-message">
-        <p>We use cookies to make this service simpler. <a href="/privacy">Find out more about cookies</a></p>
+        <p> <%= t "generic.cookies"%> <a href="/privacy"><%= t "generic.about_cookies"%></a></p>
       </div>
     <% end %>
 

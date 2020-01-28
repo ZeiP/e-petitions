@@ -1,25 +1,25 @@
 <h1 class="page-title page-title-with-icon">
   <span class="icon icon-email"></span>
-  One more step…
+  <%= t "signed.one_more_step"%>
 </h1>
 
 <p>
-  We’ve sent you an email. Please click on the link in the email to confirm your address.
+  <%= t "signed.confirm_address"%>
 </p>
 
-<%= render "notification", message: "Your signature will not be counted until you click the link in the email" %>
+<%= render "notification", message: (t "signed.confirm_required")%>
 
 <details>
-  <summary><span class="summary">Not received a confirmation email?</span></summary>
+  <summary><span class="summary"><%= t "signed.no_confirmation"%></span></summary>
 
   <div class="panel-indent">
     <p>
-      If you haven’t received a confirmation email:
+      <%= t "signed.if_no_email"%>
     </p>
 
     <ul class="list-bullet">
-      <li>check your spam or junk mail folders</li>
-      <li>allow up to 24 hours for the email to arrive</li>
+      <li><%= t "signed.check_spam"%></li>
+      <li><%= t "signed.wait"%></li>
     </ul>
   </div>
 </details>

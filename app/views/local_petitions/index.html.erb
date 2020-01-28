@@ -1,15 +1,15 @@
 <h1 class="page-title">
   <% if @postcode.present? %>
-    We couldn't find that postcode
+    LOCALIZE_We couldn't find that postcode
   <% else %>
-    Local to you
+    LOCALIZE_Local to you
   <% end %>
 </h1>
 
 <% if @postcode.blank? %>
-  <p>Find petitions about local issues</p>
+  <p>LOCALIZE_Find petitions about local issues</p>
 <% else %>
-  <p>We couldn't find the postcode <q><%= params[:postcode] %></q>. Try again?</p>
+  <p>LOCALIZE_We couldn't find the postcode <q><%= params[:postcode] %></q>. Try again?</p>
 <% end %>
 
 <%= render 'local_search' %>

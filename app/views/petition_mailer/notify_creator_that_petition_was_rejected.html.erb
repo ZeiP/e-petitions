@@ -1,6 +1,6 @@
-<p>Dear <%= @signature.name %>,</p>
+<p><%= t "mail.greeting" %> <%= @signature.name %>,</p>
 
-<p>We rejected the petition you created – “<%= @petition.action %>”.
+<p><%= t "mail.rejected.created" %>  “<%= @petition.action %>”.
 
 <%= rejection_description(@rejection.code) %>
 <% if @rejection.details? -%>
@@ -9,16 +9,16 @@
 <% end -%>
 <% unless @petition.hidden? -%>
 
-<p>Click this link to see your rejected petition:<br />
+<p><%= t "mail.rejected.petition_yours" %> <br />
 <%= link_to 'View your rejected petition', petition_url(@petition) %></p>
 <% end -%>
 
-<p>We only reject petitions that don’t meet the petition standards:<br />
+<p><%= t "mail.rejected.standards" %> <br />
 <%= link_to nil, help_url(anchor: 'standards') %></p>
 
-<p>If you want to try again, click here to start a petition:<br />
+<p><%= t "mail.rejected.try_again" %> <br />
 <%= link_to nil, check_petitions_url %></p>
 
-<p>Thanks,<br />
+<p><%= t "mail.thanks" %> <br />
 <%= t("petitions.emails.signoff_prefix") %><br />
 <%= t("petitions.emails.signoff_suffix") %></p>

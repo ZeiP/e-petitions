@@ -1,4 +1,4 @@
-require 'postcode_sanitizer'
+require "postcode_sanitizer"
 
 class PetitionCreator
   extend ActiveModel::Naming
@@ -7,7 +7,7 @@ class PetitionCreator
 
   STAGES = %w[petition replay_petition creator replay_email]
 
-  PETITION_PARAMS  = [:action, :background, :additional_details]
+  PETITION_PARAMS = [:action, :background, :additional_details]
   SIGNATURE_PARAMS = [:name, :email, :notify_by_email]
   PERMITTED_PARAMS = [:q, :stage, :move_back, :move_next, petition_creator: PETITION_PARAMS + SIGNATURE_PARAMS]
 
@@ -165,7 +165,7 @@ class PetitionCreator
     errors.add(:name, :blank) unless name.present?
     errors.add(:name, :too_long, count: 255) if action.length > 255
     errors.add(:email, :blank) unless email.present?
-    
+
     if email.present?
       email_validator.validate(self)
     end

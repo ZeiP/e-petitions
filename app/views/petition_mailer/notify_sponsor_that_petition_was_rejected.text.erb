@@ -1,6 +1,6 @@
-Dear <%= @signature.name %>,
+<%= t "mail.greeting" %> <%= @signature.name %>,
 
-We rejected the petition you supported – "<%= @petition.action %>".
+<%= t "mail.rejected.supported" %>  "<%= @petition.action %>".
 
 <%= strip_tags(rejection_description(@rejection.code)) %>
 <% if @rejection.details? -%>
@@ -9,13 +9,13 @@ We rejected the petition you supported – "<%= @petition.action %>".
 <% end -%>
 <% unless @petition.hidden? -%>
 
-Click this link to see the rejected petition:
+<%= t "mail.rejected.petition" %> 
 <%= petition_url(@petition) %>
 <% end -%>
 
-We only reject petitions that don’t meet the petition standards:
+<%= t "mail.rejected.standards" %> 
 <%= help_url(anchor: 'standards') %>
 
-Thanks,
+<%= t "mail.thanks" %> 
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>

@@ -1,54 +1,55 @@
 <h1>
-  <span class="heading-secondary">Petition</span>
+  <span class="heading-secondary"><%= t "petitions.sign.heading"%></span>
   <%= petition.action %>
 </h1>
 
 <div><%= auto_link(simple_format(h(petition.background)), html: { rel: 'nofollow' }) %></div>
-<% unless petition.additional_details.blank? %>
-  <details>
-    <summary><span class="summary">More details</span></summary>
-    <div><%= auto_link(simple_format(h(petition.additional_details)), html: { rel: 'nofollow' }) %></div>
-  </details>
-<% end %>
+  <% unless petition.additional_details.blank? %>
+    <details>
+      <summary><span class="summary"><%= t "petitions.sign.additional_details"%></span></summary>
+      <div><%= auto_link(simple_format(h(petition.additional_details)), html: { rel: 'nofollow' }) %></div>
+    </details>
+  <% end %>
 
-<% if current_user %>
-  <%= link_to "Sign this petition", new_petition_signature_path(petition), :class => 'button button-sign-petition', :tabindex => increment(5) %>
-<% else %>
-  <p><%= t ".login_to_start" %></p>
-<% end %>
-
-<div class="signature-count">
-  <p class="signature-count-number">
-    <%= signature_count(:default, petition.signature_count) %>
-  </p>
-  <div class="signature-count-graph" aria-hidden="true">
-    <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
+  <div class="signature-count">
+    <p class="signature-count-number">
+      <%= signature_count(:default, petition.signature_count) %>
+    </p>
+    <div class="signature-count-graph" aria-hidden="true">
+      <span class="signature-count-current" style="width: <%= signatures_threshold_percentage(petition) %>"></span>
+    </div>
+    <p class="signature-count-goal">
+      <%= number_with_delimiter(current_threshold(petition)) %>
+    </p>
   </div>
-  <p class="signature-count-goal">
-    <%= number_with_delimiter(current_threshold(petition)) %>
-  </p>
-</div>
 
-<%= render 'threshold_details', petition: petition %>
-<%= render 'other_business_details', petition: petition %>
-<%= render 'share_petition', petition: petition %>
+  <% if current_user %>
+    <%= link_to (t "petitions.sign.sign_this"), new_petition_signature_path(petition), :class => 'button button-sign-petition', :tabindex => increment(5) %>
+  <% else %>
+    <p><%= t "petitions.login_prompt_sign"%></p>
+    <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button' %>
+  <% end %>
 
-<ul class="petition-meta">
-  <li class="meta-created-by">
-    <span class="label">Created by</span> <%= petition.creator.name %>
-  </li>
-  <li class="meta-deadline">
-    <% if petition.closing_early_for_dissolution? %>
-      <span class="label">Deadline</span> <%= short_date_time_format Parliament.dissolution_at %>
-    <% else %>
-      <span class="label">Deadline</span> <%= short_date_format petition.deadline %>
-    <% end %>
-    <% unless Parliament.dissolution_announced? %>
-      <span class="note">All petitions run for 6 months</span>
-    <% end %>
-  </li>
-  <li class="meta-json">
-    <span class="note"><%= link_to "Get petition data (json format)", petition_path(petition, :json) %></span>
-    <%= render "about_petition_data" %>
-  </li>
-</ul>
+  <%= render 'threshold_details', petition: petition %>
+  <%= render 'other_business_details', petition: petition %>
+  <%= render 'share_petition', petition: petition %>
+
+  <ul class="petition-meta">
+    <li class="meta-created-by">
+      <span class="label"><%= t "petitions.sign.creator"%></span> <%= petition.creator.name %>
+    </li>
+    <li class="meta-deadline">
+      <% if petition.closing_early_for_dissolution? %>
+        <span class="label"><%= t "petitions.sign.deadline"%></span> <%= short_date_time_format Parliament.dissolution_at %>
+      <% else %>
+        <span class="label"><%= t "petitions.sign.deadline"%></span> <%= short_date_format petition.deadline %>
+      <% end %>
+      <% unless false #TOOD: Clean code&& Parliament.dissolution_announced? %>
+        <span class="note"><%= t "petitions.sign.time"%></span>
+      <% end %>
+    </li>
+    <li class="meta-json">
+      <span class="note"><%= link_to t("petitions.sign.get_data"), petition_path(petition, :json) %></span>
+      <%= render "about_petition_data" %>
+    </li>
+  </ul>

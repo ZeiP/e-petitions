@@ -1,12 +1,13 @@
 fi-FI:
   metadata:
+    #metadata shown with with social media stuff
     open_graph:
-      site_name: "Petitions - UK Government and Parliament"
-      default_title: "Petitions - UK Government and Parliament"
-      title: "Petition: %{petition}"
-      archived_title: "Archived Petition: %{petition}"
+      site_name: "Partiolaisaloitteet"
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"
 
     twitter:
-      default_title: "Petitions - UK Government and Parliament"
-      title: "Petition: %{petition}"
-      archived_title: "Archived Petition: %{petition}"
+      default_title: "Partiolaisaloitteet"
+      title: "Aloite: %{petition}"
+      archived_title: "Arkistoidut aloitteet: %{petition}"

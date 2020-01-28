@@ -1,0 +1,126 @@
+#Content here outside of errors at the end should be admin side.
+
+sv-SV:
+  activemodel:
+    errors:
+      models:
+        feedback:
+          attributes:
+            comment:
+              blank: "Comment must be completed"
+            email:
+              invalid: "Email not recognised."
+
+  activerecord:
+    errors:
+      models:
+        admin_user:
+          attributes:
+            current_password:
+              invalid: "Current password is incorrect"
+            password:
+              invalid: "Password must contain at least one digit, a lower and upper case letter and a special character"
+              taken: "Password is the same as the current password"
+            password_confirmation:
+              confirmation: "Password confirmation doesn't match password"
+            role:
+              inclusion: "Role '%{value}' is invalid"
+
+        archived/debate_outcome:
+          attributes:
+            commons_image:
+              too_narrow: "Width must be at least %{min_width}px (is %{width}px)"
+              too_short: "Height must be at least %{min_height}px (is %{height}px)"
+              incorrect_ratio: "Width and height ratio of uploaded image is %{ratio} - should be between %{min_ratio} and %{max_ratio}"
+
+        archived/petition:
+          attributes:
+            parliament:
+              required: "Parliament can't be blank"
+            tags:
+              invalid: "The submitted tags were invalid - please reselect and try again"
+
+        domain:
+          attributes:
+            aliased_domain:
+              not_found: "The aliased domain was not found - please check the spelling and try again"
+
+        petition:
+          attributes:
+            moderation:
+              blank: "You must choose to approve, reject or flag"
+            creator_signature:
+              blank: " %{attribute} must be completed"
+            state:
+              inclusion: "State '%{value}' not recognised"
+            tags:
+              invalid: "The submitted tags were invalid - please reselect and try again"
+
+        signature:
+          attributes:
+            state:
+              inclusion: "State '%{value}' not recognised"
+            name:
+              already_signed: " %{name} has already signed this petition using %{email}"
+
+        sponsor:
+          attributes:
+            petition:
+              blank: "Needs a petition"
+
+        debate_outcome:
+          attributes:
+            commons_image:
+              too_narrow: "Width must be at least %{min_width}px (is %{width}px)"
+              too_short: "Height must be at least %{min_height}px (is %{height}px)"
+              incorrect_ratio: "Width and height ratio of uploaded image is %{ratio} - should be between %{min_ratio} and %{max_ratio}"
+
+        rate_limit:
+          attributes:
+            allowed_domains:
+              invalid: "Allowed domains list is invalid"
+            blocked_domains:
+              invalid: "Blocked domains list is invalid"
+            allowed_ips:
+              invalid: "Allowed IPs list is invalid"
+            blocked_ips:
+              invalid: "Blocked IPs list is invalid"
+            ignored_domains:
+              invalid: "Ignored domains list is invalid"
+
+        tag:
+          attributes:
+            name:
+              taken: "Tag already exists"
+              too_long:
+                one: "Tag is too long (maximum is 1 character)"
+                other: "Tag is too long (maximum is %{count} characters)"
+
+#Errors during creation of new petition
+  errors:
+    attributes:
+      email:
+        blank: "Sähköpostiosoitteen tulee olla täytetty"
+        invalid: "Sähköpostia '%{value}' ei tunnistettu"
+        plus_address: "+-merkkin käyttö sähköpostiosoitteessasi ei ole sallittua"
+      creator:
+        blank: "Luojan tulee olla täytetty"
+      action: 
+        blank: "Aloitteen otsikko tulee olla täytetty"
+        too_long: "Aloitteen otsikko on liian pitkä"
+      background:
+        blank: "Taustatietojen tulee olla täytetty"
+        too_long: "Taustatiedot ovat liian pitkät"
+      additional_details:
+        too_long: "Lisätiedot ovat liian pitkät"
+      comment:
+        blank: "Kommentin tulee olla täytetty"
+      name:
+        blank: "Nimen tulee olla täytetty"
+      location_code:
+        blank: "Sijainnin tulee olla täytetty"
+      postcode:
+        blank: "Postinumeron tulee olla täytetty"
+        invalid: "Postinumeroa ei tunnistettu"
+      uk_citizenship:
+        accepted: "Sinun tulee olla jäsenmaksun maksanut partiolainen luodaksesi tai allekirjoittaksesi aloitteita"

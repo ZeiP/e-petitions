@@ -76,7 +76,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_seen_cookie_message
-    cookies[:seen_cookie_message] = { value: 'yes', expires: 1.year.from_now, httponly: true }
+    cookies[:seen_cookie_message] = {value: 'yes', expires: 1.year.from_now, httponly: true}
   end
 
   def set_cors_headers
@@ -90,7 +90,7 @@ class ApplicationController < ActionController::Base
   end
 
   def public_petition_facets
-    I18n.t('public', scope: :"petitions.facets")
+    I18n.t('public', scope: :'petitions.facets')
   end
 
   def do_not_cache

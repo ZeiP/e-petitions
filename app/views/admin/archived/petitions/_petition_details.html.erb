@@ -8,7 +8,7 @@
   <% if @petition.creator %>
     <dt>Creator</dt>
     <dd>
-      <%=  @petition.creator.name %><br />
+      <%= @petition.creator.name%><br/>
       <%= auto_link(@petition.creator.email) %>
     </dd>
   <% end %>
