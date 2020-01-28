@@ -10,8 +10,8 @@
 	- app/views/pages/privacy.sv-SV.html.erb
 	- app/views/pages/help.sv-SV.html.erb
 
-Parameters in the translations such as %{threshold} or %{quantity} get replaced by some value depending on the state of the software.
-The parameter should be left as it is, and 
+Parameters in the translations such as %{threshold} or %{quantity} get replaced by some value depending on the state of the software. The parameter should be left as it is.
+
 Some of the common parameters:
 - %{href} - localized hyperlink to another website or another part of this site
 - %{threshold} - number of signatures requires for an answer or debate
