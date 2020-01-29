@@ -72,9 +72,9 @@ Rails.application.configure do
   end
 
   # Log in logstash format, so that we can easily parse the output
-  config.logger = LogStashLogger.new(
-    uri: ENV.fetch('LOGSTASH_URI') { 'file://' + Rails.root.join('log', 'production.log').to_s }
-  )
+  # config.logger = LogStashLogger.new(
+  #   uri: ENV.fetch('LOGSTASH_URI') { 'file://' + Rails.root.join('log', 'production.log').to_s }
+  # )
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -122,6 +122,7 @@ Rails.application.configure do
   # certificate, so instead we proxy requests from the frontend webservers for
   # any url that starts with /attachments/ to the S3 bucket
 
+=begin
   config.paperclip_defaults = {
     storage: :s3,
     s3_region: 'eu-west-1',
@@ -131,4 +132,5 @@ Rails.application.configure do
     path: '/:class/:attachment/:id_partition/:style/:filename',
     url: ':s3_attachment_url'
   }
+=end
 end
