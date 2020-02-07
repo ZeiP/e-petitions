@@ -35,6 +35,7 @@ gem 'jbuilder'
 gem 'paperclip'
 gem 'maxminddb'
 gem 'redcarpet'
+gem 'rollbar'
 
 gem 'aws-sdk-codedeploy'
 gem 'aws-sdk-cloudwatchlogs'
