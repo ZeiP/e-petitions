@@ -1,12 +1,38 @@
 require 'rails_helper'
 
 RSpec.describe PetitionsController, type: :controller do
+  context "Without logged in user" do
+    describe "GET /petitions/new" do
+      it "Should respond with 403" do
+        get :new
+        expect(response).to render_template(file: "403.html.erb")
+        expect(response.status).to be(403)
+      end
+    end
+
+    describe "POST /petitions/new" do
+      it "Should respond with 403" do
+        post :create
+        expect(response).to render_template(file: "403.html.erb")
+        expect(response.status).to be(403)
+      end
+    end
+
+    describe "GET /petitions/check" do
+      it "Should respond with 403" do
+        get :check
+        expect(response).to render_template(file: "403.html.erb")
+        expect(response.status).to be(403)
+      end
+    end
+  end
+
   context "With logged in user" do
 
     let(:user) { FactoryBot.build(:user) }
 
     before { allow(controller).to receive(:current_user).and_return(user) }
-    
+
     describe "GET /petitions/new" do
       it "should assign a petition creator" do
         get :new
