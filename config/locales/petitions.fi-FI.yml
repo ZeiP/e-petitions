@@ -50,9 +50,9 @@ fi-FI:
     #searching for petitions
     about:
       summary: "Aloitteen tiedoista"
-      content: |-
+      content:
         "Täältä löytyy tieto siitä, kuinka monta kannattajaa aloitteella on. 
-	Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
+	      Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
         Täältä ei löydy listaa partiolaisista, jotka ovat kannattaneet aloitetta. 
         Näytämme ainoastaan aloitteen tekijän nimen."
 
@@ -73,7 +73,7 @@ fi-FI:
       show_more: "Näytä lisää esimerkkejä"
       good: "Hyviä esimerkkejä:"
       good_1: "Alueellinen aloite: piiri voisi järjestää samoajaleirin."
-      good_2: Kansainvälinen aloite: enemmän kansainvälisiä Ko-Gi-kursseja."
+      good_2: "Kansainvälinen aloite: enemmän kansainvälisiä Ko-Gi-kursseja."
       bad: "Huonoja esimerkkejä:"
       bad_1: "Lippukunnan X toiminta on huonoa."
       bad_2: "Lippukunta X ei toimi, lippukunnanjohtaja pitää vaihtaa!"
