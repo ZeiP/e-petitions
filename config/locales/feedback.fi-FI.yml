@@ -8,13 +8,13 @@ fi-FI:
     send: "Lähetä palaute"
     terms:
       email_only_reply: "Vastaamme sinulle ainostaan antamasi sähköpostin kautta"
-      no_forwarding: "Emme voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä"
+      no_forwarding: "Emme voi toimittaa palautettasi aloitteen tekijälle emmekä kommentoida tietyn aloitteen sisältöä"
     contact: "Yhteystiedot"
     email:
       direction_html: "Voit lähettää sähköpostia suoraan %{href}."
       recipient: "Fi_fi_locale_EMAIL_RECIPIENT"
       address: "Fi_fi_locale_email@email.email"
-      help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
+      help: "He voivat auttaa teitä ymmärtämään, miten partiojohto käsittelee aloitteita. He voivat myös auttaa tähän palveluun liittyvien teknisten ongelmien kanssa. He eivät voi toimittaa palautettasi aloitteen tekijälle eivätkä kommentoida tietyn aloitteen sisältöä."
     phone:
       info: "Puhelinsoitot käsittelee Fi_fi_locale_House of Commons Enquiry Service."
       help: "He voivat auttaa teitä ymmärtämään miten partiojohto käsittelee aloitteita. He voivat myös auttaa teknisten ongelmien kanssa liittyen tähän palveluun. He eivät voi toimittaa palautettasi aloitteen luojille emmekä kommentoida tietyn aloiteen sisältöä."
