@@ -1,6 +1,6 @@
 class SignaturesController < ApplicationController
   include FormTracking
-
+  before_action :require_current_user, only: [:new, :confirm, :create, :signed, :verify, :thank_you]
   before_action :retrieve_petition, only: [:new, :confirm, :create, :thank_you]
   before_action :retrieve_signature, only: [:verify, :unsubscribe, :signed]
   before_action :build_signature, only: [:new, :confirm, :create]
@@ -228,7 +228,6 @@ class SignaturesController < ApplicationController
 
   def signature_params_for_new
     {
-      location_code: "GB",
       form_token: form_token,
       form_requested_at: form_requested_at
     }
@@ -243,13 +242,12 @@ class SignaturesController < ApplicationController
       ip_address: request.remote_ip,
       form_token: form_token,
       form_requested_at: form_requested_at,
-      image_loaded_at: image_loaded_at,
       name: current_user.username,
       email: current_user.email
     )
   end
 
   def signature_attributes
-    %i[name email email_confirmation postcode location_code uk_citizenship notify_by_email]
+    %i[name email email_confirmation notify_by_email]
   end
 end

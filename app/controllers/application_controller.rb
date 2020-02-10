@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
     false
   end
 
+  def require_current_user
+    if !current_user
+      render(file: File.join(Rails.root, 'views/errors/403.html'), status: 403)
+    end
+  end
+
   protected
 
   def authenticate
