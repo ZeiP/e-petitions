@@ -2,7 +2,7 @@ en-GB:
   petitions: 
     start: 
       title: "Start a petition"
-      petition: "What do you want us to do?"
+      petition: "What should we do to make scouting better?"
       notice: "Just so you know"
       supporter_requirement: "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
       read_standards: "Remember, your petition must meet the"
@@ -61,31 +61,31 @@ en-GB:
       no_duplicates_go_ahead: "So you can go ahead and create a new one."
     
     example:
-      main: "Example: Make wrongly describing a casserole with a pastry lid as a pie a criminal offence"
+      main: "Example: Let's make scouting carbon neutral!"
       show_more: "Show more examples"
       good: "Good examples:"
-      good_1: "Introduce Black History to the primary curriculum"
-      good_2: "Lower the voting age to 16"
+      good_1: "Regional petition: The district could organize a camp for explorers."
+      good_2: "International petition: more international Ko-Gi courses"
       bad: "Bad examples:"
-      bad_1: "Russia Problem on US ruling"
-      bad_2: "Justice for David Thomas"
-      explanation: "Good petitions say clearly what they want government or parliament to do."
+      bad_1: "The activities in local group X are bad."
+      bad_2: "Local group X does not work, the leader should be changed!"
+      explanation: "Good petitions say clearly how we could make scouting better."
 
     finalize:
       title: "Check your petition"
       more_details: "More details"
       continue: "This looks good"
       warning_no_changes: "You can’t change your petition after this point."
-      warning_personal_info: "If you’ve included personal information, such as details about your health, your family or your job, think carefully about whether you are happy for this to be published."
-      warning_no_removal: "Published petitions can only be removed from the site with the agreement of the House of Commons Petitions Committee."
+      warning_personal_info: "If you’ve included personal information, think carefully about whether you are happy for this to be published."
+      warning_no_removal: "Published petitions can only be removed from the site with the agreement of the national organisation."
 
     sign:
       signatures: "signatures"
       title_own: "Sign your petition"
       title_other: "Sign petition"
       title_sponsor: "Sign %{creator}’s petition"
-      criteria: "Only British citizens or UK residents have the right to create and sign petitions"
-      criteria_confirm: "I am a British citizen or UK resident"
+      criteria: "Only Scout members who have paid their membership fee have the right to create and sign petitions"
+      criteria_confirm: "I have paid my membership fee"
       full_name_required: "You must use your full name"
       email_updates: "Email me whenever there’s an update about this petition"
       name_visible: "Your name will be published on this petition as the petition creator."
@@ -109,11 +109,11 @@ en-GB:
       closed: "Closed petitions"
       rejected: "Rejected petitions"
       published: "Published petitions"
-      awaiting_response: "Petitions waiting for a Government response"
-      with_response: "Petitions with a Government response"
-      debated: "Petitions debated in Parliament"
-      not_debated: "Petitions not debated in Parliament"
-      awaiting_debate: "Petitions waiting for a debate in Parliament"
+      awaiting_response: "Petitions waiting for a response from the national organisation"
+      with_response: "Petitions with a response from the national organisation"
+      debated: "Petitions debated in the national organisation"
+      not_debated: "Petitions not debated in the national organisation"
+      awaiting_debate: "Petitions waiting for a debate in the national organisation"
 
     share_title: "Petition: %{petition}"
 
@@ -121,21 +121,21 @@ en-GB:
     start_prompt: "Start a petition"
     login_prompt: "Log in to start a petition"
     login_prompt_sign: "Log in to sign the petition"
-    criteria: "Anyone can start a petition as long as they are a British citizen or UK resident"
-    response_threshold: "If a petition gets %{threshold} signatures, the government will respond"
-    debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in Parliament"
+    criteria: "Anyone can start a petition as long as they have paid their membership fee"
+    response_threshold: "If a petition gets %{threshold} signatures, the national organisation will respond"
+    debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in the national organisation"
 
     responded_petitions:
-      none: "The government hasn’t responded to any petitions yet"
-      responded_on: "The government responded on %{date}"
-      responded_on_dash: "Government responded – %{date}"
+      none: "The national organisation hasn’t responded to any petitions yet"
+      responded_on: "The national organisation responded on %{date}"
+      responded_on_dash: "the national organisation responded – %{date}"
       read_full: "Read the response in full"
 
     debated_petitions:
-      none: "Parliament hasn’t debated any petitions yet"
-      was_debated: "Parliament debated this topic"
+      none: "The national organisation hasn’t debated any petitions yet"
+      was_debated: "The national organisation debated this topic"
       was_debated_on: "This topic was debated on %{date}"
-      no_debate: "The Petitions Committee decided not to debate this petition"
+      no_debate: "The national organisation decided not to debate this petition"
       video_html: "Watch the debate on %{href}"
       transcript_html: "Read the transcript at %{href}"
       research_html: "Read the research at %{href}"
@@ -143,14 +143,14 @@ en-GB:
       transcript_location: "parliament.uk"
       research_location: "parliament.uk"
       watch_at_html: 'You will be able to watch the debate live at <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
-      will_debate: "Parliament will debate this petition"
-      will_debate_on: "Parliament will debate this petition on %{date}"
+      will_debate: "The national organisation will debate this petition"
+      will_debate_on: "The national organisation will debate this petition on %{date}"
       watch_online_html: 'You will be able to watch online on the <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
       will_consider_debate: "Parliament will consider this for a debate"
       waiting_debate_date: "%{duration} for a debate date"
-      consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+      consider_threshold: "The national organisation considers all petitions that get more than %{threshold} signatures for debate"
       at_threshold: "At %{threshold} signatures..."
-      if_at_threshold: "At %{threshold} signatures, this petition will be considered for debate in Parliament"
+      if_at_threshold: "At %{threshold} signatures, this petition will be considered for debate in the national organisation"
 
     sharing:
       share_this: "Share this"
@@ -160,7 +160,7 @@ en-GB:
         html: <span class="icon icon-share-email"></span> Email
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
-        twitter_card_desc: "Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
+        twitter_card_desc: "Official online petitions in response to issues of the day, listing the number that got a response from the national organisation, and those that have been debated in the national organisation"
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
@@ -170,14 +170,14 @@ en-GB:
       closed: "Closed petitions (%{quantity})"
       published: "Published petitions (%{quantity})"
       rejected: "Rejected petitions (%{quantity})"
-      awaiting_response: "Awaiting government response (%{quantity})"
-      with_response: "Government responses (%{quantity})"
-      debated: "Debated in Parliament (%{quantity})"
-      not_debated: "Not debated in Parliament (%{quantity})"
-      awaiting_debate: "Awaiting a debate in Parliament (%{quantity})"
+      awaiting_response: "Awaiting a national organisation response (%{quantity})"
+      with_response: "National organisation responses (%{quantity})"
+      debated: "Debated in the national organisation (%{quantity})"
+      not_debated: "Not debated in the national organisation (%{quantity})"
+      awaiting_debate: "Awaiting a debate in the national organisation (%{quantity})"
 
     list_headers:
-      not_debated: "The Petitions Committee decided not to debate these petitions"
+      not_debated: "The national organisation decided not to debate these petitions"
 
     facets:
       archived:
@@ -242,10 +242,10 @@ en-GB:
           rejected: "Rejected (%{quantity})"
           hidden: "Hidden (%{quantity})"
           stopped: "Stopped (%{quantity})"
-          awaiting_response: "Awaiting a government response (%{quantity})"
-          with_response: "With a government response (%{quantity})"
-          awaiting_debate_date: "Awaiting a debate in parliament (%{quantity})"
-          with_debate_outcome: "Has been debated in parliament (%{quantity})"
+          awaiting_response: "Awaiting a national organisation response (%{quantity})"
+          with_response: "With a national organisation response (%{quantity})"
+          awaiting_debate_date: "Awaiting a debate in the national organisation (%{quantity})"
+          with_debate_outcome: "Has been debated in the national organisation(%{quantity})"
           in_debate_queue: "In debate queue (%{quantity})"
         admin_archived:
           all: "All petitions (%{quantity})"
@@ -253,10 +253,10 @@ en-GB:
           rejected: "Rejected (%{quantity})"
           hidden: "Hidden (%{quantity})"
           stopped: "Stopped (%{quantity})"
-          awaiting_response: "Awaiting a government response (%{quantity})"
-          with_response: "With a government response (%{quantity})"
-          awaiting_debate_date: "Awaiting a debate in parliament (%{quantity})"
-          with_debate_outcome: "Has been debated in parliament (%{quantity})"
+          awaiting_response: "Awaiting a national organisation response (%{quantity})"
+          with_response: "With a national organisation response (%{quantity})"
+          awaiting_debate_date: "Awaiting a debate in the national organisation (%{quantity})"
+          with_debate_outcome: "Has been debated inthe national organisation (%{quantity})"
           in_debate_queue: "In debate queue (%{quantity})"
 
     emails:
@@ -269,25 +269,25 @@ en-GB:
         email_duplicate_signatures: |-
           Duplicate signature of petition
         notify_signer_of_positive_debate_outcome: |-
-          Parliament debated “%{action}”
+          The national organisation debated “%{action}”
         notify_signer_of_negative_debate_outcome: |-
-          Parliament didn’t debate “%{action}”
+          The national organisation didn’t debate “%{action}”
         notify_signer_of_debate_scheduled: |-
-          Parliament will debate “%{action}”
+          The national organisation will debate “%{action}”
         notify_signer_of_threshold_response: |-
-          Government responded to “%{action}”
+          The national organisation responded to “%{action}”
 
         # Emails to people who create petitions
         email_creator: |-
           %{subject}
         notify_creator_of_positive_debate_outcome: |-
-          Parliament debated “%{action}”
+          The national organisation debated “%{action}”
         notify_creator_of_negative_debate_outcome: |-
-          Parliament didn’t debate “%{action}”
+          The national organisation didn’t debate “%{action}”
         notify_creator_of_debate_scheduled: |-
-          Parliament will debate “%{action}”
+          The national organisation will debate “%{action}”
         notify_creator_of_threshold_response: |-
-          Government responded to “%{action}”
+          The national organisation responded to “%{action}”
         notify_creator_that_moderation_is_delayed: |-
           %{subject}
 
@@ -313,7 +313,7 @@ en-GB:
         notify_creator_of_validated_petition_being_stopped: |-
           We’ve stopped your petition early
       signoff_prefix: "The Petitions team"
-      signoff_suffix: "UK Government and Parliament"
+      signoff_suffix: "The Guides and Scouts of Finland"
 
     waiting_for_in_words:
       zero: "Waiting for less than a day"
@@ -346,30 +346,30 @@ en-GB:
     counts:
       awaiting_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition is waiting for a response from the Government"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions are waiting for responses from the Government"
+          one: "<span class=\"count\">%{formatted_count}</span> petition is waiting for a response from the national organisation"
+          other: "<span class=\"count\">%{formatted_count}</span> petitions are waiting for responses from the national organisation"
       with_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition got a response from the Government"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions got a response from the Government"
+          one: "<span class=\"count\">%{formatted_count}</span> petition got a response from the national organisation"
+          other: "<span class=\"count\">%{formatted_count}</span> petitions got a response from the national organisation"
       awaiting_debate:
         html:
           one: "<span class=\"count\">%{formatted_count}</span> petition is waiting to be considered for debate"
           other: "<span class=\"count\">%{formatted_count}</span> petitions are waiting to be considered for debate"
       with_debated_outcome:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> petition was debated in the House of Commons"
-          other: "<span class=\"count\">%{formatted_count}</span> petitions were debated in the House of Commons"
+          one: "<span class=\"count\">%{formatted_count}</span> petition was debated in the national organisation"
+          other: "<span class=\"count\">%{formatted_count}</span> petitions were debated in the national organisation"
       awaiting_response_explanation:
-        html: "See all petitions waiting for a government response (%{formatted_count})"
+        html: "See all petitions waiting for a national organisation response (%{formatted_count})"
       with_response_explanation:
-        html: "See all petitions with a government response (%{formatted_count})"
+        html: "See all petitions with a national organisation response (%{formatted_count})"
       awaiting_debate_explanation:
         html: "See all petitions waiting for a debate (%{formatted_count})"
       debated_explanation:
-        html: "See all petitions debated in parliament (%{formatted_count})"
+        html: "See all petitions debated in the national organisation (%{formatted_count})"
       not_debated_explanation:
-        html: "See all petitions not debated in parliament (%{formatted_count})"
+        html: "See all petitions not debated in the national organisation (%{formatted_count})"
 
     action_counts:
       in_moderation:
@@ -377,7 +377,7 @@ en-GB:
           "<span class=\"count\">%{formatted_count}</span> Moderation queue"
       awaiting_response:
         html:
-          "<span class=\"count\">%{formatted_count}</span> Government response queue"
+          "<span class=\"count\">%{formatted_count}</span> National organisation response queue"
       in_debate_queue:
         html:
           "<span class=\"count\">%{formatted_count}</span> Debate queue"
@@ -405,16 +405,16 @@ en-GB:
 
   petition:
     responded:
-      title: "Government responded"
+      title: "The national organisation responded"
       'on': "This response was given on %{date}"
       read_in_full: "Read the response in full"
     waiting:
-      title: "Government will respond"
-      description: "Government responds to all petitions that get more than %{threshold} signatures"
-      waiting: "%{waiting} for a government response"
+      title: "The national organisation will respond"
+      description: "The national organisation responds to all petitions that get more than %{threshold} signatures"
+      waiting: "%{waiting} for a national organisation response"
     need_more:
       title: "At %{threshold} signatures..."
-      description: "At %{threshold} signatures, government will respond to this petition"
+      description: "At %{threshold} signatures, the national organisation will respond to this petition"
 
   archived:
     during: "This petition was submitted during the %{period} %government government"
@@ -437,16 +437,16 @@ en-GB:
     watch_at: "You'll be able to watch the debate online at {href}"
     watch_at_location: "parliamentlive.tv"
     watch_at_link: http://parliamentlive.tv
-    result_publication: "%{duration} for Parliament to publish the debate outcome"
-    will_debate: "Parliament will debate this petition"
-    will_debate_on: "Parliament will debate this petition on %{date}"
+    result_publication: "%{duration} for the national organisation to publish the debate outcome"
+    will_debate: "The national organisation will debate this petition"
+    will_debate_on: "The national organisation will debate this petition on %{date}"
     watch_online: "You'll be able to watch online on the %{href}."
     watch_online_location: "UK Parliament YouTube channel"
     watch_online_link: "https://www.youtube.com/UKParliament"
     will_consider_debate: "Parliament will consider this for a debate"
     consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
     waiting_debate_date: "%{duration} for a debate date"
-    responded: "Government responded"
+    responded: "The national organisation responded"
     responded_on: "This response was given on %{date}"
     read_response: "Read the response in full"
     other: "Other parliamentary business"

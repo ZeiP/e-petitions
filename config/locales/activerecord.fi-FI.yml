@@ -100,27 +100,27 @@ fi-FI:
   errors:
     attributes:
       email:
-        blank: "Sähköpostiosoitteen tulee olla täytetty"
+        blank: "Sähköpostiosoite on pakollinen tieto"
         invalid: "Sähköpostia '%{value}' ei tunnistettu"
         plus_address: "+-merkkin käyttö sähköpostiosoitteessasi ei ole sallittua"
       creator:
-        blank: "Luojan tulee olla täytetty"
+        blank: "Tekijän nimi puuttuu"
       action: 
-        blank: "Aloitteen otsikko tulee olla täytetty"
-        too_long: "Aloitteen otsikko on liian pitkä"
+        blank: "Aloitteen kuvaus puuttuu"
+        too_long: "Aloitteen kuvaus on liian pitkä"
       background:
-        blank: "Taustatietojen tulee olla täytetty"
-        too_long: "Taustatiedot ovat liian pitkät"
+        blank: "Perustelut puuttuvat"
+        too_long: "Perusteluissa on liikaa tekstiä"
       additional_details:
-        too_long: "Lisätiedot ovat liian pitkät"
+        too_long: "Lisätiedoissa on liikaa tekstiä"
       comment:
-        blank: "Kommentin tulee olla täytetty"
+        blank: "Kommentti puuttuu"
       name:
-        blank: "Nimen tulee olla täytetty"
+        blank: "Nimi on pakollinen tieto"
       location_code:
-        blank: "Sijainnin tulee olla täytetty"
+        blank: "Sijainti on pakollinen tieto"
       postcode:
-        blank: "Postinumeron tulee olla täytetty"
+        blank: "Postinumero on pakollinen tieto"
         invalid: "Postinumeroa ei tunnistettu"
       uk_citizenship:
-        accepted: "Sinun tulee olla jäsenmaksun maksanut partiolainen luodaksesi tai allekirjoittaksesi aloitteita"
+        accepted: "Sinun tulee olla jäsenmaksun maksanut partiolainen tehdäksesi tai allekirjoittaksesi aloitteita"
