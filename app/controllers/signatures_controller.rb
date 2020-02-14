@@ -62,7 +62,7 @@ class SignaturesController < ApplicationController
 
   def verify
     unless @signature.validated?
-      @signature.validate!(request: request)
+      @signature.validate!(request: request, force: true)
     end
 
     store_signed_token_in_session

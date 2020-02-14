@@ -350,7 +350,6 @@ class Signature < ActiveRecord::Base
 
     def validate!(signature_ids, now = Time.current, force: false, request: nil)
       signatures = find(signature_ids)
-
       transaction do
         signatures.each do |signature|
           signature.validate!(now, force: force, request: request)

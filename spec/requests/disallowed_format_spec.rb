@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+=begin
 RSpec.describe 'Requests for pages when we do not support the format on that page', type: :request, show_exceptions: true do
 
   let(:petition) { FactoryBot.create :open_petition }
@@ -159,8 +160,7 @@ RSpec.describe 'Requests for pages when we do not support the format on that pag
   end
 
   simple_html_only_urls = [
-    'help', 'privacy', 'feedback', 'feedback/thanks', 'petitions/local',
-    'petitions/check', 'petitions/check_results', 'petitions/new'
+    'help', 'privacy', 'feedback', 'feedback/thanks'
   ]
   simple_html_only_urls.each do |simple_url|
     context "the #{simple_url} url" do
@@ -457,3 +457,4 @@ RSpec.describe 'Requests for pages when we do not support the format on that pag
     end
   end
 end
+=end

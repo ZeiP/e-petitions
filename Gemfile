@@ -51,6 +51,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'knapsack'
   gem 'nokogiri'
   gem 'shoulda-matchers', '4.0.1'
   gem 'pickle'

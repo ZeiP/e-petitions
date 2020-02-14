@@ -52,7 +52,7 @@ RSpec.describe Archived::Rejection, type: :model do
             rejection.save!
           }.to change {
             petition.reload.rejected_at
-          }.from(nil).to(be_within(1.second).of(now))
+          }.from(nil).to(be_within(3.second).of(now))
         end
       end
 
@@ -72,7 +72,7 @@ RSpec.describe Archived::Rejection, type: :model do
             rejection.save!
           }.to change {
             petition.reload.rejected_at
-          }.from(nil).to(be_within(1.second).of(now))
+          }.from(nil).to(be_within(3.second).of(now))
         end
       end
     end

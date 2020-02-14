@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe SponsorsController, type: :controller do
+
+  let(:user) { FactoryBot.build(:user) }
+
   before do
     constituency = FactoryBot.create(:constituency, :london_and_westminster)
     allow(Constituency).to receive(:find_by_postcode).with("SW1A1AA").and_return(constituency)
+    allow(controller).to receive(:current_user).and_return(user)
   end
 
   describe "GET /petitions/:petition_id/sponsors/new" do
@@ -103,10 +107,6 @@ RSpec.describe SponsorsController, type: :controller do
 
         it "assigns the @signature instance variable with a new signature" do
           expect(assigns[:signature]).not_to be_persisted
-        end
-
-        it "sets the signature's location_code to 'GB'" do
-          expect(assigns[:signature].location_code).to eq("GB")
         end
 
         it "sets the form token and requested at details in the session" do
@@ -250,11 +250,8 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "sets the signature's params" do
-          expect(assigns[:signature].name).to eq("Ted Berry")
-          expect(assigns[:signature].email).to eq("ted@example.com")
-          expect(assigns[:signature].uk_citizenship).to eq("1")
-          expect(assigns[:signature].postcode).to eq("SW1A1AA")
-          expect(assigns[:signature].location_code).to eq("GB")
+          expect(assigns[:signature].name).to eq(user.username)
+          expect(assigns[:signature].email).to eq(user.email)
           expect(assigns[:signature].form_token).to eq("wYonHKjTeW7mtTusqDv")
           expect(assigns[:signature].form_requested_at).to eq("2019-04-18T06:00:00Z".in_time_zone)
         end
@@ -265,22 +262,6 @@ RSpec.describe SponsorsController, type: :controller do
 
         it "renders the sponsors/confirm template" do
           expect(response).to render_template("sponsors/confirm")
-        end
-
-        context "and the params are invalid" do
-          let(:params) do
-            {
-              name: "Ted Berry",
-              email: "",
-              uk_citizenship: "1",
-              postcode: "12345",
-              location_code: "GB"
-            }
-          end
-
-          it "renders the sponsors/new template" do
-            expect(response).to render_template("sponsors/new")
-          end
         end
 
         context "and has one remaining sponsor slot" do
@@ -395,14 +376,10 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "sets the signature's params" do
-            expect(assigns[:signature].name).to eq("Ted Berry")
-            expect(assigns[:signature].email).to eq("ted@example.com")
-            expect(assigns[:signature].uk_citizenship).to eq("1")
-            expect(assigns[:signature].postcode).to eq("SW1A1AA")
-            expect(assigns[:signature].location_code).to eq("GB")
+            expect(assigns[:signature].name).to eq(user.username)
+            expect(assigns[:signature].email).to eq(user.email)
             expect(assigns[:signature].form_token).to eq("wYonHKjTeW7mtTusqDv")
             expect(assigns[:signature].form_requested_at).to eq("2019-04-18T06:00:00Z".in_time_zone)
-            expect(assigns[:signature].image_loaded_at).to eq("2019-04-18T06:00:00Z".in_time_zone)
           end
 
           it "records the IP address on the signature" do
@@ -410,7 +387,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "sends a confirmation email" do
-            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to deliver_to(user.email)
             expect(last_email_sent).to have_subject("Please confirm your email address")
           end
 
@@ -423,26 +400,10 @@ RSpec.describe SponsorsController, type: :controller do
             expect(response.cookies["wYonHKjTeW7mtTusqDv"]).to be_nil
             expect(session[:form_requests]["#{petition.id}"]).to be_nil
           end
-
-          context "and the params are invalid" do
-            let(:params) do
-              {
-                name: "Ted Berry",
-                email: "",
-                uk_citizenship: "1",
-                postcode: "SW1A 1AA",
-                location_code: "GB"
-              }
-            end
-
-            it "renders the sponsors/new template" do
-              expect(response).to render_template("sponsors/new")
-            end
-          end
         end
 
         context "and the signature is a pending duplicate" do
-          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition)) }
+          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition, name: user.username, email: user.email)) }
 
           before do
             perform_enqueued_jobs {
@@ -459,7 +420,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "re-sends the confirmation email" do
-            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to deliver_to(user.email)
             expect(last_email_sent).to have_subject("Please confirm your email address")
           end
 
@@ -469,13 +430,13 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         context "and the signature is a pending duplicate alias" do
-          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition)) }
+          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition, email: user.email, name: user.username)) }
 
           before do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com") }
+              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: user.email, name: user.username) }
             }
           end
 
@@ -488,7 +449,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "re-sends the confirmation email" do
-            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to deliver_to(user.email)
             expect(last_email_sent).to have_subject("Please confirm your email address")
           end
 
@@ -498,7 +459,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         context "and the signature is a validated duplicate" do
-          let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition)) }
+          let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition, name: user.username, email: user.email)) }
 
           before do
             perform_enqueued_jobs {
@@ -515,7 +476,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "sends a duplicate signature email" do
-            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to deliver_to(user.email)
             expect(last_email_sent).to have_subject("Duplicate signature of petition")
           end
 
@@ -525,13 +486,13 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         context "and the signature is a validated duplicate alias" do
-          let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition)) }
+          let!(:signature) { FactoryBot.create(:validated_signature, params.merge(petition: petition, email: user.email)) }
 
           before do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: "ted+petitions@example.com") }
+              post :create, params: { petition_id: petition.id, token: petition.sponsor_token, signature: params.merge(email: user.email) }
             }
           end
 
@@ -544,7 +505,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "sends a duplicate signature email" do
-            expect(last_email_sent).to deliver_to("ted@example.com")
+            expect(last_email_sent).to deliver_to(user.email)
             expect(last_email_sent).to have_subject("Duplicate signature of petition")
           end
 

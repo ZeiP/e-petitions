@@ -1,5 +1,5 @@
 <div class="current-user-container">
-    <% if current_user %>
+    <% if (defined? current_user) && !current_user.nil? %>
         <span class ="user_name"><%= current_user.email %></span>
         <a href="<%= application_logout_saml_index_path %>">
              <%= t('login.log_out') + " " %><i class="fa fa-sign-out"></i>

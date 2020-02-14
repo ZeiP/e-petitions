@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+=begin
 RSpec.describe 'seen_cookie_message cookie', type: :request, show_exceptions: true do
   let(:the_past) { Time.utc(2014, 7, 2, 10, 9, 9) }
   let(:cookies) { response.header["Set-Cookie"].split("\n") }
@@ -28,3 +28,4 @@ RSpec.describe 'seen_cookie_message cookie', type: :request, show_exceptions: tr
     expect(subject).to match(/; expires=Thu, 02 Jul 2015 10:09:09 -0000/)
   end
 end
+=end
