@@ -242,7 +242,7 @@ class SignaturesController < ApplicationController
       ip_address: request.remote_ip,
       form_token: form_token,
       form_requested_at: form_requested_at,
-      name: current_user.username,
+      name: current_user.full_name,
       email: current_user.email
     )
   end

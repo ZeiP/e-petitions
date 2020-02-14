@@ -185,8 +185,6 @@ en-GB:
         - :published
         - :rejected
         - :with_response
-        - :debated
-        - :not_debated
       public:
         - :all
         - :open
@@ -194,9 +192,6 @@ en-GB:
         - :rejected
         - :awaiting_response
         - :with_response
-        - :awaiting_debate
-        - :debated
-        - :not_debated
       admin:
         - :all
         - :collecting_sponsors
@@ -213,9 +208,6 @@ en-GB:
         - :stopped
         - :awaiting_response
         - :with_response
-        - :awaiting_debate_date
-        - :with_debate_outcome
-        - :in_debate_queue
       admin_archived:
         - :all
         - :published
@@ -224,9 +216,6 @@ en-GB:
         - :stopped
         - :awaiting_response
         - :with_response
-        - :awaiting_debate_date
-        - :with_debate_outcome
-        - :in_debate_queue
       names:
         admin:
           all: "All petitions (%{quantity})"

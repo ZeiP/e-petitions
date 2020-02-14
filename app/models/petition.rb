@@ -60,7 +60,7 @@ class Petition < ActiveRecord::Base
 
   facet :collecting_sponsors,  -> { collecting_sponsors.by_most_recent }
   facet :in_moderation,        -> { in_moderation.by_most_recent_moderation_threshold_reached }
-  facet :in_debate_queue,      -> { in_debate_queue.by_waiting_for_debate_longest }
+  # facet :in_debate_queue,      -> { in_debate_queue.by_waiting_for_debate_longest }
 
   facet :recently_in_moderation,       -> { recently_in_moderation.by_most_recent_moderation_threshold_reached }
   facet :nearly_overdue_in_moderation, -> { nearly_overdue_in_moderation.by_most_recent_moderation_threshold_reached }

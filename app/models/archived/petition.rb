@@ -41,20 +41,20 @@ module Archived
 
     facet :all, -> { visible.by_most_signatures }
     facet :awaiting_response, -> { awaiting_response.by_waiting_for_response_longest }
-    facet :awaiting_debate_date, -> { awaiting_debate_date.by_waiting_for_debate_longest }
-    facet :with_debate_outcome, -> { with_debate_outcome.by_most_recent_debate_outcome }
-    facet :with_debated_outcome, -> { with_debated_outcome.by_most_recent_debate_outcome }
+    # facet :awaiting_debate_date, -> { awaiting_debate_date.by_waiting_for_debate_longest }
+    # facet :with_debate_outcome, -> { with_debate_outcome.by_most_recent_debate_outcome }
+    # facet :with_debated_outcome, -> { with_debated_outcome.by_most_recent_debate_outcome }
     facet :published, -> { published.by_most_signatures }
     facet :stopped, -> { stopped.by_most_signatures }
     facet :closed, -> { closed.by_most_signatures }
     facet :rejected, -> { rejected.by_most_signatures }
     facet :hidden, -> { hidden.by_most_recent }
     facet :with_response, -> { with_response.by_most_signatures }
-    facet :debated, -> { debated.by_most_recent_debate_outcome }
-    facet :not_debated, -> { not_debated.by_most_recent_debate_outcome }
+    # facet :debated, -> { debated.by_most_recent_debate_outcome }
+    # facet :not_debated, -> { not_debated.by_most_recent_debate_outcome }
     facet :by_most_signatures, -> { by_most_signatures }
     facet :by_created_at, -> { by_created_at }
-    facet :in_debate_queue, -> { in_debate_queue.by_waiting_for_debate_longest }
+    # facet :in_debate_queue, -> { in_debate_queue.by_waiting_for_debate_longest }
 
     default_scope { preload(:parliament) }
 
