@@ -1390,7 +1390,9 @@ CREATE TABLE public.users (
     username character varying(255) NOT NULL,
     persistence_token character varying(255),
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    firstname character varying(255),
+    lastname character varying(255)
 );
 
 
@@ -3090,6 +3092,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190514055139'),
 ('20190514070908'),
 ('20190718133606'),
-('20200114090018');
+('20200114090018'),
+('20200214131018');
 
 

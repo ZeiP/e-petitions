@@ -64,7 +64,7 @@ RSpec.describe SignaturesController, type: :controller do
 
   context "With logged in user" do
 
-    let(:user) { FactoryBot.build(:user) }
+    let(:user) { FactoryBot.build(:user, firstname: 'John', lastname: 'Doe') }
     before { allow(controller).to receive(:current_user).and_return(user) }
 
     before do
@@ -257,7 +257,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "sets the signature's params" do
-          expect(assigns[:signature].name).to eq(user.username)
+          expect(assigns[:signature].name).to eq(user.full_name)
           expect(assigns[:signature].email).to eq(user.email)
           expect(assigns[:signature].form_token).to eq("wYonHKjTeW7mtTusqDva")
           expect(assigns[:signature].form_requested_at).to eq("2019-04-18T06:00:00Z".in_time_zone)
@@ -352,7 +352,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "sets the signature's params" do
-            expect(assigns[:signature].name).to eq(user.username)
+            expect(assigns[:signature].name).to eq(user.full_name)
             expect(assigns[:signature].email).to eq(user.email)
             expect(assigns[:signature].form_token).to eq("wYonHKjTeW7mtTusqDva")
             expect(assigns[:signature].form_requested_at).to eq("2019-04-18T06:00:00Z".in_time_zone)
@@ -406,7 +406,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         context "and the signature is a pending duplicate alias" do
-          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition, name: user.username, email: user.email)) }
+          let!(:signature) { FactoryBot.create(:pending_signature, params.merge(petition: petition, name: user.full_name, email: user.email)) }
 
           before do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)

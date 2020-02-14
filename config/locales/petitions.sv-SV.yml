@@ -229,9 +229,6 @@ sv-SV:
         - :stopped
         - :awaiting_response
         - :with_response
-        - :awaiting_debate_date
-        - :with_debate_outcome
-        - :in_debate_queue
       admin_archived:
         - :all
         - :published
@@ -240,9 +237,6 @@ sv-SV:
         - :stopped
         - :awaiting_response
         - :with_response
-        - :awaiting_debate_date
-        - :with_debate_outcome
-        - :in_debate_queue
       names:
         admin:
           all: "All petitions (%{quantity})"
