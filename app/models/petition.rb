@@ -49,12 +49,14 @@ class Petition < ActiveRecord::Base
   facet :awaiting_response,    -> { awaiting_response.by_waiting_for_response_longest }
   facet :with_response,        -> { with_response.by_most_recent_response }
 
+=begin
   facet :awaiting_debate,      -> { awaiting_debate.by_most_relevant_debate_date }
   facet :awaiting_debate_date, -> { awaiting_debate_date.by_waiting_for_debate_longest }
   facet :with_debate_outcome,  -> { with_debate_outcome.by_most_recent_debate_outcome }
   facet :with_debated_outcome, -> { with_debated_outcome.by_most_recent_debate_outcome }
   facet :debated,              -> { debated.by_most_recent_debate_outcome }
   facet :not_debated,          -> { not_debated.by_most_recent_debate_outcome }
+=end
 
   facet :collecting_sponsors,  -> { collecting_sponsors.by_most_recent }
   facet :in_moderation,        -> { in_moderation.by_most_recent_moderation_threshold_reached }

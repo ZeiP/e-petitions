@@ -2,10 +2,10 @@ module HomeHelper
   class ActionedPetitionsDecorator
     FACETS = [
       :awaiting_response,
-      :with_response,
-      :awaiting_debate,
-      :with_debated_outcome,
-      :not_debated
+      :with_response
+      # :awaiting_debate,
+      # :with_debated_outcome,
+      # :not_debated
     ]
 
     delegate :each, to: :actioned
