@@ -12,3 +12,5 @@ task default: %i[
   bundle:audit brakeman:check
   spec spec:javascripts cucumber
 ]
+
+Knapsack.load_tasks if defined?(Knapsack)

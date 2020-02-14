@@ -1,9 +1,9 @@
 require "csv"
 
 class PetitionsController < ApplicationController
+  before_action :do_not_cache, except: [:index, :show]
   before_action :require_current_user, only: [:check, :create, :new]
   before_action :redirect_to_valid_state, only: [:index]
-  before_action :do_not_cache, except: [:index, :show]
   before_action :set_cors_headers, only: [:index, :show, :count], if: :json_request?
 
   before_action :redirect_to_archived_petition_if_archived, only: [:show]

@@ -252,9 +252,7 @@ RSpec.describe Signature, type: :model do
   context "validations" do
     it { is_expected.to validate_presence_of(:name).with_message(/must be completed/) }
     it { is_expected.to validate_presence_of(:email).with_message(/must be completed/) }
-    it { is_expected.to validate_presence_of(:location_code).with_message(/must be completed/) }
     it { is_expected.to validate_length_of(:name).is_at_most(255) }
-    it { is_expected.to validate_length_of(:constituency_id).is_at_most(255) }
 
     it "validates format of email" do
       s = FactoryBot.build(:signature, :email => 'joe@example.com')
@@ -284,59 +282,6 @@ RSpec.describe Signature, type: :model do
       %w(pending validated ).each do |state|
         s.state = state
         expect(s).to have_valid(:state)
-      end
-    end
-
-    describe "postcode" do
-      it "requires a postcode for a UK address" do
-        expect(FactoryBot.build(:signature, :postcode => 'SW1A 1AA')).to be_valid
-        expect(FactoryBot.build(:signature, :postcode => '')).not_to be_valid
-      end
-
-      it "does not require a postcode for non-UK addresses" do
-        expect(FactoryBot.build(:signature, :location_code => "GB", :postcode => '')).not_to be_valid
-        expect(FactoryBot.build(:signature, :location_code => "US", :postcode => '')).to be_valid
-      end
-
-      it "checks the format of postcode" do
-        s = FactoryBot.build(:signature, :postcode => 'SW1A1AA')
-        expect(s).to have_valid(:postcode)
-      end
-
-      it "recognises special postcodes" do
-        expect(FactoryBot.build(:signature, :postcode => 'BFPO 1234')).to have_valid(:postcode)
-        expect(FactoryBot.build(:signature, :postcode => 'XM4 5HQ')).to have_valid(:postcode)
-        expect(FactoryBot.build(:signature, :postcode => 'GIR 0AA')).to have_valid(:postcode)
-      end
-
-      it "does not allow prefix of postcode only" do
-        s = FactoryBot.build(:signature, :postcode => 'N1')
-        expect(s).not_to have_valid(:postcode)
-      end
-
-      it "does not allow unrecognised postcodes" do
-        s = FactoryBot.build(:signature, :postcode => '90210')
-        expect(s).not_to have_valid(:postcode)
-      end
-
-      it "does not allow postcodes longer than 255 characters for non-UK addresses" do
-        s = FactoryBot.build(:signature, :location_code => "US", :postcode => "1" * 256)
-        expect(s).not_to have_valid(:postcode)
-      end
-    end
-
-    describe "uk_citizenship" do
-      it "requires acceptance of uk_citizenship for a new record" do
-        expect(FactoryBot.build(:signature, :uk_citizenship => '1')).to be_valid
-        expect(FactoryBot.build(:signature, :uk_citizenship => '0')).not_to be_valid
-        expect(FactoryBot.build(:signature, :uk_citizenship => nil)).not_to be_valid
-      end
-
-      it "does not require acceptance of uk_citizenship for old records" do
-        sig = FactoryBot.create(:signature)
-        sig.reload
-        sig.uk_citizenship = '0'
-        expect(sig).to be_valid
       end
     end
   end
@@ -632,6 +577,17 @@ RSpec.describe Signature, type: :model do
             signature.reload.validated?
           }.from(false)
         end
+
+        it "doesn't increment the petitions signature count" do
+          petition.increment_signature_count!(Time.current)
+          orig_count = petition.signature_count
+          expect {
+            described_class.validate!([signature.id])
+            petition.reload
+          }.not_to change {
+            petition.signature_count
+          }.from(orig_count)
+        end
       end
 
       context "with an invalidated signature" do
@@ -643,7 +599,7 @@ RSpec.describe Signature, type: :model do
           expect(signature).to receive(:validate!).and_call_original
         end
 
-        it "transitions the signature to the validated state" do
+        it "does not transition the signature to the validated state" do
           expect {
             described_class.validate!([signature.id])
           }.not_to change {
@@ -670,6 +626,17 @@ RSpec.describe Signature, type: :model do
             signature.reload.validated?
           }.from(false).to(true)
         end
+
+        it "increments the petitions signature count" do
+          petition.update_signature_count!
+          orig_count = petition.signature_count
+          expect {
+            described_class.validate!([signature.id], force: true)
+            petition.reload
+          }.to change {
+            petition.signature_count
+          }.from(orig_count).to(orig_count + 1)
+        end
       end
 
       context "with an invalidated signature" do
@@ -687,6 +654,17 @@ RSpec.describe Signature, type: :model do
           }.to change {
             signature.reload.validated?
           }.from(false).to(true)
+        end
+
+        it "increments the petitions signature count" do
+          petition.update_signature_count!
+          orig_count = petition.signature_count
+          expect {
+            described_class.validate!([signature.id], force: true)
+            petition.reload
+          }.to change {
+            petition.signature_count
+          }.from(orig_count).to(orig_count + 1)
         end
       end
     end
@@ -737,6 +715,17 @@ RSpec.describe Signature, type: :model do
         }.to change {
           signature.reload.invalidated?
         }.from(false).to(true)
+      end
+
+      it "decrements the petitions signature count" do
+        petition.update_signature_count!
+        orig_count = petition.signature_count
+        expect {
+          described_class.invalidate!([signature.id])
+          petition.reload
+        }.to change {
+          petition.signature_count
+        }.from(orig_count).to(orig_count - 1)
       end
     end
   end

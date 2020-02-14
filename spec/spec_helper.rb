@@ -1,3 +1,5 @@
+require 'knapsack'
+
 if ENV['COVERAGE'] == 'true'
   require 'simplecov'
   SimpleCov.start 'rails'
@@ -24,3 +26,5 @@ RSpec.configure do |config|
 
   Kernel.srand config.seed
 end
+
+Knapsack::Adapters::RspecAdapter.bind
