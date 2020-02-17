@@ -211,7 +211,9 @@ class Signature < ActiveRecord::Base
         end
       end
 
-      if ip_search?(query)
+      if blank_search?(query)
+        scope = scope.all
+      elsif ip_search?(query)
         scope = scope.for_ip(query)
       elsif domain_search?(query)
         scope = scope.for_domain(query)
@@ -381,6 +383,10 @@ class Signature < ActiveRecord::Base
     end
 
     private
+
+    def blank_search?(query)
+      query.blank?
+    end
 
     def ip_search?(query)
       IPAddr.new(query)
