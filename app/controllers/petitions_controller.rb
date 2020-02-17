@@ -113,7 +113,7 @@ class PetitionsController < ApplicationController
   def build_petition_creator
     new_params = params.dup
     new_params[:petition_creator] = (new_params[:petition_creator] || {})
-    new_params[:petition_creator].merge!({ email: current_user.email, name: current_user.username })
+    new_params[:petition_creator].merge!({ email: current_user.email, name: current_user.full_name })
     @new_petition = PetitionCreator.new(new_params, request)
   end
 
