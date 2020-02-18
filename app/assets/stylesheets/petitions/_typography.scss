@@ -60,6 +60,23 @@ h2, h3, h4 {
 
 }
 
+
+.text-page{
+  ol{
+    li{
+      list-style: decimal;
+      margin-left: 20px;
+    }
+  }
+
+   ul{
+     li{ 
+      list-style: circle;
+      margin-left: 20px;
+    }
+  }
+}
+
 // More heading hierarchy for .text-page
 .text-page h2 {
   @include bold-24();
@@ -71,6 +88,8 @@ h2, h3, h4 {
     margin-top: em(60, 24);
     margin-bottom: em(20, 24);
   }
+
+
 }
 
 p {
