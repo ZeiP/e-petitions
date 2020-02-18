@@ -34,7 +34,7 @@ en-GB:
       research: "Read the research:"
       petition: "The petition:"
       no_debate_yours: "The national organisation decided not to debate your petition –"
-      no_debate_yours: "The national organisation decided not to debate the petition you signed –"
+      no_debate_signed: "The national organisation decided not to debate the petition you signed –"
     will_debate:
       created: "The national organisation is going to debate your petition –"
       signed: "The national organisation is going to debate the petition you signed –"
