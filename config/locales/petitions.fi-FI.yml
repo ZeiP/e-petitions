@@ -50,11 +50,11 @@ fi-FI:
     #searching for petitions
     about:
       summary: "Aloitteen tiedoista"
-      content:
+      content: |-
         "Täältä löytyy tieto siitä, kuinka monta kannattajaa aloitteella on. 
-	      Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
+        Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
         Täältä ei löydy listaa partiolaisista, jotka ovat kannattaneet aloitetta. 
-        Näytämme ainoastaan aloitteen tekijän nimen."
+        Näytämme ainoastaan aloitteen tekijän nimen. Tiedoista löytyy myös 	aloitejärjestelmään kuuluvia kenttiä, jotka eivät ole meillä tällä hetkellä 	käytössä."
 
     #petition creation during check for duplicates
     check:
@@ -90,7 +90,7 @@ fi-FI:
 
     #signing a petition
     sign:
-      signatures: "kannatukset"
+      signatures: "kannattajaa"
       title_own: "Vahvista aloitteesi"
       title_other: "Kannata aloitetta"
       title_sponsor: "Kannata partiolaisen %{creator} tekemää aloitetta"
@@ -173,7 +173,7 @@ fi-FI:
         html: <span class="icon icon-share-email"></span> Sähköposti
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
-        twitter_card_desc: "Fi_fi_locale_Official online petitions in response to issues of the day, listing the number that got a Government response, and those that have been debated in the House of Parliament"
+        twitter_card_desc: "Miten haluaisit kehittää partiota? Tee ja kannata aloitteita Partion alueelliseksi, valtakunnalliseksi tai kansainväliseksi kehittämiseksi."
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
@@ -494,7 +494,7 @@ fi-FI:
     signatures: "kannattajaa"
     signature_added: "Lisäsimme sinut tämän aloitteen kannattajaksi:"
     thanks: "Kiitos"
-    sponsor_sign: "Lisäsimme sinut tämän aloitteen kannattajaksi."
+    sponsor_sign: "Lisäsimme sinut tämän aloitteen tukijaksi."
     what_next: "Mitä seuraavaksi?"
     signatures_required: "Jatkoon päästäkseen tämä aloite tarvitsee %{threshold} kannattajaa."
     email_notice: "Kun aloite on julkaistu, lähetämme sinulle linkin, jota voit jakaa."
