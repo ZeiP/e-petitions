@@ -35,7 +35,7 @@ fi-FI:
       research: "Fi_fi_locale_Read the research:"
       petition: "Aloite:"
       no_debate_yours: "Keskusjärjestö päätti jättää aloitteesi keskustelematta –"
-      no_debate_yours: "Keskusjärjestö päätti jättää kannattamasi aloitteen keskustelematta –"
+      no_debate_signed: "Keskusjärjestö päätti jättää kannattamasi aloitteen keskustelematta –"
     will_debate:
       created: "Keskusjärjestö keskustelee aloitteestasi –"
       signed: "Keskusjärjestö keskustelee kannattamastasi aloitteesta –"

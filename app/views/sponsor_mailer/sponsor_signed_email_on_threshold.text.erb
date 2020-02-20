@@ -2,7 +2,7 @@
 
 <%= t"mail.nearly_ready"%>
 
-<%= t"mail.supported", sponsor: @sponsor.name, petition: @petition.action %>
+<%= t"mail.because.supported", sponsor: @sponsor.name, petition: @petition.action %>
 
 <% if christmas_period? %>
 <%= t "mail.checking.christmas", count: @sponsor_count %>
@@ -12,7 +12,7 @@
 <%= t "mail.checking.default", count: @sponsor_count %>
 <% end %>
 
-<%= t "mail.moderation_info" %>
+<%= t "mail.sponsor.moderation_info" %>
 <%= help_url(anchor: 'standards') %>
 
 <%= t "mail.thanks"%>

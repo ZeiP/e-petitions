@@ -50,9 +50,9 @@ fi-FI:
     #searching for petitions
     about:
       summary: "Aloitteen tiedoista"
-      content:
+      content: |-
         "Täältä löytyy tieto siitä, kuinka monta kannattajaa aloitteella on. 
-	      Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
+        Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
         Täältä ei löydy listaa partiolaisista, jotka ovat kannattaneet aloitetta. 
         Näytämme ainoastaan aloitteen tekijän nimen."
 

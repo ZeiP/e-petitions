@@ -35,7 +35,7 @@ sv-SV:
       research: "Sv_sv_locale_Read the research:"
       petition: "Sv_sv_locale_The petition:"
       no_debate_yours: "Sv_sv_locale_The Petitions Committee decided not to debate your petition –"
-      no_debate_yours: "Sv_sv_locale_The Petitions Committee decided not to debate the petition you signed –"
+      no_debate_signed: "Sv_sv_locale_The Petitions Committee decided not to debate the petition you signed –"
     will_debate:
       created: "Sv_sv_locale_Parliament is going to debate your petition –"
       signed: "Sv_sv_locale_Parliament is going to debate the petition you signed –"
