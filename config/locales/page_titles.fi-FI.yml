@@ -32,8 +32,8 @@ fi-FI:
       thank_you: "Kiitos - Partiolaisaloite"
       unsubscribe: "Lopeta sähköpostipäivitysten vastaanotto aloitteelle %{petition} - Partiolaisaloite"
     sponsors:
-      new: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloite"
-      confirm: "Tue partiolaisen %{creator} aloitetta - Partiolaisaloite"
+      new: "Tue partiolaisen aloitetta - Partiolaisaloite"
+      confirm: "Tue partiolaisen aloitetta - Partiolaisaloite"
       signed: "Kiitos - Partiolaisaloite"
       thank_you: "%{petition} - Kiitos tuestasi tälle aloitteelle - Partiolaisaloite"
     pages:

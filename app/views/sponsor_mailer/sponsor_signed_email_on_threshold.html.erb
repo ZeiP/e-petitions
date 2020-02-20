@@ -2,7 +2,7 @@
 
 <p><%= t"mail.nearly_ready"%></p>
 
-<p><%= t"mail.supported", sponsor: @sponsor.name, petition: @petition.action %></p>
+<p><%= t"mail.because.supported", sponsor: @sponsor.name, petition: @petition.action %></p>
 
 <% if christmas_period? %>
 <p><%= t "mail.checking.christmas", count: @sponsor_count %></p>
@@ -12,7 +12,7 @@
 <p><%= t "mail.checking.default", count: @sponsor_count %></p>
 <% end %>
 
-<p><%= t "mail.moderation_info" %><br />
+<p><%= t "mail.sponsor.moderation_info" %><br />
 <%= link_to nil, help_url(anchor: 'standards') %></p>
 
 <p><%= t "mail.thanks"%><br />
