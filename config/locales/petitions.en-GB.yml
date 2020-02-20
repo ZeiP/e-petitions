@@ -281,7 +281,7 @@ en-GB:
           %{subject}
 
         # Emails to people who support a petition
-        gather_sponsors_for_petition: |-
+        petition_created: |-
           Petition created: “%{action}”
         notify_creator_that_petition_is_published: |-
           We published your petition “%{action}”
