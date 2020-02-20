@@ -49,8 +49,8 @@ class PetitionCreator
         p.action = action
         p.background = background
         p.additional_details = additional_details
-        p.state = Petition::OPEN_STATE
-        p.open_at = Time.current
+        #p.state = Petition::OPEN_STATE
+        #p.open_at = Time.current
 
         p.build_creator do |c|
           c.name = name
@@ -62,8 +62,8 @@ class PetitionCreator
 
 
       @petition.save!
-      #send_email_to_gather_sponsors(@petition)
-      send_email_to_notify_creation(@petition.creator)
+      send_email_to_gather_sponsors(@petition)
+      #send_email_to_notify_creation(@petition.creator)
 
       return true
     else

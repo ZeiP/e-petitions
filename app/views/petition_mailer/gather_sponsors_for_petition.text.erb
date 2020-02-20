@@ -1,43 +1,6 @@
-<%= t "mail.greeting" %> <%= @creator.name %>,
-
-<%= t "mail.gather_sponsors.not_done" %>
-
-<%= t "mail.gather_sponsors.forward" %>
-
-<%= t "mail.gather_sponsors.threshold", threshold: Site.threshold_for_moderation %>
-
-<% if christmas_period? %>
-<%= t "mail.gather_sponsors.estimate.christmas" %>
-<% elsif easter_period? %>
-<%= t "mail.gather_sponsors.estimate.easter" %>
-<% elsif moderation_delay? %>
-<%= t "mail.gather_sponsors.estimate.delay" %>
-<% else %>
-<%= t "mail.gather_sponsors.estimate.standard" %>
-<% end %>
+<%= t "mail.published.will_be_published" %>
+<%= petition_url(@petition) %>
 
 <%= t "mail.thanks" %> 
 <%= t("petitions.emails.signoff_prefix") %>
 <%= t("petitions.emails.signoff_suffix") %>
-
---
-
-<%= t "mail.gather_sponsors.please_sign" %>
-
-<%= t "mail.sponsor.click_link" %> 
-<%= new_petition_sponsor_url(@petition, token: @petition.sponsor_token) %>
-
-<%= t "mail.gather_sponsors.my_petition" %>
-
-<%= @petition.action %>
-
-<%= @petition.background %>
-<% if @petition.additional_details? %>
-
-  <%= @petition.additional_details %>
-<% end %>
-
---
-
-<%= t "mail.sponsor.click_link" %> 
-<%= new_petition_sponsor_url(@petition, token: @petition.sponsor_token) %>

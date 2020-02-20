@@ -27,6 +27,7 @@ sv-SV:
       created: "Sv_sv_locale_We published the petition you created –"
       share: "Sv_sv_locale_Click this link to see the petition and start sharing it:"
       share_yours: "Sv_sv_locale_Click this link to see your petition and start sharing it:"
+      will_be_published: "Sv_sv_locale_Your petition is being checked by the moderation. After publication, you can use the following link to share it:"
     debated:
       created: "Sv_sv_locale_Parliament debated your petition –"
       signed: "Sv_sv_locale_Parliament debated the petition you signed –"
