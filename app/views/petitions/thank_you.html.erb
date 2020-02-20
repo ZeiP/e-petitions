@@ -5,7 +5,8 @@
 
 <p class="lede"><%= t "signed.emailed_link"%></p>
 
-<h2><%= t "signed.required_supporters", threshold: Site.minimum_number_of_sponsors %></h2>
-<p><%= t "signed.supporters_needed", threshold: Site.minimum_number_of_sponsors %></p>
 
-<%= render 'notification', message: (t "signed.live_requirement", threshold: Site.minimum_number_of_sponsors ) %>
+<h2><%#= t "signed.required_supporters", threshold: Site.minimum_number_of_sponsors %></h2>
+<p><%#= t "signed.supporters_needed", threshold: Site.minimum_number_of_sponsors %></p>
+
+<%#= render 'notification', message: (t "signed.live_requirement", threshold: Site.minimum_number_of_sponsors ) %>

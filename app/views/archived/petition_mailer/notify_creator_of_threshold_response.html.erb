@@ -17,7 +17,7 @@
 <p><%= link_to nil, archived_petition_url(@petition, reveal_response: "yes") %></p>
 
 <% if @petition.signature_count < @parliament.threshold_for_debate %>
-<p><%= t "mail.response.action", threshold: @parliament.formatted_threshold_for_debate %></p>
+<p><%#= t "mail.response.action", threshold: @parliament.formatted_threshold_for_debate %></p>
 <% else %>
 <p><%= t "mail.response.consider_debate", threshold: @parliament.formatted_threshold_for_debate %></p>
 <% end %>
