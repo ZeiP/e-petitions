@@ -49,6 +49,8 @@ class PetitionCreator
         p.action = action
         p.background = background
         p.additional_details = additional_details
+        p.state = Petition::OPEN_STATE
+        p.open_at = Time.current
 
         p.build_creator do |c|
           c.name = name
@@ -58,8 +60,10 @@ class PetitionCreator
         end
       end
 
+
       @petition.save!
-      send_email_to_gather_sponsors(@petition)
+      #send_email_to_gather_sponsors(@petition)
+      send_email_to_notify_creation(@petition.creator)
 
       return true
     else
@@ -217,5 +221,9 @@ class PetitionCreator
 
   def send_email_to_gather_sponsors(petition)
     GatherSponsorsForPetitionEmailJob.perform_later(petition)
+  end
+
+  def send_email_to_notify_creation(creator)
+    NotifyCreatorThatPetitionIsPublishedEmailJob.perform_later(creator)
   end
 end

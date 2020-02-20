@@ -6,7 +6,8 @@
       <li><%= link_to t("navigation.start_petition"), check_petitions_path %></li>
       <li><%= link_to t("navigation.help"), help_path %></li>
       <li><%= link_to t("navigation.privacy"), privacy_path %></li>
-      <li><%= link_to t("navigation.feedback"), feedback_path %></li>
+      <%#=TODO: Maybe hardcode this a bit less%>
+      <li><%= link_to t("navigation.feedback"), 'https://www.partio.fi/partiolaiselle/apua-ja-ohjeita/jasenpalvelu/' %></li>
     </ul>
   </div>
 </footer>

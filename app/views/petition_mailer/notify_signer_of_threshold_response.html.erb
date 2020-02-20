@@ -17,7 +17,7 @@
 <p><%= link_to nil, petition_url(@petition, reveal_response: "yes") %></p>
 
 <% if @petition.signature_count < Site.threshold_for_debate %>
-<p><%= t "mail.response.action", threshold: Site.formatted_threshold_for_debate %></p>
+<p><%#= t "mail.response.action", threshold: Site.formatted_threshold_for_debate %></p>
 <% else %>
 <p><%= t "mail.response.consider_debate", threshold: Site.formatted_threshold_for_debate %></p>
 <% end %>
