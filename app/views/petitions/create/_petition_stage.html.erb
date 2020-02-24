@@ -36,8 +36,8 @@
     <span class="form-hint"><%= t "petitions.start.optional_details"%></span>
   <% end %>
   <%= error_messages_for_field petition, :additional_details %>
-  <%= form.text_area :additional_details, tabindex: increment, rows: 7, data: { max_length: 500 }, class: "form-control" %>
-  <p class="character-count"><%= t "generic.character_limit", limit:500 %></p>
+  <%= form.text_area :additional_details, tabindex: increment, rows: 7, data: { max_length: 15000 }, class: "form-control" %>
+  <p class="character-count"><%= t "generic.character_limit", limit:15000 %></p>
 <% end %>
 
 <%= form.submit (t "petitions.start.preview_petition"), name: "move_next", class: "button", tabindex: increment %>

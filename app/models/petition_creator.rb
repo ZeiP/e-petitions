@@ -154,7 +154,7 @@ class PetitionCreator
     errors.add(:action, :too_long, count: 80) if action.length > 80
     errors.add(:background, :blank) unless background.present?
     errors.add(:background, :too_long, count: 300) if background.length > 300
-    errors.add(:additional_details, :too_long, count: 800) if additional_details.length > 800
+    errors.add(:additional_details, :too_long, count: 20000) if additional_details.length > 20000
 
     if errors.any?
       @stage = "petition"
