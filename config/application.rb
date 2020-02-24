@@ -14,12 +14,13 @@ module Epets
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    config.time_zone = "London"
+    config.time_zone = "Helsinki"
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     #config.i18n.default_locale = :'en-GB'
     config.i18n.default_locale = :'fi-FI'
+    config.i18n.available_locales = [:'en-GB', :'fi-FI']
 
     # Use SQL for the schema format
     config.active_record.schema_format = :sql

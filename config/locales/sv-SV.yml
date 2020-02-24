@@ -1,6 +1,10 @@
 
 ---
 sv-SV:
+  locales:
+    fi-FI: Suomi
+    en-GB: English
+    sv-SV: Svenska
   date:
     abbr_day_names:
     - su

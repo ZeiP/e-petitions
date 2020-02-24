@@ -9,7 +9,13 @@
     h1 {
     margin: 0;
   }
+  .header-title {
+    @media(max-width: 470px) {
+      display: none;
+    }
+  }
   .proposition {
+    flex: 1;
     color: $white;
     font-size: 24px;
     font-weight: 700;
@@ -17,7 +23,9 @@
     position: relative;
     overflow: visible;
     line-height: 34px;
-    padding-left: $text-indent;
+    @media(min-width: 800px) {
+      padding-left: $text-indent;
+    }
     img {
       margin-right: 0.5em;
     }
@@ -50,6 +58,11 @@
     }
     .current-user-container {
       line-height: 34px;
+      .hide-tablet {
+        @media(max-width: 800px) {
+          display: none;
+        }
+      }
       > a {
         color: white;
         > i {
