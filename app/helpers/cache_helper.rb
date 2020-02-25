@@ -201,6 +201,10 @@ module CacheHelper
     cache(*(CacheKey.build(self, name)), &block)
   end
 
+  def cache_for_with_locale(name, locale, &block)
+    cache_for((Array.wrap(name) + [(locale || Rails.application.config.i18n.default_locale)]).join("-").to_sym, &block)
+  end
+
   def last_signature_at
     @_last_signature_at ||= Petition.maximum(:last_signed_at)
   end

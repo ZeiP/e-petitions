@@ -1,4 +1,4 @@
-<%= cache_for :petition do %>
+<%= cache_for_with_locale :petition, params[:locale] do %>
   <h1>
     <span class="heading-secondary">Closed petition</span>
     <%= petition.action %>

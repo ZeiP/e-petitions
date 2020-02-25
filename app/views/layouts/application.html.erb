@@ -2,7 +2,7 @@
 <html lang="en-GB">
   <head>
     <title><%= page_title %></title>
-    <%= cache_for :head do %>
+    <%= cache_for_with_locale :head, params[:locale] do %>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!--[if gt IE 8]><!--><%= stylesheet_link_tag 'application' %><!--<![endif]-->
@@ -33,7 +33,7 @@
       <%= yield %>
     </main>
 
-    <%= cache_for :footer do %>
+    <%= cache_for_with_locale :footer, params[:locale] do %>
       <%= render 'application/footer' %>
       <%= javascript_include_tag 'application' %>
       <% if open_petition_page? %>

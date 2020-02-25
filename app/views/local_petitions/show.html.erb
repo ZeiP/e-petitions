@@ -1,4 +1,4 @@
-<%= cache_for :local_petitions_page do %>
+<%= cache_for_with_locale :local_petitions_page, params[:locale] do %>
   <h1 class="page-title">
     LOCALIZE_Popular open petitions in the constituency of <%= @constituency.name %>
   </h1>

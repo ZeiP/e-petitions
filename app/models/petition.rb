@@ -23,7 +23,7 @@ class Petition < ActiveRecord::Base
   SEARCHABLE_STATES = %w[open closed rejected]
   STOPPABLE_STATES  = %w[pending validated sponsored flagged]
 
-  IN_MODERATION_STATES       = %w[sponsored flagged]
+  IN_MODERATION_STATES       = %w[sponsored flagged pending]
   TODO_LIST_STATES           = %w[pending validated sponsored flagged]
   COLLECTING_SPONSORS_STATES = %w[pending validated]
   STOP_COLLECTING_STATES     = %w[pending validated sponsored flagged]

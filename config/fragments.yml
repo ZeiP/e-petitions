@@ -1,24 +1,24 @@
-head:
+head-fi-FI:
   keys:
     - :site_updated_at
     - :url
   options:
     expires_in: 300
 
-header:
+header-fi-FI:
   keys:
     - :home_page
   options:
     expires_in: 300
 
-footer:
+footer-fi-FI:
   keys:
     - :create_petition_page
     - :open_petition_page
   options:
     expires_in: 300
 
-home_page:
+home_page-fi-FI:
   keys:
     - :site_updated_at
     - :last_government_response_updated_at
@@ -26,19 +26,19 @@ home_page:
   options:
     expires_in: 300
 
-local_petitions_page:
+local_petitions_page-fi-FI:
   keys:
     - :constituency
   options:
     expires_in: 300
 
-all_local_petitions_page:
+all_local_petitions_page-fi-FI:
   keys:
     - :constituency
   options:
     expires_in: 300
 
-petition:
+petition-fi-FI:
   keys:
     - :petition
     - :reveal_response
@@ -46,7 +46,7 @@ petition:
   options:
     expires_in: 300
 
-archived_petition:
+archived_petition-fi-FI:
   keys:
     - :petition
     - :reveal_response
@@ -54,7 +54,137 @@ archived_petition:
   options:
     expires_in: 300
 
-robots:
+robots-fi-FI:
+  keys:
+    - :last_petition_created_at
+  options:
+    expires_in: 86400
+    head-fi-FI:
+      keys:
+        - :site_updated_at
+        - :url
+      options:
+        expires_in: 300
+    
+head-en-GB:
+  keys:
+    - :site_updated_at
+    - :url
+  options:
+    expires_in: 300
+
+header-en-GB:
+  keys:
+    - :home_page
+  options:
+    expires_in: 300
+
+footer-en-GB:
+  keys:
+    - :create_petition_page
+    - :open_petition_page
+  options:
+    expires_in: 300
+
+home_page-en-GB:
+  keys:
+    - :site_updated_at
+    - :last_government_response_updated_at
+    - :last_debate_outcome_updated_at
+  options:
+    expires_in: 300
+
+local_petitions_page-en-GBI:
+  keys:
+    - :constituency
+  options:
+    expires_in: 300
+
+all_local_petitions_page-en-GB:
+  keys:
+    - :constituency
+  options:
+    expires_in: 300
+
+petition-en-GB:
+  keys:
+    - :petition
+    - :reveal_response
+    - :site_updated_at
+  options:
+    expires_in: 300
+
+archived_petition-en-GB:
+  keys:
+    - :petition
+    - :reveal_response
+    - :site_updated_at
+  options:
+    expires_in: 300
+
+robots-en-GB:
+  keys:
+    - :last_petition_created_at
+  options:
+    expires_in: 86400
+        
+head-sv-SV:
+  keys:
+    - :site_updated_at
+    - :url
+  options:
+    expires_in: 300
+
+header-sv-SV:
+  keys:
+    - :home_page
+  options:
+    expires_in: 300
+
+footer-sv-SV:
+  keys:
+    - :create_petition_page
+    - :open_petition_page
+  options:
+    expires_in: 300
+
+home_page-sv-SV:
+  keys:
+    - :site_updated_at
+    - :last_government_response_updated_at
+    - :last_debate_outcome_updated_at
+  options:
+    expires_in: 300
+
+local_petitions_page-sv-SV:
+  keys:
+    - :constituency
+  options:
+    expires_in: 300
+
+all_local_petitions_page-sv-SV:
+  keys:
+    - :constituency
+  options:
+    expires_in: 300
+
+petition-sv-SV:
+  keys:
+    - :petition
+    - :reveal_response
+    - :site_updated_at
+  options:
+    expires_in: 300
+
+archived_petition-sv-SV:
+  keys:
+    - :petition
+    - :reveal_response
+    - :site_updated_at
+  options:
+    expires_in: 300
+
+robots-sv-SV:
   keys:
     - :last_petition_created_at
   options:
