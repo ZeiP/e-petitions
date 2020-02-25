@@ -62,8 +62,8 @@ class PetitionCreator
 
 
       @petition.save!
-      send_email_to_gather_sponsors(@petition)
-      #send_email_to_notify_creation(@petition.creator)
+      send_email_to_notify_creation(@petition)
+      #send_email_to_notify_publication(@petition.creator)
 
       return true
     else
@@ -219,11 +219,11 @@ class PetitionCreator
     constituency.try(:external_id)
   end
 
-  def send_email_to_gather_sponsors(petition)
-    GatherSponsorsForPetitionEmailJob.perform_later(petition)
+  def send_email_to_notify_creation(petition)
+    PetitionCreatedEmailJob.perform_later(petition)
   end
 
-  def send_email_to_notify_creation(creator)
+  def send_email_to_notify_publication(creator)
     NotifyCreatorThatPetitionIsPublishedEmailJob.perform_later(creator)
   end
 end
