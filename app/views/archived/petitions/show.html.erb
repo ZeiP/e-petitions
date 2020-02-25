@@ -1,4 +1,4 @@
-<%= cache_for :archived_petition do %>
+<%= cache_for_with_locale :archived_petition, params[:locale] do %>
   <div class="notification">
     <span class="icon icon-warning-white"></span>
     <p class="content">

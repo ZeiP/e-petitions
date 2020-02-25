@@ -1,6 +1,14 @@
 
 ---
 fi-FI:
+  locales:
+    fi-FI: Suomi
+    en-GB: English
+    sv-SV: Svenska
+    language_codes:
+      fi-FI: FI
+      en-GB: EN
+      sv-SV: SV
   date:
     abbr_day_names:
     - su

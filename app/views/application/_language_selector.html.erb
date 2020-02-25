@@ -1,0 +1,11 @@
+<% current_locale = params[:locale] || Rails.application.config.i18n.default_locale %>
+<div id="language-selector">
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-globe"></i> <span class="selected-language-code"><%= t("locales.language_codes.#{current_locale}") %></span></button>
+    <div class="dropdown-content">
+      <% Rails.application.config.i18n.available_locales.each do |locale| %>
+        <a class="language-selector-link" href="#" data-locale=<%= locale %>><%= t("locales.#{locale}") %></a>
+      <% end %>
+    </div>
+  </div>
+</div>
