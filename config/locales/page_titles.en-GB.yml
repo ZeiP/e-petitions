@@ -1,7 +1,7 @@
 en-GB:
   page_titles:
-    header_title: "Petitions - UK Government and Parliament"
-    default: "Petitions - UK Government and Parliament"
+    header_title: "Scout Petitions"
+    default: "Scout Petitions"
     archived_petitions:
       index: "View archived petitions - Petitions"
       show: "%{petition} - Petitions"
@@ -36,7 +36,7 @@ en-GB:
       signed: "Thank you - Petitions"
       thank_you: "%{petition} - Thank you for supporting this petition - Petitions"
     pages:
-      index: "Petitions - UK Government and Parliament"
+      index: "Scout Petitions"
       help: "How petitions work"
       privacy: "Privacy and cookies"
   navigation:    

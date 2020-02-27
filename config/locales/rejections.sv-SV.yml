@@ -13,22 +13,22 @@ sv-SV:
     #descriptions available only to general users
     descriptions:
       duplicate: |-
-        <p>Aiheesta on jo aloite. Emme voi hyväksyä uutta hyvin samanlaista aloitetta.</p>
-        <p>On todennäköisempää että aloitteesi käsitellään jos allekirjoitat ja jaat saman aloitteen.</p>
+        <p>Toinen samankaltainen aloite on jo käynnissä.</p>
+        <p>On todennäköisempää että aloitteesi saa kannatusta, jos kannatat ja jaat saman aloitteen.</p>
       irrelevant: |-
-        <p>Aloite on aiheesta josta Partiolaiset tai partiojohto ei ole vastuussa.</p>
+        <p>Aloite on aiheesta, josta Partiolaiset tai partiojohto ei ole vastuussa.</p>
       no-action: |-
-        <p>Ei ole selvää mitä aloite haluaa Partiolaisten tai partiojohdon tekevän.</p>
+        <p>Emme oikein ymmärrä, mitä aloite koskee.</p>
       honours: |-
-        <p>Aloite on kunnianosoitusten tai nimityksisten myönnöstä.</p>
+        <p>Aloite liittyy kunnianosoitusten tai nimitysten myöntämiseen.</p>
       fake-name: |-
         <p>Aloite luotiin käyttäen väärää tai vaillinaista nimeä.</p>
         <p>Aloitteen teksti täytti sille asetetut vaatimukset.</p>
-        <p>Tästä huolimatta aloitteet tulee luoda käyttäen kokonaista, oikeaa nimeä. Anteeksi jos tämä ei ollut selvää.</p>
-        <p>Hylkäämme aloittesi tämän perusteella, mutta jos lähetät aloitteen uudelleen käyttäen oikeaa nimeäsi voimme hyväksyä sen.</p>
+        <p>Tästä huolimatta aloitteet tulee tehdä käyttäen kokonaista, oikeaa nimeä.</p>
+        <p>Hylkäämme aloittesi tämän perusteella, mutta jos teet aloitteen uudelleen käyttäen oikeaa nimeäsi, voimme hyväksyä sen.</p>
       foi: |-
         <p>Aloite on tietopyyntö.</p>
       libellous: |-
-        <p>Aloite sisälsi luottamuksellista, kunniaa loukkaavaa tai valheellista tietoa, tai viittasi käsittelyssä olevaan oikeustapaukseen.</p>
+        <p>Aloite sisälsi luottamuksellista, kunniaa loukkaavaa tai valheellista tietoa.</p>
       offensive: |-
         <p>Aloite oli loukkaava, vitsi tai mainos.</p>

@@ -154,12 +154,12 @@ fi-FI:
         url: "URL"
       parliament:
         #Partiolaiset hallitus shouldn't need to dissolve
-        dissolution_heading: "Fi_fi_locale_Heading"
-        dissolution_message: "Fi_fi_locale_Message"
-        dissolved_heading: "Fi_fi_locale_Heading"
-        dissolved_message: "Fi_fi_locale_Message"
-        dissolution_at: "Fi_fi_locale_Date and time"
-        notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
+        dissolution_heading: "Otsikko"
+        dissolution_message: "Viesti"
+        dissolved_heading: "Otsikko"
+        dissolved_message: Viesti"
+        dissolution_at: "Päivämäärä ja kellonaika"
+        notification_cutoff_at: "Ilmoita julkaisemattomille aloitteille, jotka on tehty jälkeen"
     select:
       prompt: Valitse
     submit:
@@ -175,7 +175,7 @@ fi-FI:
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "Fi_fi_locale_£"
+        unit: "€"
     format:
       delimiter: ","
       precision: 3
