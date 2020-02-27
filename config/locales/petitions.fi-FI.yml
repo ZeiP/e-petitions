@@ -12,10 +12,10 @@ fi-FI:
       standards: "ohjeet hyvän aloitteen tekemiseen"
       background: "Perustele aloitteesi"
       background_help: "Apua perustelujen kirjoittamiseen"
-      background_help_explanation: "Perustele, miksi aloitteesi on tärkeä."
-      background_help_reminder: "Millä tavoin aloitteesi tekisi Partiosta ja maailmasta paremman paikan?"
+      background_help_explanation: "Perustele, miksi aloitteesi on tärkeä ja se pitäisi toteuttaa."
+      background_help_reminder: "Mieti aloitteesi vaikuttavuutta: millä tavoin aloitteesi toteutuessaan tekisi Partiosta - ja maailmasta - paremman paikan?"
       additional_details: "Lisää tietoa"
-      optional_details: "Valinnaista - taustatietoa, todisteita ja viitteitä"
+      optional_details: "Valinnaista - taustatietoa, lisää perusteluja. Voit myös lisätä linkin muualla verkossa oleviin materiaaleihin."
       preview_petition: "Esikatsele aloitetta"
       could_not_create: "Emme voineet luoda aloitetta"
 
@@ -54,7 +54,7 @@ fi-FI:
         "Täältä löytyy tieto siitä, kuinka monta kannattajaa aloitteella on. 
         Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
         Täältä ei löydy listaa partiolaisista, jotka ovat kannattaneet aloitetta. 
-        Näytämme ainoastaan aloitteen tekijän nimen. Tiedoista löytyy myös 	aloitejärjestelmään kuuluvia kenttiä, jotka eivät ole meillä tällä hetkellä 	käytössä."
+        Näytämme ainoastaan aloitteen tekijän nimen. Tiedoista löytyy myös 	aloitejärjestelmään kuuluvia kenttiä, jotka eivät ole meillä tällä hetkellä käytössä."
 
     #petition creation during check for duplicates
     check:
@@ -109,9 +109,9 @@ fi-FI:
       deadline: "Määräaika"
       time: "Kaikki aloitteet ovat käynnissä 6 kuukautta."
       get_data: "Lataa aloitteen tiedot (json-muodossa)"
-      check_info: "Varmista että tämä on oikein"
+      check_info: "Järjestelmä haluaa tarkistaa sähköpostiosoitteesi"
       confirm_info: "Kyllä - tämä on sähköpostiosoitteeni"
-      if_wrong_email: "Jos sähköpostiosoitteesi on virheellinen, korjaa se yllä olevaan kenttään."
+      if_wrong_email: "Kentässä olevaa sähköpostiosoitetta ei kannata muokata, järjestelmä lähettää viestit joka tapauksessa PartioID:n mukaiseen osoitteeseesi. (Tämä välivaihe poistuu kokonaan tulevaisuudessa.)"
 
     #page titles for petition listings
     page_titles:
@@ -120,8 +120,8 @@ fi-FI:
       closed: "Suljetut aloitteet"
       rejected: "Hylätyt aloitteet"
       published: "Julkaistut aloitteet"
-      awaiting_response: "Keskusjärjestön vastausta odottavat aloitteet"
-      with_response: "Keskusjärjestön vastaamat aloitteet"
+      awaiting_response: "Keskusjärjestön käsittelyä odottavat aloitteet"
+      with_response: "Keskusjärjestön käsittelemät aloitteet"
       debated: "Keskusjärjestön keskustelemat aloitteet"
       not_debated: "Keskusjärjestön keskustelemattomat aloitteet"
       awaiting_debate: "Keskusjärjestön keskustelua odottavat aloitteet"
@@ -133,14 +133,14 @@ fi-FI:
     login_prompt: "Kirjaudu sisään, niin voit tehdä aloitteen"
     login_prompt_sign: "Kirjaudu sisään, niin voit kannattaa aloitetta"
     criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
-    response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö vastaa siihen."
+    response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö ottaa sen käsittelyyn."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö keskustelee siitä."
 
     #appears on responded petitions listing?
     responded_petitions:
-      none: "Keskusjärjestö ei ole vielä vastannut yhteenkään aloitteeseen"
-      responded_on: "Keskusjärjestö vastasi %{date}"
-      responded_on_dash: "Keskusjärjestö vastasi – %{date}"
+      none: "Keskusjärjestö ei ole vielä käsitellyt yhtään aloitetta"
+      responded_on: "Keskusjärjestö käsitteli aloitteen %{date}"
+      responded_on_dash: "Keskusjärjestö käsitteli aloitteen – %{date}"
       read_full: "Lue vastaus kokonaan"
  
     #appears when petition has been debated. 
@@ -173,7 +173,7 @@ fi-FI:
         html: <span class="icon icon-share-email"></span> Sähköposti
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
-        twitter_card_desc: "Miten haluaisit kehittää partiota? Tee ja kannata aloitteita Partion alueelliseksi, valtakunnalliseksi tai kansainväliseksi kehittämiseksi."
+        twitter_card_desc: "Osallistu partion kehittämiseen tekemällä tai kannattamalla partiolaisaloitteita."
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
@@ -184,8 +184,8 @@ fi-FI:
       closed: "Suljetut aloitteet (%{quantity})"
       published: "Julkaistut aloitteet (%{quantity})"
       rejected: "Hylätyt aloitteet (%{quantity})"
-      awaiting_response: "Odottaa keskusjärjestön vastausta (%{quantity})"
-      with_response: "Keskusjärjestön vastaamat (%{quantity})"
+      awaiting_response: "Odottaa keskusjärjestön käsittelyä (%{quantity})"
+      with_response: "Keskusjärjestön käsittelemät (%{quantity})"
       debated: "Keskusjärjestön keskustelemat (%{quantity})"
       not_debated: "Keskusjärjestön keskustelemattomat (%{quantity})"
       awaiting_debate: "Odottaa keskusjärjestön keskustelua (%{quantity})"
@@ -296,7 +296,7 @@ fi-FI:
         notify_creator_of_debate_scheduled: |-
           Keskusjärjestö keskustelee “%{action}”
         notify_creator_of_threshold_response: |-
-          Keskusjärjestö vastasi “%{action}”
+          Keskusjärjestö käsitteli “%{action}”
         notify_creator_that_moderation_is_delayed: |-
           %{subject}
 
@@ -357,12 +357,12 @@ fi-FI:
     counts:
       awaiting_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> aloite odottaa vastausta keskusjärjestöltä"
-          other: "<span class=\"count\">%{formatted_count}</span> aloitetta odottaa vastausta keskusjärjestöltä"
+          one: "<span class=\"count\">%{formatted_count}</span> aloite odottaa keskusjärjestön käsittelyä"
+          other: "<span class=\"count\">%{formatted_count}</span> aloitetta odottaa keskusjärjestön käsittelyä"
       with_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> aloite sai vastauksen keskusjärjestöltä"
-          other: "<span class=\"count\">%{formatted_count}</span> aloitetta sai vastauksen keskusjärjestöltä"
+          one: "Keskusjärjestö on käsitellyt <span class=\"count\">%{formatted_count}</span> aloitteen"
+          other: "Keskusjärjestö on käsitellyt <span class=\"count\">%{formatted_count}</span> aloitetta"
       awaiting_debate:
         html:
           one: "<span class=\"count\">%{formatted_count}</span> aloite odottaa keskusjärjestön keskustelua"
@@ -372,9 +372,9 @@ fi-FI:
           one: "<span class=\"count\">%{formatted_count}</span> keskusjärjestön keskustelema aloite"
           other: "<span class=\"count\">%{formatted_count}</span> keskusjärjestön keskustelema aloitetta"
       awaiting_response_explanation:
-        html: "Katso kaikki aloitteet, jotka odottavat keskusjärjestön vastausta (%{formatted_count})"
+        html: "Katso kaikki aloitteet, jotka odottavat keskusjärjestön käsittelyä (%{formatted_count})"
       with_response_explanation:
-        html: "Katso kaikki aloitteet, jotka ovat saaneet keskusjärjestön vastauksen (%{formatted_count})"
+        html: "Katso kaikki aloitteet, jotka keskusjärjestö on käsitellyt (%{formatted_count})"
       awaiting_debate_explanation:
         html: "Katso kaikki aloitteet, jotka odottavat keskusjärjestön keskustelua (%{formatted_count})"
       debated_explanation:
@@ -417,16 +417,16 @@ fi-FI:
 
   petition:
     responded:
-      title: "Keskusjärjestö vastasi"
+      title: "Keskusjärjestö käsitteli"
       'on': "Vastaus annettiin %{date}"
       read_in_full: "Lue koko vastaus"
     waiting:
-      title: "Keskusjärjestö vastaa kohta"
-      description: "Keskusjärjestö vastaa kaikkiin aloitteisiin, joita kannattaa vähintään %{threshold} partiolaista"
+      title: "Keskusjärjestö käsittelee kohta"
+      description: "Keskusjärjestö käsittelee kaikki aloitteet, joita kannattaa vähintään %{threshold} partiolaista"
       waiting: "%{waiting} keskusjärjestön vastausta"
     need_more:
       title: "%{threshold} partiolaisen kannatuksella..."
-      description: "Keskusjärjestö vastaa aloitteeseen, kun sitä kannattaa vähintään %{threshold} partiolaista"
+      description: "Keskusjärjestö käsittelee aloitteen, kun sitä kannattaa vähintään %{threshold} partiolaista"
 
   #appears on archived petitions
   #logic for archived petitions might not be in use in partiolaisaloite
@@ -504,7 +504,7 @@ fi-FI:
     supporters_needed: "Aloitteesi pääsee jatkoon, kun %{threshold} partiolaista on tukenut sitä."
     live_requirement: "Aloitteesi pääsee jatkoon, kun %{threshold} partiolaista on tukenut sitä"
     confirm_address: "Lähetimme sinulle sähköpostia. Vahvista kannatuksesi klikkaamalla sähköpostissa olevaa linkkiä."
-    confirm_required: "Kannatustasi ei lasketa, ennen kuin olet klikannut sähköpostissa olevaa linkkiä."
+    confirm_required: "Kannatuksesi lasketaan mukaan, kun olet vahvistanut sen sinulle lähetetyn sähköpostin kautta."
     no_confirmation: "Etkö saanut vahvistussähköpostia?"
     if_no_email: "Jos et saanut vahvistussähköpostia:"
     check_spam: "tarkista roskapostikansiosi"
