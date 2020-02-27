@@ -1,6 +1,6 @@
 
 ---
-sv-SV:
+sv-SV:  
   locales:
     fi-FI: Suomi
     en-GB: English
@@ -23,7 +23,7 @@ sv-SV:
     - tam
     - hel
     - maa
-    - huu
+    - huh
     - tou
     - kesä
     - hei
@@ -154,12 +154,12 @@ sv-SV:
         url: "URL"
       parliament:
         #Partiolaiset hallitus shouldn't need to dissolve
-        dissolution_heading: "Sv_sv_locale_Heading"
-        dissolution_message: "Sv_sv_locale_Message"
-        dissolved_heading: "Sv_sv_locale_Heading"
-        dissolved_message: "Sv_sv_locale_Message"
-        dissolution_at: "Sv_sv_locale_Date and time"
-        notification_cutoff_at: "Sv_sv_locale_Notify unpublished petitions created after"
+        dissolution_heading: "Fi_fi_locale_Heading"
+        dissolution_message: "Fi_fi_locale_Message"
+        dissolved_heading: "Fi_fi_locale_Heading"
+        dissolved_message: "Fi_fi_locale_Message"
+        dissolution_at: "Fi_fi_locale_Date and time"
+        notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
     select:
       prompt: Valitse
     submit:
@@ -175,7 +175,7 @@ sv-SV:
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "Sv_sv_locale_£"
+        unit: "€"
     format:
       delimiter: ","
       precision: 3
@@ -220,12 +220,12 @@ sv-SV:
       words_connector: ", "
   time:
     #Seem to be just placeholders, possibly appear somewhere
-    am: Sv_sv_locale_am
+    am: Fi_fi_locale_am
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
-    pm: Sv_sv_locale_pm
+    pm: Fi_fi_locale_pm
 
 #Lines that do rely on surrounding context and appear in
 #many parts of the service

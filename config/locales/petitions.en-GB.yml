@@ -7,12 +7,12 @@ en-GB:
       supporter_requirement: "Later on, you'll need email addresses for %{threshold} supporters to get your petition started"
       read_standards: "Remember, your petition must meet the"
       standards: "petition standards"
-      background: "Background"
-      background_help: "Help writing background"
-      background_help_explanation: "Use this section to back up why you want action. Some people include a personal story here."
-      background_help_reminder: "Remember that people won’t always know that much about the issue you’re petitioning about - explain it."
-      additional_details: "Additional details"
-      optional_details: "Optional - background information, evidence and references"
+      background: "Justify your petition"
+      background_help: "Help with the justification"
+      background_help_explanation: "Justify why your petition is important and should be implemented."
+      background_help_reminder: "Think about the effectiveness of your petition: how would your petition, if implemented, make Scouting - and the world - better?"
+      additional_details: "Additional information"
+      optional_details: "Optional - background information, more justifications. You can also add a link to materials that are elsewhere online."
       preview_petition: "Preview petition"
       could_not_create: "We couldn't create this petition"
 
@@ -44,11 +44,10 @@ en-GB:
     about:
       summary: "About petition data"
       content: |-
-        "The data shows the number of people who have signed the petition
-        by country as well as in the constituency of each Member of Parliament.
+        "The data shows the number of people who have signed the petition.
         This data is available for all petitions on the site. It is not a
         list of people who have signed the petition. The only name
-        that is shared on the site is that of the petition creator. There are some	fields in the data that are not currently in use."
+        that is shared on the site is that of the petition creator. There are some fields in the data that are not currently in use."
   
     check:
       title: "We checked for similar petitions"
@@ -99,9 +98,9 @@ en-GB:
       deadline: "Deadline"
       time: "All petitions run for 6 months"
       get_data: "Get petition data (json format)"
-      check_info: "Make sure this is right"
+      check_info: "The system wants to check your email"
       confirm_info: "Yes – this is my email address"
-      if_wrong_email: "If your email address is wrong, just change it above"
+      if_wrong_email: "Don't change this email address, the system will send all emails to your ScoutID address anyway. (This step will be removed in the future.)"
 
     page_titles:
       all: "All petitions"
@@ -422,25 +421,25 @@ en-GB:
     faq_location: "Petitions Committee website" 
     petition_closed: "This petition is closed"
     petition_ran_for: "This petition ran for %{duration}"
-    was_debated: "Parliament debated this topic"
+    was_debated: "The central organisation debated this topic"
     was_debated_on: "This topic was debated on %{date}"
     no_debate: "The Petitions Committee decided not to debate this petition"
     watch_at: "You'll be able to watch the debate online at {href}"
-    watch_at_location: "parliamentlive.tv"
-    watch_at_link: http://parliamentlive.tv
+    watch_at_location: " "
+    watch_at_link: " "
     result_publication: "%{duration} for the central organisation to publish the debate outcome"
     will_debate: "The central organisation will debate this petition"
     will_debate_on: "The central organisation will debate this petition on %{date}"
     watch_online: "You'll be able to watch online on the %{href}."
-    watch_online_location: "UK Parliament YouTube channel"
-    watch_online_link: "https://www.youtube.com/UKParliament"
-    will_consider_debate: "Parliament will consider this for a debate"
-    consider_threshold: "Parliament considers all petitions that get more than %{threshold} signatures for debate"
+    watch_online_location: " "
+    watch_online_link: " "
+    will_consider_debate: "The central organisation will consider this for a debate"
+    consider_threshold: "The central organisation considers all petitions that get more than %{threshold} signatures for debate"
     waiting_debate_date: "%{duration} for a debate date"
     responded: "The central organisation responded"
     responded_on: "This response was given on %{date}"
     read_response: "Read the response in full"
-    other: "Other parliamentary business"
+    other: "Other organisational business"
     date_submitted: "Date submitted"
     date_closed: "Date closed"
     get_json_data: "Get petition data (json format)"

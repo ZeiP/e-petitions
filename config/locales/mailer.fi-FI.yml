@@ -16,11 +16,11 @@ fi-FI:
       signed: "Sait tämän sähköpostin, koska olet kannattanut tätä aloitetta:"
       already_signed: "Sait tämän sähköpostin, koska sähköpostiosoitettasi on käytetty aloitteen “%{petition}” kannattamiseen, mutta olet jo kannattanut sitä."
     response:
-      signed: "Keskusjärjestö on vastannut kannattamaasi aloitteeseen –"
-      created: "Keskusjärjestö on vastannut aloitteeseesi –"
+      signed: "Keskusjärjestö on käsitellyt kannattamasi aloitteen –"
+      created: "Keskusjärjestö on käsitellyt aloitteesi –"
       response: "Keskusjärjestö vastasi:"
       view_online: "Katso vastaus verkossa:"
-      action: "Fi_fi_locale_The Petitions Committee will take a look at this petition and its response. They can press the government for action and gather evidence. If this petition reaches %{threshold} signatures, the Committee will consider it for a debate."
+      action: "Keskusjärjestö käsittelee aloitteesi. Jos aloite saa %{threshold} kannattajaa, keskusjärjestö keskustelee siitä."
       consider_debate: "Tällä aloitteella on yli %{threshold} kannattajaa. Se menee keskusjärjestön käsittelyyn."
     published:
       signed: "Julkaisimme kannattamasi aloitteen –"
@@ -69,9 +69,9 @@ fi-FI:
       supporters:
         one: "Sinulla on %{count} tukija tähän mennessä. Kun aloitteellasi on %{threshold} tukijaa, tarkistamme onko se aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen."
         other: "Sinulla on %{count} tukijaa tähän mennessä. Kun aloitteellasi on %{threshold} tukijaa, tarkistamme onko se aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen."
-      moderation_info: "Fi_fi_locale_Find out how we check petitions before we publish them:"
+      moderation_info: "Näin tarkistamme aloitteet ennen kuin julkaisemme ne:"
       nearly_ready: "Aloitteesi on melkein valmis."
       checking:
         christmas: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon, mutta näin joulun aikaan meillä voi kestää vähän kauemmin kuin tavallisesti. Tarkistamme aloitteesi mahdollisimman pian."
         easter: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon, mutta näin pääsiäisen aikaan meillä voi kestää vähän kauemmin kuin tavallisesti. Tarkistamme aloitteesi mahdollisimman pian."
-        default: "Fi_fi_locale_%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon."
+        default: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon."

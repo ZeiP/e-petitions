@@ -1,12 +1,12 @@
 en-GB:
   metadata:
     open_graph:
-      site_name: "Petitions - UK Government and Parliament"
-      default_title: "Petitions - UK Government and Parliament"
+      site_name: "Scout Petitions"
+      default_title: "Scout Petitions"
       title: "Petition: %{petition}"
       archived_title: "Archived Petition: %{petition}"
 
     twitter:
-      default_title: "Petitions - UK Government and Parliament"
+      default_title: "Scout Petitions"
       title: "Petition: %{petition}"
       archived_title: "Archived Petition: %{petition}"
