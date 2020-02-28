@@ -1,7 +1,7 @@
 if ENV['RAILS_ENV'] == 'production'
   # Pumacorn specific items:
   application_name = "epetitions"
-  pidfile "/home/deploy/#{application_name}/shared/pids/puma.pid"
+  pidfile "tmp/pids/puma.pid"
   bind "unix:///var/run/pumacorn/#{application_name}.sock"
 
   # Based on https://raw.githubusercontent.com/codetriage/codetriage/master/config/puma.rb

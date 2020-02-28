@@ -1,4 +1,4 @@
-<% current_locale = params[:locale] || Rails.application.config.i18n.default_locale %>
+<% current_locale = @locale || Rails.application.config.i18n.default_locale %>
 <div id="language-selector">
   <div class="dropdown">
     <button class="dropbtn"><i class="fa fa-globe"></i> <span class="selected-language-code"><%= t("locales.language_codes.#{current_locale}") %></span></button>
