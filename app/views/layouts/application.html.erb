@@ -32,15 +32,13 @@
       <%= yield %>
     </main>
 
-    <%= cache_for_with_locale :footer, params[:locale] do %>
-      <%= render 'application/footer' %>
-      <%= javascript_include_tag 'application' %>
-      <% if open_petition_page? %>
-        <%= javascript_include_tag 'auto-updater' %>
-      <% end %>
-      <% if create_petition_page? %>
-        <%= javascript_include_tag 'character-counter' %>
-      <% end %>
+    <%= render 'application/footer' %>
+    <%= javascript_include_tag 'application' %>
+    <% if open_petition_page? %>
+      <%= javascript_include_tag 'auto-updater' %>
+    <% end %>
+    <% if create_petition_page? %>
+      <%= javascript_include_tag 'character-counter' %>
     <% end %>
   </body>
 </html>
