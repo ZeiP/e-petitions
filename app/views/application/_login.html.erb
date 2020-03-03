@@ -5,9 +5,14 @@
              <span class="hide-tablet"><%= t('login.log_out') + " " %></span><i class="fa fa-sign-out"></i>
         </a>
     <% else %>
-        <a href="<%= sso_saml_index_path %>" id="login-link">
+        <a href="<%= sso_saml_index_path %>" class="login-link">
             <span class="login_text"><%= t('login.log_in') %></span>
             <i class="fa fa-sign-in"></i>
         </a>
     <% end %>
+</div>
+<div id="logged-in-redirect-overlay" style="display: none;">
+    <h1>
+        <%= t('login.logged_in_redirect') %>
+    </h1>
 </div>

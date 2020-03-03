@@ -252,3 +252,4 @@ fi-FI:
   login:
     log_in: "Kirjaudu sisään"
     log_out: "Kirjaudu ulos"
+    logged_in_redirect: "Kirjautuminen onnistui, odota uudelleenohjausta"

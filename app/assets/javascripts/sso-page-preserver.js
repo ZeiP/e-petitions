@@ -33,7 +33,18 @@
       setCookie('pagePreserve', window.location.href, 1)
       window.location.replace(this.href)
     })
+
+    var pagePreserve = getCookie('pagePreserve');
+    if (pagePreserve) {
+      eraseCookie('pagePreserve');
+      if (window.location.href != pagePreserve) {
+        $("#logged-in-redirect-overlay").show();
+        setTimeout(function() {
+          window.location.replace(pagePreserve);
+        }, 1000)
+      }
+    }
   }
 
-  $('#login-link').ssoPagePreserver();
+  $('.login-link').ssoPagePreserver();
 })(jQuery);

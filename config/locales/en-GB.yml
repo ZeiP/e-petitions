@@ -244,3 +244,4 @@ en-GB:
   login:
     log_in: "Sign In"
     log_out: "Sign Out"
+    logged_in_redirect: "You have been logged in, wait for redirect"
