@@ -27,7 +27,7 @@
     <%= link_to (t "petitions.sign.sign_this"), new_petition_signature_path(petition), :class => 'button button-sign-petition', :tabindex => increment(5) %>
   <% else %>
     <p><%= t "petitions.login_prompt_sign"%></p>
-    <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button' %>
+    <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button login-link' %>
   <% end %>
 
   <%= render 'threshold_details', petition: petition %>

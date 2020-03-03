@@ -22,5 +22,5 @@
     <%= link_to t("petitions.start_prompt"), check_petitions_path, :class => 'button' %>
   <% else %>
     <p><%= t "petitions.login_prompt" %></p>
-    <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button' %>
+    <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button login-link' %>
   <% end %>
