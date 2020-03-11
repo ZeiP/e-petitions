@@ -23,7 +23,7 @@ module EmailDelivery
   ]
 
   included do
-    before_perform :set_appsignal_namespace
+    # before_perform :set_appsignal_namespace
 
     attr_reader :signature, :timestamp_name, :petition, :requested_at
     queue_as :low_priority
@@ -104,7 +104,7 @@ module EmailDelivery
     petition.signatures_to_email_for(timestamp_name).where(id: signature.id).exists?
   end
 
-  def set_appsignal_namespace
-    Appsignal.set_namespace("email")
-  end
+  # def set_appsignal_namespace
+  #   Appsignal.set_namespace("email")
+  # end
 end
