@@ -1,6 +1,6 @@
 #Content here outside of errors at the end should be admin side.
 
-fi-FI:
+sv-SV:
   activemodel:
     errors:
       models:
@@ -100,27 +100,27 @@ fi-FI:
   errors:
     attributes:
       email:
-        blank: "Sähköpostiosoite on pakollinen tieto"
-        invalid: "Sähköpostia '%{value}' ei tunnistettu"
-        plus_address: "+-merkkin käyttö sähköpostiosoitteessasi ei ole sallittua"
+        blank: "E-postadress är en obligatorisk uppgift"
+        invalid: "E-postadressen '%{value}' kunde inte identifieras"
+        plus_address: "+-tecken är inte tillåtet i e-postadressen"
       creator:
-        blank: "Tekijän nimi puuttuu"
+        blank: "Namnet på skaparen saknas"
       action: 
-        blank: "Aloitteen kuvaus puuttuu"
-        too_long: "Aloitteen kuvaus on liian pitkä"
+        blank: "Beskrivningen av initiativet saknas"
+        too_long: "Beskrivningen av initiativet är för lång"
       background:
-        blank: "Perustelut puuttuvat"
-        too_long: "Perusteluissa on liikaa tekstiä"
+        blank: "Motiveringen saknas"
+        too_long: "För mycket text i motiveringen"
       additional_details:
-        too_long: "Lisätiedoissa on liikaa tekstiä"
+        too_long: "För mycket text i mer information"
       comment:
-        blank: "Kommentti puuttuu"
+        blank: "Kommentar saknas"
       name:
-        blank: "Nimi on pakollinen tieto"
+        blank: "Namn är en obligatorisk uppgift"
       location_code:
-        blank: "Sijainti on pakollinen tieto"
+        blank: "Ort är en obligatorisk uppgift"
       postcode:
-        blank: "Postinumero on pakollinen tieto"
-        invalid: "Postinumeroa ei tunnistettu"
+        blank: "Postnummer är en obligatorisk uppgift"
+        invalid: "Postnumret kunde inte identifieras"
       uk_citizenship:
-        accepted: "Sinun tulee olla jäsenmaksun maksanut partiolainen tehdäksesi tai allekirjoittaksesi aloitteita"
+        accepted: "Du måste vara scout och ha betalat medlemsavgiften för att skapa eller understöda initiativ"

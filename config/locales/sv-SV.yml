@@ -1,6 +1,6 @@
 
 ---
-fi-FI:
+sv-SV:
   locales:
     fi-FI: Suomi
     en-GB: English
@@ -11,53 +11,53 @@ fi-FI:
       sv-SV: SV
   date:
     abbr_day_names:
-    - su
-    - ma
-    - ti
-    - ke
-    - to
-    - pe
-    - la
+    - sön
+    - mån
+    - tis
+    - ons
+    - tors
+    - fre
+    - lör
     abbr_month_names:
     -
-    - tam
-    - hel
-    - maa
-    - huh
-    - tou
-    - kesä
-    - hei
-    - elo
-    - syys
-    - lok
-    - mar
-    - jou
+    - jan
+    - feb
+    - mars
+    - apr
+    - maj
+    - juni
+    - juli
+    - aug
+    - sept
+    - okt
+    - nov
+    - dec
     day_names:
-    - sunnuntai
-    - maanantai
-    - tiistai
-    - keskiviikko
-    - torstai
-    - perjantai
-    - lauantai
+    - söndag
+    - måndag
+    - tisdag
+    - onsdag
+    - torsdag
+    - fredag
+    - lördag
     formats:
       default: "%d-%m-%Y"
       long: "%d.%m, %Y"
       short: "%-d.%m.%Y"
     month_names:
     -
-    - tammikuu
-    - helmikuu
-    - maaliskuu
-    - huhtikuu
-    - toukokuu
-    - kesäkuu
-    - heinäkuu
-    - elokuu
-    - syyskuu
-    - lokakuu
-    - marraskuu
-    - joulukuu
+    - januari
+    - februari
+    - mars
+    - april
+    - maj
+    - juni
+    - juli
+    - augusti
+    - september
+    - oktober
+    - november
+    - december
     order:
     - :day
     - :month
@@ -67,46 +67,46 @@ fi-FI:
         short: "%d.%m.%Y klo %H:%M"
     distance_in_words:
       about_x_hours:
-        one: Noin 1 tunti
-        other: Noin %{count} tuntia
+        one: Ca 1 timme
+        other: Ca %{count} timmar
       about_x_months:
-        one: Noin 1 kuukausi
-        other: Noin %{count} kuukautta
+        one: Ca 1 månad
+        other: Ca %{count} månader
       about_x_years:
-        one: Noin 1 vuosi
-        other: Noin %{count} vuotta
+        one: Ca 1 år
+        other: Ca %{count} år
       almost_x_years:
-        one: Melkein 1 vuosi
-        other: Melkein %{count} vuotta
-      half_a_minute: puoli minuuttia
+        one: Nästan 1 år
+        other: Nästan %{count} år
+      half_a_minute: en halv minut
       less_than_x_minutes:
-        one: alle minuutti
-        other: alle %{count} minuuttia
+        one: under en minut
+        other: under %{count} minuter
       less_than_x_seconds:
-        one: Alle 1 sekuntti
-        other: Alle %{count} sekunttia
+        one: Under 1 sekund
+        other: Under %{count} sekunder
       over_x_years:
-        one: Yli 1 vuosi
-        other: Yli %{count} vuotta
+        one: Över 1 år
+        other: Över %{count} år
       x_days:
-        one: 1 päivä
-        other: "%{count} päivää"
+        one: 1 dag
+        other: "%{count} dagar"
       x_minutes:
-        one: 1 minuutti
-        other: "%{count} minuuttia"
+        one: 1 minut
+        other: "%{count} minuter"
       x_months:
-        one: 1 kuukausi
-        other: "%{count} kuukautta"
+        one: 1 månad
+        other: "%{count} månader"
       x_seconds:
-        one: 1 sekuntti
-        other: "%{count} sekunttia"
+        one: 1 sekund
+        other: "%{count} sekunder"
     prompts:
-      day: Päivä
-      hour: Tunti
-      minute: Minuutti
-      month: Kuukausi
-      second: Sekunttia
-      year: Vuosi
+      day: Dag
+      hour: Timme
+      minute: Minut
+      month: Månad
+      second: Sekund
+      year: År
   #Many of the errors-lines here are admin-side 
   #Not all appear within the service
   errors:
@@ -154,18 +154,18 @@ fi-FI:
         url: "URL"
       parliament:
         #Partiolaiset hallitus shouldn't need to dissolve
-        dissolution_heading: "Otsikko"
-        dissolution_message: "Viesti"
-        dissolved_heading: "Otsikko"
-        dissolved_message: Viesti"
-        dissolution_at: "Päivämäärä ja kellonaika"
-        notification_cutoff_at: "Ilmoita julkaisemattomille aloitteille, jotka on tehty jälkeen"
+        dissolution_heading: "Fi_fi_locale_Heading"
+        dissolution_message: "Fi_fi_locale_Message"
+        dissolved_heading: "Fi_fi_locale_Heading"
+        dissolved_message: "Fi_fi_locale_Message"
+        dissolution_at: "Fi_fi_locale_Date and time"
+        notification_cutoff_at: "Fi_fi_locale_Notify unpublished petitions created after"
     select:
-      prompt: Valitse
+      prompt: Välj
     submit:
-      create: Luo %{model}
-      submit: Lähetä %{model}
-      update: Päivitä %{model}
+      create: Skapa %{model}
+      submit: Skicka %{model}
+      update: Uppdatera %{model}
   number:
     currency:
       format:
@@ -186,11 +186,11 @@ fi-FI:
       decimal_units:
         format: "%n %u"
         units:
-          billion: Miljardi
-          million: Miljoona
-          quadrillion: Quadriljoona
-          thousand: Tuhat
-          trillion: Triljoona
+          billion: Miljard
+          million: Miljon
+          quadrillion: Kvadriljon
+          thousand: Tusen
+          trillion: Triljon
           unit: ''
       format:
         delimiter: ''
@@ -201,8 +201,8 @@ fi-FI:
         format: "%n %u"
         units:
           byte:
-            one: Tavu
-            other: Tavua
+            one: Byte
+            other: Byte
           gb: GB
           kb: KB
           mb: MB
@@ -215,8 +215,8 @@ fi-FI:
         delimiter: ''
   support:
     array:
-      last_word_connector: ", ja "
-      two_words_connector: " ja "
+      last_word_connector: ", och "
+      two_words_connector: " och "
       words_connector: ", "
   time:
     #Seem to be just placeholders, possibly appear somewhere
@@ -230,26 +230,26 @@ fi-FI:
 #Lines that do rely on surrounding context and appear in
 #many parts of the service
   generic:
-    back: Takaisin
-    back_and_make_changes: "Palaa takaisin ja jatka muokkausta"
-    continue: "Jatka" 
-    postcode: "Postinumero"
-    feedback: "Palaute"
-    comments: "Kommentit"
-    optional: "valinnainen"
-    email_address: "Sähköpostiosoite"
-    email: "Sähköposti"
-    phone: "Puhelin"
-    character_limit: "{%limit} kirjainta max"
-    name: "Nimi"
-    location: "Sijainti"
-    rejected: "Hylätty"
-    now_closed: "suljettu"
-    cookies: "Käytämme evästeitä yksinkertaistaaksemme palvelun käyttöä."
-    about_cookies: "Lisätietoja evästeistä"
-    debated: "Käsitelty"
-    other: "Muuta keskusjärjestöltä"
+    back: Tillbaka
+    back_and_make_changes: "Gå tillbaka och fortsätt ändra"
+    continue: "Fortsätt" 
+    postcode: "Postnummer"
+    feedback: "Respons"
+    comments: "Kommentarer"
+    optional: "valfri"
+    email_address: "E-postadress"
+    email: "E-post"
+    phone: "Telefon"
+    character_limit: "{%limit} bokstäver, max"
+    name: "Namn"
+    location: "Ort"
+    rejected: "Förkastat"
+    now_closed: "stängt"
+    cookies: "Vi använder kakor för att underlätta användningen av tjänsten."
+    about_cookies: "Mer information om kakor"
+    debated: "Behandlats"
+    other: "Övrigt från centralorganisationen"
   login:
-    log_in: "Kirjaudu sisään"
-    log_out: "Kirjaudu ulos"
-    logged_in_redirect: "Kirjautuminen onnistui, odota uudelleenohjausta"
+    log_in: "Logga in"
+    log_out: "Logga ut"
+    logged_in_redirect: "Du är inloggad, vänta på omdirigering"

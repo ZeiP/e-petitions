@@ -20,7 +20,7 @@ module Epets
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     #config.i18n.default_locale = :'en-GB'
     config.i18n.default_locale = :'fi-FI'
-    config.i18n.available_locales = [:'en-GB', :'fi-FI']
+    config.i18n.available_locales = [:'en-GB', :'fi-FI', :'sv-SV']
 
     # Use SQL for the schema format
     config.active_record.schema_format = :sql

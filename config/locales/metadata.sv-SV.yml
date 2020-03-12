@@ -1,13 +1,13 @@
-fi-FI:
+sv-SV:
   metadata:
     #metadata shown with with social media stuff
     open_graph:
-      site_name: "Partiolaisaloite"
-      default_title: "Partiolaisaloite"
-      title: "Aloite: %{petition}"
-      archived_title: "Arkistoidut aloitteet: %{petition}"
+      site_name: "Scoutinitiativet"
+      default_title: "Scoutinitiativet"
+      title: "Initiativ: %{petition}"
+      archived_title: "Arkiverade initiativ: %{petition}"
 
     twitter:
-      default_title: "Partiolaisaloite"
-      title: "Aloite: %{petition}"
-      archived_title: "Arkistoidut aloitteet: %{petition}"
+      default_title: "Scoutinitiativet"
+      title: "Initiativ: %{petition}"
+      archived_title: "Arkiverade initiativ: %{petition}"
