@@ -1,6 +1,6 @@
 #Almost everything here is visible to standard users
 
-sv-SV:
+fi-FI:
   petitions:
     #encountered during creation of new petition
     start:
@@ -14,7 +14,7 @@ sv-SV:
       background_help: "Apua perustelujen kirjoittamiseen"
       background_help_explanation: "Perustele, miksi aloitteesi on tärkeä ja se pitäisi toteuttaa."
       background_help_reminder: "Mieti aloitteesi vaikuttavuutta: millä tavoin aloitteesi toteutuessaan tekisi Partiosta - ja maailmasta - paremman paikan?"
-      additional_details: "Lisätietoa"
+      additional_details: "Lisää tietoa"
       optional_details: "Valinnaista - taustatietoa, lisää perusteluja. Voit myös lisätä linkin muualla verkossa oleviin materiaaleihin."
       preview_petition: "Esikatsele aloitetta"
       could_not_create: "Emme voineet luoda aloitetta"
@@ -301,8 +301,8 @@ sv-SV:
           %{subject}
 
         # Emails to people who support a petition
-        gather_sponsors_for_petition: |-
-          Aloite “%{action}” kaipaa tukijoita
+        petition_created: |-
+          Aloite “%{action}” on luotu
         notify_creator_that_petition_is_published: |-
           Julkaisimme aloitteesi “%{action}”
         notify_sponsor_that_petition_is_published: |-

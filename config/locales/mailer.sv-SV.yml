@@ -1,5 +1,5 @@
 #everything here appears in emails. Plenty of re-used lines
-sv-SV:
+fi-FI:
   mail:
     thanks: "Kiitos,"
     greeting: "Hyvä"
@@ -27,7 +27,7 @@ sv-SV:
       created: "Julkaisimme tekemäsi aloitteen –"
       share: "Tämän linkin avulla voit jakaa aloitetta:"
       share_yours: "Tämän linkin avulla voit jakaa aloitettasi:"
-      will_be_published: "Tarkistamme aloitteesi. Sen jälkeen lähetämme sinulle linkin, jota voit jakaa muille ja pyytää heitä kannattamaan aloitettasi."
+      will_be_published: "Tarkistamme aloitteesi. Sen jälkeen lähetämme sinulle linkin, jota voit jakaa muille ja pyytää heitä kannattamaan aloitettasi"
     debated:
       created: "Keskusjärjestö keskusteli aloitteestasi –"
       signed: "Keskusjärjestö keskusteli kannattamastasi aloiteesta –"
