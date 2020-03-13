@@ -7,10 +7,10 @@ if ENV['RAILS_ENV'] == 'production'
   # Based on https://raw.githubusercontent.com/codetriage/codetriage/master/config/puma.rb
   concurrency = {
     # Set to default of 4 workers - c4.xlarge has 4 CPUs
-    workers: ENV.fetch('WEB_CONCURRENCY') { 4 }.to_i,
+    workers: ENV.fetch('WEB_CONCURRENCY') { 2 }.to_i,
     # Some experimentation seems to indicate these are reasonable options:
-    min_threads: ENV.fetch('WEB_CONCURRENCY_MIN_THREADS') { 16 }.to_i,
-    max_threads: ENV.fetch('WEB_CONCURRENCY_MAX_THREADS') { 32 }.to_i
+    min_threads: ENV.fetch('WEB_CONCURRENCY_MIN_THREADS') { 8 }.to_i,
+    max_threads: ENV.fetch('WEB_CONCURRENCY_MAX_THREADS') { 16 }.to_i
   }
 
   workers(concurrency[:workers])

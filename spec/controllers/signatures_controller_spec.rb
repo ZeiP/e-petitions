@@ -106,7 +106,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the petition page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}")
+            expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
           end
         end
       end
@@ -224,7 +224,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the petition page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}")
+            expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
           end
         end
       end
@@ -314,7 +314,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the petition page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}")
+            expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
           end
         end
       end
@@ -368,7 +368,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you")
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
           end
 
           it "deletes the form request details" do
@@ -401,7 +401,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you")
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
           end
         end
 
@@ -430,7 +430,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you")
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
           end
         end
 
@@ -457,7 +457,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you")
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
           end
         end
 
@@ -486,7 +486,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you")
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
           end
         end
       end
@@ -529,7 +529,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -550,7 +550,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -571,7 +571,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -669,7 +669,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -694,7 +694,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -731,7 +731,23 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the signed signature page" do
-          expect(response).to redirect_to("/signatures/#{signature.id}/signed")
+          expect(response).to redirect_to("/signatures/#{signature.id}/signed?locale=en-GB")
+        end
+      end
+
+      context "petition signature_count" do
+
+        let(:petition) { FactoryBot.create(:open_petition) }
+        let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
+
+        context "when the petition is open" do
+          it "increments the signature_count" do
+            expect {
+              get :verify, params: { id: signature.id, token: signature.perishable_token }
+            }.to change{
+              petition.reload.signature_count
+            }.by(1)
+          end
         end
       end
 
@@ -778,7 +794,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the signed signature page" do
-          expect(response).to redirect_to("/signatures/#{signature.id}/signed")
+          expect(response).to redirect_to("/signatures/#{signature.id}/signed?locale=en-GB")
         end
 
         context "and the signature has already been validated" do
@@ -806,7 +822,7 @@ RSpec.describe SignaturesController, type: :controller do
 
         it "redirects to the petition page" do
           get :signed, params: { id: signature.id }
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -862,7 +878,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -883,7 +899,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
 
@@ -960,7 +976,7 @@ RSpec.describe SignaturesController, type: :controller do
           end
 
           it "redirects to the petition page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}")
+            expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
           end
         end
       end

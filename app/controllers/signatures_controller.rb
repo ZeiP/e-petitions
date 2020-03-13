@@ -63,6 +63,7 @@ class SignaturesController < ApplicationController
   def verify
     unless @signature.validated?
       @signature.validate!(request: request, force: true)
+      @signature.petition.update_signature_count! if @signature.petition
     end
 
     store_signed_token_in_session

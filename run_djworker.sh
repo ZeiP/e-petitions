@@ -3,4 +3,4 @@
 
 cd /app
 
-./bin/delayed_job -n 2 start
+./bin/delayed_job start

@@ -35,7 +35,7 @@ RSpec.describe Petition, type: :model do
           FactoryBot.create(:petition)
         }.to change {
           Site.last_petition_created_at
-        }.from(nil).to(be_within(1.second).of(now))
+        }.from(nil).to(be_within(5.second).of(now))
       end
     end
   end
@@ -59,9 +59,9 @@ RSpec.describe Petition, type: :model do
       expect(FactoryBot.build(:petition, :background => 'x' * 301)).not_to be_valid
     end
 
-    it "should validate the length of :additional_details to within 800 characters" do
-      expect(FactoryBot.build(:petition, :additional_details => 'x' * 800)).to be_valid
-      expect(FactoryBot.build(:petition, :additional_details => 'x' * 801)).not_to be_valid
+    it "should validate the length of :additional_details to within 20000 characters" do
+      expect(FactoryBot.build(:petition, :additional_details => 'x' * 20000)).to be_valid
+      expect(FactoryBot.build(:petition, :additional_details => 'x' * 20001)).not_to be_valid
     end
 
     it "does not allow a blank state" do
@@ -2771,7 +2771,7 @@ RSpec.describe Petition, type: :model do
           petition.checkout!(current_user)
         }.to change {
           petition.reload.locked_at
-        }.from(nil).to(be_within(1.second).of(Time.current))
+        }.from(nil).to(be_within(5.second).of(Time.current))
       end
     end
 
