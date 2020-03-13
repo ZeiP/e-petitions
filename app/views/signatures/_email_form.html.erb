@@ -10,7 +10,7 @@
 <%= form_row for: [signature, :email] do %>
   <%= form.label :email, (t "generic.email_address"), class: "form-label visuallyhidden" %>
   <%= error_messages_for_field signature, :email %>
-  <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control" %>
+  <%= form.text_field :email, type: "email", tabindex: increment, class: "form-control", disabled: true %>
 <% end %>
 
 <%= form.submit (t "petitions.sign.confirm_info"), class: "button", tabindex: increment %>
