@@ -13,22 +13,22 @@ sv-SV:
     #descriptions available only to general users
     descriptions:
       duplicate: |-
-        <p>Toinen samankaltainen aloite on jo käynnissä.</p>
-        <p>On todennäköisempää että aloitteesi saa kannatusta, jos kannatat ja jaat saman aloitteen.</p>
+        <p>Ett liknande initiativ pågår redan.</p>
+        <p>Det är mer sannolikt att ditt initiativ får understöd om du stöder och delar samma initiativ.</p>
       irrelevant: |-
-        <p>Aloite on aiheesta, josta Partiolaiset tai partiojohto ei ole vastuussa.</p>
+        <p>Initiativet gäller ett ämne som Scouterna eller scoutledningen inte ansvarar för.</p>
       no-action: |-
-        <p>Emme oikein ymmärrä, mitä aloite koskee.</p>
+        <p>Vi förstår inte riktigt vad initiativet gäller.</p>
       honours: |-
-        <p>Aloite liittyy kunnianosoitusten tai nimitysten myöntämiseen.</p>
+        <p>Initiativet gäller tilldelande av hedersbevisningar eller utnämningar.</p>
       fake-name: |-
-        <p>Aloite luotiin käyttäen väärää tai vaillinaista nimeä.</p>
-        <p>Aloitteen teksti täytti sille asetetut vaatimukset.</p>
-        <p>Tästä huolimatta aloitteet tulee tehdä käyttäen kokonaista, oikeaa nimeä.</p>
-        <p>Hylkäämme aloittesi tämän perusteella, mutta jos teet aloitteen uudelleen käyttäen oikeaa nimeäsi, voimme hyväksyä sen.</p>
+        <p>Initiativet skapades under ett felaktigt eller ofullständigt namn.</p>
+        <p>Initiativets text uppfyllde kraven.</p>
+        <p>Initiativ ska oberoende skapas under ett fullständigt, korrekt namn.</p>
+        <p>Vi förkastar därför ditt initiativ, men om du skapar initiativet på nytt under ditt korrekta namn, kan vi godkänna det.</p>
       foi: |-
-        <p>Aloite on tietopyyntö.</p>
+        <p>Initiativet är en begäran om information.</p>
       libellous: |-
-        <p>Aloite sisälsi luottamuksellista, kunniaa loukkaavaa tai valheellista tietoa.</p>
+        <p>Initiativet innehöll konfidentiell, ärekränkande eller falsk information.</p>
       offensive: |-
-        <p>Aloite oli loukkaava, vitsi tai mainos.</p>
+        <p>Initiativet var sårande, ett skämt eller en reklam.</p>

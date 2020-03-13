@@ -4,196 +4,196 @@ sv-SV:
   petitions:
     #encountered during creation of new petition
     start:
-      title: "Tee uusi aloite"
-      petition: "Miten haluaisit kehittää partiota?"
-      notice: "Huomio"
-      supporter_requirement: "Jotta voit tehdä aloitteen, tarvitset sille heti aluksi %{threshold} tukijaa. Kysymme heidän sähköpostiosoitteitaan kohta."
-      read_standards: "Ennen kuin teet aloitteen, lue"
-      standards: "ohjeet hyvän aloitteen tekemiseen"
-      background: "Perustele aloitteesi"
-      background_help: "Apua perustelujen kirjoittamiseen"
-      background_help_explanation: "Perustele, miksi aloitteesi on tärkeä ja se pitäisi toteuttaa."
-      background_help_reminder: "Mieti aloitteesi vaikuttavuutta: millä tavoin aloitteesi toteutuessaan tekisi Partiosta - ja maailmasta - paremman paikan?"
-      additional_details: "Lisätietoa"
-      optional_details: "Valinnaista - taustatietoa, lisää perusteluja. Voit myös lisätä linkin muualla verkossa oleviin materiaaleihin."
-      preview_petition: "Esikatsele aloitetta"
-      could_not_create: "Emme voineet luoda aloitetta"
+      title: "Skapa ett nytt initiativ"
+      petition: "Hur vill du utveckla scouterna?"
+      notice: "Observera"
+      supporter_requirement: "För att kunna skapa ett initiativ behöver du genast i början %{threshold} personer som stöder det. Vi ber snart om deras e-postadresser."
+      read_standards: "Innan du skapar ett initiativ, läs"
+      standards: "anvisningarna för ett bra initiativ"
+      background: "Motivera ditt initiativ"
+      background_help: "Hjälp med att skriva motiveringarna"
+      background_help_explanation: "Motivera varför ditt initiativ är viktigt och borde genomföras."
+      background_help_reminder: "Tänk på hur ditt initiativ skulle påverka: om ditt initiativ genomförs, på vilket sätt skulle det göra Scouterna - och världen - till en bättre plats?"
+      additional_details: "Mer information"
+      optional_details: "Valfritt - bakgrundsinformation, ytterligare motiveringar. Du kan också lägga till en länk till material någon annanstans på webben."
+      preview_petition: "Förhandsgranska initiativet"
+      could_not_create: "Vi kunde inte skapa ett initiativ"
 
     # encountered when searching for petitions
     search:
       result:
-        one: "tulos"
-        other: "tulosta"
+        one: "resultat"
+        other: "resultat"
       petition: 
-        one: "aloite"
-        other: "aloitetta"
+        one: "initiativ"
+        other: "initiativ"
 
     #errors during petition creation
     errors:
       prompt:
-        one: "Korjaa seuraava virhe:"
-        other: "Korjaa seuraavat virheet:"
+        one: "Korrigera följande fel:"
+        other: "Korrigera följande fel:"
 
-      invalid_signature_count: "Aloitteella %{id} oli virheellinen kannattajamäärä"
+      invalid_signature_count: "Initiativet %{id} hade ett felaktigt antal stödförklaringar"
 
     #searching for petitions
-    view_all: "Näytä kaikki aloitteet"
-    popular_title: "Suositut aloitteet"
-    search_title: "Hae aloitetta"
-    current: "Käynnissä olevat aloitteet"
-    back_to_current: "Takaisin käynnissä oleviin aloitteisiin"
-    no_archived_found: "Hakusanoihin sopivia arkistoituja aloitteita ei löytynyt"
-    list_of_petitions: "Muita aloitelistauksia"
-    archived_petitions: "Arkistoidut aloitteet"
-    get_data_html: "Lataa tiedot %{json}- tai %{csv}-muodossa"
+    view_all: "Visa alla initiativ"
+    popular_title: "Populära initiativ"
+    search_title: "Sök initiativ"
+    current: "Pågående initiativ"
+    back_to_current: "Tillbaka till pågående initiativ"
+    no_archived_found: "Arkiverade initiativ som motsvarar sökorden hittades inte"
+    list_of_petitions: "Andra listor över initiativ"
+    archived_petitions: "Arkiverade initiativ"
+    get_data_html: "Ladda ned uppgifterna i %{json}- eller %{csv}-format"
 
     #searching for petitions
     about:
-      summary: "Aloitteen tiedoista"
+      summary: "Uppgifter om initiativet"
       content: |-
-        "Täältä löytyy tieto siitä, kuinka monta kannattajaa aloitteella on. 
-        Tämä tieto on saatavissa kaikista aloitteista tällä sivustolla.
-        Täältä ei löydy listaa partiolaisista, jotka ovat kannattaneet aloitetta. 
-        Näytämme ainoastaan aloitteen tekijän nimen. Tiedoista löytyy myös 	aloitejärjestelmään kuuluvia kenttiä, jotka eivät ole meillä tällä hetkellä käytössä."
+        "Här hittar du uppgifter om hur många personer som stöder ett initiativ.
+        Dessa uppgifter finns tillgängliga om alla initiativ på denna webbplats.
+        Uppgifterna innehåller inte en lista över de scouter som har understött initiativet. 
+        Vi visar endast namnet på den som har skapat initiativet. Bland uppgifterna finns också 	sådana fält i initiativsystemet, som för tillfället inte används 	hos oss."
 
     #petition creation during check for duplicates
     check:
-      title: "Emme löytäneet samankaltaisia aloitteita"
-      title_duplicates: "Löysimme joitakin samankaltaisia aloitteita"
-      help: "Jos jokin näistä aloitteista vastaa omaasi, kannata sitä ja jaa se uuden aloitteen tekemisen sijaan."
-      help_reason: "On todennäköisempää, että kehitysideasi saa %{threshold_response} ja %{threshold_debate} kannatusta tällä tavalla."
-      duplicate_notification: "Jos aiheesta on jo tehty aloite, on todennäköistä että aloitteesi hylätään."
-      duplicate_continue: "Minun aloitteeni on erilainen"
-      no_duplicates: "Tarkistimme, löytyykö jo tehtyjen aloitteiden joukosta samankaltainen aloite. Ei löytynyt."
-      no_duplicates_go_ahead: "Voit siis jatkaa ja tehdä uuden aloitteen."
+      title: "Vi hittade inga liknande initiativ"
+      title_duplicates: "Vi hittade några liknande initiativ"
+      help: "Om något av dessa initiativ motsvarar ditt eget, stöd det initiativet och dela det i stället för att skapa ett nytt."
+      help_reason: "Det är mer sannolikt att din utvecklingsidé får %{threshold_response} och %{threshold_debate} understöd på detta sätt."
+      duplicate_notification: "Om det redan har skapats ett initiativ om ämnet, kommer ditt initiativ sannolikt att förkastas."
+      duplicate_continue: "Mitt initiativ är annorlunda"
+      no_duplicates: "Vi kontrollerade om det redan har skapats ett liknande initiativ. Inga initiativ hittades."
+      no_duplicates_go_ahead: "Du kan alltså fortsätta skapa ett nytt initiativ."
 
     #examples for good and bad petitions during petition creation
     example:
-      main: "Esimerkki: Tehdään partiosta hiilineutraali!"
-      show_more: "Näytä lisää esimerkkejä"
-      good: "Hyviä esimerkkejä:"
-      good_1: "Alueellinen aloite: piiri voisi järjestää samoajaleirin."
-      good_2: "Kansainvälinen aloite: enemmän kansainvälisiä Ko-Gi-kursseja."
-      bad: "Huonoja esimerkkejä:"
-      bad_1: "Lippukunnan X toiminta on huonoa."
-      bad_2: "Lippukunta X ei toimi, lippukunnanjohtaja pitää vaihtaa!"
-      explanation: "Hyvissä aloitteissa kerrotaan selkeästi, millä tavoin voisimme kehittää partiotoimintaa."
+      main: "Exempel: Låt oss göra scouterna klimatneutrala!"
+      show_more: "Visa fler exempel"
+      good: "Bra exempel:"
+      good_1: "Regionalt initiativ: distriktet skulle kunna ordna ett explorerscoutläger."
+      good_2: "Ett internationellt initiativ: fler internationella Ko-Gi-kurser."
+      bad: "Dåliga exempel:"
+      bad_1: "Kårens X verksamhet är dålig."
+      bad_2: "Kåren X fungerar inte, kårchefen måste bytas ut!"
+      explanation: "I bra initiativ berättas tydligt på vilket sätt vi kan utveckla scoutverksamheten."
 
     #finishing up on creating petition
     finalize:
-      title: "Tarkista aloitteesi"
-      more_details: "Lisätietoa"
-      continue: "Tämä näyttää hyvältä"
-      warning_no_changes: "Et voi muuttaa aloitettasi enää tämän vaiheen jälkeen."
-      warning_personal_info: "Tarkista vielä kerran, onko aloitteesi sellainen, että se voidaan julkaista."
-      warning_no_removal: "Julkaistu aloite voidaan poistaa ainoastaan keskusjärjestön päätöksellä."
+      title: "Kontrollera ditt initiativ"
+      more_details: "Mer information"
+      continue: "Det ser bra ut"
+      warning_no_changes: "Efter detta steg kan du inte längre ändra ditt initiativ."
+      warning_personal_info: "Kontrollera en sista gång att ditt initiativ är redo att publiceras."
+      warning_no_removal: "Ett publicerat initiativ kan raderas endast på beslut av centralorganisationen."
 
     #signing a petition
     sign:
-      signatures: "kannattajaa"
-      title_own: "Vahvista aloitteesi"
-      title_other: "Kannata aloitetta"
-      title_sponsor: "Kannata partiolaisen %{creator} tekemää aloitetta"
-      criteria: "Partiolaisaloitteen voi tehdä vain jäsenmaksun maksanut partiolainen"
-      criteria_confirm: "Olen jäsenmaksun maksanut partiolainen"
-      full_name_required: "Sinun täytyy käyttää koko nimeäsi"
-      email_updates: "Lähetä minulle sähköpostitse ilmoituksia aloitteesta"
-      name_visible: "Olet aloitteen tekijä, joten julkaisemme koko nimesi aloitteen yhteydessä."
-      confirm: "Kannata aloitetta"
-      other_hidden: "Emme julkaise muita henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
-      all_hidden: "Emme julkaise henkilötietojasi, emmekä käytä niitä muualla kuin tämän aloitteen yhteydessä."
-      heading: "Aloite"
-      additional_details: "Lisää tietoa"
-      sign_this: "Kannata aloitetta"
-      creator: "Aloitteen tekijä"
-      deadline: "Määräaika"
-      time: "Kaikki aloitteet ovat käynnissä 6 kuukautta."
-      get_data: "Lataa aloitteen tiedot (json-muodossa)"
-      check_info: "Järjestelmä haluaa tarkistaa sähköpostiosoitteesi"
-      confirm_info: "Kyllä - tämä on sähköpostiosoitteeni"
-      if_wrong_email: "Kentässä olevaa sähköpostiosoitetta ei kannata muokata, järjestelmä lähettää viestit joka tapauksessa PartioID:n mukaiseen osoitteeseesi. (Tämä välivaihe poistuu kokonaan tulevaisuudessa.)"
+      signatures: "personer stöder"
+      title_own: "Bekräfta ditt initiativ"
+      title_other: "Stöd initiativet"
+      title_sponsor: "Stöd initiativet av scouten %{creator}"
+      criteria: "Endast scouter som har betalat medlemsavgiften kan skapa scoutinitiativ"
+      criteria_confirm: "Jag är scout och jag har betalat medlemsavgiften"
+      full_name_required: "Du måste använda ditt fullständiga namn"
+      email_updates: "Skicka mig e-postmeddelanden om initiativet"
+      name_visible: "Du har skapat initiativet, så vi kommer att publicera ditt fullständiga namn i samband med initiativet."
+      confirm: "Stöd initiativet"
+      other_hidden: "Vi publicerar inga andra personuppgifter om dig, och vi använder dem inte utöver i samband med detta initiativ."
+      all_hidden: "Vi publicerar inga personuppgifter om dig, och vi använder dem inte utöver i samband med detta initiativ."
+      heading: "Initiativ"
+      additional_details: "Mer information"
+      sign_this: "Stöd initiativet"
+      creator: "Den som har skapat initiativet"
+      deadline: "Tidsfrist"
+      time: "Alla initiativ pågår i 6 månader."
+      get_data: "Ladda ned uppgifterna om initiativet (i json-format)"
+      check_info: "Systemet vill kontrollera din e-postadress"
+      confirm_info: "Ja - detta är min e-postadress"
+      if_wrong_email: "Det lönar sig inte att ändra e-postadressen i fältet, systemet skickar oberoende meddelanden till din adress enligt ditt ScoutID. (Detta mellansteg kommer att försvinna helt i framtiden.)"
 
     #page titles for petition listings
     page_titles:
-      all: "Kaikki aloitteet"
-      open: "Käynnissä olevat aloitteet"
-      closed: "Suljetut aloitteet"
-      rejected: "Hylätyt aloitteet"
-      published: "Julkaistut aloitteet"
-      awaiting_response: "Keskusjärjestön käsittelyä odottavat aloitteet"
-      with_response: "Keskusjärjestön käsittelemät aloitteet"
-      debated: "Keskusjärjestön keskustelemat aloitteet"
-      not_debated: "Keskusjärjestön keskustelemattomat aloitteet"
-      awaiting_debate: "Keskusjärjestön keskustelua odottavat aloitteet"
+      all: "Alla initiativ"
+      open: "Pågående initiativ"
+      closed: "Stängda initiativ"
+      rejected: "Förkastade initiativ"
+      published: "Publicerade initiativ"
+      awaiting_response: "Initiativ som väntar på att behandlas av centralorganisationen"
+      with_response: "Initiativ som har behandlats av centralorganisationen"
+      debated: "Initiativ som har diskuterats av centralorganisationen"
+      not_debated: "Initiativ som inte har diskuterats av centralorganisationen"
+      awaiting_debate: "Initiativ som väntar på att diskuteras av centralorganisationen"
 
-    share_title: "Aloite: %{petition}"
+    share_title: "Initiativ: %{petition}"
 
-    ad: "Tee partiolaisaloite!"
-    start_prompt: "Tee aloite"
-    login_prompt: "Kirjaudu sisään, niin voit tehdä aloitteen"
-    login_prompt_sign: "Kirjaudu sisään, niin voit kannattaa aloitetta"
-    criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
-    response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö ottaa sen käsittelyyn."
-    debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö keskustelee siitä."
+    ad: "Skapa ett scoutinitiativ!"
+    start_prompt: "Skapa ett initiativ"
+    login_prompt: "Logga in för att skapa ett initiativ"
+    login_prompt_sign: "Logga in för att stödja ett initiativ"
+    criteria: "Scouter som har betalat medlemsavgiften kan skapa scoutinitiativ"
+    response_threshold: "Om ett initiativ stöds av fler än %{threshold} scouter, behandlar centralorganisationen det."
+    debate_threshold: "Om ett initiativ stöds av fler än %{threshold} scouter, diskuterar centralorganisationen det."
 
     #appears on responded petitions listing?
     responded_petitions:
-      none: "Keskusjärjestö ei ole vielä käsitellyt yhtään aloitetta"
-      responded_on: "Keskusjärjestö käsitteli aloitteen %{date}"
-      responded_on_dash: "Keskusjärjestö käsitteli aloitteen – %{date}"
-      read_full: "Lue vastaus kokonaan"
+      none: "Centralorganisationen har ännu inte behandlat ett enda initiativ"
+      responded_on: "Centralorganisationen behandlade initiativet %{date}"
+      responded_on_dash: "Centralorganisationen behandlade initiativet – %{date}"
+      read_full: "Läs svaret i sin helhet"
  
     #appears when petition has been debated. 
     #the logic for this might not be in use with partiolaisaloite. 
     debated_petitions:
-      none: "Keskusjärjestö ei ole vielä keskustellut yhdestäkään aloiteesta"
-      was_debated: "Keskusjärjestö keskusteli tästä aloitteesta"
-      was_debated_on: "Keskusjärjestö keskusteli aloitteesta %{date}"
-      no_debate: "Keskusjärjestö päätti olla keskustelematta aloiteesta"
-      video_html: "Katso keskustelu %{href}"
-      transcript_html: "Lue keskustelun litterointi %{href}"
-      research_html: "Lue tutkimustyötä %{href}"
+      none: "Centralorganisationen har ännu inte diskuterat ett enda initiativ"
+      was_debated: "Centralorganisationen diskuterade detta initiativ"
+      was_debated_on: "Centralorganisationen diskuterade initiativet %{date}"
+      no_debate: "Centralorganisationen beslutade att inte diskutera initiativet"
+      video_html: "Se diskussionen %{href}"
+      transcript_html: "Läs transkriberingen av diskussionen %{href}"
+      research_html: "Läs forskningsarbetet %{href}"
       video_location: "Fi_fi_locale_parliamentlive.tv"
       transcript_location: "Fi_fi_locale_parliament.uk"
       research_location: "Fi_fi_locale_parliament.uk"
-      watch_at_html: 'Voit katsoa keskustelun suorana lähetyksenä osoitteessa <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
-      will_debate: "Keskusjärjestö keskustelee aloitteesta"
-      will_debate_on: "Keskusjärjestö keskustelee aloitteestan %{date}"
-      watch_online_html: 'Voit katsoa keskustelun verkossa osoitteessa  <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
-      will_consider_debate: "Keskusjärjestö harkitsee keskustelua aloitteesta"
-      consider_threshold: "Keskusjärjestö keskustelee kaikista aloitteista, jotka saavat vähintään %{threshold} allekirjoitusta"
-      at_threshold: "%{threshold} partiolaisen kannatuksella..."
-      if_at_threshold: "Keskusjärjestö harkitsee keskustelua aloitteesta, jos sitä kannattaa %{threshold} partiolaista"
+      watch_at_html: 'Du kan se diskussionen i direktsändning på adressen <a href=http://parliamentlive.tv rel="external">parliamentlive.tv</a>'
+      will_debate: "Centralorganisationen diskuterar initiativet"
+      will_debate_on: "Centralorganisationen diskuterar initiativet %{date}"
+      watch_online_html: 'Du kan se diskussionen på webbadressen  <a href=https://www.youtube.com/UKParliament rel="external">UK Parliament YouTube channel</a>'
+      will_consider_debate: "Centralorganisationen överväger diskussion om initiativet"
+      consider_threshold: "Centralorganisationen diskuterar alla initiativ som får minst %{threshold} underskrifter"
+      at_threshold: "Med stöd av %{threshold} scouter..."
+      if_at_threshold: "Centralorganisationen överväger diskussion om initiativet, om det stöds av %{threshold} scouter"
 
     sharing:
-      share_this: "Jaa tämä aloite"
+      share_this: "Dela detta initiativ"
       facebook:
         html: <span class="icon icon-share-facebook"></span> Facebook
       email:
-        html: <span class="icon icon-share-email"></span> Sähköposti
+        html: <span class="icon icon-share-email"></span> E-post
       twitter:
         html: <span class="icon icon-share-twitter"></span> Twitter
-        twitter_card_desc: "Osallistu partion kehittämiseen tekemällä tai kannattamalla partiolaisaloitteita."
+        twitter_card_desc: "Delta i att utveckla scouterna genom att skapa eller stödja scoutinitiativ."
       whatsapp:
         html: <span class="icon icon-share-whatsapp"></span> Whatsapp
 
     #petitions listings
     lists:
-      all: "Kaikki aloitteet (%{quantity})"
-      open: "Avoimet aloitteet (%{quantity})"
-      closed: "Suljetut aloitteet (%{quantity})"
-      published: "Julkaistut aloitteet (%{quantity})"
-      rejected: "Hylätyt aloitteet (%{quantity})"
-      awaiting_response: "Odottaa keskusjärjestön käsittelyä (%{quantity})"
-      with_response: "Keskusjärjestön käsittelemät (%{quantity})"
-      debated: "Keskusjärjestön keskustelemat (%{quantity})"
-      not_debated: "Keskusjärjestön keskustelemattomat (%{quantity})"
-      awaiting_debate: "Odottaa keskusjärjestön keskustelua (%{quantity})"
+      all: "Alla initiativ (%{quantity})"
+      open: "Öppna initiativ (%{quantity})"
+      closed: "Stängda initiativ (%{quantity})"
+      published: "Publicerade initiativ (%{quantity})"
+      rejected: "Förkastade initiativ (%{quantity})"
+      awaiting_response: "Väntar på att behandlas av centralorganisationen (%{quantity})"
+      with_response: "Har behandlats av centralorganisationen (%{quantity})"
+      debated: "Har diskuterats av centralorganisationen (%{quantity})"
+      not_debated: "Har inte diskuterats av centralorganisationen (%{quantity})"
+      awaiting_debate: "Väntar på att diskuteras av centralorganisationen (%{quantity})"
 
     list_headers:
-      not_debated: "Keskusjärjestö on päättänyt jättää keskustelematta nämä aloitteet" #TODO: mitä haetaan?
+      not_debated: "Centralorganisationen har beslutat att inte diskutera dessa initiativ" #TODO: mitä haetaan?
 
-    #this is not visible/admin side?
+    #this is not visible/admin side? no need to translate these. 
     facets:
       archived:
         - :all
@@ -274,113 +274,113 @@ sv-SV:
         email_signer: |-
           %{subject}
         email_confirmation_for_signer: |-
-          Vahvista sähköpostiosoitteesi
+          Bekräfta din e-postadress
         email_duplicate_signatures: |-
-          Kannatit samaa aloitetta kahdesti
+          Du understödde samma initiativ två gånger
         notify_signer_of_positive_debate_outcome: |-
-          Keskusjärjestö keskusteli “%{action}”
+          Centralorganisationen diskuterade “%{action}”
         notify_signer_of_negative_debate_outcome: |-
-          Keskusjärjestö ei keskustellut “%{action}”
+          Centralorganisationen diskuterade inte “%{action}”
         notify_signer_of_debate_scheduled: |-
-          Keskusjärjestö keskustelee “%{action}”
+          Centralorganisationen diskuterar “%{action}”
         notify_signer_of_threshold_response: |-
-          Keskusjärjestö vastasi “%{action}”
+          Centralorganisationen svarade “%{action}”
 
         # Emails to people who create petitions
         email_creator: |-
           %{subject}
         notify_creator_of_positive_debate_outcome: |-
-          Keskusjärjestö keskusteli “%{action}”
+          Centralorganisationen diskuterade “%{action}”
         notify_creator_of_negative_debate_outcome: |-
-          Keskusjärjestö ei keskustellut “%{action}”
+          Centralorganisationen diskuterade inte “%{action}”
         notify_creator_of_debate_scheduled: |-
-          Keskusjärjestö keskustelee “%{action}”
+          Centralorganisationen diskuterar “%{action}”
         notify_creator_of_threshold_response: |-
-          Keskusjärjestö käsitteli “%{action}”
+          Centralorganisationen behandlade “%{action}”
         notify_creator_that_moderation_is_delayed: |-
           %{subject}
 
         # Emails to people who support a petition
         gather_sponsors_for_petition: |-
-          Aloite “%{action}” kaipaa tukijoita
+          Det behövs personer som stöder initiativet “%{action}”
         notify_creator_that_petition_is_published: |-
-          Julkaisimme aloitteesi “%{action}”
+          Vi har publicerat ditt initiativ “%{action}”
         notify_sponsor_that_petition_is_published: |-
-          Julkaisimme tukemasi aloitteen “%{action}”
+          Vi har publicerat initiativet “%{action}” som du understött
         notify_creator_that_petition_was_rejected: |-
-          Hylkäsimme aloitteesi “%{action}”
+          Vi har förkastat ditt initiativ “%{action}”
         notify_sponsor_that_petition_was_rejected: |-
-          Hylkäsimme tukemasi aloitteen “%{action}”
+          Vi har förkastat initiativet “%{action}” som du understött
 
         # Re-send confirmation emails
         special_resend_of_email_confirmation_for_signer: |-
-          Vahvista sähköpostiosoitteesi
+          Bekräfta din e-postadress
         notify_creator_of_closing_date_change: |-
-          Suljemme aloitteen etuajassa
+          Vi stänger initiativet i förtid
         notify_creator_of_sponsored_petition_being_stopped: |-
-          Suljimme aloitteesi etuajassa
+          Vi har stängt ditt initiativ i förtid
         notify_creator_of_validated_petition_being_stopped: |-
-          Suljimme aloitteesi etuajassa
-      signoff_prefix: "Aloitteiden käsittelyryhmä"
+          Vi har stängt ditt initiativ i förtid
+      signoff_prefix: "Gruppen som behandlar initiativ"
       signoff_suffix: "Suomen Partiolaiset - Finlands Scouter ry"
 
     #appears on petitions awaiting answer/moderation?
     waiting_for_in_words:
-      zero: "Odottanut alle päivän"
-      one: "Odottanut 1 päivä"
-      other: "Odottanut %{formatted_count} päivää"
+      zero: "Väntat mindre än en dag"
+      one: "Väntat 1 dag"
+      other: "Väntat %{formatted_count} dagar"
 
     #appears on petitions that have been scheduled for debate. Logic not in use? 
     scheduled_for_debate_in_words:
-      today: "Suunniteltu keskusteltavaksi tänään"
-      tomorrow: "Suunniteltu keskusteltavaksi huomenna"
-      other: "Suunniteltu keskusteltavaksi %{formatted_date}"
+      today: "Kommer att diskuteras idag"
+      tomorrow: "Kommer att diskuteras imorgon"
+      other: "Kommer att diskuteras %{formatted_date}"
 
     signature_counts:
       default:
         html:
-          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">kannattaja</span>"
-          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">kannattajaa</span>"
+          one: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">person stöder</span>"
+          other: "<span class=\"count\" data-count=\"%{count}\">%{formatted_count}</span> <span class=\"text\">personer stöder</span>"
       trending:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> kannattaja tunnin sisällä"
-          other: "<span class=\"count\">%{formatted_count}</span> kannattajaa tunnin sisällä"
+          one: "<span class=\"count\">%{formatted_count}</span> person har understött inom en timme"
+          other: "<span class=\"count\">%{formatted_count}</span> personer har understött inom en timme"
       in_your_constituency:
         html:
           one: "%{formatted_count} Fi_fi_locale_signature from %{constituency}"
           other: "%{formatted_count} Fi_fi_locale_signatures from %{constituency}"
       in_total:
         html:
-          one: "%{formatted_count} kannattaja yhteensä"
-          other: "%{formatted_count} kannattajaa yhteensä"
+          one: "Sammanlagt %{formatted_count} person stöder"
+          other: "Sammanlagt %{formatted_count} personer stöder"
 
     counts:
       awaiting_response:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> aloite odottaa keskusjärjestön käsittelyä"
-          other: "<span class=\"count\">%{formatted_count}</span> aloitetta odottaa keskusjärjestön käsittelyä"
+          one: "<span class=\"count\">%{formatted_count}</span> initiativ väntar på att behandlas av centralorganisationen"
+          other: "<span class=\"count\">%{formatted_count}</span> initiativ väntar på att behandlas av centralorganisationen"
       with_response:
         html:
-          one: "Keskusjärjestö on käsitellyt <span class=\"count\">%{formatted_count}</span> aloitteen"
-          other: "Keskusjärjestö on käsitellyt <span class=\"count\">%{formatted_count}</span> aloitetta"
+          one: "Centralorganisationen har behandlat <span class=\"count\">%{formatted_count}</span> initiativ"
+          other: "Centralorganisationen har behandlat <span class=\"count\">%{formatted_count}</span> initiativ"
       awaiting_debate:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> aloite odottaa keskusjärjestön keskustelua"
-          other: "<span class=\"count\">%{formatted_count}</span> aloitetta odottaa keskusjärjestön keskustelua"
+          one: "<span class=\"count\">%{formatted_count}</span> initiativ väntar på att diskuteras av centralorganisationen"
+          other: "<span class=\"count\">%{formatted_count}</span> initiativ väntar på att diskuteras av centralorganisationen"
       with_debated_outcome:
         html:
-          one: "<span class=\"count\">%{formatted_count}</span> keskusjärjestön keskustelema aloite"
-          other: "<span class=\"count\">%{formatted_count}</span> keskusjärjestön keskustelema aloitetta"
+          one: "<span class=\"count\">%{formatted_count}</span> initiativ som centralorganisationen diskuterat"
+          other: "<span class=\"count\">%{formatted_count}</span> initiativ som centralorganisationen diskuterat"
       awaiting_response_explanation:
-        html: "Katso kaikki aloitteet, jotka odottavat keskusjärjestön käsittelyä (%{formatted_count})"
+        html: "Se alla initiativ som väntar på att behandlas av centralorganisationen (%{formatted_count})"
       with_response_explanation:
-        html: "Katso kaikki aloitteet, jotka keskusjärjestö on käsitellyt (%{formatted_count})"
+        html: "Se alla initiativ som centralorganisationen har behandlat (%{formatted_count})"
       awaiting_debate_explanation:
-        html: "Katso kaikki aloitteet, jotka odottavat keskusjärjestön keskustelua (%{formatted_count})"
+        html: "Se alla initiativ som väntar på att diskuteras av centralorganisationen (%{formatted_count})"
       debated_explanation:
-        html: "Katso kaikki aloitteet, joista keskusjärjestö on keskustellut (%{formatted_count})"
+        html: "Se alla initiativ som centralorganisationen har diskuterat (%{formatted_count})"
       not_debated_explanation:
-        html: "Katso kaikki aloitteet, joista keskusjärjestö ei keskustele (%{formatted_count})"
+        html: "Se alla initiativ som centralorganisationen inte diskuterar (%{formatted_count})"
 
     #Admin-side localizations
     action_counts:
@@ -399,126 +399,126 @@ sv-SV:
 
     debate_outcomes:
       link_titles:
-        video_url: "Katso käsittely"
-        transcript_url: "Lue litterointi"
-        debate_pack_url: "Lue tutkimustyötä"
+        video_url: "Se behandlingen"
+        transcript_url: "Läs transkriberingen"
+        debate_pack_url: "Läs forskningsarbetet"
 
     pagination:
       previous_html: |-
         <a class="previous" href="%{previous_link}">
-          <span class="paginate-label">Edellinen</span>
+          <span class="paginate-label">Föregående</span>
           <span class="paginate page-count">%{previous_page} of %{total_pages}</span>
         </a>
       next_html: |-
         <a class="next" href="%{next_link}">
-          <span class="paginate-label">Seuraava</span>
+          <span class="paginate-label">Nästa</span>
           <span class="paginate page-count">%{next_page} of %{total_pages}</span>
         </a>
 
   petition:
     responded:
-      title: "Keskusjärjestö käsitteli"
-      'on': "Vastaus annettiin %{date}"
-      read_in_full: "Lue koko vastaus"
+      title: "Centralorganisationen har behandlat"
+      'on': "Svaret gavs %{date}"
+      read_in_full: "Läs hela svaret"
     waiting:
-      title: "Keskusjärjestö käsittelee kohta"
-      description: "Keskusjärjestö käsittelee kaikki aloitteet, joita kannattaa vähintään %{threshold} partiolaista"
-      waiting: "%{waiting} keskusjärjestön vastausta"
+      title: "Centralorganisationen behandlar snart"
+      description: "Centralorganisationen behandlar alla initiativ som stöds av minst %{threshold} scouter"
+      waiting: "%{waiting} centralorganisationens svar"
     need_more:
-      title: "%{threshold} partiolaisen kannatuksella..."
-      description: "Keskusjärjestö käsittelee aloitteen, kun sitä kannattaa vähintään %{threshold} partiolaista"
+      title: "Med understöd av %{threshold} scouter..."
+      description: "Centralorganisationen behandlar initiativet när det stöds av minst %{threshold} scouter"
 
   #appears on archived petitions
   #logic for archived petitions might not be in use in partiolaisaloite
   archived:
     during: "Fi_fi_locale_This petition was submitted during the %{period} %government government"
     others: "Fi_fi_locale_View other petitions from this government"
-    rejected_petition: "Hylätty aloite"
-    petition: "Aloite"
-    details: "Lisätietoa"
-    was_rejected: "Tämä aloite hylättiin"
-    rejection_reason: "Miksi tämä aloite hylättiin?"
-    rejection_explanation: "Hylkäämme aloitteen vain, jos se ei ole %{href}"
-    standards: "aloiteohjeen mukainen"
-    reason_ge: "Tämä aloite suljettiin etuajassa"
-    faq:  "Lisätietoa: %{href}"
+    rejected_petition: "Förkastat initiativ"
+    petition: "Initiativ"
+    details: "Mer information"
+    was_rejected: "Detta initiativ förkastades"
+    rejection_reason: "Varför förkastades detta initiativ?"
+    rejection_explanation: "Vi förkastar ett initiativ endast om det inte %{href}"
+    standards: "följer anvisningarna för initiativ"
+    reason_ge: "Detta initiativ har stängts i förtid"
+    faq:  "Mer information: %{href}"
     faq_location: "Fi_fi_locale_Petitions Committee website" 
-    petition_closed: "Tämä aloite on suljettu"
-    petition_ran_for: "Tämä aloite oli käynnissä %{duration}"
-    was_debated: "Keskusjärjestö keskusteli aloitteesta"
-    was_debated_on: "Keskusjärjestö keskusteli aloitteesta %{date}"
-    no_debate: "Keskusjärjestö päätti jättää keskustelematta aloitteesta"
+    petition_closed: "Detta initiativ har stängts"
+    petition_ran_for: "Detta initiativ pågick %{duration}"
+    was_debated: "Centralorganisationen har diskuterat initiativet"
+    was_debated_on: "Centralorganisationen diskuterade initiativet %{date}"
+    no_debate: "Centralorganisationen beslutade att inte diskutera initiativet"
     watch_at: "Fi_fi_locale_You'll be able to watch the debate online at {href}"
     watch_at_location: "Fi_fi_locale_parliamentlive.tv"
     watch_at_link: Fi_fi_locale_http://parliamentlive.tv
     result_publication: "%{duration} Fi_fi_locale_for Parliament to publish the debate outcome"
-    will_debate: "Keskusjärjestö keskustelee tästä aloitteesta"
-    will_debate_on: "Keskusjärjestö keskustelee tästä aloitteesta %{date}"
+    will_debate: "Centralorganisationen diskuterar detta initiativ"
+    will_debate_on: "Centralorganisationen diskuterar detta initiativ %{date}"
     watch_online: "Fi_fi_locale_You'll be able to watch online on the %{href}."
     watch_online_location: "Fi_fi_locale_UK Parliament YouTube channel"
     watch_online_link: "Fi_fi_locale_https://www.youtube.com/UKParliament"
     will_consider_debate: "Fi_fi_locale_Parliament will consider this for a debate"
-    consider_threshold: "Keskusjärjestö keskustelee kaikista aloitteista, joilla on vähintään %{threshold} kannattajaa"
-    waiting_debate_date: "%{duration} keskustelupäivään"
-    responded: "Keskusjärjestö vastasi"
-    responded_on: "Keskusjärjestö vastasi %{date}"
-    read_response: "Lue koko vastaus"
+    consider_threshold: "Centralorganisationen diskuterar alla initiativ som stöds av minst %{threshold} personer"
+    waiting_debate_date: "%{duration} till diskussionsdagen"
+    responded: "Centralorganisationen har svarat"
+    responded_on: "Centralorganisationen svarade %{date}"
+    read_response: "Läs hela svaret"
     other: "Fi_fi_locale_Other parliamentary business"
     date_submitted: "Fi_fi_locale_Date submitted"
     date_closed: "Fi_fi_locale_Date closed"
-    get_json_data: "Lataa tiedot (json-muodossa)"
+    get_json_data: "Ladda ned uppgifterna (i json-format)"
 
   #appears on rejected petitions
   rejected:
-    heading: "Hylätty aloite"
-    details: "Lisätietoja"
-    was_rejected: "Tämä aloite hylättiin"
-    reason: "Miksi tämä aloite hylättiin?"
-    explanation_html: "Hylkäämme aloitteen ainoastaan, jos se ei ole %{href}."
-    standards: "aloiteohjeen mukainen"
-    date_submitted: "Aloitteen luontipäivä"
-    get_json_data: "Lataa aloitteen tiedot (json-formaatti)"
+    heading: "Förkastat initiativ"
+    details: "Mer information"
+    was_rejected: "Detta initiativ förkastades"
+    reason: "Varför förkastades detta initiativ?"
+    explanation_html: "Vi förkastar ett initiativ endast om det inte %{href}."
+    standards: "följer anvisningarna för initiativ"
+    date_submitted: "Datum då initiativet skapades"
+    get_json_data: "Ladda ned uppgifterna om initiativet (i json-format)"
 
   #appears when you unsubscribe from emails for a petition
   unsubscribe:
-    already_unsubcribed_title: "Olet jo perunut tähän aloitteeseen liittyvien viestien tilauksen"
-    already_unsubscribed: "Olet jo perunut aloitteen sähköpostipäivitysten tilauksen."
-    failed_title: "Tilauksen peruminen epäonnistui"
-    failed: "Linkki tilauksen perumiseen oli virheellinen."
-    success_title: "Aloitteen viestien tilaus peruttu onnistuneesti"
-    success: "Olet onnistuneesti perunut aloitteen sähköpostipäivitysten tilauksen."
-    return_home: "Palaa etusivulle"
+    already_unsubcribed_title: "Du har redan avbeställt meddelanden om detta initiativ"
+    already_unsubscribed: "Du har redan avbeställt e-postuppdateringar om initiativet."
+    failed_title: "Avbeställningen lyckas inte"
+    failed: "Länken till avbeställningen var felaktig."
+    success_title: "Avbeställningen av meddelanden om initiativet lyckades"
+    success: "Du har avbeställt e-postuppdateringar om initiativet."
+    return_home: "Tillbaka till förstasidan"
 
   #appears when you sign a petition
   signed:
-    signatures: "kannattajaa"
-    signature_added: "Lisäsimme sinut tämän aloitteen kannattajaksi:"
-    thanks: "Kiitos"
-    sponsor_sign: "Lisäsimme sinut tämän aloitteen tukijaksi."
-    what_next: "Mitä seuraavaksi?"
-    signatures_required: "Jatkoon päästäkseen tämä aloite tarvitsee %{threshold} kannattajaa."
-    email_notice: "Kun aloite on julkaistu, lähetämme sinulle linkin, jota voit jakaa."
-    one_more_step: "Vielä yksi askel..."
-    emailed_link: "Olemme lähettäneet sähköpostiisi linkin, jota voit jakaa mahdollisille kannattajille."
-    required_supporters: "Tarvitset %{threshold} tukijaa"
-    supporters_needed: "Aloitteesi pääsee jatkoon, kun %{threshold} partiolaista on tukenut sitä."
-    live_requirement: "Aloitteesi pääsee jatkoon, kun %{threshold} partiolaista on tukenut sitä"
-    confirm_address: "Lähetimme sinulle sähköpostia. Vahvista kannatuksesi klikkaamalla sähköpostissa olevaa linkkiä."
-    confirm_required: "Kannatuksesi lasketaan mukaan, kun olet vahvistanut sen sinulle lähetetyn sähköpostin kautta."
-    no_confirmation: "Etkö saanut vahvistussähköpostia?"
-    if_no_email: "Jos et saanut vahvistussähköpostia:"
-    check_spam: "tarkista roskapostikansiosi"
-    wait: "sähköpostin saapuminen saattaa kestää maksimissaan 24 tuntia"
+    signatures: "personer som stöder"
+    signature_added: "Vi lade till din stödförklaring för detta initiativ:"
+    thanks: "Tack"
+    sponsor_sign: "Vi lade till din stödförklaring för detta initiativ."
+    what_next: "Vad sker nu?"
+    signatures_required: "För att gå vidare behöver detta initiativ understöd av %{threshold} personer."
+    email_notice: "När initiativet har publicerats, skickar vi dig en länk som du kan dela."
+    one_more_step: "Ett steg till..."
+    emailed_link: "Vi har skickat en länk till din e-post som du kan dela med personer som eventuellt vill stödja initiativet."
+    required_supporters: "Du behöver %{threshold} personer som stöder"
+    supporters_needed: "Ditt initiativ går vidare när %{threshold} scouter har understött det."
+    live_requirement: "Ditt initiativ går vidare när %{threshold} scouter har understött det"
+    confirm_address: "Vi har skickat ett e-postmeddelande till dig. Bekräfta ditt understöd genom att klicka på länken i meddelandet."
+    confirm_required: "Ditt understöd räknas med när du har bekräftat det via e-postmeddelandet du fått."
+    no_confirmation: "Fick du inget e-postmeddelande om bekräftelse?"
+    if_no_email: "Om du inte fick ett e-postmeddelande om bekräftelse:"
+    check_spam: "kontrollera din skräppostmapp"
+    wait: "det kan dröja upp till 24 timmar innan du får e-postmeddelandet"
 
   #appears on a petition that is still gathering sponsors
   gathering_support:
-    title: "Tämä aloite kerää tukea"
-    signatures_required_html: "Partiolaisen %{creator} aloite tarvitsee %{threshold} tukijaa. Sitten tarkistamme, että se on %{href} ja julkaisemme sen."
-    try_later: "Yritä uudestaan muutaman päivän kuluttua."
+    title: "Detta initiativ samlar stödförklaringar"
+    signatures_required_html: "Initiativet av scouten %{creator} behöver stöd av %{threshold} personer. Sedan kontrollerar vi att det %{href} och publicerar det."
+    try_later: "Försök på nytt om några dagar."
 
   #appears on a petition that has gained enough sponsors and waits for moderation?
   moderation:
-    title: "Tämä aloite on tarkistettavana"
-    supporters: "%{threshold} partiolaista on jo tukenut partiolaisen %{creator} aloitetta."
-    check_needed_html: "Meidän on tarkistettava että se on %{href} ennen kuin julkaisemme sen."
-    try_later: "Yritä uudestaan muutaman päivän kuluttua."
+    title: "Detta initiativ kontrolleras"
+    supporters: "%{threshold} scouter har redan understött initiativet av scouten %{creator}."
+    check_needed_html: "Vi måste kontrollera att det %{href} innan vi publicerar det."
+    try_later: "Försök på nytt om några dagar."
