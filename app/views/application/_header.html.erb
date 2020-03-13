@@ -6,7 +6,7 @@
       </span>
     <% else %>
       <%= link_to(home_path, :title => (t "navigation.to_home"), :tabindex => 1, :class => 'proposition') do %>
-        <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <%= t "page_titles.header_title" %>
+        <img src="/partio_logo_cmyk_valkoinen.png" style="height: 34px;" /> <span class="header-title"><%= t "page_titles.header_title" %></span>
       <% end %>
     <% end %>
     <%= render partial: 'application/login' %>
