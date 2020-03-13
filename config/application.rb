@@ -28,7 +28,7 @@ module Epets
     # Configure the cache store
     config.cache_store = :atomic_dalli_store, ENV.fetch("MEMCACHED_HOST"), {
       namespace: "epets", expires_in: 1.day, compress: true,
-      pool_size: ENV.fetch("WEB_CONCURRENCY_MAX_THREADS") { 32 }.to_i,
+      pool_size: ENV.fetch("WEB_CONCURRENCY_MAX_THREADS") { 16 }.to_i,
     }
 
     # Configure Active Job queue adapter

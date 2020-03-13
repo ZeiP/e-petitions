@@ -71,7 +71,7 @@ RSpec.describe PetitionsController, type: :controller do
           end
 
           expect(petition.creator).not_to be_nil
-          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you")
+          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you?locale=en-GB")
         end
 
         it "should successfully create a new petition and a signature even when email has white space either end" do
@@ -80,7 +80,7 @@ RSpec.describe PetitionsController, type: :controller do
           end
 
           expect(petition).not_to be_nil
-          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you")
+          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you?locale=en-GB")
         end
 
         it "should strip a petition action on petition creation" do
@@ -89,17 +89,17 @@ RSpec.describe PetitionsController, type: :controller do
           end
 
           expect(petition).not_to be_nil
-          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you")
+          expect(response).to redirect_to("https://petition.parliament.uk/petitions/#{petition.id}/thank-you?locale=en-GB")
         end
 
-        it "should send gather sponsors email to petition's creator" do
+        it "should send petition created email to creator" do
           perform_enqueued_jobs do
             post :create, params: { stage: "replay_email", petition_creator: params }
           end
 
           expect(last_email_sent).to deliver_to(user.email)
           expect(last_email_sent).to deliver_from(%{"Petitions: UK Government and Parliament" <no-reply@petition.parliament.uk>})
-          expect(last_email_sent).to have_subject("Action required: Petition “Save the planet”")
+          expect(last_email_sent).to have_subject("Petition created: “Save the planet”")
         end
 
         it "should successfully point the signature at the petition" do
@@ -128,10 +128,18 @@ RSpec.describe PetitionsController, type: :controller do
 
         it "should not be able to set the state of a new signature" do
           perform_enqueued_jobs do
-            post :create, params: { stage: "replay_email", petition_creator: params.merge(state: Signature::VALIDATED_STATE) }
+            post :create, params: { stage: "replay_email", petition_creator: params.merge(state: Signature::PENDING_STATE) }
           end
 
-          expect(petition.creator.state).to eq(Signature::PENDING_STATE)
+          expect(petition.creator.state).to eq(Signature::VALIDATED_STATE)
+        end
+
+        it "should default the creator signature to validated state" do
+          perform_enqueued_jobs do
+            post :create, params: { stage: "replay_email", petition_creator: params }
+          end
+
+          expect(petition.creator.state).to eq(Signature::VALIDATED_STATE)
         end
 
         it "should set notify_by_email to false on the creator signature" do
@@ -171,7 +179,7 @@ RSpec.describe PetitionsController, type: :controller do
 
           it "has stage of 'petition' if there is an error on additional_details" do
             perform_enqueued_jobs do
-              post :create, params: { stage: "replay_email", petition_creator: params.merge(additional_details: "a" * 801) }
+              post :create, params: { stage: "replay_email", petition_creator: params.merge(additional_details: "a" * 20001) }
             end
 
             expect(assigns[:new_petition].stage).to eq "petition"
@@ -210,7 +218,7 @@ RSpec.describe PetitionsController, type: :controller do
         allow(Petition).to receive_message_chain(:show, find: petition)
 
         get :show, params: { id: 1 }
-        expect(response).to redirect_to "https://petition.parliament.uk/"
+        expect(response).to redirect_to "https://petition.parliament.uk/?locale=en-GB"
       end
 
       context "when the petition is archived" do
@@ -231,7 +239,7 @@ RSpec.describe PetitionsController, type: :controller do
 
           it "redirects to the archived petition page" do
             get :show, params: { id: petition.id }
-            expect(response).to redirect_to "https://petition.parliament.uk/archived/petitions/#{petition.id}"
+            expect(response).to redirect_to "https://petition.parliament.uk/archived/petitions/#{petition.id}?locale=en-GB"
           end
         end
       end
@@ -254,12 +262,12 @@ RSpec.describe PetitionsController, type: :controller do
         context "but it is not a public facet from the locale file" do
           it "redirects to itself with state=all" do
             get :index, params: { state: "awaiting_monkey" }
-            expect(response).to redirect_to "https://petition.parliament.uk/petitions?state=all"
+            expect(response).to redirect_to "https://petition.parliament.uk/petitions?locale=en-GB&state=all"
           end
 
           it "preserves other params when it redirects" do
             get :index, params: { q: "what is clocks", state: "awaiting_monkey" }
-            expect(response).to redirect_to "https://petition.parliament.uk/petitions?q=what+is+clocks&state=all"
+            expect(response).to redirect_to "https://petition.parliament.uk/petitions?locale=en-GB&q=what+is+clocks&state=all"
           end
         end
 

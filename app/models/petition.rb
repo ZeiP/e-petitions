@@ -474,7 +474,6 @@ class Petition < ActiveRecord::Base
   def increment_signature_count!(time = Time.current)
     sql = "signature_count = signature_count + ?, last_signed_at = ?, updated_at = ?"
     count = signatures.validated_count(last_signed_at, time)
-
     return false if count.zero?
 
     if result = update_all([sql, count, time, time]) > 0

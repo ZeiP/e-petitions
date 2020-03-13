@@ -49,21 +49,19 @@ class PetitionCreator
         p.action = action
         p.background = background
         p.additional_details = additional_details
-        #p.state = Petition::OPEN_STATE
-        #p.open_at = Time.current
 
         p.build_creator do |c|
           c.name = name
           c.email = email
           c.notify_by_email = notify_by_email
           c.ip_address = request.remote_ip
+          c.state = Signature::VALIDATED_STATE
         end
       end
 
-
       @petition.save!
+      @petition.update_signature_count!
       send_email_to_notify_creation(@petition)
-      #send_email_to_notify_publication(@petition.creator)
 
       return true
     else
