@@ -11,7 +11,7 @@
       <li><%= link_to t("navigation.help"), help_path %></li>
       <li><%= link_to t("navigation.privacy"), privacy_path %></li>
       <%#=TODO: Maybe hardcode this a bit less%>
-      <li><%= link_to t("navigation.feedback"), 'https://www.partio.fi/partiolaiselle/apua-ja-ohjeita/jasenpalvelu/' %></li>
+      <li><%= mail_to 'partiolaisaloite@partio.fi', t("navigation.feedback") %></li>
     </ul>
   </div>
 </footer>
