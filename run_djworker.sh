@@ -1,0 +1,6 @@
+#!/bin/bash
+#source /etc/profile.d/rvm.sh
+
+cd /app
+
+./bin/delayed_job -n 2 start
