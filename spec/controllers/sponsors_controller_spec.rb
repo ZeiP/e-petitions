@@ -67,7 +67,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
     end
@@ -147,7 +147,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors - 1, sponsors_signed: true) }
 
           it "doesn't redirect to the petition moderation info page" do
-            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
 
@@ -155,7 +155,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors, sponsors_signed: true) }
 
           it "redirects to the petition moderation info page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
       end
@@ -216,7 +216,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
     end
@@ -268,7 +268,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors - 1, sponsors_signed: true) }
 
           it "doesn't redirect to the petition moderation info page" do
-            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
 
@@ -276,7 +276,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors, sponsors_signed: true) }
 
           it "redirects to the petition moderation info page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
       end
@@ -337,7 +337,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
     end
@@ -392,7 +392,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?locale=en-GB&token=#{petition.sponsor_token}")
           end
 
           it "deletes the form request details" do
@@ -425,7 +425,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?locale=en-GB&token=#{petition.sponsor_token}")
           end
         end
 
@@ -454,7 +454,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?locale=en-GB&token=#{petition.sponsor_token}")
           end
         end
 
@@ -481,7 +481,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?locale=en-GB&token=#{petition.sponsor_token}")
           end
         end
 
@@ -510,7 +510,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?token=#{petition.sponsor_token}")
+            expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/thank-you?locale=en-GB&token=#{petition.sponsor_token}")
           end
         end
 
@@ -524,7 +524,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "doesn't redirect to the petition moderation info page" do
-            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
 
@@ -538,7 +538,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the petition moderation info page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
       end
@@ -589,7 +589,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "doesn't redirect to the petition page" do
-          expect(response).not_to redirect_to("/petitions/#{petition.id}")
+          expect(response).not_to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
 
         it "renders the signatures/thank_you template" do
@@ -619,7 +619,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors - 1, sponsors_signed: true) }
 
           it "doesn't redirect to the petition moderation info page" do
-            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
 
           it "renders the signatures/thank_you template" do
@@ -631,7 +631,7 @@ RSpec.describe SponsorsController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition", sponsor_count: Site.maximum_number_of_sponsors, sponsors_signed: true) }
 
           it "doesn't redirect to the petition moderation info page" do
-            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).not_to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
 
           it "renders the signatures/thank_you template" do
@@ -715,7 +715,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}")
+          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
         end
       end
     end
@@ -778,7 +778,7 @@ RSpec.describe SponsorsController, type: :controller do
       end
 
       it "redirects to the signed signature page" do
-        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
       end
 
       context "and the signature has already been validated" do
@@ -840,7 +840,7 @@ RSpec.describe SponsorsController, type: :controller do
       end
 
       it "redirects to the signed signature page" do
-        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
       end
 
       context "and the signature has already been validated" do
@@ -859,7 +859,7 @@ RSpec.describe SponsorsController, type: :controller do
         let(:signature) { FactoryBot.create(:validated_signature, validated_at: 30.minutes.ago, petition: petition, sponsor: true) }
 
         it "redirects to the new sponsor page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/new?token=#{petition.sponsor_token}")
+          expect(response).to redirect_to("/petitions/#{petition.id}/sponsors/new?locale=en-GB&token=#{petition.sponsor_token}")
         end
       end
 
@@ -892,7 +892,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the signed signature page" do
-          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
         end
       end
 
@@ -925,7 +925,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the signed signature page" do
-          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
         end
       end
 
@@ -933,7 +933,7 @@ RSpec.describe SponsorsController, type: :controller do
         let(:petition) { FactoryBot.create(:validated_petition, sponsor_count: Site.maximum_number_of_sponsors, sponsors_signed: true) }
 
         it "redirects to the petition moderation info page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+          expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
         end
       end
     end
@@ -987,7 +987,7 @@ RSpec.describe SponsorsController, type: :controller do
       end
 
       it "redirects to the signed signature page" do
-        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+        expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
       end
 
       context "and the signature has already been validated" do
@@ -1026,7 +1026,7 @@ RSpec.describe SponsorsController, type: :controller do
         end
 
         it "redirects to the signed signature page" do
-          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored")
+          expect(response).to redirect_to("/sponsors/#{signature.id}/sponsored?locale=en-GB")
         end
       end
 
@@ -1034,7 +1034,7 @@ RSpec.describe SponsorsController, type: :controller do
         let(:petition) { FactoryBot.create(:sponsored_petition, sponsor_count: Site.maximum_number_of_sponsors, sponsors_signed: true) }
 
         it "redirects to the petition moderation info page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+          expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
         end
       end
     end
@@ -1055,7 +1055,7 @@ RSpec.describe SponsorsController, type: :controller do
 
       it "redirects to the petition moderation info page" do
         get :signed, params: { id: signature.id }
-        expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+        expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
       end
     end
 
@@ -1218,7 +1218,7 @@ RSpec.describe SponsorsController, type: :controller do
           end
 
           it "redirects to the petition moderation info page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info")
+            expect(response).to redirect_to("/petitions/#{petition.id}/moderation-info?locale=en-GB")
           end
         end
       end

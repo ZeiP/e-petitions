@@ -10,35 +10,35 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
     describe 'GET /new' do
       it 'redirects to the login page' do
         get :new, params: { petition_id: petition.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
 
     describe 'POST /' do
       it 'redirects to the login page' do
         post :create, params: { petition_id: petition.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
 
     describe 'GET /:id/edit' do
       it 'redirects to the login page' do
         get :edit, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
 
     describe 'PATCH /:id' do
       it 'redirects to the login page' do
         patch :update, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
 
     describe 'DELETE /:id' do
       it 'redirects to the login page' do
         patch :destroy, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
   end
@@ -52,35 +52,35 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
     describe 'GET /new' do
       it 'redirects to edit profile page' do
         get :new, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe 'POST /' do
       it 'redirects to edit profile page' do
         post :create, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe 'GET /:id/edit' do
       it 'redirects to the login page' do
         get :edit, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe 'PATCH /:id' do
       it 'redirects to the login page' do
         patch :update, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe 'DELETE /:id' do
       it 'redirects to the login page' do
         patch :destroy, params: { petition_id: petition.id, id: email.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
   end
@@ -152,7 +152,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_post
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their email will be sent overnight' do
@@ -314,7 +314,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_post
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their changes were saved' do
@@ -450,7 +450,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_post
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their changes were saved' do
@@ -669,7 +669,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_patch
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their email will be sent overnight' do
@@ -841,7 +841,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_patch
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their changes were saved' do
@@ -987,7 +987,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
           describe 'with valid params' do
             it 'redirects to the petition show page' do
               do_patch
-              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+              expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
             end
 
             it 'tells the moderator that their changes were saved' do
@@ -1161,7 +1161,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
 
           it 'redirects to the petition show page' do
             do_delete
-            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
           end
 
           it 'tells the moderator that the record was deleted' do
@@ -1177,7 +1177,7 @@ RSpec.describe Admin::Archived::PetitionEmailsController, type: :controller, adm
 
           it 'redirects to the petition show page' do
             do_delete
-            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}"
+            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/archived/petitions/#{petition.id}?locale=en-GB"
           end
 
           it 'tells the moderator to contact support' do

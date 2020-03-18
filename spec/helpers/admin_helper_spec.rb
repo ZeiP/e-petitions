@@ -16,7 +16,7 @@ RSpec.describe AdminHelper, type: :helper do
     subject { helper.admin_petition_facets_for_select(facets, selected) }
 
     it "generates the correct number of options" do
-      expect(subject).to have_css("option", count: 18)
+      expect(subject).to have_css("option", count: 15)
     end
 
     it "generates the correct option for 'all'" do

@@ -6,14 +6,14 @@ RSpec.describe DateTimeHelper, type: :helper do
       expect(helper.local_date_time_format(nil)).to be_nil
     end
 
-    it "displays a GMT time in winter" do
+    it "displays an EET time in winter" do
       date_time = DateTime.parse("17:45 25th December 2012")
-      expect(helper.local_date_time_format(date_time)).to eq("25/12/2012 17:45")
+      expect(helper.local_date_time_format(date_time)).to eq("25/12/2012 19:45")
     end
 
-    it "displays the BST time in summer" do
+    it "displays the EEST time in summer" do
       date_time = DateTime.parse("17:45 15th June 2012")
-      expect(helper.local_date_time_format(date_time)).to eq("15/06/2012 18:45")
+      expect(helper.local_date_time_format(date_time)).to eq("15/06/2012 20:45")
     end
   end
 
@@ -24,12 +24,12 @@ RSpec.describe DateTimeHelper, type: :helper do
 
     it "returns just the time" do
       date_time = DateTime.parse("17:45 25th December 2012")
-      expect(helper.last_updated_at_time(date_time)).to eq("17:45 GMT")
+      expect(helper.last_updated_at_time(date_time)).to eq("19:45 EET")
     end
 
     it "returns just the time" do
       date_time = DateTime.parse("17:45 25th July 2012 GMT")
-      expect(helper.last_updated_at_time(date_time)).to eq("18:45 BST")
+      expect(helper.last_updated_at_time(date_time)).to eq("20:45 EEST")
     end
   end
 

@@ -174,28 +174,6 @@ RSpec.describe EmailDuplicateSignaturesEmailJob, type: :job do
   end
 end
 
-RSpec.describe GatherSponsorsForPetitionEmailJob, type: :job do
-  let(:petition) { FactoryBot.create(:petition) }
-
-  it "sends the PetitionMailer#gather_sponsors_for_petition email" do
-    expect(PetitionMailer).to receive(:gather_sponsors_for_petition).with(petition).and_call_original
-
-    perform_enqueued_jobs do
-      described_class.perform_later(petition)
-    end
-  end
-
-  context "when passing a BCC address" do
-    it "sends the PetitionMailer#gather_sponsors_for_petition email with a BCC address" do
-      expect(PetitionMailer).to receive(:gather_sponsors_for_petition).with(petition, Site.feedback_email).and_call_original
-
-      perform_enqueued_jobs do
-        described_class.perform_later(petition, Site.feedback_email)
-      end
-    end
-  end
-end
-
 RSpec.describe NotifyCreatorThatModerationIsDelayedJob, type: :job do
   let(:petition) { FactoryBot.create(:sponsored_petition, :overdue, sponsors_signed: true) }
   let(:signature) { petition.creator }

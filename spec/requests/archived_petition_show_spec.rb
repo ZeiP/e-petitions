@@ -34,7 +34,7 @@ RSpec.describe "API request to show an archived petition", type: :request, show_
       end
 
       it "redirects to the archive url" do
-        expect(response).to redirect_to("/archived/petitions/#{petition.id}.json")
+        expect(response).to redirect_to("/archived/petitions/#{petition.id}.json?locale=en-GB")
         expect(access_control_allow_origin).to eq('*')
         expect(access_control_allow_methods).to eq('GET')
         expect(access_control_allow_headers).to eq('Origin, X-Requested-With, Content-Type, Accept')

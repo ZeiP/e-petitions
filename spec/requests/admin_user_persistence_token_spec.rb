@@ -33,18 +33,18 @@ RSpec.describe "admin user persistence token", type: :request, csrf: false do
       s1.post "/admin/user_sessions", params: { admin_user_session: login_params }
 
       expect(s1.response.status).to eq(302)
-      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin")
+      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin?locale=en-GB")
 
       s2 = new_browser
       s2.post "/admin/user_sessions", params: { admin_user_session: login_params }
 
       expect(s2.response.status).to eq(302)
-      expect(s2.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin")
+      expect(s2.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin?locale=en-GB")
 
       s1.get("/admin")
 
       expect(s1.response.status).to eq(302)
-      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login")
+      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
     end
   end
 
@@ -54,7 +54,7 @@ RSpec.describe "admin user persistence token", type: :request, csrf: false do
       s1.post "/admin/user_sessions", params: { admin_user_session: login_params }
 
       expect(s1.response.status).to eq(302)
-      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin")
+      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin?locale=en-GB")
 
       s2 = new_browser
       s2.cookies["admin_user_credentials"] = s1.cookies["admin_user_credentials"]
@@ -62,12 +62,12 @@ RSpec.describe "admin user persistence token", type: :request, csrf: false do
       s1.get("/admin/logout")
 
       expect(s1.response.status).to eq(302)
-      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login")
+      expect(s1.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
 
       s2.get("/admin")
 
       expect(s2.response.status).to eq(302)
-      expect(s2.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login")
+      expect(s2.response.headers["Location"]).to eq("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
     end
   end
 
@@ -82,7 +82,7 @@ RSpec.describe "admin user persistence token", type: :request, csrf: false do
 
       travel_to 5.minutes.ago do
         post "/admin/user_sessions", params: { admin_user_session: login_params }
-        expect(response).to redirect_to("/admin")
+        expect(response).to redirect_to("/admin?locale=en-GB")
       end
 
       get "/admin"
@@ -90,14 +90,14 @@ RSpec.describe "admin user persistence token", type: :request, csrf: false do
 
       travel_to 15.minutes.from_now do
         get "/admin"
-        expect(response).to redirect_to("/admin/login")
+        expect(response).to redirect_to("/admin/login?locale=en-GB")
       end
 
       Site.instance.update(login_timeout: 1800)
 
       travel_to 15.minutes.from_now do
         get "/admin"
-        expect(response).to redirect_to("/admin/login")
+        expect(response).to redirect_to("/admin/login?locale=en-GB")
       end
     end
   end

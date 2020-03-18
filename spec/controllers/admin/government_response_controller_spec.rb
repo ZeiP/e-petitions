@@ -8,14 +8,14 @@ RSpec.describe Admin::GovernmentResponseController, type: :controller, admin: tr
     describe 'GET /show' do
       it 'redirects to the login page' do
         get :show, params: { petition_id: petition.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
 
     describe 'PATCH /update' do
       it 'redirects to the login page' do
         patch :update, params: { petition_id: petition.id }
-        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login')
+        expect(response).to redirect_to('https://moderate.petition.parliament.uk/admin/login?locale=en-GB')
       end
     end
   end
@@ -27,14 +27,14 @@ RSpec.describe Admin::GovernmentResponseController, type: :controller, admin: tr
     describe 'GET /show' do
       it 'redirects to edit profile page' do
         get :show, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe 'PATCH /update' do
       it 'redirects to edit profile page' do
         patch :update, params: { petition_id: petition.id }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
   end
@@ -120,7 +120,7 @@ RSpec.describe Admin::GovernmentResponseController, type: :controller, admin: tr
         describe 'using valid params to add a government response' do
           it 'redirects to the show page' do
             do_patch
-            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}"
+            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}?locale=en-GB"
           end
 
           it 'tells the moderator that their email will be sent overnight' do
@@ -218,10 +218,10 @@ RSpec.describe Admin::GovernmentResponseController, type: :controller, admin: tr
                   ['laura_1@example.com'],
                   ['laura_2@example.com']
                 ])
-                expect(ActionMailer::Base.deliveries[0].subject).to match(/The national organisation responded to “#{petition.action}”/)
-                expect(ActionMailer::Base.deliveries[1].subject).to match(/The national organisation responded to “#{petition.action}”/)
-                expect(ActionMailer::Base.deliveries[2].subject).to match(/The national organisation responded to “#{petition.action}”/)
-                expect(ActionMailer::Base.deliveries[3].subject).to match(/The national organisation responded to “#{petition.action}”/)
+                expect(ActionMailer::Base.deliveries[0].subject).to match(/The central organisation responded to “#{petition.action}”/)
+                expect(ActionMailer::Base.deliveries[1].subject).to match(/The central organisation responded to “#{petition.action}”/)
+                expect(ActionMailer::Base.deliveries[2].subject).to match(/The central organisation responded to “#{petition.action}”/)
+                expect(ActionMailer::Base.deliveries[3].subject).to match(/The central organisation responded to “#{petition.action}”/)
               end
             end
           end
@@ -374,7 +374,7 @@ RSpec.describe Admin::GovernmentResponseController, type: :controller, admin: tr
         describe 'using valid params to add a government response' do
           it 'redirects to the show page' do
             do_patch
-            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}"
+            expect(response).to redirect_to "https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}?locale=en-GB"
           end
 
           it 'tells the moderator that their changes were saved' do

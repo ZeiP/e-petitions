@@ -1,4 +1,7 @@
 require 'factory_bot'
+require 'faker'
+
+I18n.enforce_available_locales = false
 
 FactoryBot.define do
   factory :user do
