@@ -56,6 +56,7 @@ class PetitionCreator
           c.notify_by_email = notify_by_email
           c.ip_address = request.remote_ip
           c.state = Signature::VALIDATED_STATE
+          c.validated_at = Time.current
         end
       end
 
