@@ -134,7 +134,7 @@ RSpec.describe "API request to list petitions", type: :request, show_exceptions:
         a_collection_containing_exactly(
           a_hash_including(
             "links" => a_hash_including(
-              "self" => "https://petition.parliament.uk/petitions/#{petition.id}.json"
+              "self" => "https://petition.parliament.uk/petitions/#{petition.id}.json?locale=en-GB"
             )
           )
         )

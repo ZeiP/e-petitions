@@ -36,7 +36,7 @@ RSpec.describe NotifyTrendingIpJob, type: :job do
   it "sends a notification to the Slack channel" do
     described_class.perform_now(trending_ip)
 
-    message = "32 signatures between 5:00pm and 6:00pm on "
+    message = "32 signatures between 7:00pm and 8:00pm on "
     message << "<https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}|Do Stuff!> "
     message << "from <https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}/signatures?q=127.0.0.1&window=2019-03-31T16%3A00%3A00Z|127.0.0.1>"
 

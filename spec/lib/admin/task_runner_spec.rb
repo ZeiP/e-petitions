@@ -54,7 +54,7 @@ RSpec.describe Admin::TaskRunner do
           {
             job: BackfillConstituenciesJob,
             args: [
-              { "since" => "2017-09-11T09:00:00+01:00", "_aj_symbol_keys" => ["since"] }
+              { "since" => "2017-09-11T11:00:00+03:00", "_aj_symbol_keys" => ["since"] }
             ],
             queue: "low_priority"
           }
@@ -83,7 +83,7 @@ RSpec.describe Admin::TaskRunner do
           {
             job: BackfillConstituenciesJob,
             args: [
-              { "since" => "2017-08-18T09:00:00+01:00", "_aj_symbol_keys" => ["since"] }
+              { "since" => "2017-08-18T11:00:00+03:00", "_aj_symbol_keys" => ["since"] }
             ],
             queue: "low_priority"
           }
@@ -112,7 +112,7 @@ RSpec.describe Admin::TaskRunner do
           {
             job: BackfillConstituenciesJob,
             args: [
-              { "since" => "2017-06-18T09:00:00+01:00", "_aj_symbol_keys" => ["since"] }
+              { "since" => "2017-06-18T11:00:00+03:00", "_aj_symbol_keys" => ["since"] }
             ],
             queue: "low_priority"
           }

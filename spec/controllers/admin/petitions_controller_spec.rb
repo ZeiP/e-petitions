@@ -5,14 +5,14 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
     describe "GET /admin/petitions" do
       it "redirects to the login page" do
         get :index
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
       end
     end
 
     describe "GET /admin/petitions/:id" do
       it "redirects to the login page" do
         get :show, params: { id: "100000" }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
       end
     end
   end
@@ -24,14 +24,14 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
     describe "GET /admin/petitions" do
       it "redirects to the edit profile page" do
         get :index
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
 
     describe "GET /admin/petitions/:id" do
       it "redirects to the edit profile page" do
         get :show, params: { id: "100000" }
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/profile/#{user.id}/edit?locale=en-GB")
       end
     end
   end
@@ -78,7 +78,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { get :index, params: { q: "100000" } }
 
         it "redirects to the admin petition page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/100000")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/100000?locale=en-GB")
         end
       end
     end
@@ -88,7 +88,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { get :show, params: { id: "999999" } }
 
         it "redirects to the admin dashboard page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin?locale=en-GB")
         end
 
         it "sets the flash alert message" do
@@ -116,7 +116,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { post :resend, params: { id: "999999" } }
 
         it "redirects to the admin dashboard page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin?locale=en-GB")
         end
 
         it "sets the flash alert message" do
@@ -130,7 +130,7 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         before { perform_enqueued_jobs { post :resend, params: { id: petition.to_param } } }
 
         it "redirects to the admin petition page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/#{petition.to_param}")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/#{petition.to_param}?locale=en-GB")
         end
 
         it "sets the flash alert message" do
@@ -138,11 +138,11 @@ RSpec.describe Admin::PetitionsController, type: :controller, admin: true do
         end
 
         it "resends the email to the petition creator" do
-          expect(mailbox_for("bob@example.com").last).to have_subject("Action required: Petition “Do Stuff!”")
+          expect(mailbox_for("bob@example.com").last).to have_subject("Petition created: “Do Stuff!”")
         end
 
         it "sends a copy of the email to the feedback address" do
-          expect(mailbox_for("petitionscommittee@parliament.uk").last).to have_subject("Action required: Petition “Do Stuff!”")
+          expect(mailbox_for("petitionscommittee@parliament.uk").last).to have_subject("Petition created: “Do Stuff!”")
         end
       end
     end

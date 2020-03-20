@@ -16,7 +16,7 @@ RSpec.describe LocalPetitionsController, type: :controller do
       end
 
       it "redirects to the constituency page for current popular petitions" do
-        expect(response).to redirect_to("/petitions/local/holborn")
+        expect(response).to redirect_to("/petitions/local/holborn?locale=en-GB")
       end
     end
 
@@ -29,7 +29,7 @@ RSpec.describe LocalPetitionsController, type: :controller do
       end
 
       it "redirects to the constituency page for all popular petitions" do
-        expect(response).to redirect_to("/petitions/local/holborn/all")
+        expect(response).to redirect_to("/petitions/local/holborn/all?locale=en-GB")
       end
     end
 

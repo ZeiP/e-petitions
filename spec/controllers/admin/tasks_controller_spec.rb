@@ -10,7 +10,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         before { process action, method: method, params: params }
 
         it "redirects to the login page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
         end
       end
 
@@ -29,7 +29,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         before { process action, method: method, params: params }
 
         it "redirects to the admin hub page" do
-          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin")
+          expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin?locale=en-GB")
         end
       end
 
@@ -48,7 +48,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         end
 
         it "redirects back to the tasks tab" do
-          expect(response).to redirect_to("/admin/site/edit?tab=tasks")
+          expect(response).to redirect_to("/admin/site/edit?locale=en-GB&tab=tasks")
         end
 
         it "sets the flash :notice key" do
@@ -63,7 +63,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         end
 
         it "redirects back to the tasks tab" do
-          expect(response).to redirect_to("/admin/site/edit?tab=tasks")
+          expect(response).to redirect_to("/admin/site/edit?locale=en-GB&tab=tasks")
         end
 
         it "sets the flash :notice key" do
@@ -78,7 +78,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         end
 
         it "redirects back to the tasks tab" do
-          expect(response).to redirect_to("/admin/site/edit?tab=tasks")
+          expect(response).to redirect_to("/admin/site/edit?locale=en-GB&tab=tasks")
         end
 
         it "sets the flash :notice key" do
@@ -93,7 +93,7 @@ RSpec.describe Admin::TasksController, type: :controller, admin: true do
         end
 
         it "redirects back to the tasks tab" do
-          expect(response).to redirect_to("/admin/site/edit?tab=tasks")
+          expect(response).to redirect_to("/admin/site/edit?locale=en-GB&tab=tasks")
         end
 
         it "sets the flash :notice key" do

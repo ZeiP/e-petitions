@@ -138,7 +138,7 @@ RSpec.describe "API request to list archived petitions", type: :request, show_ex
         a_collection_containing_exactly(
           a_hash_including(
             "links" => a_hash_including(
-              "self" => "https://petition.parliament.uk/archived/petitions/#{petition.id}.json"
+              "self" => "https://petition.parliament.uk/archived/petitions/#{petition.id}.json?locale=en-GB"
             )
           )
         )

@@ -10,7 +10,7 @@ RSpec.describe Admin::PetitionStatisticsController, type: :controller, admin: tr
       end
 
       it "redirects to the login page" do
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/login?locale=en-GB")
       end
     end
   end
@@ -25,7 +25,7 @@ RSpec.describe Admin::PetitionStatisticsController, type: :controller, admin: tr
       end
 
       it "redirects to the admin hub page" do
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin?locale=en-GB")
       end
     end
   end
@@ -40,7 +40,7 @@ RSpec.describe Admin::PetitionStatisticsController, type: :controller, admin: tr
       end
 
       it "redirects to the petition page" do
-        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}")
+        expect(response).to redirect_to("https://moderate.petition.parliament.uk/admin/petitions/#{petition.id}?locale=en-GB")
       end
 
       it "sets the flash notice message" do

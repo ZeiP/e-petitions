@@ -27,7 +27,7 @@ RSpec.describe "login timeout", type: :request, csrf: false do
 
     travel_to 2.minutes.ago do
       post "/admin/user_sessions", params: { admin_user_session: login_params }
-      expect(response).to redirect_to("/admin")
+      expect(response).to redirect_to("/admin?locale=en-GB")
     end
 
     get "/admin"
@@ -35,7 +35,7 @@ RSpec.describe "login timeout", type: :request, csrf: false do
 
     travel_to 15.minutes.from_now do
       get "/admin"
-      expect(response).to redirect_to("/admin/login")
+      expect(response).to redirect_to("/admin/login?locale=en-GB")
     end
   end
 end
