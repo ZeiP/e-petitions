@@ -2,7 +2,7 @@
 
 <form method="get" action="/petitions/check_results">
   <div class="form-group">
-    <label for="action" class="form-label"><%= t "petitions.start.petition" %></label>
+    <label for="q" class="form-label"><%= t "petitions.start.petition" %></label>
     <textarea name="q" id="q" class="form-control" data-max-length="80" rows="3"><%= @new_petition.action %></textarea>
     <p class="character-count"><%= t "generic.character_limit", limit:80 %></p>
     <%= render 'petitions/action_help' %>
