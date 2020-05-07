@@ -156,6 +156,7 @@ class Signature < ActiveRecord::Base
       transaction do
         signatures.each do |signature|
           signature.invalidate!(now, invalidation_id)
+          signature.petition.update_signature_count! if signature.petition
         end
       end
     end
@@ -355,6 +356,7 @@ class Signature < ActiveRecord::Base
       transaction do
         signatures.each do |signature|
           signature.validate!(now, force: force, request: request)
+          signature.petition.update_signature_count! if signature.petition
         end
       end
     end
@@ -586,6 +588,7 @@ class Signature < ActiveRecord::Base
       ConstituencyPetitionJournal.increment_signature_counts_for(petition, last_signed_at)
       CountryPetitionJournal.increment_signature_counts_for(petition, last_signed_at)
     end
+    petition.update_signature_count! if petition
   end
 
   def just_validated?
