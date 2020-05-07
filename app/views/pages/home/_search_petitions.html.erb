@@ -1,9 +1,9 @@
-<section class="search-petitions" aria-labelledby="search-petitions-heading">
+<section class="search-petitions">
   <h2 id="search-petitions-heading"><%= t "petitions.search_title" %></h2>
 
   <%= form_tag search_path, method: 'get', enforce_utf8: false do %>
     <div class="search-inline">
-      <%= search_field_tag 'q', nil, class: 'form-control', id: 'search' %>
+      <%= search_field_tag 'q', nil, class: 'form-control', id: 'search', 'aria-labelledby': 'search-petitions-heading' %>
       <%= submit_tag 'Search', name: nil, class: 'inline-submit' %>
     </div>
   <% end %>

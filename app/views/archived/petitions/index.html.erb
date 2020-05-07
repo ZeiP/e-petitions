@@ -29,10 +29,10 @@
     </ul>
   </div>
 </details>
-<h1 class="page-title"><%= t(@petitions.scope, scope: :"petitions.page_titles") %></h1>
+<h1 class="page-title" id="page-title"><%= t(@petitions.scope, scope: :"petitions.page_titles") %></h1>
 <%= form_tag archived_petitions_path, method: 'get', enforce_utf8: false do %>
   <div class="search-inline">
-    <%= search_field_tag  'q', @petitions.query, class: 'form-control', id: 'search' %>
+    <%= search_field_tag  'q', @petitions.query, class: 'form-control', id: 'search', 'aria-labelledby': 'page-title' %>
     <%= hidden_field_tag 'state', @petitions.scope %>
     <%= hidden_field_tag 'parliament', @parliament.id %>
     <%= submit_tag 'Search', name: nil, class: 'inline-submit' %>
