@@ -8,7 +8,7 @@ class SamlController < ApplicationController
 
   def sso
     if Rails.env.development?
-      sign_in({'email' => ['leif.setala@trineria.fi'], 'membernumber' => ['1234356'], 'firstname' => ['Leif'], 'lastname' => ['Setälä']})
+      sign_in({'email' => ['john.doe@example.com'], 'membernumber' => ['1234251'], 'firstname' => ['John'], 'lastname' => ['Doe']})
     else
       redirect_to(SamlIntegration.url_for_sso)
     end
