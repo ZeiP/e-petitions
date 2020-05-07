@@ -6,8 +6,9 @@
   'use strict';
 
   var JSON_URL = window.location.pathname + '/count.json',
-      THRESHOLD_RESPONSE = <%= Site.threshold_for_response %>,
-      THRESHOLD_DEBATE = <%= Site.threshold_for_debate %>,
+      $threshold_limits = $('.signature-count-goal'),
+      THRESHOLD_RESPONSE = parseInt($threshold_limits.data('threshold-response')),
+      THRESHOLD_DEBATE = parseInt($threshold_limits.data('threshold-debate')),
       TIMEOUT = 10000;
 
   function add_commas(n) {
@@ -22,7 +23,7 @@
       pc = 1;
     }
     $('.signature-count-current').width(pc + '%');
-    if (value >= THRESHOLD_RESPONSE) {
+    if (value >= THRESHOLD_RESPONSE && THRESHOLD_DEBATE > 0) {
       $('.signature-count-goal').text(add_commas(THRESHOLD_DEBATE));
     } else {
       $('.signature-count-goal').text(add_commas(THRESHOLD_RESPONSE));
