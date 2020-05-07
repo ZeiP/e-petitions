@@ -4,7 +4,7 @@
     <%= form.label :notify_by_email, (t "petitions.sign.email_updates") %>
   </div>
 <% end %>
-<%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0" %>
+<%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0", alt: "" %>
 <%= form.submit ( t "generic.continue" ), name: "move:next", class: "button", tabindex: increment %>
 <section class="secondary">
   <p><%= t "petitions.sign.all_hidden" %></p>

@@ -19,7 +19,7 @@ module HomeHelper
     end
 
     def with_result
-      {:with_response => actioned[:with_response], :with_debated_outcome => actioned[:with_debated_outcome]}
+      {:with_response => actioned[:with_response]}
     end
 
     private

@@ -13,7 +13,7 @@
   </div>
 </details>
 
-<h1 class="page-title"><%= t(@petitions.scope, scope: :"petitions.page_titles") %></h1>
+<h1 class="page-title" id="page-title"><%= t(@petitions.scope, scope: :"petitions.page_titles") %></h1>
 
 <% if petition_list_header? %>
   <p class="text-secondary"><%= petition_list_header %></p>
@@ -21,7 +21,7 @@
 
 <%= form_tag petitions_path, method: 'get', enforce_utf8: false do %>
   <div class="search-inline">
-    <%= search_field_tag 'q', @petitions.query, class: 'form-control', id: 'search' %>
+    <%= search_field_tag 'q', @petitions.query, class: 'form-control', id: 'search', 'aria-labelledby': 'page-title' %>
     <%= hidden_field_tag 'state', @petitions.scope %>
     <%= submit_tag 'Search', name: nil, class: 'inline-submit' %>
   </div>
