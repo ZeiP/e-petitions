@@ -43,7 +43,7 @@ sv-SV:
     formats:
       default: "%d-%m-%Y"
       long: "%d.%m, %Y"
-      short: "%-d.%m.%Y"
+      short: "%-d.%-m.%Y"
     month_names:
     -
     - januari
