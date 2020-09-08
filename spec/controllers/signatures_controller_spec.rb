@@ -4,6 +4,7 @@ RSpec.describe SignaturesController, type: :controller do
   context "Without logged in user" do
 
     let(:petition) { FactoryBot.create(:open_petition) }
+    let(:signature) { FactoryBot.create(:validated_signature, :just_signed, petition: petition) }
 
     describe "GET /petitions/:petition_id/signatures/new" do
       it 'Should respond with 403' do
@@ -24,38 +25,6 @@ RSpec.describe SignaturesController, type: :controller do
     describe "POST /petitions/:petition_id/signatures" do
       it "Should respond with 403" do
         post :create, params: { petition_id: petition.id }
-        expect(response).to render_template(file: "403.html.erb")
-        expect(response.status).to be(403)
-      end
-    end
-
-    describe "GET /petitions/:petition_id/signatures/thank-you" do
-      it "Should respond with 403" do
-        get :thank_you, params: { petition_id: petition.id }
-        expect(response).to render_template(file: "403.html.erb")
-        expect(response.status).to be(403)
-      end
-    end
-
-    describe "GET /signatures/:id/verify" do
-      it "Should respond with 403" do
-        get :verify, params: { id: 1 }
-        expect(response).to render_template(file: "403.html.erb")
-        expect(response.status).to be(403)
-      end
-    end
-
-    describe "GET /signatures/:id/signed" do
-      it "Should respond with 403" do
-        get :signed, params: { id: 1 }
-        expect(response).to render_template(file: "403.html.erb")
-        expect(response.status).to be(403)
-      end
-    end
-
-    describe "GET /signatures/:id/unsubscribe" do
-      it "Should respond with 403" do
-        get :signed, params: { id: 1 }
         expect(response).to render_template(file: "403.html.erb")
         expect(response.status).to be(403)
       end
