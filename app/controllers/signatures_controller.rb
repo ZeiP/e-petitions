@@ -1,6 +1,6 @@
 class SignaturesController < ApplicationController
   include FormTracking
-  before_action :require_current_user, only: [:new, :confirm, :create, :signed, :verify, :thank_you]
+  before_action :require_current_user, only: [:new, :confirm, :create]
   before_action :retrieve_petition, only: [:new, :confirm, :create, :thank_you]
   before_action :retrieve_signature, only: [:verify, :unsubscribe, :signed]
   before_action :build_signature, only: [:new, :confirm, :create]
