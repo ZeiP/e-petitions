@@ -4,6 +4,7 @@ services:
     image: postgres:10
     environment:
       - POSTGRES_DB=epets_development
+      - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
       - ./data/sqldb:/var/lib/postgres/data
     networks:
@@ -20,6 +21,10 @@ services:
       - DATABASE_HOST=sqldb
       - DATABASE_URL=postgres://postgres@sqldb
       - MEMCACHED_HOST=memcached
+      - SMTP_HOSTNAME=localhost
+      - SMTP_PORT=443
+      - SMTP_USERNAME=foo
+      - SMTP_PASSWORD=bar
     build:
       context: .
       dockerfile: Dockerfile.dev
