@@ -31,6 +31,10 @@
 
 ## Other info
 
+## Running tests inside docker container
+* First enter the container `docker-compose -f docker-compose.dev.yml exec app bash`
+* Then run `RAILS_ENV=test DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true bundle exec rspec spec/`
+
 * If you want jobs (like emails) to be run, use `$ rake jobs:work`
 * For setting up a sysadmin user
 	* `rake epets:add_sysadmin_user` - to set up an admin user with email 'admin@example.com' and password 'Letmein1!'

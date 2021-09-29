@@ -1,4 +1,8 @@
 require 'knapsack'
+require 'database_cleaner'
+require 'email_spec'
+require 'shoulda-matchers'
+require 'factory_bot_rails'
 
 if ENV['COVERAGE'] == 'true'
   require 'simplecov'

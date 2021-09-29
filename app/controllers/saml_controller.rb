@@ -45,8 +45,8 @@ class SamlController < ApplicationController
     if logged_in?
       redirect_to home_url
     else
-      user = User.find_or_initialize_by(email: params['email'][0], username: params['membernumber'][0])
-      user.assign_attributes(firstname: params['firstname'][0], lastname: params['lastname'][0])
+      user = User.find_or_initialize_by(username: params['membernumber'][0])
+      user.assign_attributes(firstname: params['firstname'][0], lastname: params['lastname'][0], email: params['email'][0])
       if user.save
         @current_session = UserSession.create(user, false)
         redirect_to home_url
