@@ -16,10 +16,10 @@ Rails.application.configure do
   # Tell Action Mailer not to deliver emails to the real world.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: ENV.fetch('SMTP_HOSTNAME'),
-    port: ENV.fetch('SMTP_PORT'),
-    user_name: ENV.fetch('SMTP_USERNAME'),
-    password: ENV.fetch('SMTP_PASSWORD'),
+    address: (ENV.fetch('SMTP_HOSTNAME') rescue nil),
+    port: (ENV.fetch('SMTP_PORT') rescue nil),
+    user_name: (ENV.fetch('SMTP_USERNAME') rescue nil),
+    password: (ENV.fetch('SMTP_PASSWORD') rescue nil),
     authentication: :login,
     enable_starttls_auto: true
   }
