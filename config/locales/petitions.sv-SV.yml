@@ -493,6 +493,9 @@ sv-SV:
   signed:
     signatures: "personer som stöder"
     signature_added: "Vi lade till din stödförklaring för detta initiativ:"
+    #need swedish translation
+    failed_title: "Kannattajan vahvistaminen epäonnistui"
+    failed: "Kannattaja oli virheellinen."
     thanks: "Tack"
     sponsor_sign: "Vi lade till din stödförklaring för detta initiativ."
     what_next: "Vad sker nu?"
