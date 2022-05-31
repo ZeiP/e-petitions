@@ -1,0 +1,5 @@
+<h2 class="petition-action-heading">Close this petition early</h2>
+<%= form_for petition, url: admin_petition_close_early_path(petition), method: :patch do |f| -%>
+  
+  <%= f.submit 'Close petition early', name: 'save', class: 'button-warning', tabindex: increment %>
+<% end -%>
