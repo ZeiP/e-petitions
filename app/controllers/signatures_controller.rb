@@ -65,9 +65,6 @@ class SignaturesController < ApplicationController
       @signature.validate!(request: request, force: true)
     end
 
-    respond_to do |format|
-      format.html
-    
     store_signed_token_in_session
     redirect_to signed_signature_url(@signature)
   end

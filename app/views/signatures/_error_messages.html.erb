@@ -1,0 +1,11 @@
+<% if @signature.errors.any? -%>
+  <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+    <h2 class="error-summary-heading" id="error-summary-heading"><%= t "signed.failed_title"%></h2>
+    <p><%= t(:prompt, scope: :"petitions.errors", count: @signature.errors.size) %></p>
+    <ul class="error-summary-list">
+      <% @signature.errors.each do |key, error| -%>
+        <li><%= error %></li>
+      <% end -%>
+    </ul>
+  </div>
+<% end -%>
