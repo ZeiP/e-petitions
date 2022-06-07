@@ -493,9 +493,8 @@ fi-FI:
   signed:
     signatures: "kannattajaa"
     signature_added: "Lisäsimme sinut tämän aloitteen kannattajaksi:"
-    #need translation check
-    failed_title: "Kannattajan vahvistaminen epäonnistui"
-    failed: "Kannattaja oli virheellinen."
+    failed_title: "Kannatuksen vahvistaminen epäonnistui"
+    failed: "Kannatus oli virheellinen"
     thanks: "Kiitos"
     sponsor_sign: "Lisäsimme sinut tämän aloitteen tukijaksi."
     what_next: "Mitä seuraavaksi?"
