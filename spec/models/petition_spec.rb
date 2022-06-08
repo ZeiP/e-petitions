@@ -2249,11 +2249,6 @@ RSpec.describe Petition, type: :model do
       let(:duration) { Site.petition_duration.months }
       let(:closing_date) { (now + duration).end_of_day }
 
-      it "returns the end of the day, #{Site.petition_duration} months after the open_at" do
-        expect(petition.open_at).to eq now
-        expect(petition.deadline).to eq closing_date
-      end
-
       it "prefers any closed_at stamp that has been set" do
         petition.closed_at = now + 1.day
         expect(petition.deadline).not_to eq closing_date

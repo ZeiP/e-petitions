@@ -79,4 +79,4 @@ fi-FI:
     # need confirmation
     admin:
       petition_created: "Aloite on luotu"
-      petition_created_notification: "Sait tämän sähköpostin, koska aloite on tehty:"
+      petition_created_notification: "Sait tämän sähköpostin, koska aloite on tehty"
