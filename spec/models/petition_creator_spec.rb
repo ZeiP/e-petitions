@@ -20,7 +20,7 @@ RSpec.describe PetitionCreator, type: :model do
       end
 
       it "creates a valid signature for the creator" do
-        petition_creator = described_class.new(ActionController::Parameters.new({ petition_creator: params, stage: "replay_email" }), mock_request)
+        petition_creator = described_class.new(ActionController::Parameters.new({ petition_creator: params, stage: "creator" }), mock_request)
         petition_creator.save
 
         # This is a workaround to test against the correct petition since PetitionCreator doesn't actually return the created petition.

@@ -1,3 +1,13 @@
-<%= form_for @signature, url: petition_signatures_path(@petition) do |form| %>
-  <%= render "email_form", form: form, signature: @signature %>
-<% end %>
+<h1 class="visuallyhidden"><%= number_with_delimiter(@signature.number) %> <%= t "signed.signatures"%></h1>
+
+<div class="signature-confirmation">
+  <%= render 'signature_confirmation' %>
+  <p><%= t "signed.signature_added"%></p>
+  <p><%= link_to @petition.action, petition_path(@petition) %></p>
+</div>
+
+<%= render 'share_petition', petition: @petition %>
+
+<section class="section-panel" aria-labelledby="whats-next-heading">
+  <%= render "petitions/threshold_details", petition: @petition %>
+</section>

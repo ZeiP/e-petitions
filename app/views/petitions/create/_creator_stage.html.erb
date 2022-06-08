@@ -5,6 +5,7 @@
 <h1 class="page-title"><%= t "petitions.sign.title_own" %></h1>
 <h2 class="page-subtitle"><%= petition.action %></h2>
 <%= render "petitions/create/error_summary", form: form %>
+
 <%= form.submit (t "petitions.sign.confirm"), name: "move_next", class: "button", tabindex: increment %>
 <div class="secondary">
   <p><%= t "petitions.sign.name_visible" %></p>

@@ -1,7 +1,7 @@
 class SignaturesController < ApplicationController
   include FormTracking
   before_action :require_current_user, only: [:new, :confirm, :create]
-  before_action :retrieve_petition, only: [:new, :confirm, :create, :thank_you]
+  before_action :retrieve_petition, only: [:new, :confirm, :create, :already_signed]
   before_action :retrieve_signature, only: [:verify, :unsubscribe, :signed]
   before_action :build_signature, only: [:new, :confirm, :create]
   before_action :expire_form_requests, only: [:new]
@@ -9,8 +9,8 @@ class SignaturesController < ApplicationController
   before_action :verify_token, only: [:verify]
   before_action :verify_signed_token, only: [:signed]
   before_action :verify_unsubscribe_token, only: [:unsubscribe]
-  before_action :redirect_to_petition_page_if_rejected, only: [:new, :confirm, :create, :thank_you, :verify, :signed]
-  before_action :redirect_to_petition_page_if_closed, only: [:new, :confirm, :create, :thank_you]
+  before_action :redirect_to_petition_page_if_rejected, only: [:new, :confirm, :create, :already_signed, :verify, :signed]
+  before_action :redirect_to_petition_page_if_closed, only: [:new, :confirm, :create, :already_signed]
   before_action :redirect_to_petition_page_if_closed_for_signing, only: [:verify, :signed]
   before_action :do_not_cache
 
@@ -18,9 +18,8 @@ class SignaturesController < ApplicationController
     @signature = @signature.find_duplicate!
 
     delete_form_request
-    send_email_to_petition_signer
 
-    redirect_to thank_you_url
+    redirect_to already_signed_url
   end
 
   rescue_from ActiveRecord::RecordInvalid do |exception|
@@ -36,17 +35,16 @@ class SignaturesController < ApplicationController
   end
 
   def confirm
-    respond_to do |format|
-      format.html { render(@signature.valid? ? :confirm : :new) }
-    end
-  end
-
-  def create
     if @signature.save!
-      delete_form_request
       send_email_to_petition_signer
-
-      redirect_to thank_you_url
+      delete_form_request
+      respond_to do |format|
+        if @signature.valid?
+          format.html { render(:confirm) }
+        else 
+          format.html { render(:new) }
+        end
+      end
     end
   end
 
@@ -77,7 +75,8 @@ class SignaturesController < ApplicationController
     end
   end
 
-  def thank_you
+
+  def already_signed
     respond_to do |format|
       format.html
     end
@@ -190,8 +189,8 @@ class SignaturesController < ApplicationController
     end
   end
 
-  def thank_you_url
-    thank_you_petition_signatures_url(@petition)
+  def already_signed_url
+    already_signed_petition_signatures_url(@petition)
   end
 
   def signed_token_failure_url
