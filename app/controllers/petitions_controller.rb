@@ -60,7 +60,7 @@ class PetitionsController < ApplicationController
 
   def create
     if @new_petition.save
-      redirect_to thank_you_petition_url(@new_petition)
+      redirect_to done_petition_url(@new_petition)
     else
       respond_to do |format|
         format.html { render :new }
@@ -80,7 +80,7 @@ class PetitionsController < ApplicationController
     end
   end
 
-  def thank_you
+  def done
     respond_to do |format|
       format.html
     end

@@ -24,13 +24,12 @@ RSpec.describe SignaturesController, type: :controller do
 
     describe "POST /petitions/:petition_id/signatures" do
       it "Should respond with 403" do
-        post :create, params: { petition_id: petition.id }
+        post :confirm, params: { petition_id: petition.id }
         expect(response).to render_template(file: "403.html.erb")
         expect(response.status).to be(403)
       end
     end
   end
-
   context "With logged in user" do
 
     let(:user) { FactoryBot.build(:user, firstname: 'John', lastname: 'Doe') }
@@ -222,7 +221,7 @@ RSpec.describe SignaturesController, type: :controller do
         end
 
         it "assigns the @signature instance variable with a new signature" do
-          expect(assigns[:signature]).not_to be_persisted
+          expect(assigns[:signature]).to be_persisted
         end
 
         it "sets the signature's params" do
@@ -253,7 +252,7 @@ RSpec.describe SignaturesController, type: :controller do
       context "when the petition doesn't exist" do
         it "raises an ActiveRecord::RecordNotFound exception" do
           expect {
-            post :create, params: { petition_id: 1, signature: params }
+            post :confirm, params: { petition_id: 1, signature: params }
           }.to raise_exception(ActiveRecord::RecordNotFound)
         end
       end
@@ -264,7 +263,7 @@ RSpec.describe SignaturesController, type: :controller do
 
           it "raises an ActiveRecord::RecordNotFound exception" do
             expect {
-              post :create, params: { petition_id: petition.id, signature: params }
+              post :confirm, params: { petition_id: petition.id, signature: params }
             }.to raise_exception(ActiveRecord::RecordNotFound)
           end
         end
@@ -275,7 +274,7 @@ RSpec.describe SignaturesController, type: :controller do
           let(:petition) { FactoryBot.create(:"#{state}_petition") }
 
           before do
-            post :create, params: { petition_id: petition.id, signature: params }
+            post :confirm, params: { petition_id: petition.id, signature: params }
           end
 
           it "assigns the @petition instance variable" do
@@ -308,7 +307,7 @@ RSpec.describe SignaturesController, type: :controller do
             }
 
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, signature: params }
+              post :confirm, params: { petition_id: petition.id, signature: params }
             }
           end
 
@@ -336,8 +335,8 @@ RSpec.describe SignaturesController, type: :controller do
             expect(last_email_sent).to have_subject("Please confirm your email address")
           end
 
-          it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
+          it "renders signature confirmation page" do #I don't get the initial logic? 
+            expect(response).to render_template("signatures/confirm")
           end
 
           it "deletes the form request details" do
@@ -352,7 +351,7 @@ RSpec.describe SignaturesController, type: :controller do
 
           before do
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
+              post :confirm, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
             }
           end
 
@@ -364,13 +363,8 @@ RSpec.describe SignaturesController, type: :controller do
             expect(assigns[:signature]).to eq(signature)
           end
 
-          it "re-sends the confirmation email" do
-            expect(last_email_sent).to deliver_to(user.email)
-            expect(last_email_sent).to have_subject("Please confirm your email address")
-          end
-
-          it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
+          it "redirects to the already signed page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/already-signed?locale=en-GB")
           end
         end
 
@@ -381,7 +375,7 @@ RSpec.describe SignaturesController, type: :controller do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
+              post :confirm, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
             }
           end
 
@@ -393,13 +387,8 @@ RSpec.describe SignaturesController, type: :controller do
             expect(assigns[:signature]).to eq(signature)
           end
 
-          it "re-sends the confirmation email" do
-            expect(last_email_sent).to deliver_to(user.email)
-            expect(last_email_sent).to have_subject("Please confirm your email address")
-          end
-
-          it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
+          it "redirects to the already signed page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/already-signed?locale=en-GB")
           end
         end
 
@@ -408,7 +397,7 @@ RSpec.describe SignaturesController, type: :controller do
 
           before do
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, signature: params.merge!(email: user.email) }
+              post :confirm, params: { petition_id: petition.id, signature: params.merge!(email: user.email) }
             }
           end
 
@@ -420,13 +409,8 @@ RSpec.describe SignaturesController, type: :controller do
             expect(assigns[:signature]).to eq(signature)
           end
 
-          it "sends a duplicate signature email" do
-            expect(last_email_sent).to deliver_to(user.email)
-            expect(last_email_sent).to have_subject("Duplicate signature of petition")
-          end
-
-          it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
+          it "redirects to the already signed page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/already-signed?locale=en-GB")
           end
         end
 
@@ -437,7 +421,7 @@ RSpec.describe SignaturesController, type: :controller do
             allow(Site).to receive(:disable_plus_address_check?).and_return(true)
 
             perform_enqueued_jobs {
-              post :create, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
+              post :confirm, params: { petition_id: petition.id, signature: params.merge(email: user.email) }
             }
           end
 
@@ -449,23 +433,18 @@ RSpec.describe SignaturesController, type: :controller do
             expect(assigns[:signature]).to eq(signature)
           end
 
-          it "sends a duplicate signature email" do
-            expect(last_email_sent).to deliver_to(user.email)
-            expect(last_email_sent).to have_subject("Duplicate signature of petition")
-          end
-
-          it "redirects to the thank you page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/thank-you?locale=en-GB")
+          it "redirects to the already signed page" do
+            expect(response).to redirect_to("/petitions/#{petition.id}/signatures/already-signed?locale=en-GB")
           end
         end
       end
     end
 
-    describe "GET /petitions/:petition_id/signatures/thank-you" do
+    describe "GET /petitions/:petition_id/signatures/already-signed" do
       context "when the petition doesn't exist" do
         it "raises an ActiveRecord::RecordNotFound exception" do
           expect {
-            get :thank_you, params: { petition_id: 1 }
+            get :already_signed, params: { petition_id: 1 }
           }.to raise_exception(ActiveRecord::RecordNotFound)
         end
       end
@@ -476,7 +455,7 @@ RSpec.describe SignaturesController, type: :controller do
 
           it "raises an ActiveRecord::RecordNotFound exception" do
             expect {
-              get :thank_you, params: { petition_id: petition.id }
+              get :already_signed, params: { petition_id: petition.id }
             }.to raise_exception(ActiveRecord::RecordNotFound)
           end
         end
@@ -486,7 +465,7 @@ RSpec.describe SignaturesController, type: :controller do
         let(:petition) { FactoryBot.create(:rejected_petition) }
 
         before do
-          get :thank_you, params: { petition_id: petition.id }
+          get :already_signed, params: { petition_id: petition.id }
         end
 
         it "assigns the @petition instance variable" do
@@ -507,7 +486,7 @@ RSpec.describe SignaturesController, type: :controller do
         let(:signature) { FactoryBot.create(:validated_signature, petition: petition) }
 
         before do
-          get :thank_you, params: { petition_id: petition.id }
+          get :already_signed, params: { petition_id: petition.id }
         end
 
         it "assigns the @petition instance variable" do
@@ -528,7 +507,7 @@ RSpec.describe SignaturesController, type: :controller do
         let(:signature) { FactoryBot.create(:validated_signature, :just_signed, petition: petition) }
 
         before do
-          get :thank_you, params: { petition_id: petition.id }
+          get :already_signed, params: { petition_id: petition.id }
         end
 
         it "assigns the @petition instance variable" do
@@ -549,15 +528,15 @@ RSpec.describe SignaturesController, type: :controller do
         let(:signature) { FactoryBot.create(:validated_signature, :just_signed, petition: petition) }
 
         before do
-          get :thank_you, params: { petition_id: petition.id }
+          get :already_signed, params: { petition_id: petition.id }
         end
 
         it "assigns the @petition instance variable" do
           expect(assigns[:petition]).to eq(petition)
         end
 
-        it "renders the signatures/thank_you template" do
-          expect(response).to render_template("signatures/thank_you")
+        it "renders the signatures/already_signed template" do
+          expect(response).to render_template("signatures/already_signed")
         end
       end
     end
@@ -771,181 +750,6 @@ RSpec.describe SignaturesController, type: :controller do
 
           it "doesn't set the flash :notice message" do
             expect(flash[:notice]).to be_nil
-          end
-        end
-      end
-    end
-
-    describe "GET /signatures/:id/signed" do
-      context "when the signature doesn't exist" do
-        it "raises an ActiveRecord::RecordNotFound exception" do
-          expect {
-            get :signed, params: { id: 1, token: "token" }
-          }.to raise_exception(ActiveRecord::RecordNotFound)
-        end
-      end
-
-      context "when the signed token is missing" do
-        let(:petition) { FactoryBot.create(:open_petition) }
-        let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
-
-        it "redirects to the petition page" do
-          get :signed, params: { id: signature.id }
-          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
-        end
-      end
-
-      context "when the signature is fraudulent" do
-        let(:petition) { FactoryBot.create(:open_petition) }
-        let(:signature) { FactoryBot.create(:fraudulent_signature, petition: petition) }
-
-        it "doesn't raise an ActiveRecord::RecordNotFound exception" do
-          expect {
-            get :signed, params: { id: signature.id, token: signature.perishable_token }
-          }.not_to raise_error
-        end
-      end
-
-      context "when the signature is invalidated" do
-        let(:petition) { FactoryBot.create(:open_petition) }
-        let(:signature) { FactoryBot.create(:invalidated_signature, petition: petition) }
-
-        it "doesn't raise an ActiveRecord::RecordNotFound exception" do
-          expect {
-            get :signed, params: { id: signature.id }
-          }.not_to raise_error
-        end
-      end
-
-      %w[pending validated sponsored flagged hidden stopped].each do |state|
-        context "when the petition is #{state}" do
-          let(:petition) { FactoryBot.create(:"#{state}_petition") }
-          let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
-
-          it "raises an ActiveRecord::RecordNotFound exception" do
-            expect {
-              get :signed, params: { id: signature.id }
-            }.to raise_exception(ActiveRecord::RecordNotFound)
-          end
-        end
-      end
-
-      context "when the petition was rejected" do
-        let(:petition) { FactoryBot.create(:rejected_petition) }
-        let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
-
-        before do
-          get :signed, params: { id: signature.id }
-        end
-
-        it "assigns the @signature instance variable" do
-          expect(assigns[:signature]).to eq(signature)
-        end
-
-        it "assigns the @petition instance variable" do
-          expect(assigns[:petition]).to eq(petition)
-        end
-
-        it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
-        end
-      end
-
-      context "when the petition was closed more than 24 hours ago" do
-        let(:petition) { FactoryBot.create(:closed_petition, closed_at: 36.hours.ago) }
-        let(:signature) { FactoryBot.create(:validated_signature, petition: petition) }
-
-        before do
-          get :signed, params: { id: signature.id }
-        end
-
-        it "assigns the @signature instance variable" do
-          expect(assigns[:signature]).to eq(signature)
-        end
-
-        it "assigns the @petition instance variable" do
-          expect(assigns[:petition]).to eq(petition)
-        end
-
-        it "redirects to the petition page" do
-          expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
-        end
-      end
-
-      context "when the petition was closed less than 24 hours ago" do
-        let(:petition) { FactoryBot.create(:closed_petition, closed_at: 12.hours.ago) }
-        let(:signature) { FactoryBot.create(:validated_signature, :just_signed, petition: petition) }
-
-        before do
-          session[:signed_tokens] = { signature.id.to_s => signature.signed_token }
-          get :signed, params: { id: signature.id }
-        end
-
-        it "assigns the @signature instance variable" do
-          expect(assigns[:signature]).to eq(signature)
-        end
-
-        it "assigns the @petition instance variable" do
-          expect(assigns[:petition]).to eq(petition)
-        end
-
-        it "marks the signature has having seen the confirmation page" do
-          expect(assigns[:signature].seen_signed_confirmation_page).to eq(true)
-        end
-
-        it "renders the signatures/signed template" do
-          expect(response).to render_template("signatures/signed")
-        end
-      end
-
-      context "when the petition is open" do
-        let(:petition) { FactoryBot.create(:open_petition) }
-        let(:signature) { FactoryBot.create(:validated_signature, :just_signed, petition: petition) }
-
-        context "when the signature has been validated" do
-          before do
-            session[:signed_tokens] = { signature.id.to_s => signature.signed_token }
-            get :signed, params: { id: signature.id }
-          end
-
-          it "assigns the @signature instance variable" do
-            expect(assigns[:signature]).to eq(signature)
-          end
-
-          it "assigns the @petition instance variable" do
-            expect(assigns[:petition]).to eq(petition)
-          end
-
-          it "marks the signature has having seen the confirmation page" do
-            expect(assigns[:signature].seen_signed_confirmation_page).to eq(true)
-          end
-
-          it "renders the signatures/signed template" do
-            expect(response).to render_template("signatures/signed")
-          end
-
-          it "deletes the signed token from the session" do
-            expect(session[:signed_tokens]).to be_empty
-          end
-
-          context "and the signature has already seen the confirmation page" do
-            let(:signature) { FactoryBot.create(:validated_signature, petition: petition) }
-
-            it "doesn't redirect to the petition page" do
-              expect(response).not_to redirect_to("/petitions/#{petition.id}")
-            end
-          end
-        end
-
-        context "when the signature has not been validated" do
-          let(:signature) { FactoryBot.create(:pending_signature, petition: petition) }
-
-          before do
-            get :signed, params: { id: signature.id }
-          end
-
-          it "redirects to the petition page" do
-            expect(response).to redirect_to("/petitions/#{petition.id}?locale=en-GB")
           end
         end
       end
