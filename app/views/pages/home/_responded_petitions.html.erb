@@ -1,6 +1,7 @@
 <% if actioned[:awaiting_response][:count].zero? && actioned[:with_response][:count].zero? %>
   <p><%= t "petitions.responded_petitions.none" %></p>
 <% else %>
+  <h2 class="recent-responded-petitions"><%= t "petitions.responded_petitions.recent" %></h2>
   <ol class="threshold-petitions">
     <% actioned[:with_response][:list].each do |petition| %>
       <li class="petition-item">

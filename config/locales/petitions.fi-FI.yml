@@ -138,20 +138,21 @@ fi-FI:
     criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
     response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, aloite ohjataan käsittelyyn. Asiasta vastaavan tahon vastaus aloitteeseen tallennettaan aloitteen yhteyteen."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö keskustelee siitä."
-    welcome: "Tervetuloa partiolaisaloitteiden sivustolle! Digitaalinen partiolaisaloite on tarkoitettu kaikille jäsenmaksun maksaneille partiolaisille. Kyseessä on uusi tapa kehittää partiota ja vaikuttaa itselle tärkeisiin teemoihin partiossa.
-    Alustaa kehitetään jatkossa käyttökokemusten ja palautteen perusteella. Palautetta ja kehitysehdotuksia voi lähettää osoitteeseen"
-    definition: "Partiolaisaloitteen avulla kuka tahansa jäsenmaksun maksanut partiolainen voi tehdä aloitteita partion alueelliseksi, valtakunnalliseksi tai kansainväliseksi kehittämiseksi. Jäsenmaksun maksaneet partiolaiset voivat myös kannattaa muiden tekemiä aloitteita.
-    Aloitteet ovat voimassa kuusi kuukautta ja jos aloite saa sinä aikana 100 kannattajaa, se siirtyy Suomen Partiolaisten käsiteltäväksi. Aloitteita käsittelevä ryhmä miettii, miten aloitetta kannattaisi edistää ja ohjaa sen eteenpäin asiasta vastaavalle taholle, kuten aloitetta koskevan partiopiirin hallitukselle tai asiasta vastaavalle Suomen Partiolaisten valiokunnalle."
-    start_instruction: "Partiolaisaloitteet tehdään tämän sivuston kautta. Klikkaa sivun alaosasta ”Tee aloite” -painiketta, ja kirjaudu sisään omalla PartioID-tunnuksellasi.
-    Aloitetta tehdessä kannattaa miettiä sen vaikuttavuutta: millä tavoin aloitteesi toteutuessaan tekisi partiosta – ja maailmasta – paremman paikan?
-    Tarkemmat ohjeet partiolaisaloitteen vireille laittamiseksi löydät täältä: "
-    support_instruction: "Kaikki jätetyt partiolaisaloitteet löytyvät tältä sivustolta. Klikkaa sivun alaosasta ”Näytä kaikki aloitteet” tai käytä hakukenttää.
-    Voit kannattaa partiolaisaloitetta joko aloitteen tekijältä saamasi linkin kautta, tai kirjautumalla sisään omalla PartioID-tunnuksellasi ja etsimällä oikean aloitteen sivustolta.
-    Tarkemmat ohjeet partiolaisaloitteen kannattamiseksi löydät täältä: "
+    welcome_1: "Tervetuloa partiolaisaloitteiden sivustolle! Digitaalinen partiolaisaloite on tarkoitettu kaikille jäsenmaksun maksaneille partiolaisille. Kyseessä on uusi tapa kehittää partiota ja vaikuttaa itselle tärkeisiin teemoihin partiossa."
+    welcome_2: "Alustaa kehitetään jatkossa käyttökokemusten ja palautteen perusteella. Palautetta ja kehitysehdotuksia voi lähettää osoitteeseen "
+    definition_1: "Partiolaisaloitteen avulla kuka tahansa jäsenmaksun maksanut partiolainen voi tehdä aloitteita partion alueelliseksi, valtakunnalliseksi tai kansainväliseksi kehittämiseksi. Jäsenmaksun maksaneet partiolaiset voivat myös kannattaa muiden tekemiä aloitteita."
+    definition_2: "Aloitteet ovat voimassa kuusi kuukautta ja jos aloite saa sinä aikana 100 kannattajaa, se siirtyy Suomen Partiolaisten käsiteltäväksi. Aloitteita käsittelevä ryhmä miettii, miten aloitetta kannattaisi edistää ja ohjaa sen eteenpäin asiasta vastaavalle taholle, kuten aloitetta koskevan partiopiirin hallitukselle tai asiasta vastaavalle Suomen Partiolaisten valiokunnalle."
+    start_instruction_1: "Partiolaisaloitteet tehdään tämän sivuston kautta. Klikkaa sivun alaosasta ”Tee aloite” -painiketta, ja kirjaudu sisään omalla PartioID-tunnuksellasi."
+    start_instruction_2: "Aloitetta tehdessä kannattaa miettiä sen vaikuttavuutta: millä tavoin aloitteesi toteutuessaan tekisi partiosta – ja maailmasta – paremman paikan?"
+    start_instruction_3: "Tarkemmat ohjeet partiolaisaloitteen vireille laittamiseksi löydät täältä: "
+    support_instruction_1: "Kaikki jätetyt partiolaisaloitteet löytyvät tältä sivustolta. Klikkaa sivun alaosasta ”Näytä kaikki aloitteet” tai käytä hakukenttää."
+    support_instruction_2: "Voit kannattaa partiolaisaloitetta joko aloitteen tekijältä saamasi linkin kautta, tai kirjautumalla sisään omalla PartioID-tunnuksellasi ja etsimällä oikean aloitteen sivustolta."
+    support_instruction_3: "Tarkemmat ohjeet partiolaisaloitteen kannattamiseksi löydät täältä: "
                         
     #appears on responded petitions listing?
     responded_petitions:
       none: "Keskusjärjestö ei ole vielä käsitellyt yhtään aloitetta"
+      recent: "Viimeisimmät keskusjärjestön käsittelemät aloitteet"
       responded_on: "Keskusjärjestö käsitteli aloitteen %{date}"
       responded_on_dash: "Keskusjärjestö käsitteli aloitteen – %{date}"
       read_full: "Lue vastaus kokonaan"
