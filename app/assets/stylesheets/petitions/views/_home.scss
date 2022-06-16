@@ -119,9 +119,8 @@ a.threshold-panel:hover, a.threshold-panel:focus {
 .local-to-you,
 .start-petition {
   border-top: 1px solid #dee0e2;
-  border-bottom: none;
+  border-bottom: 1px solid #dee0e2;
   margin-top: $gutter;
-  padding-bottom: 0;
 }
 
 .local-to-you h2 {

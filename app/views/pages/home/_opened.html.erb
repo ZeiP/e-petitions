@@ -5,19 +5,16 @@
   </div>
 <% end %>
 
-<%= render "pages/home/actioned_petitions" %>
-
 <section class="section-panel start-petition" aria-labelledby="start-a-petition-heading">
   <h2 id="start-a-petition-heading"><%= t "petitions.start_prompt" %></h2>
   <p><%= t "petitions.criteria" %></p>
-</section>
-
   <% if current_user %>
     <%= link_to t("petitions.start_prompt"), check_petitions_path, :class => 'button' %>
   <% else %>
     <p><%= t "petitions.login_prompt" %></p>
     <%= link_to t("login.log_in"), sso_saml_index_path, :class => 'button login-link' %>
   <% end %>
+</section>
 
 <% unless no_petitions_yet? %>
   <%= render "pages/home/search_petitions", search_path: petitions_path %>
