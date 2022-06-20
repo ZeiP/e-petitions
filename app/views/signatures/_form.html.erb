@@ -6,6 +6,7 @@
 <% end %>
 <%= image_tag petition_tracker_path(@petition, @signature.form_token, :gif), size: "0x0", alt: "" %>
 <%= form.submit ( t "generic.continue" ), name: "move:next", class: "button", tabindex: increment %>
+<%= render "signatures/error_messages", form: form %>
 <section class="secondary">
   <p><%= t "petitions.sign.all_hidden" %></p>
 </section>

@@ -479,6 +479,8 @@ en-GB:
   signed:
     signatures: "signatures"
     signature_added: "We've added your signature to the petition:"
+    failed_title: "Failed to validate"
+    failed: "Signature is invalid."
     thanks: "Thanks"
     sponsor_sign: "Your signature has been added to this petition as a supporter."
     what_next: "What next?"

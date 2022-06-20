@@ -506,6 +506,8 @@ sv-SV:
   signed:
     signatures: "personer som stöder"
     signature_added: "Vi lade till din stödförklaring för detta initiativ:"
+    failed_title: "Det gick inte att validera"
+    failed: "Signaturen är ogiltig"
     thanks: "Tack"
     sponsor_sign: "Vi lade till din stödförklaring för detta initiativ."
     what_next: "Vad sker nu?"
