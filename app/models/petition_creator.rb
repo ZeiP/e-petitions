@@ -119,7 +119,7 @@ class PetitionCreator
   end
 
   def notify_by_email
-    petition_creator_params[:notify_by_email] || "0"
+    petition_creator_params[:notify_by_email] || "1"
   end
 
   private
