@@ -119,13 +119,11 @@ a.threshold-panel:hover, a.threshold-panel:focus {
 .local-to-you,
 .start-petition {
   border-top: 1px solid #dee0e2;
-  border-bottom: none;
+  border-bottom: 1px solid #dee0e2;
   margin-top: $gutter;
-  padding-bottom: 0;
 }
 
-.local-to-you h2,
-.start-petition h2 {
+.local-to-you h2 {
   @include bold-24();
 
   margin-top: em(40, 20);
@@ -147,7 +145,13 @@ a.threshold-panel:hover, a.threshold-panel:focus {
   padding-bottom: 0;
 }
 
-.search-petitions h2 {
+.responded-petitions {
+  border-top: 1px solid #dee0e2;
+}
+
+.search-petitions h2,
+.start-petition h2,
+.recent-responded-petitions {
   @include bold-36();
 
   margin-top: em(30, 20);
@@ -159,3 +163,19 @@ a.threshold-panel:hover, a.threshold-panel:focus {
   }
 }
 
+.landing-page-picture {
+  margin-top: $gutter;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  .landing-banner {
+    width: 100%;
+  }
+}
+
+.partiolaisaloite-introduction {
+  .welcome-message {
+    font-style: italic;
+  }
+}

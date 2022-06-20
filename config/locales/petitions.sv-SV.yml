@@ -37,9 +37,9 @@ sv-SV:
       invalid_signature_count: "Initiativet %{id} hade ett felaktigt antal stödförklaringar"
 
     #searching for petitions
-    view_all: "Visa alla initiativ"
+    view_all: "Visa alla aktuella initiativ"
     popular_title: "Populära initiativ"
-    search_title: "Sök initiativ"
+    search_title: "Bekanta dig med inlämnade initiativ och sök efter ett initiativ"
     current: "Pågående initiativ"
     back_to_current: "Tillbaka till pågående initiativ"
     no_archived_found: "Arkiverade initiativ som motsvarar sökorden hittades inte"
@@ -125,6 +125,10 @@ sv-SV:
       debated: "Initiativ som har diskuterats av centralorganisationen"
       not_debated: "Initiativ som inte har diskuterats av centralorganisationen"
       awaiting_debate: "Initiativ som väntar på att diskuteras av centralorganisationen"
+      what_is: "Vad är ett scoutinitiativ?"
+      how_to_create: "Hur skapar du ett initiativ?"
+      how_to_support: "Hur stöder du ett initiativ?"
+
 
     share_title: "Initiativ: %{petition}"
 
@@ -133,9 +137,18 @@ sv-SV:
     login_prompt: "Logga in för att skapa ett initiativ"
     login_prompt_sign: "Logga in för att stödja ett initiativ"
     criteria: "Scouter som har betalat medlemsavgiften kan skapa scoutinitiativ"
-    response_threshold: "Om ett initiativ stöds av fler än %{threshold} scouter, behandlar centralorganisationen det."
+    response_threshold: "Om initiativet stöds av fler än 100 scouterna kommer initiativet att remitteras till prövning. Svaret på initiativet kommer att laddas upp på denna webbplats."
     debate_threshold: "Om ett initiativ stöds av fler än %{threshold} scouter, diskuterar centralorganisationen det."
-
+    welcome_1: "Välkommen till scoutinitiativ -webbtjänsten! Via tjänsten kan alla scouter som betalat medlemsavgiften göra initiativ för att utveckla scoutverksamheten. Scoutinitiativ är ett nytt sätt att utveckla scoutingen så att var och en kan påverka teman som är viktiga för en själv."
+    welcome_2: "Plattformen utvecklas framöver på basen av användarupplevelser och respons. Utvecklingsidéer och respons kan skickas till adressen: "
+    definition_1: "Via tjänsten kan alla scouter som betalat medlemsavgiften skapa initiativ för att utveckla scoutverksamheten regionalt, nationellt eller internationellt. De som betalt medlemsavgiften kan också understöda inititiv som gjorts av andra scouter."
+    definition_2: "Initiativen är aktiva i sex månader. Om ett initiativ understöds av 100 personer under den perioden, tar Finlands Scouter upp det till behandling. Gruppen som behandlar initiativen överväger sedan hur initiativet ska vidarebehandlas och för initiativet vidare till den instans som ansvarar för frågan. Dylika instanser kan vara scoutdistriktets styrelse eller utskottet som ansvarar för ärendet inom Finlands Scouter."
+    create_instruction_1: "Scoutinitiativ skapas via denna sida. Klicka på knappen ”Logga in” längst ner på sidan, och logga in med ditt ScoutID."
+    create_instruction_2: "Vid inlämning av initiativ är det bra att fundera på dess effekter: på vilket sätt skulle ditt initiativ göra scouting – och världen bättre?"
+    create_instruction_3: "Noggrannare anvisningar för hur man använder scoutinitiativet finns här: "
+    support_instruction_1: "Alla inlämnade scoutinitiativ finns på denna sida. Klicka på ”Visa alla initiativ” längst ner på sidan eller använd sökrutan."
+    support_instruction_2: "Du kan stödja ett scoutinitiativ antingen genom länken du fått av initiativtagaren, eller genom att logga in med ditt ScoutID och söka efter rätt initiativ på sajten."
+    support_instruction_3: "Noggrannare anvisningar för hur man stöder scoutinitiativet finns här: "
     #appears on responded petitions listing?
     responded_petitions:
       none: "Centralorganisationen har ännu inte behandlat ett enda initiativ"

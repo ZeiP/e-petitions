@@ -2,7 +2,7 @@
   <section aria-labelledby="response-threshold-heading" id="petitions-with-response">
     <% if actioned[:with_response][:count].zero? %>
       <div class="threshold-panel threshold-panel-response">
-        <h2 id="response-threshold-heading"><%= Site.formatted_threshold_for_response %></h2>
+        <h2 id="response-threshold-heading"><%= Site.formatted_threshold_for_response %> <%= t "petitions.sign.signatures" %></h2>
         <p><%= t "petitions.response_threshold", threshold: Site.formatted_threshold_for_response %></p>
       </div>
     <% else %>
