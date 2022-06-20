@@ -31,9 +31,9 @@ en-GB:
 
       invalid_signature_count: "Petition %{id} had an invalid signature count"
 
-    view_all: "View all open petitions"
+    view_all: "Show all open petitions"
     popular_title: "Popular petitions"
-    search_title: "Search petitions"
+    search_title: "Check out the submitted petitions and search for a petition"
     current: "Current petitions"
     back_to_current: "Back to current petitions"
     no_archived_found: "No archived petitions could be found matching your search terms"
@@ -115,6 +115,9 @@ en-GB:
       debated: "Petitions debated in the central organisation"
       not_debated: "Petitions not debated in the central organisation"
       awaiting_debate: "Petitions waiting for a debate in the central organisation"
+      what_is: "What is a scout petition?"
+      how_to_create: "How to create a petition?"
+      how_to_support: "Hot to support and sign a petition?"
 
     share_title: "Petition: %{petition}"
 
@@ -123,8 +126,18 @@ en-GB:
     login_prompt: "Log in to start a petition"
     login_prompt_sign: "Log in to sign the petition"
     criteria: "Anyone can start a petition as long as they have paid their membership fee"
-    response_threshold: "If a petition gets %{threshold} signatures, the central organisation will respond"
+    response_threshold: "If the initiative is signed by more than 100 Guides or Scouts, the petition will be referred for consideration. The response to the petition will be uploaded to this website."
     debate_threshold: "If a petition gets %{threshold} signatures, it will be considered for debate in the central organisation"
+    welcome_1: "Welcome to the scout petitions website! The digital scout petition is for all Guides and Scouts who have paid their membership fee. It is a new way to develop scouting and to influence the issues that are important to you."
+    welcome_2: "The platform will be further developed based on user experience and feedback. Feedback and development suggestions can be sent to "
+    definition_1: "The scout petition allows any Guide and Scout who has paid a membership fee to take initiatives to develop the scout regionally, nationally, or internationally. Guides and Scouts who have paid the membership fee can also support initiatives taken by others."
+    definition_2: "The petitions are valid for six months, and if the initiative receives 100 signatures during that time, it will be handed over to the Guides and Scouts of Finland. The group dealing with the petitions will consider how the petition should be promoted and will forward it to the relevant body."
+    create_instruction_1: "The scout petitions are made through this website. Click the “Log in” button at the end of this page, and log in with your own ScoutID"
+    create_instruction_2: "When creating a petition, it's worth thinking about how effective it is: how would your petition make scouting - and the world - better?"
+    create_instruction_3: "More detailed instructions for creating a scout petition can be found here: "
+    support_instruction_1: "All submitted scout petitions can be found on this site. Click “View all open petitions” at the bottom of the page or use the search field."
+    support_instruction_2: "You can support and sign a scout petition either through the link you received from the initiator, or by logging in with your own ScoutID and searching for the right petition on the website."
+    support_instruction_3: "More detailed instructions for signing a scout petition can be found here: "
 
     responded_petitions:
       none: "The central organisation hasn’t responded to any petitions yet"
@@ -468,6 +481,8 @@ en-GB:
   signed:
     signatures: "signatures"
     signature_added: "We've added your signature to the petition:"
+    failed_title: "Failed to validate"
+    failed: "Signature is invalid."
     thanks: "Thanks"
     sponsor_sign: "Your signature has been added to this petition as a supporter."
     what_next: "What next?"

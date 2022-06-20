@@ -75,3 +75,8 @@ fi-FI:
         christmas: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon, mutta näin joulun aikaan meillä voi kestää vähän kauemmin kuin tavallisesti. Tarkistamme aloitteesi mahdollisimman pian."
         easter: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon, mutta näin pääsiäisen aikaan meillä voi kestää vähän kauemmin kuin tavallisesti. Tarkistamme aloitteesi mahdollisimman pian."
         default: "%{count} partiolaista on tukenut aloitettasi tähän mennessä. Tarkistamme, onko aloitteesi aloiteohjeen mukainen. Jos kaikki on kunnossa, julkaisemme sen.  Tämä kestää yleensä noin viikon."
+    
+    # need confirmation
+    admin:
+      petition_created: "Aloite on luotu"
+      petition_created_notification: "Sait tämän sähköpostin, koska aloite on tehty"
