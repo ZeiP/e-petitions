@@ -134,6 +134,7 @@ Rails.application.routes.draw do
           resource :schedule_debate, path: 'schedule-debate', controller: 'schedule_debate'
           resource :tags, controller: 'petition_tags'
           resource :take_down, path: 'take-down', controller: 'take_down'
+          resource :close_early, path: 'close-early', controller: 'close_early'
         end
 
         resources :signatures, only: %i[index destroy] do
