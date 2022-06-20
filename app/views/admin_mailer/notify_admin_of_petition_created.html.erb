@@ -1,0 +1,4 @@
+<p><%= t "mail.greeting" %></p>
+
+<p><%= t "mail.admin.petition_created_notification" %>  “<%= @new_petition.action %>”:<br />
+<%= link_to nil, petition_url(@new_petition) %></p>

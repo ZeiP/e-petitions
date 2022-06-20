@@ -75,3 +75,7 @@ sv-SV:
         christmas: "%{count} scouter har hittills understött ditt initiativ. Vi kontrollerar att ditt initiativ följer anvisningarna för initiativ. Om allt är i sin ordning, publicerar vi det.  Det här tar i allmänhet ungefär en vecka, men nu vid jul kan det ta lite längre än vanligt. Vi kontrollerar ditt initiativ så fort som möjligt."
         easter: "%{count} scouter har hittills understött ditt initiativ. Vi kontrollerar att ditt initiativ följer anvisningarna för initiativ. Om allt är i sin ordning, publicerar vi det.  Det här tar i allmänhet ungefär en vecka, men nu vid påsk kan det ta lite längre än vanligt. Vi kontrollerar ditt initiativ så fort som möjligt."
         default: "%{count} scouter har hittills understött ditt initiativ. Vi kontrollerar att ditt initiativ följer anvisningarna för initiativ. Om allt är i sin ordning, publicerar vi det.  Det här tar i allmänhet ungefär en vecka."
+    
+    admin:
+      petition_created: "Initiativ skapat"
+      petition_created_notification: "Du får detta e-postmeddelande eftersom ett nytt initiativ har skapats"

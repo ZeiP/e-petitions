@@ -60,6 +60,7 @@ class PetitionsController < ApplicationController
 
   def create
     if @new_petition.save
+      AdminMailer.notify_admin_of_petition_created(@new_petition).deliver
       redirect_to thank_you_petition_url(@new_petition)
     else
       respond_to do |format|
