@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
       member do
         get 'count'
-        get 'thank-you'
+        get 'done'
         get 'gathering-support'
         get 'moderation-info'
       end
@@ -61,7 +61,7 @@ Rails.application.routes.draw do
       resources :signatures, only: %i[new create], shallow: true do
         collection do
           post 'new', action: 'confirm', as: :confirm
-          get  'thank-you'
+          get  'already-signed'
         end
 
         member do

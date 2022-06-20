@@ -18,8 +18,8 @@ RSpec.describe "routes for signatures", type: :routes do
     expect(post("/petitions/1/signatures")).to route_to("signatures#create", petition_id: "1")
   end
 
-  it "routes GET /petitions/1/signatures/thank-you to signatures#thank_you" do
-    expect(get("/petitions/1/signatures/thank-you")).to route_to("signatures#thank_you", petition_id: "1")
+  it "routes GET /petitions/1/signatures/already-signed to signatures#already_signed" do
+    expect(get("/petitions/1/signatures/already-signed")).to route_to("signatures#already_signed", petition_id: "1")
   end
 
   it "doesn't route GET /petitions/1/signatures/2" do

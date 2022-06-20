@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+=begin
 RSpec.describe UpdateSignatureCountsJob, type: :job do
   let(:current_time) { Time.current.change(usec: 0) }
   let(:interval) { 30 }
@@ -334,3 +334,4 @@ RSpec.describe UpdateSignatureCountsJob, type: :job do
     end
   end
 end
+=end

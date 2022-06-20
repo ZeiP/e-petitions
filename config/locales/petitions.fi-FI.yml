@@ -112,6 +112,9 @@ fi-FI:
       check_info: "Järjestelmä haluaa tarkistaa sähköpostiosoitteesi"
       confirm_info: "Kyllä - tämä on sähköpostiosoitteeni"
       if_wrong_email: "Kentässä olevaa sähköpostiosoitetta ei kannata muokata, järjestelmä lähettää viestit joka tapauksessa PartioID:n mukaiseen osoitteeseesi. (Tämä välivaihe poistuu kokonaan tulevaisuudessa.)"
+      already_signed_title: "Aloitteen kannattaminen epäonnistui"
+      already_signed_notification: "Olet jo kannattanut tätä aloitetta"
+
 
     #page titles for petition listings
     page_titles:

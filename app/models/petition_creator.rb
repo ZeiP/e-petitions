@@ -5,7 +5,7 @@ class PetitionCreator
   extend ActiveModel::Translation
   include ActiveModel::Conversion
 
-  STAGES = %w[petition replay_petition creator replay_email]
+  STAGES = %w[petition replay_petition creator]
 
   PETITION_PARAMS = [:action, :background, :additional_details]
   SIGNATURE_PARAMS = [:name, :email, :notify_by_email]
@@ -44,7 +44,7 @@ class PetitionCreator
       return false
     end
 
-    if done?
+    if ready?
       @petition = Petition.new do |p|
         p.action = action
         p.background = background
@@ -169,14 +169,10 @@ class PetitionCreator
     errors.add(:name, :too_long, count: 255) if action.length > 255
     errors.add(:email, :blank) unless email.present?
 
-    if email.present?
-      email_validator.validate(self)
-    end
-
-    if replay_email?
-      @stage = "replay_email"
-    elsif errors.any?
+    if ready?
       @stage = "creator"
+    elsif errors.any?
+      @stage = "replay_petition"
     end
   end
 
@@ -194,12 +190,8 @@ class PetitionCreator
     errors.empty?
   end
 
-  def replay_email?
-    stage == "replay_email" && errors.keys == [:email]
-  end
-
-  def done?
-    stage == "replay_email"
+  def ready?
+    stage == "creator"
   end
 
   def email_validator

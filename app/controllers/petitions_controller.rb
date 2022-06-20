@@ -9,7 +9,7 @@ class PetitionsController < ApplicationController
   before_action :redirect_to_archived_petition_if_archived, only: [:show]
 
   before_action :retrieve_petitions, only: [:index]
-  before_action :retrieve_petition, only: [:show, :count, :gathering_support, :moderation_info]
+  before_action :retrieve_petition, only: [:show, :count, :done, :gathering_support, :moderation_info]
   before_action :build_petition_creator, only: [:check, :check_results, :new, :create]
 
   before_action :redirect_to_stopped_page, if: :stopped?, only: [:moderation_info, :show]
@@ -81,7 +81,7 @@ class PetitionsController < ApplicationController
     end
   end
 
-  def thank_you
+  def done
     respond_to do |format|
       format.html
     end

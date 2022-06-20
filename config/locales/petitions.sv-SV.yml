@@ -112,6 +112,8 @@ sv-SV:
       check_info: "Systemet vill kontrollera din e-postadress"
       confirm_info: "Ja - detta är min e-postadress"
       if_wrong_email: "Det lönar sig inte att ändra e-postadressen i fältet, systemet skickar oberoende meddelanden till din adress enligt ditt ScoutID. (Detta mellansteg kommer att försvinna helt i framtiden.)"
+      already_signed_title: "Misslyckades med att stödja initiativet" 
+      already_signed_notification: "Du har redan stött initiativet"
 
     #page titles for petition listings
     page_titles:
