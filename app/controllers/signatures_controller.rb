@@ -19,7 +19,7 @@ class SignaturesController < ApplicationController
 
     delete_form_request
 
-    redirect_to already_signed_url
+    redirect_to :action => "already_signed", :locale => @locale
   end
 
   rescue_from ActiveRecord::RecordInvalid do |exception|

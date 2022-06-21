@@ -1,6 +1,7 @@
 <h1 class="page-title"><%= t "petitions.start.title" %></h1>
 
 <form method="get" action="/petitions/check_results">
+  <%= hidden_field_tag :locale, @locale %>
   <div class="form-group">
     <label for="q" class="form-label"><%= t "petitions.start.petition" %></label>
     <textarea name="q" id="q" class="form-control" data-max-length="80" rows="3"><%= @new_petition.action %></textarea>
