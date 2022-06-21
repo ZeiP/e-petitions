@@ -141,6 +141,7 @@ sv-SV:
     criteria: "Scouter som har betalat medlemsavgiften kan skapa scoutinitiativ"
     response_threshold: "Om initiativet stöds av fler än 100 scouterna kommer initiativet att remitteras till prövning. Svaret på initiativet kommer att laddas upp på denna webbplats."
     debate_threshold: "Om ett initiativ stöds av fler än %{threshold} scouter, diskuterar centralorganisationen det."
+    image_photographer: "Fotograf: Aleksi Murtojärvi"
     welcome_1: "Välkommen till scoutinitiativ -webbtjänsten! Via tjänsten kan alla scouter som betalat medlemsavgiften göra initiativ för att utveckla scoutverksamheten. Scoutinitiativ är ett nytt sätt att utveckla scoutingen så att var och en kan påverka teman som är viktiga för en själv."
     welcome_2: "Plattformen utvecklas framöver på basen av användarupplevelser och respons. Utvecklingsidéer och respons kan skickas till adressen: "
     definition_1: "Via tjänsten kan alla scouter som betalat medlemsavgiften skapa initiativ för att utveckla scoutverksamheten regionalt, nationellt eller internationellt. De som betalt medlemsavgiften kan också understöda inititiv som gjorts av andra scouter."

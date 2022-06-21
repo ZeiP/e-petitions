@@ -167,11 +167,18 @@ a.threshold-panel:hover, a.threshold-panel:focus {
   margin-top: $gutter;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  display: flex;
+  display: block;
   justify-content: center;
   .landing-banner {
     width: 100%;
   }
+}
+
+.landing-page-picture-text {
+  text-align: center;
+  font-style: italic;
+  font-size: medium;
+  line-height: 1;
 }
 
 .partiolaisaloite-introduction {
