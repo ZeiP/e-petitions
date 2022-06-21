@@ -141,6 +141,7 @@ fi-FI:
     criteria: "Partiolaisaloitteen voi tehdä jäsenmaksun maksanut partiolainen"
     response_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, aloite ohjataan käsittelyyn. Asiasta vastaavan tahon vastaus aloitteeseen tallennettaan aloitteen yhteyteen."
     debate_threshold: "Jos aloitetta kannattaa yli %{threshold} partiolaista, keskusjärjestö keskustelee siitä."
+    image_photographer: "Kuvaaja: Aleksi Murtojärvi"
     welcome_1: "Tervetuloa partiolaisaloitteiden sivustolle! Digitaalinen partiolaisaloite on tarkoitettu kaikille jäsenmaksun maksaneille partiolaisille. Kyseessä on uusi tapa kehittää partiota ja vaikuttaa itselle tärkeisiin teemoihin partiossa."
     welcome_2: "Alustaa kehitetään jatkossa käyttökokemusten ja palautteen perusteella. Palautetta ja kehitysehdotuksia voi lähettää osoitteeseen "
     definition_1: "Partiolaisaloitteen avulla kuka tahansa jäsenmaksun maksanut partiolainen voi tehdä aloitteita partion alueelliseksi, valtakunnalliseksi tai kansainväliseksi kehittämiseksi. Jäsenmaksun maksaneet partiolaiset voivat myös kannattaa muiden tekemiä aloitteita."
